@@ -6,7 +6,13 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% if app.session.get('user_admin') %}
+            <div class="container">
+                {% block body %}{% endblock %}
+            </div>
+        {% else %}
+            <script>window.location="/"</script>
+        {% endif %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>
