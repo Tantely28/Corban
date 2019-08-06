@@ -38,13 +38,17 @@ class AdminController extends AbstractController
     {
         $form=$this->createFormBuilder()
             ->add('username',TextType::class,[
+                'label'=> "Nom d'utilisateur",
                 'attr'=>[
-                    'placeholder'=>'Username'
+                    'placeholder'=>"Nom d'utilisateur",
+                    'class'=>'form-control'
                 ]
             ])
             ->add('password',PasswordType::class,[
+                'label'=> "Mot de passe",
                 'attr'=>[
-                    'placeholder'=>'Password'
+                    'placeholder'=>"Mot de passe",
+                    'class'=>'form-control'
                 ]
             ])->getForm();
         $form->handleRequest($request);
