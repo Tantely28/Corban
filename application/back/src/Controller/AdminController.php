@@ -89,4 +89,15 @@ class AdminController extends AbstractController
         $this->session->clear();
         return $this->redirectToRoute('login_admin');
     }
+
+    /**
+     * @return Response
+     * @Route("/service", name="service_admin")
+     */
+    public function service(): Response
+    {
+        return $this->render('service.html.twig');
+    }
+
+
 }
