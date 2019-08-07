@@ -83,8 +83,7 @@ class ClientController extends AbstractController
             ->add('telephone')
             ->add('email')
             ->add('web')
-            ->add('secteur')
-            ->add('user')->getForm();
+            ->add('secteur')->getForm();
 
         $form->handleRequest($request);
 
