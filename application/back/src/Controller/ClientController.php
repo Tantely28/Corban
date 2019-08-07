@@ -56,6 +56,7 @@ class ClientController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid())
         {
+            $client->setPassword(sha1($client->getPassword()));
             $this->em->persist($client);
             $this->em->flush();
 
