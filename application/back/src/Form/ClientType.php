@@ -19,8 +19,6 @@ class ClientType extends AbstractType
             ->add('email')
             ->add('web')
             ->add('secteur')
-            ->add('user')
-            ->add('password',PasswordType::class)
         ;
     }
 
