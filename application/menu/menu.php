@@ -14,7 +14,7 @@
 		        	<a class="nav-link" href="index.php?page=temoignages">Témoignage</a>
 		      	</li>
 		      	<li class="nav-item dropdown">
-		        	<a class="nav-link" href="index.php?page=ressource">Ressources</a>
+		        	<a class="nav-link" href="index.php?page=ressources">Ressources</a>
       			</li>
 		      	<li class="nav-item">
 		        	<a class="nav-link" href="index.php?page=service">Service</a>

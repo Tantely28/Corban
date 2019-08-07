@@ -20,7 +20,7 @@
 					followers sur les réseaux sociaux, recrutez rapidement, trouvez 
 					le bon talent et accompagnez-vous par Corban</p>
 					<div style="padding: 0px 0px 0px 90px;">
-						<button type="button" class="btn " style="font-size: 16px; border-radius: 10px;font-weight: bold;padding: 4px 10px;font-family: Martodo bold;background-color:#0e3fab;left: 10px;color: #fff; ">Demander une offre</button>
+						<button type="button" class="btn " style="font-size: 16px; border-radius: 10px;font-weight: bold;padding: 4px 10px;font-family: Martodo bold;background-color:#0e3fab;left: 10px;color: #fff;border:none; ">Demander une offre</button>
 					</div>
 				
       			</div>
@@ -34,7 +34,7 @@
       		<div class="" style="margin:0px 300px 0px 0px;bottom: 200px;">	
           		<h5 style="font-family: Raleway Heavy;padding: 2px 0px 20px 0px;">Découvrez nos dernières
 				offres d’emploi publiées</h5>
-				<button type="button" class="btn " style="border-radius: 50px;padding: 10px 40px;color:  #545454;font-weight: bold;font-family:Arimo;background: linear-gradient(#ffde59,#ffbd59,#ff914d);">SAISIR L’OPPORTUNITE</button>
+				<button type="button" class="btn " style="border-radius: 50px;padding: 10px 40px;color:  #545454;font-weight: bold;font-family:Arimo;background: linear-gradient(#ffde59,#ffbd59,#ff914d);border:none;">SAISIR L’OPPORTUNITE</button>
 			</div>	
         	</div>
         </div>
@@ -50,7 +50,7 @@
 	          		<p style="font-family: Raleway Heavy ;font-size: 16px;line-height: 0.5cm;padding: 2px 0px 20px 0px;">Rejoignez-nous pour notre prochain Book Club, une opportunité 
 						de discuter un sujet  qui vous passionne et développer votre 
 						network</p>
-						<button type="button" class="btn " style="font-size: 16px; border-radius: 10px;font-weight: bold;padding: 4px 10px;font-family: Martodo bold;background-color:#0e3fab;left: 10px;color: #fff; ">En savoir plus</button>
+						<button type="button" class="btn " style="font-size: 16px; border-radius: 10px;font-weight: bold;padding: 4px 10px;font-family: Martodo bold;background-color:#0e3fab;left: 10px;color: #fff;border:none; ">En savoir plus</button>
 				</div>
         	</div>
     	</div>
@@ -62,7 +62,7 @@
           		<h5 style="padding: 2px 0px 20px 0px;">Articles, vidéos et infographies,
 					profitez gratuitement de nos
 					ressources</h5>
-					<button type="button" class="btn " style="border-radius: 50px;padding: 10px 80px;color: #545454;font-family:Arimo;font-weight: bold;background: linear-gradient(#ffde59,#ffbd59,#ff914d);">NAVIGUER</button>
+					<button type="button" class="btn " style="border-radius: 50px;padding: 10px 80px;color: #545454;font-family:Arimo;font-weight: bold;background: linear-gradient(#ffde59,#ffbd59,#ff914d);border:none;">NAVIGUER</button>
 				</div>	
         	</div>
     	</div>
@@ -131,4 +131,53 @@
 			</div>
 		</div>
 	</div>		
+</section>
+
+<section class="container-fluid" style="background-color: #ffffff;padding: 80px 20px;">
+	<div class="container">
+		<div class="row" style="margin-bottom: 50px;margin-top: 50px">
+			<div class="col-md-6">
+				
+			</div>
+			<div class="col-md-6">
+				<h2 style="color: #222222; font-weight:bold;font-family: RALEWAY ;text-align: center;margin-bottom: 50px;">Notre mission</h2>
+				<p style="color:#444041;font-family:Raleway Heavy;text-align: justify;line-height: 1.8;">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+					enim ad minim veniam, quis nostrud exercitation ullamco laboris
+					nisi ut aliquip ex ea commodo consequat</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="container-fluid" style="background-color:#f7f7f7;padding: 80px 20px;">
+	<div style="margin-bottom: 50px;margin-top: 50px">
+		<p style="color: #444041;font-family: arimo">Ce qu'ils disent de nous</p>
+		<h2 style="font-family: Raleway Heavy ;font-weight: bold;color: #444041">Témoignages</h2>
+	</div>
+	<div class="container">
+	<div class="row" style="font-family: Raleway Heavy ;color: #444041">
+		<div class="col-md-3">
+			<img src="assets/images/0007.png" style="max-width: 100%;height: 200px;">
+		</div>
+		<div class="col-md-3">
+			<p style="text-align: justify;">Lorem ipsum dolor sit amet,<br>
+				consectetur adipiscing elit, sed do<br>
+				eiusmod tempor incididunt ut<br>
+				labore et dolore magna aliqua.</p>
+			<p style="font-weight: bold;">Nom + poste + entreprise</p>
+		</div>
+		<div class="col-md-3">
+			<img src="assets/images/0007.png" style="max-width: 100%;height: 200px;">
+		</div>
+		<div class="col-md-3">
+			<p style="text-align: justify;">Lorem ipsum dolor sit amet,<br>
+				consectetur adipiscing elit, sed do<br>
+				eiusmod tempor incididunt ut<br>
+				labore et dolore magna aliqua.</p>
+			<p style="font-weight: bold;">Nom + poste + entreprise</p>
+		</div>
+	</div>
+</div>
 </section>
