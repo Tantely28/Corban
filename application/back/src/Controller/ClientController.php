@@ -3,10 +3,12 @@
 namespace App\Controller;
 
 use App\Entity\Client;
+use App\Entity\Temoignage;
 use App\Form\ClientType;
 use App\Repository\ClientRepository;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -103,15 +105,29 @@ class ClientController extends AbstractController
      * @param Client $client
      * @param Request $request
      * @return Response
-     * @Route("/client/{id}", name="client_delete", methods="DELETE")
+     * @Route("/delete/client/{id}", name="client_delete")
      */
     public function delete(Client $client, Request $request): Response
     {
-        if ($this->isCsrfTokenValid('delete' . $client->getId(), $request->get('_token'))){
             $this->em->remove($client);
             $this->em->flush();
-        }
-
         return $this->redirectToRoute('client_index');
+    }
+
+    /**
+     * @param Request $request
+     * @Route("/ajout/temoignage", name="ajout_temoin")
+     */
+    public function addTemoignage(Request $request)
+    {
+        $temoingnage=new Temoignage();
+        $form=$this->createFormBuilder($temoingnage)
+            ->add('description',TextType::class,[
+                'label'=>'Description',
+                'attr'=>[
+                    'placeholder'=>'Description'
+                ]
+            ])
+            ->add('video')->getForm();
     }
 }
