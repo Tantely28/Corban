@@ -38,13 +38,17 @@ class AdminController extends AbstractController
     {
         $form=$this->createFormBuilder()
             ->add('username',TextType::class,[
+                'label'=> "Nom d'utilisateur",
                 'attr'=>[
-                    'placeholder'=>'Username'
+                    'placeholder'=>"Nom d'utilisateur",
+                    'class'=>'form-control'
                 ]
             ])
             ->add('password',PasswordType::class,[
+                'label'=> "Mot de passe",
                 'attr'=>[
-                    'placeholder'=>'Password'
+                    'placeholder'=>"Mot de passe",
+                    'class'=>'form-control'
                 ]
             ])->getForm();
         $form->handleRequest($request);
@@ -85,4 +89,15 @@ class AdminController extends AbstractController
         $this->session->clear();
         return $this->redirectToRoute('login_admin');
     }
+
+    /**
+     * @return Response
+     * @Route("/service", name="service_admin")
+     */
+    public function service(): Response
+    {
+        return $this->render('service.html.twig');
+    }
+
+
 }
