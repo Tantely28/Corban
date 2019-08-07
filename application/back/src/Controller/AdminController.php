@@ -63,7 +63,7 @@ class AdminController extends AbstractController
 
                 return $this->redirectToRoute('accueil');
             }else{
-                $err="Username ou password incorrect";
+                $err="Nom d'utilisateur ou Mot de passe incorrecte";
                 return $this->render('admin/login.html.twig',[
                     'form'=>$form->createView(),
                     'erreur'=>$err

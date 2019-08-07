@@ -21,6 +21,9 @@
                         <form id="login-form" class="form" action="" method="post">
                         {{ form_start(form) }}
                             <h3 class="text-center text-info">Connexion</h3>
+                            {% if erreur is defined %}
+                            <h6 class="text-danger">{{ erreur }}</h6>
+                            {% endif %}
                             <div class="form-group">
                                  {{ form_row(form.username) }}
                             </div>
