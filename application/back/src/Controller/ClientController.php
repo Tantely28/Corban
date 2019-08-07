@@ -6,8 +6,12 @@ use App\Entity\Client;
 use App\Entity\Temoignage;
 use App\Form\ClientType;
 use App\Repository\ClientRepository;
+use App\Repository\TemoignageRepository;
 use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\ORM\EntityRepository;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -23,11 +27,16 @@ class ClientController extends AbstractController
      * @var ClientRepository
      */
     private $clientRepository;
+    /**
+     * @var TemoignageRepository
+     */
+    private $temoignageRepository;
 
-    public function __construct(ObjectManager $em, ClientRepository $clientRepository)
+    public function __construct(ObjectManager $em, ClientRepository $clientRepository,TemoignageRepository $temoignageRepository)
     {
         $this->em = $em;
         $this->clientRepository = $clientRepository;
+        $this->temoignageRepository = $temoignageRepository;
     }
 
     /**
@@ -114,10 +123,12 @@ class ClientController extends AbstractController
     }
 
     /**
+     * @param Client $client
      * @param Request $request
-     * @Route("/ajout/temoignage", name="ajout_temoin")
+     * @return Response
+     * @Route("/ajout/temoignage?id={id}", name="ajout_temoin")
      */
-    public function addTemoignage(Request $request)
+    public function addTemoignage(Client $client,Request $request)
     {
         $temoingnage=new Temoignage();
         $form=$this->createFormBuilder($temoingnage)
@@ -127,6 +138,44 @@ class ClientController extends AbstractController
                     'placeholder'=>'Description'
                 ]
             ])
-            ->add('video')->getForm();
+            ->add('video',FileType::class,[
+                'attr'=>[
+                    'placeholder'=>'Choisissez votre fichier'
+                ]
+            ])
+            ->getForm();
+
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()){
+
+            $file=$temoingnage->getVideo();
+            $filename=md5(uniqid()).'.'.$file->guessExtension();
+            $file->move($this->getParameter('upload_directory'), $filename);
+            $temoingnage->setVideo($filename);
+
+            $temoingnage->setClient($client);
+            $this->em->persist($temoingnage);
+            $this->em->flush();
+            return $this->redirectToRoute('list_temoignage',['id'=>$client->getId()]);
+
+        }
+
+        return $this->render('admin/client/addTemoingnage.html.twig',[
+            'current_menu' => 'client',
+            'form'=>$form->createView()
+        ]);
+    }
+
+    /**
+     * @Route("/list/temoignage/{id}", name="list_temoignage")
+     * @param Client $client
+     * @return Response
+     */
+    public function temoignage(Client $client)
+    {
+        $temo=$this->temoignageRepository->findtem($client);
+        return $this->render('admin/client/list.html.twig',[
+            'tem'=>$temo
+        ]);
     }
 }
