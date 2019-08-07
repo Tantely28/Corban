@@ -4,8 +4,8 @@
 			<div class="col-md-3 col-sm-6">
 				<h2 style="font-family: Raleway Heavy; font-weight: bold;">Corban Perfomance</h2>
 				<div style="padding: 10px 10px;margin-right: 5px;">
-					<img src="assets/images/fb.png" style="margin-right: 10px;">
-					<img src="assets/images/in.png" >
+					<a href=""><img src="assets/images/fb.png" style="margin-right: 10px;"></a>
+					<a href=""><img src="assets/images/in.png" ></a>
 				</div>
 				<div style="font-family: arimo;margin-right: 5px;padding: 20px 10px">
 					<p style="margin-bottom: 2px;">Adresse physique</p> 
