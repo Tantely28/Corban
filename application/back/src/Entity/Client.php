@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -57,9 +59,14 @@ class Client
     private $password;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Temoignage", inversedBy="client")
+     * @ORM\OneToMany(targetEntity="App\Entity\Temoignage", mappedBy="client")
      */
-    private $temoignage;
+    private $temoignages;
+
+    public function __construct()
+    {
+        $this->temoignages = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -162,15 +169,35 @@ class Client
         return $this;
     }
 
-    public function getTemoignage(): ?Temoignage
+    /**
+     * @return Collection|Temoignage[]
+     */
+    public function getTemoignages(): Collection
     {
-        return $this->temoignage;
+        return $this->temoignages;
     }
 
-    public function setTemoignage(?Temoignage $temoignage): self
+    public function addTemoignage(Temoignage $temoignage): self
     {
-        $this->temoignage = $temoignage;
+        if (!$this->temoignages->contains($temoignage)) {
+            $this->temoignages[] = $temoignage;
+            $temoignage->setClient($this);
+        }
 
         return $this;
     }
+
+    public function removeTemoignage(Temoignage $temoignage): self
+    {
+        if ($this->temoignages->contains($temoignage)) {
+            $this->temoignages->removeElement($temoignage);
+            // set the owning side to null (unless already changed)
+            if ($temoignage->getClient() === $this) {
+                $temoignage->setClient(null);
+            }
+        }
+
+        return $this;
+    }
+
 }

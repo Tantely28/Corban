@@ -6,6 +6,9 @@
     <div class="container">
         <h1>Les clients</h1>
         <table class="table table-striped">
+            <a href="{{ path('client_new') }}" class="text-left">
+                <div class="btn btn-primary">Ajouter client</div>
+            </a>
             <thead>
                 <tr>
                     <th>Nom</th>
@@ -19,18 +22,24 @@
                     <td>{{ client.adresse }}</td>
                     <td>
                         <a href="{{ path('client_edit', {id: client.id}) }}" class="btn btn secondary">Editer</a>
-                        <form method="post" action="{{ path('client_delete', {id: client.id}) }}" style="display: inline-block">
-                            <input type="hidden" name="_method" value="DELETE">
-                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ client.id) }}">
-                            <button class="btn btn-danger">Supprimer</button>
-                        </form>
+                        <a href="#" onclick="DeletClient({{ client.id }})" class="btn btn-danger">Supprimer</a>
+                        <a href="{{ path('ajout_temoin',{id: client.id}) }}" class="btn btn-outline-primary">Ajouter Temoignage</a>
                     </td>
                 </tr>
             {% endfor %}
             </tbody>
         </table>
-        <a href="{{ path('client_new') }}" class="text-left">
-            <div class="btn btn-primary">Ajouter client</div>
-        </a>
+
     </div>
+    <script>
+        function DeletClient(id) {
+            if(confirm("Voulez vous vraiment supprimer cette Enregistrement ?")){
+                window.location='/back/public/index.php/delete/client/'+id;
+                console.log("ok")
+            }
+            else{
+                alert("L'enregistrement n'a pas été supprimé.")
+            }
+        }
+    </script>
 {% endblock %}

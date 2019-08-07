@@ -19,6 +19,17 @@ class TemoignageRepository extends ServiceEntityRepository
         parent::__construct($registry, Temoignage::class);
     }
 
+    public function findtem($value)
+    {
+        return $this->createQueryBuilder('t')
+            ->andWhere('t.client = :val')
+            ->setParameter('val', $value)
+            ->orderBy('t.id', 'DESC')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     // /**
     //  * @return Temoignage[] Returns an array of Temoignage objects
     //  */

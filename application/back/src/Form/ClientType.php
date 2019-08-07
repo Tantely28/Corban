@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Client;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -19,8 +20,7 @@ class ClientType extends AbstractType
             ->add('web')
             ->add('secteur')
             ->add('user')
-            ->add('password')
-            ->add('temoignage')
+            ->add('password',PasswordType::class)
         ;
     }
 

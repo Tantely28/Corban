@@ -19,11 +19,6 @@ class Temoignage
     private $id;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Client", mappedBy="temoignage")
-     */
-    private $client;
-
-    /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $description;
@@ -32,6 +27,11 @@ class Temoignage
      * @ORM\Column(type="string", length=255)
      */
     private $video;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Client", inversedBy="temoignages")
+     */
+    private $client;
 
     public function __construct()
     {
@@ -61,18 +61,6 @@ class Temoignage
         return $this;
     }
 
-    public function removeClient(Client $client): self
-    {
-        if ($this->client->contains($client)) {
-            $this->client->removeElement($client);
-            // set the owning side to null (unless already changed)
-            if ($client->getTemoignage() === $this) {
-                $client->setTemoignage(null);
-            }
-        }
-
-        return $this;
-    }
 
     public function getDescription(): ?string
     {
@@ -86,14 +74,21 @@ class Temoignage
         return $this;
     }
 
-    public function getVideo(): ?string
+    public function getVideo()
     {
         return $this->video;
     }
 
-    public function setVideo(string $video): self
+    public function setVideo($video): self
     {
         $this->video = $video;
+
+        return $this;
+    }
+
+    public function setClient(?Client $client): self
+    {
+        $this->client = $client;
 
         return $this;
     }
