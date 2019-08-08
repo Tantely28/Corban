@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
   	<div class="container">
-  		<a class="navbar-brand" href="#">Corban</a>
+  		<a class="navbar-brand" href="index.php?page=home">
+        <img src="assets/images/Logo.png" style="width: 100%; height:70px;">  
+      </a>
   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     		<span class="navbar-toggler-icon"></span>
   		</button>
