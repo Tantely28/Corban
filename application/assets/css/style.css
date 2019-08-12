@@ -1,17 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Arimo|Raleway&display=swap');
-.navbar-light .navbar-nav .nav-link{
-	color: #FFF;
-	font-family: Martodo bold ;
-	font-weight: bold;
-}
-.navbar-light .navbar-nav .active > 
-.nav-link, .navbar-light .navbar-nav .nav-link.active, 
-.navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link{
-	background: none;
-	font-family: Martodo bold ;
-	font-weight: bold;
-	color: #000;
-}
+
 .carousel-item{
 	height: 100vh;
 	min-height: 300px;

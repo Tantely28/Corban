@@ -1,3 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style>
+	.btn-1{
+		font-size: 16px; 
+		border-radius: 10px;
+		font-weight: bold;
+		padding: 4px 10px;
+		font-family: Martodo bold;
+		background-color:#0e3fab;
+		left: 10px;
+		color: #fff;
+		border:none;
+	}
+	.btn-1:hover{
+		font-size: 16px; 
+		border-radius: 10px;
+		font-weight: bold;
+		padding: 4px 10px;
+		font-family: Martodo bold;
+		background-color:#ffffff;
+		left: 10px;
+		color: #0e3fab;
+		border:2px solid #0e3fab;
+	}
+	.btn-2{
+		border-radius: 50px;
+		padding: 10px 40px;
+		color:  #545454;
+		font-weight: bold;
+		font-family:Arimo;
+		background: linear-gradient(#ffde59,#ffbd59,#ff914d);
+		border:none;
+	}
+	.btn-2:hover{
+		border-radius: 50px;
+		padding: 10px 40px;
+		color: #ffde59;
+		font-weight: bold;
+		font-family:Arimo;
+		background: #545454;
+		border:2px solid #ffde59;
+	}
+</style>
+<body>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   	<ol class="carousel-indicators">
 	    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -24,17 +72,7 @@
 				    </p>
 					<div style="padding: 0px 0px 0px 90px;">
 						<a href="index.php?page=offres">
-							<button type="button" 
-							        class="btn " 
-							        style="font-size: 16px; 
-							               border-radius: 10px;
-							               font-weight: bold;
-							               padding: 4px 10px;
-							               font-family: Martodo bold;
-							               background-color:#0e3fab;
-							               left: 10px;
-							               color: #fff;
-							               border:none; ">Demander une offre
+							<button type="button" class="btn-1">Demander une offre
 							</button>
 						</a>
 					</div>
@@ -51,16 +89,7 @@
 		          	</h5>
 					<div>
 						<a href="index.php?page=ressources">
-							<button type="button" 
-									class="btn " 
-									style="border-radius: 50px;
-										   padding: 10px 40px;
-										   color:  #545454;
-										   font-weight: bold;
-										   font-family:Arimo;
-										   background: linear-gradient(#ffde59,#ffbd59,#ff914d)
-										   ;border:none;">SAISIR L’OPPORTUNITE
-							</button>
+							<button type="button" class="btn-2 ">SAISIR L’OPPORTUNITE </button>
 						</a>
 					</div>
 				</div>	
@@ -83,17 +112,7 @@
 						de discuter un sujet  qui vous passionne et développer votre network
 					</p>
 					<a href="index.php?page=book">
-						<button type="button" 
-								class="btn " 
-								style="font-size: 16px; 
-									   border-radius: 10px;
-									   font-weight: bold;
-									   padding: 4px 10px;
-									   font-family: Martodo bold;
-									   background-color:#0e3fab;
-									   left: 10px;color: #fff;
-									   border:none; ">En savoir plus
-						</button>
+						<button type="button" class="btn-1 " >En savoir plus</button>
 					</a>	
 				</div>
 	        </div>
@@ -107,16 +126,7 @@
 		          		Articles, vidéos et infographies,profitez gratuitement de nos ressources
 		          	</h5>
 		          	<a href="index.php?page=ressources">
-		          		<button type="button" 
-		          				class="btn " 
-		          				style="border-radius: 50px;
-		          					   padding: 10px 80px;
-		          					   color: #545454;
-		          					   font-family:Arimo;
-		          					   font-weight: bold;
-		          					   background: linear-gradient(#ffde59,#ffbd59,#ff914d);
-		          					   border:none;">NAVIGUER
-		          		</button>
+		          		<button type="button" class="btn-2 " >NAVIGUER</button>
 		          	</a>	
 				</div>	
 	        </div>
@@ -363,4 +373,7 @@
 		</div>
 	</div>
 </div>
+</body>
+</html>
+
 	
