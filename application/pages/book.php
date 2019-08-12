@@ -87,7 +87,7 @@
 <section class="container-fluid" style="padding: 40px 40px">
   <div class="container">
     <div class="row">
-      <div class="col-md-12" style="color: #545454;">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12" style="color: #545454;">
         <h2 style="font-family:raleway heavy; text-align: center;font-weight: bold;, font-size:40px;color: #545454;">Le Book Club de Corban</h2>
         <p style="color: #545454;text-align: center;">Chez Corban, nous sommes convaincus que la lecture reste un moyen efficace pour s’enrichir
             intellectuellement.
@@ -95,7 +95,7 @@
       </div>
     </div>
     <div class="row" style="font-family: arimo; color: #222222; text-align: justify;">
-      <div class="col-md-7" style="background: #dcdcdc;">
+      <div class="col-lg-7 col-md-7 col-sm-6 col-xl-12" style="background: #dcdcdc;">
         <p style="margin-top: 40px">Il s'agit est un évènement mensuel à ne pas rater. Nous <br>
           sélectionnons les tops des best-sellers recommandés par<br>
           des experts en management sur des thèmes variés.
@@ -105,7 +105,7 @@
           veulent à la fois discuter d’un livre et rencontrer des gens.
         </p>
       </div>
-      <div class="col-md-5">
+      <div class="col-lg-5 col-md-5 col-sm-6 col-xl-12">
         
       </div>
     </div>
@@ -116,20 +116,20 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
         <h2 style="margin-top: 40px; color: #222222; text-align: center;font-family: raleway heavy; font-size: 35px;">Ce qu’ils disent sur nos dernières <br>séances de Book Club</h2>
       </div>
     </div>
     <div class="row" style="margin-top: 40px">
-      <div class="col-md-5">
+      <div class="col-lg-5 col-md-5 col-sm-12 col-xl-12">
       </div>
-      <div class="col-md-7">
+      <div class="col-lg-7 col-md-7 col-sm-12 col-xl-12">
         <div class="row" style="margin-bottom: 35px">
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xl-12">
             <img src="assets/images/book/Frank.png" 
                 style="max-width: 100%;height: 200px;">
           </div>
-          <div class="col-md-9">
+          <div class="col-lg-9 col-md-9 col-sm-6 col-xl-12" style="color: #000000;">
             <p style="text-align: justify;">
               Pour un commercial et/ou un manage, le livre INFLUENCE est un must. 
               Il devra permettre d’améliorer mon efficience et mon efficacité. 
@@ -140,11 +140,11 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xl-12">
             <img src="assets/images/book/Laurie.png" 
                 style="max-width: 100%;height: 200px;">
           </div>
-          <div class="col-md-9">
+          <div class="col-lg-9 col-md-9 col-sm-6 col-xl-12" style="color: #000000;">
             <p style="text-align: justify;">
               Ce Book Club / network répond à pas mal de questions que je me pose dans ma vie professionnelle. 
               La partie qui m’a le plus marqué c’est le principe du “donnez” ce que vous vous voulez recevoir….  
@@ -161,7 +161,7 @@
 <section class="container-fluid" style="background:linear-gradient(#ffde59,#ffbd59); padding: 80px 20px" id="postuler">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
         <h2 style="font-family:Raleway Heavy;
                color: #ffffff;
                text-align: center;
@@ -173,7 +173,7 @@
       </div>
     </div>
     <div class="row" style="font-family: arimo;color: #222222;margin-left: 200px;">
-      <div class="col-md-3">
+      <div class="col-lg-3 col-md-3">
         <input  type="text" placeholder="Nom" style="margin-bottom: 20px;
                                background:none;
                                border:none;

@@ -6,8 +6,7 @@
 </head>
 <body>
 
-</body>
-</html>
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
 	  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -37,7 +36,7 @@
 <section class="container-fluid">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-lg-12 col-ml-12 col-sm-12 col-xs-12">
         <h2 style="color: #545454;
                   font-weight: bold;
                   text-align: center;
@@ -52,7 +51,7 @@
       </div>
     </div>
     <div class="row" style="margin-top: 35px;margin-bottom: 40px">
-      <div class="col-md-6">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xl-12">
         <p style="text-align: center; font-family: arimo">
           L'inbound Recruiting fonctionne sur un<br> 
           principe comparable à <br>
@@ -72,7 +71,7 @@
 
 <section class="container-fluid">
   <div class="row">
-    <div class="col-md-6" style="background: #eff0f2">
+    <div class="col-lg-6 col-ml-6 col-sm-12 col-xs-12" style="background: #eff0f2">
       <h2 style="color:#393838;
                 font-family: Raleway Heavy;
                 font-weight: bold;
@@ -94,17 +93,17 @@
         ● Sécuriser un recrutement et réduire son turn-over
       </p>
     </div>
-    <div class="col-md-6">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xl-12">
       <img src="assets/images/service/inbound/66.jpeg" style="width: 100%; height: 300px;">
     </div>
   </div>
 </section>
 <section class="container-fluid">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xl-12">
       <img src="assets/images/service/inbound/nospre.png" style="width: 100%; height: 300px;">
     </div>
-    <div class="col-md-6" style="background: linear-gradient(#ffbd59,#ff914d)">
+    <div class="col-lgl6 col-md-6 col-sm-12 col-xs-12" style="background: linear-gradient(#ffbd59,#ff914d)">
       <h2 style="color:#393838;
                 font-family: Raleway Heavy;
                 font-weight: bold;
@@ -129,23 +128,23 @@
   </div>
 </section>
 
-<div class="contact container-fluid">
+<div class="contact">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <h2>Pour plus d'information</h2>
-        <h3>CONTACTEZ NOUS</h3>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
+        <h2 style="text-align: center;">Pour plus d'information</h2>
+        <h3 style="text-align: center;">CONTACTEZ NOUS</h3>
       </div>
     </div>
     <div class="row" style="margin-bottom: 20px;">
-      <div class="col-md-3">
+      <div class="col-lg-3 col-md-3">
       </div>  
-      <div class="col-md-3">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xl-12">
         <input  type="text" placeholder="Nom" style="margin-bottom: 20px;">
         <input  type="text" placeholder="Téléphone" style="margin-bottom: 20px;">
         <input  type="text" placeholder="Entreprise">
       </div>
-      <div class="col-md-3">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xl-12">
         <input  type="text" placeholder="Prénom" style="margin-bottom: 20px;">
         <input  type="text" placeholder="Adresse email"style="margin-bottom: 20px;">
         <select>
@@ -156,13 +155,15 @@
           <option>Autre</option>
         </select>
       </div>
-      <div class="col-md-3">
+      <div class="col-lg-3 col-md-3">
       </div>  
     </div>
     <div class="row">
-      <div class="col-md-12" style="text-align: center;">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12" style="text-align: center;">
         <button type="button" class="btn">Envoyer</button>  
       </div>
     </div>
   </div>
 </div>
+</body>
+</html>

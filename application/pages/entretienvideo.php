@@ -34,7 +34,7 @@
 <section class="container-fluid">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
         <h2 style="font-family:Raleway Heavy; 
                   color:#545454;
                   font-weight: bold;
@@ -51,7 +51,7 @@
   </div>
   <div class="row" style="color: #222222;font-family: arimo;margin-top: 20px;
     margin-bottom: 40px;">
-    <div class="col-md-6">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xl-12">
       <h4 style="font-weight: bold;margin-bottom: 20px">Le concept</h4>
       <div style="text-align: justify;">
         <p>
@@ -67,7 +67,7 @@
         <p>Contactez-nous pour plus d'information.</p>
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xl-12">
       <h4 style="font-weight: bold;margin-bottom: 20px">Les avantages</h4>
       <div style="text-align: justify;">
         <p>●  accélérer le processus de recrutement</p>
@@ -77,23 +77,23 @@
   </div>
 </section>
 
-<div class="contact container-fluid">
+<div class="contact">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <h2>Pour plus d'information</h2>
-        <h3>CONTACTEZ NOUS</h3>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
+        <h2 style="text-align: center;">Pour plus d'information</h2>
+        <h3 style="text-align: center;">CONTACTEZ NOUS</h3>
       </div>
     </div>
     <div class="row" style="margin-bottom: 20px;">
-      <div class="col-md-3">
+      <div class="col-lg-3 col-md-3">
       </div>  
-      <div class="col-md-3">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xl-12">
         <input  type="text" placeholder="Nom" style="margin-bottom: 20px;">
         <input  type="text" placeholder="Téléphone" style="margin-bottom: 20px;">
         <input  type="text" placeholder="Entreprise">
       </div>
-      <div class="col-md-3">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xl-12">
         <input  type="text" placeholder="Prénom" style="margin-bottom: 20px;">
         <input  type="text" placeholder="Adresse email"style="margin-bottom: 20px;">
         <select>
@@ -104,11 +104,11 @@
           <option>Autre</option>
         </select>
       </div>
-      <div class="col-md-3">
+      <div class="col-lg-3 col-md-3">
       </div>  
     </div>
     <div class="row">
-      <div class="col-md-12" style="text-align: center;">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12" style="text-align: center;">
         <button type="button" class="btn">Envoyer</button>  
       </div>
     </div>

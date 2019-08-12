@@ -18,10 +18,10 @@
 </style>
 <body>
 <footer>
-	<div class="container">
+	<div class="container" style="color: #ffffff;">
 		<div class="row">
-			<div class="col-md-3 col-sm-6">
-				<h2 style="font-family: Raleway Heavy; font-weight: bold;">Corban Perfomance</h2>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xl-12">
+				<h2 style="font-family: Raleway Heavy; font-weight: bold;color: #ffffff;">Corban Perfomance</h2>
 				<div style="padding: 10px 10px;margin-right: 5px;">
 					<a href="https://www.facebook.com/CorbanPerformanceConsulting/">
 						<img src="assets/images/footer/fb.png" style="margin-right: 10px;">
@@ -33,7 +33,7 @@
 						<img src="assets/images/footer/rj.png" >
 					</a>
 				</div>
-				<div style="font-family: arimo;margin-right: 5px;padding: 20px 10px">
+				<div style="font-family: arimo;margin-right: 5px;padding: 20px 10px;color: #ffffff;">
 					<p style="margin-bottom: 2px;">Adresse physique</p> 
 					<p style="margin-bottom: 2px;">Antananarivo, Madagasc</p>
 					<p style="margin-bottom: 2px;">Téléphone</p>
@@ -41,8 +41,9 @@
 				</div>
 				<div style="font-family: arimo;
 							margin-right: 5px;
-							padding: 20px 10px">
-					<h4>Souscrire à notre Newsletter</h4>
+							padding: 20px 10px;
+							">
+					<h4 style="color: #ffffff;">Souscrire à notre Newsletter</h4>
 					<div class="input-group mb-3">
   						<input type="text" 
   								class="form-control" 
@@ -57,22 +58,22 @@
 				</div>
 			</div>
 
-			<div class="col-md-9 col-sm-6" style="font-family: arimo">
+			<div class="col-lg-9 col-md-9 col-sm-6 col-xl-12" style="font-family: arimo">
 				<div class="row">
-					<div class="col-md-3 col-sm-6">
-						<h3>A PROPOS</h3>
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xl-12">
+						<h3 style="color: #ffffff;">A PROPOS</h3>
 						<p style="margin-top: 20px;">Corban</p>
-						<p>Book Club</p>
+						<p >Book Club</p>
 					</div>
 
-					<div class="col-md-3 col-sm-6">
-						<h3>NOS OFFRES D'EMPLOI</h3>
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xl-12">
+						<h3 style="color: #ffffff;">NOS OFFRES D'EMPLOI</h3>
 						<p style="margin-top: 20px;">Les offres récentes</p>
 						<p>Postuler</p>
 					</div>
 
-					<div class="col-md-3 col-sm-6">
-						<h3>SERVICES</h3>
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xl-12">
+						<h3 style="color: #ffffff;">SERVICES</h3>
 						<p style="margin-top: 20px;">Recrutement</p>
 						<p>Formations</p>
 						<p>Conseils</p>
@@ -83,8 +84,8 @@
 						<p>Externalisation de paie</p>
 					</div>
 
-					<div class="col-md-3 col-sm-6">
-						<h3>RESSOURCES</h3>
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xl-12">
+						<h3 style="color: #ffffff;">RESSOURCES</h3>
 						<p style="margin-top: 20px;">Blog</p>
 						<p>Pro Tips</p>
 						<p>Citations</p>
@@ -98,7 +99,7 @@
 			</div>
 		</div>
 
-		<div class="col-md-12" style="text-align: center; margin-top: 20px;">
+		<div class="col-lg-12 col-md-12 col-sm-6 col-xl-12" style="text-align: center; margin-top: 20px;">
 			<p>&copy Copy right NL Technologie 2019</p>
 		</div>
 	</div>

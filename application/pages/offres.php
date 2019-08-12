@@ -70,11 +70,11 @@
 <div class="container-fluid" style="background-color: #f7f7f7;padding: 80px 20px;">
 	<div class="container">
 		<div class="row" style="color: #ffffff;">
-			<div class="col-md-4" style="background-color:#3b4a61 ;">
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xl-12" style="background-color:#3b4a61 ;">
 				<p style="margin-top: 80px;font-size: 15px">
 					Corban Performance Consulting
 				</p>
-				<h2 style="font-weight: bold;">
+				<h2 style="font-weight: bold;color: #ffffff;">
 					Business <br>Partner RH
 				</h2>
 				<p style="margin-top: 10px;font-size: 12px">
@@ -88,11 +88,11 @@
 					</a>
 				</div>
 			</div>
-			<div class="col-md-4" style="background-color:#652150 ;">
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xl-12" style="background-color:#652150 ;">
 				<p  style="margin-top: 80px;font-size: 15px">
 					Corban Performance Consulting
 				</p>
-				<h2 style="font-weight: bold;">
+				<h2 style="font-weight: bold;color: #ffffff;">
 					Senior <br>Programme<br>Manager
 				</h2>
 				<div style="margin-top: 75px;
@@ -103,11 +103,11 @@
 					</a>
 				</div>
 			</div>
-			<div class="col-md-4" style="background-color:#3b4a61 ;">
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xl-12" style="background-color:#3b4a61 ;">
 				<p  style="margin-top: 80px;font-size: 15px">
 					Corban Performance Consulting
 				</p>
-				<h2 style="font-weight: bold;">
+				<h2 style="font-weight: bold;color: #ffffff;">
 					Lead<br> Qualifiers
 				</h2>
 				<div style="margin-top: 114px;
@@ -120,7 +120,7 @@
 		</div>
 
 		<div class="row" style="margin-top: 50px;">
-			<div class="col-md-12" style="text-align: center;">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xl-12" style="text-align: center;">
 				<button type="button" 
 						class="btn-5" 
 						style="">VOIR PLUS
@@ -133,7 +133,7 @@
 <div class="container-fluid" style="background-color:#ffffff;padding: 80px 20px;">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8" style="color: #222222;">
+			<div class="col-lg-8 col-md-8 col-sm-6 col-xl-12" style="color: #222222;">
 				<h2 style="font-weight: bold;font-family: Raleway Heavy;">
 					Lead qualifier (H/F)
 				</h2>
@@ -158,7 +158,7 @@
 				</div>
 				
 			</div>
-			<div class="col-md-4" style="margin-top: 150px">
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xl-12" style="margin-top: 150px">
 				<p style="color: #222222;
 						  font-weight: bold;
 						  font-family:Raleway Heavy;
