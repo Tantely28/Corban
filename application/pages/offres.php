@@ -4,6 +4,44 @@
 	<meta charset="utf-8">
 	<title>Nos offres d'emploi</title>
 </head>
+<style>
+	.btn-5{
+		border-radius: none;
+		padding: 10px 80px;
+		color: #545454;
+		font-family:Arimo;
+		font-weight: bold;
+		background: linear-gradient(#ffde59,#ffbd59,#ff914d);
+		border:none;
+	}
+	.btn-5:hover{
+		border-radius: none;
+		padding: 10px 80px;
+		color: #ffde59;
+		font-family:Arimo;
+		font-weight: bold;
+		background: #545454;
+		border:2px solid #ffde59;"
+	}
+	.btn-6{
+		border-radius:50px;
+		padding: 8px 40px;
+		color: #ffffff;
+		font-family:Raleway Heavy;
+		font-weight: bold;
+		background: linear-gradient(#00b7ff,#3d5a98,#00b7ff);
+		border:none;
+	}
+	.btn-6:hover{
+		border-radius:50px;
+		padding: 8px 40px;
+		color: #3d5a98;
+		font-family:Raleway Heavy;
+		font-weight: bold;
+		background: #ffffff;
+		border:2px solid #3d5a98;
+	}
+</style>
 <body>
 
 </body>
@@ -84,14 +122,8 @@
 		<div class="row" style="margin-top: 50px;">
 			<div class="col-md-12" style="text-align: center;">
 				<button type="button" 
-						class="btn " 
-						style="border-radius: none;
-							   padding: 10px 80px;
-							   color: #545454;
-							   font-family:Arimo;
-							   font-weight: bold;
-							   background: linear-gradient(#ffde59,#ffbd59,#ff914d);
-							   border:none;">VOIR PLUS
+						class="btn-5" 
+						style="">VOIR PLUS
 				</button>	
 			</div>
 		</div>
@@ -135,28 +167,10 @@
 				</p>
 				<div style="text-align: center;">
 					<a href="#postuler">
-						<button type="button" 
-							    class="btn " 
-							    style="border-radius:50px;
-									   padding: 8px 40px;
-									   color: #ffffff;
-									   font-family:Raleway Heavy;
-									   font-weight: bold;
-									   background: linear-gradient(#00b7ff,#3d5a98,#00b7ff);
-									   border:none;">POSTULER
-						</button>
+						<button type="button" class="btn-6">POSTULER</button>
 					</a>
 					<a href="index.php?page=cooptation">
-						<button type="button" 
-						        class="btn " 
-						        style="border-radius:50px;
-						               padding: 8px 40px;
-						               color: #ffffff;
-						               font-family:Raleway Heavy;
-						               font-weight: bold;
-						               background: linear-gradient(#00b7ff,#3d5a98,#00b7ff);
-						               border:none;">COOPTER
-						</button>	
+						<button type="button" class="btn-6 ">COOPTER</button>	
 					</a>
 						
 				</div>
