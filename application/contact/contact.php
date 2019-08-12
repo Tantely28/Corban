@@ -33,7 +33,6 @@
 				<button type="button" class="btn">Envoyer</button>	
 			</div>
 		</div>
-			
 	</div>
 </div>
 	

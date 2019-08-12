@@ -28,7 +28,6 @@ if(isset($_GET['page'])) {
     include('menu/menu.php');
     include($content);
     
-    include('contact/contact.php');
     include('footer/footer.php');
     ?>
 

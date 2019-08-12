@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
   	<div class="container">
-  		<a class="navbar-brand" href="#">Corban</a>
+  		<a class="navbar-brand" href="index.php?page=home">
+        <img src="assets/images/Logo.png" style="width: 100%; height:70px;">  
+      </a>
   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     		<span class="navbar-toggler-icon"></span>
   		</button>
@@ -14,7 +16,7 @@
 		        	<a class="nav-link" href="index.php?page=temoignages">Témoignage</a>
 		      	</li>
 		      	<li class="nav-item dropdown">
-		        	<a class="nav-link" href="index.php?page=ressource">Ressources</a>
+		        	<a class="nav-link" href="index.php?page=ressources">Ressources</a>
       			</li>
 		      	<li class="nav-item">
 		        	<a class="nav-link" href="index.php?page=service">Service</a>
