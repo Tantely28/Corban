@@ -25,9 +25,15 @@
             <li class="nav-item"><a href="index.php?page=service" class="nav-link">Service</a></li>
             <li class="nav-item"><a href="index.php?page=offres" class="nav-link">Nos offres d'emploi</a></li>
             <li class="nav-item"><a href="index.php?page=apropos" class="nav-link">A propos</a></li>
-            <li class="nav-item"><a href="index.php?page=connexion" class="nav-link">Connexion</a></li>
+
+            <li class="nav-item">
+              <a href="index.php?page=connexion" data-toggle="modal" data-target="#modalConnexion" class="nav-link">Connexion</a>
+            </li>
+
             <li class="nav-item"><a href="index.php?page=contact" class="nav-link">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
+
+    <?php include("pages/connexion.php"); ?>

@@ -23,7 +23,7 @@
                     <td>
                         <a href="{{ path('client_edit', {id: client.id}) }}" class="btn btn secondary">Editer</a>
                         <a href="#" onclick="DeletClient({{ client.id }})" class="btn btn-danger">Supprimer</a>
-                        <a href="{{ path('ajout_temoin',{id: client.id}) }}" class="btn btn-outline-primary">Ajouter Temoignage</a>
+                        <a href="{{ path('list_temoignage',{id: client.id}) }}" class="btn btn-outline-primary">Temoignages</a>
                     </td>
                 </tr>
             {% endfor %}
