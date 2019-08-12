@@ -122,20 +122,29 @@ class ClientController extends AbstractController
         return $this->redirectToRoute('client_index');
     }
 
+    /*
+     * @Route("/ajout/temoignage?id={id}", name="ajout_temoin")
+     */
     /**
      * @param Client $client
      * @param Request $request
      * @return Response
-     * @Route("/ajout/temoignage?id={id}", name="ajout_temoin")
+     * @Route("/ajout/temoignage/{id}", name="ajout_temoin")
      */
     public function addTemoignage(Client $client,Request $request)
     {
         $temoingnage=new Temoignage();
         $form=$this->createFormBuilder($temoingnage)
+            ->add('title',TextType::class,[
+                'label'=>'Titre',
+                'attr'=>[
+                    'placeholder'=>'Titre du vidéo'
+                ]
+            ])
             ->add('description',TextType::class,[
                 'label'=>'Description',
                 'attr'=>[
-                    'placeholder'=>'Description'
+                    'placeholder'=>'Description de votre témoignage'
                 ]
             ])
             ->add('video',FileType::class,[
@@ -157,7 +166,6 @@ class ClientController extends AbstractController
             $this->em->persist($temoingnage);
             $this->em->flush();
             return $this->redirectToRoute('list_temoignage',['id'=>$client->getId()]);
-
         }
 
         return $this->render('admin/client/addTemoingnage.html.twig',[
@@ -166,16 +174,27 @@ class ClientController extends AbstractController
         ]);
     }
 
+
     /**
      * @Route("/list/temoignage/{id}", name="list_temoignage")
      * @param Client $client
      * @return Response
      */
-    public function temoignage(Client $client)
+    public function temoignage(Client $client, Request $request)
     {
+        dump($request);
         $temo=$this->temoignageRepository->findtem($client);
         return $this->render('admin/client/list.html.twig',[
             'tem'=>$temo
         ]);
+    }
+
+    /**
+     * @return Response
+     * @Route("/loginClient", name="login_client")
+     */
+    public function login(): Response
+    {
+        return $this->render('admin/client/loginClient.html.twig');
     }
 }
