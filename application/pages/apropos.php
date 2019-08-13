@@ -4,6 +4,30 @@
 	<meta charset="utf-8">
 	<title>A propos</title>
 </head>
+<style>
+	.btn-1{
+		font-size: 16px; 
+		border-radius: 10px;
+		font-weight: bold;
+		padding: 4px 10px;
+		font-family: Martodo bold;
+		background-color:#0e3fab;
+		left: 10px;
+		color: #fff;
+		border:none;
+	}
+	.btn-1:hover{
+		font-size: 16px; 
+		border-radius: 10px;
+		font-weight: bold;
+		padding: 4px 10px;
+		font-family: Martodo bold;
+		background-color:#ffffff;
+		left: 10px;
+		color: #0e3fab;
+		border:2px solid #0e3fab;
+	}
+</style>	
 <body>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   	<div class="carousel-inner">
@@ -201,35 +225,35 @@
 						  padding: 10px 5px;">LOGO
 				</p>
 			</div>
-			<div class="col-lg-1 col-md-1 col-sm-6 col-xl-12" >
+			<div class="col-lg-1 col-md-1 col-sm-6 col-xs-12" >
 				<p style="background-color:#DCDCDC;
 						  font-size: 20px;
 						  text-align: center;
 						  padding: 10px 5px;">LOGO
 				</p>
 			</div>
-			<div class="col-lg-1 col-md-1 col-sm-6 col-xl-12" >
+			<div class="col-lg-1 col-md-1 col-sm-6 col-xs-12" >
 				<p style="background-color:#DCDCDC;
 						  font-size: 20px;
 						  text-align: center;
 						  padding: 10px 5px;">LOGO
 				</p>
 			</div>
-			<div class="col-lg-1 col-md-1 col-sm-6 col-xl-12" >
+			<div class="col-lg-1 col-md-1 col-sm-6 col-xs-12" >
 				<p style="background-color:#DCDCDC;
 						  font-size: 20px;
 						  text-align: center;
 						  padding: 10px 5px;">LOGO
 				</p>
 			</div>
-			<div class="col-lg-1 col-md-1 col-sm-6 col-xl-12" >
+			<div class="col-lg-1 col-md-1 col-sm-6 col-xs-12" >
 				<p style="background-color:#DCDCDC;
 						  font-size: 20px;
 						  text-align: center;
 						  padding: 10px 5px;">LOGO
 				</p>
 			</div>
-			<div class="col-lg-1 col-md-1 col-sm-6 col-xl-12" >
+			<div class="col-lg-1 col-md-1 col-sm-6 col-xs-12" >
 				<p style="background-color:#DCDCDC;
 						  font-size: 20px;
 						  text-align: center;
@@ -244,7 +268,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12" style="text-align: center;">
-				<h2 class="col-lg-12 col-md-12 col-sm-12 col-xl-12" style="color: #545454;
+				<h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="color: #545454;
 							font-weight: bold;
 							font-family: raleway Heavy;
 							 margin-top: 40px;
@@ -254,39 +278,17 @@
 			</div>
 		</div>
 		<div class="row" style="margin-top: 30px;">
-			<div class="col-lg-6 col-md-6 col-sm-6 col-xl-12" style="text-align: center;">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="text-align: center;">
 				<img src="assets/images/apropos/1.png" style="margin-bottom: 20px"><br>
 				<p style="color:#222222;margin-bottom: 20px ">Entreprise</p><br>
 				<a href="index.php?page=offres">
-					<button type="button" 
-							class="btn " 
-							style="font-size: 16px; 
-							       border-radius: 10px;
-							       font-weight: bold;
-							       padding: 4px 10px;
-							       font-family: Martodo bold;
-							       background-color:#0e3fab;
-							       left: 10px;
-							       color: #fff;
-							       border:none; ">Demander une offre
-					</button>
+					<button type="button" class="btn-1 " >Demander une offre</button>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 col-xl-12"  style="text-align: center;">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"  style="text-align: center;">
 				<img src="assets/images/apropos/2.png" style="margin-bottom: 20px"><br>
 				<p style="color:#222222;margin-bottom: 20px ">A la recherche d'opportunité</p><br>
 				<a href="index.php?page=offres">
-					<button type="button" 
-							class="btn " 
-							style="font-size: 16px; 
-							       border-radius: 10px;
-							       font-weight: bold;
-							       padding: 4px 10px;
-							       font-family: Martodo bold;
-							       background-color:#0e3fab;
-							       left: 10px;
-							       color: #fff;
-							       border:none; ">Demander votre CV
-					</button>
+					<button type="button" class="btn-1 " >Demander votre CV</button>
 			</div>
 		</div>
 	</div>
