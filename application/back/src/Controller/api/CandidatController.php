@@ -30,10 +30,12 @@ class CandidatController extends AbstractController
         {
             $candidat->setNom($request->get('nom'));
             $candidat->setDateNaissance($request->get('dateNaissance'));
+//            $candidat->setDateNaissance(new \DateTime());
             $candidat->setSituationFamilier($request->get('situation'));
             $candidat->setAdresse($request->get('adresse'));
             $candidat->setVille($request->get('ville'));
             $candidat->setPays($request->get('pays'));
+            $candidat->setEmail($request->get('email'));
             $candidat->setTelephone($request->get('telephone'));
             $candidat->setSex($request->get('sex'));
             $candidat->setPseudo($request->get('pseudo'));
