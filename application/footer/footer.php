@@ -20,7 +20,7 @@
 <footer>
 	<div class="container" style="color: #ffffff;">
 		<div class="row">
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xl-12">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				<h2 style="font-family: Raleway Heavy; font-weight: bold;color: #ffffff;">Corban Perfomance</h2>
 				<div style="padding: 10px 10px;margin-right: 5px;">
 					<a href="https://www.facebook.com/CorbanPerformanceConsulting/">
@@ -58,21 +58,21 @@
 				</div>
 			</div>
 
-			<div class="col-lg-9 col-md-9 col-sm-6 col-xl-12" style="font-family: arimo">
+			<div class="col-lg-9 col-md-9 col-sm-6 col-xs-12" style="font-family: arimo">
 				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xl-12">
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 						<h3 style="color: #ffffff;">A PROPOS</h3>
 						<p style="margin-top: 20px;">Corban</p>
 						<p >Book Club</p>
 					</div>
 
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xl-12">
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 						<h3 style="color: #ffffff;">NOS OFFRES D'EMPLOI</h3>
 						<p style="margin-top: 20px;">Les offres récentes</p>
 						<p>Postuler</p>
 					</div>
 
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xl-12">
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 						<h3 style="color: #ffffff;">SERVICES</h3>
 						<p style="margin-top: 20px;">Recrutement</p>
 						<p>Formations</p>
@@ -84,7 +84,7 @@
 						<p>Externalisation de paie</p>
 					</div>
 
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xl-12">
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 						<h3 style="color: #ffffff;">RESSOURCES</h3>
 						<p style="margin-top: 20px;">Blog</p>
 						<p>Pro Tips</p>
@@ -99,7 +99,7 @@
 			</div>
 		</div>
 
-		<div class="col-lg-12 col-md-12 col-sm-6 col-xl-12" style="text-align: center; margin-top: 20px;">
+		<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12" style="text-align: center; margin-top: 20px;">
 			<p>&copy Copy right NL Technologie 2019</p>
 		</div>
 	</div>

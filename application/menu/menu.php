@@ -12,7 +12,7 @@
 </html>
 <nav class="navbar navbar-expand-lg navbar-dark site_navbar bg-dark site-navbar-light" id="site-navbar">
       <div class="container">
-        <a class="navbar-brand" href="index.php?page=home"><img src="assets/images/Logo.png" style="width: 100%; height:70px;">  </a>
+        <a class="navbar-brand" href="index.php?page=home"><img src="assets/images/Logo.png" style="width:30%; height:30%;">  </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#site-nav" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
@@ -23,7 +23,7 @@
             <li class="nav-item"><a href="index.php?page=temoignages" class="nav-link">Témoignage</a></li>
             <li class="nav-item"><a href="index.php?page=ressources" class="nav-link">Ressources</a></li>
             <li class="nav-item"><a href="index.php?page=service" class="nav-link">Service</a></li>
-            <li class="nav-item"><a href="index.php?page=offres" class="nav-link">Nos offres d'emploi</a></li>
+            <li class="nav-item"><a href="index.php?page=offres" class="nav-link">Nos offres d'emplois</a></li>
             <li class="nav-item"><a href="index.php?page=apropos" class="nav-link">A propos</a></li>
 
             <li class="nav-item">
