@@ -12,7 +12,9 @@ use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -132,10 +134,15 @@ class ClientController extends AbstractController
     {
         $temoingnage=new Temoignage();
         $form=$this->createFormBuilder($temoingnage)
-            ->add('description',TextType::class,[
-                'label'=>'Description',
+            ->add('titre',TextType::class,[
+                'label'=>'Titre',
                 'attr'=>[
-                    'placeholder'=>'Description'
+                    'placeholder'=>'Titre...'
+                ]
+            ])
+            ->add('description',TextareaType::class,[
+                'attr'=>[
+                    'placeholder'=>'Description...'
                 ]
             ])
             ->add('video',FileType::class,[
@@ -167,15 +174,31 @@ class ClientController extends AbstractController
     }
 
     /**
-     * @Route("/list/temoignage/{id}", name="list_temoignage")
+     * @Route("/list/temoignage/clent/{id}", name="list_temoignage")
      * @param Client $client
      * @return Response
      */
     public function temoignage(Client $client)
     {
         $temo=$this->temoignageRepository->findtem($client);
+        $idCl=$client->getId();
         return $this->render('admin/client/list.html.twig',[
-            'tem'=>$temo
+            'client'=>$client,
+            'current_menu' => 'client',
+            'tem'=>$temo,
+            'id'=>$idCl
         ]);
+    }
+
+    /**
+     * @param Temoignage $temoignage
+     * @Route("/delete/temoignage/{id}", name="delete_temoignage")
+     * @return RedirectResponse
+     */
+    public function deleteTem(Temoignage $temoignage){
+        $this->em->remove($temoignage);
+        $this->em->flush();
+        return $this->redirectToRoute('client_index');
+
     }
 }

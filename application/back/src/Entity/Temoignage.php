@@ -21,7 +21,7 @@ class Temoignage
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $description;
+    private $titre;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -32,6 +32,11 @@ class Temoignage
      * @ORM\ManyToOne(targetEntity="App\Entity\Client", inversedBy="temoignages")
      */
     private $client;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $description;
 
     public function __construct()
     {
@@ -62,14 +67,14 @@ class Temoignage
     }
 
 
-    public function getDescription(): ?string
+    public function getTitre(): ?string
     {
-        return $this->description;
+        return $this->titre;
     }
 
-    public function setDescription(?string $description): self
+    public function setTitre(?string $titre): self
     {
-        $this->description = $description;
+        $this->titre = $titre;
 
         return $this;
     }
@@ -89,6 +94,18 @@ class Temoignage
     public function setClient(?Client $client): self
     {
         $this->client = $client;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
 
         return $this;
     }

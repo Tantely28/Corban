@@ -107,6 +107,10 @@
       <path value="$PROJECT_DIR$/back/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/back/vendor/zendframework/zend-code" />
       <path value="$PROJECT_DIR$/back/vendor/zendframework/zend-eventmanager" />
+      <path value="$PROJECT_DIR$/back/vendor/symfony/templating" />
+      <path value="$PROJECT_DIR$/back/vendor/willdurand/negotiation" />
+      <path value="$PROJECT_DIR$/back/vendor/willdurand/jsonp-callback-validator" />
+      <path value="$PROJECT_DIR$/back/vendor/friendsofsymfony/rest-bundle" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

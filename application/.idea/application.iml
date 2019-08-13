@@ -24,6 +24,7 @@
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/easycorp/easy-log-handler" />
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/egulias/email-validator" />
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/fig/link-util" />
+      <excludeFolder url="file://$MODULE_DIR$/back/vendor/friendsofsymfony/rest-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/jdorn/sql-formatter" />
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/nikic/php-parser" />
@@ -93,6 +94,7 @@
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/symfony/service-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/symfony/stopwatch" />
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/symfony/swiftmailer-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/back/vendor/symfony/templating" />
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/symfony/test-pack" />
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/symfony/translation" />
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/symfony/translation-contracts" />
@@ -107,6 +109,8 @@
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/symfony/yaml" />
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/twig/twig" />
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/back/vendor/willdurand/jsonp-callback-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/back/vendor/willdurand/negotiation" />
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/zendframework/zend-code" />
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/zendframework/zend-eventmanager" />
     </content>
