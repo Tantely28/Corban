@@ -19,6 +19,18 @@ class ClientRepository extends ServiceEntityRepository
         parent::__construct($registry, Client::class);
     }
 
+    public function authentification($username,$password)
+    {
+        return $this->createQueryBuilder('c')
+            ->andWhere('c.user = :user')
+            ->andWhere('c.password = :pass')
+            ->setParameter('user', $username)
+            ->setParameter('pass', sha1($password))
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     // /**
     //  * @return Client[] Returns an array of Client objects
     //  */
