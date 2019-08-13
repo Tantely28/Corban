@@ -38,6 +38,7 @@ class Temoignage
      */
     private $description;
 
+
     public function __construct()
     {
         $this->client = new ArrayCollection();
@@ -106,7 +107,6 @@ class Temoignage
     public function setDescription(?string $description): self
     {
         $this->description = $description;
-
         return $this;
     }
 }

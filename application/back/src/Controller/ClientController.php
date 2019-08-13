@@ -124,11 +124,14 @@ class ClientController extends AbstractController
         return $this->redirectToRoute('client_index');
     }
 
+    /*
+     * @Route("/ajout/temoignage?id={id}", name="ajout_temoin")
+     */
     /**
      * @param Client $client
      * @param Request $request
      * @return Response
-     * @Route("/ajout/temoignage?id={id}", name="ajout_temoin")
+     * @Route("/ajout/temoignage/{id}", name="ajout_temoin")
      */
     public function addTemoignage(Client $client,Request $request)
     {
@@ -164,7 +167,6 @@ class ClientController extends AbstractController
             $this->em->persist($temoingnage);
             $this->em->flush();
             return $this->redirectToRoute('list_temoignage',['id'=>$client->getId()]);
-
         }
 
         return $this->render('admin/client/addTemoingnage.html.twig',[
@@ -173,13 +175,15 @@ class ClientController extends AbstractController
         ]);
     }
 
+
     /**
      * @Route("/list/temoignage/clent/{id}", name="list_temoignage")
      * @param Client $client
      * @return Response
      */
-    public function temoignage(Client $client)
+    public function temoignage(Client $client, Request $request)
     {
+        dump($request);
         $temo=$this->temoignageRepository->findtem($client);
         $idCl=$client->getId();
         return $this->render('admin/client/list.html.twig',[

@@ -21,9 +21,25 @@ if(isset($_GET['page'])) {
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Arimo|Raleway&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Arimo|Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/css/animate.css">
+    
+    <link rel="stylesheet" href="assets/css/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="assets/css/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="assets/css/css/jquery.timepicker.css">
+
+    
+
+    <link rel="stylesheet" href="assets/css/css/icomoon.css">
+    <link rel="stylesheet" href="assets/css/css/style.css">  
 </head>
-<body>
+<body data-spy="scroll" data-target="#site-navbar" data-offset="200">
     <?php
     include('menu/menu.php');
     include($content);
@@ -34,5 +50,24 @@ if(isset($_GET['page'])) {
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script src="assets/js/js/jquery.min.js"></script>
+    <script src="assets/js/js/popper.min.js"></script>
+    <script src="assets/js/js/bootstrap.min.js"></script>
+    <script src="assets/js/js/jquery.easing.1.3.js"></script>
+    <script src="assets/js/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/js/owl.carousel.min.js"></script>
+    <script src="assets/js/js/jquery.magnific-popup.min.js"></script>
+
+    <script src="assets/js/js/bootstrap-datepicker.js"></script>
+    <script src="assets/js/js/jquery.timepicker.min.js"></script>
+    
+    <script src="assets/js/js/jquery.animateNumber.min.js"></script>
+    
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="assets/js/js/google-map.js"></script>
+
+    <script src="assets/js/js/main.js"></script>
 </body>
 </html>

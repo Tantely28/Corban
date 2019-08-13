@@ -29,12 +29,12 @@
 <section class="container-fluid">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
 				<h2 style="margin-top:80px;text-align: center;">Cooptation</h2>
 			</div>
 		</div>
 		<div class="row" style="margin-top: 40px;">
-			<div class="col-md-4">
+			<div class="col-lg-4 col-md-4 col-sm-12 col-xl-12">
 				<h3 style="margin-bottom: 20px">Le concept</h3>
 				<p style="text-align: justify;">Il s'agit d'un mode de 
 					<br>recrutement consistant à 
@@ -42,14 +42,14 @@
 					<br>son réseau pour un poste
 				</p>
 			</div>
-			<div class="col-md-4">
+			<div class="col-lg-4 col-md-4 col-sm-12 col-xl-12">
 				<h3 style="margin-bottom: 20px">L'avantage </h3>
 				<p style="text-align: justify;">●	Gain du temps durant le sourcing<br>
 				   ●	Des collaborateurs proches des<br> valeurs de l'entreprise<br>
 				   ●	Des candidats qualifiés
 				</p>
 			</div>
-			<div class="col-md-4">
+			<div class="col-lg-4 col-md-4 col-sm-12 col-xl-12">
 				<h3 style="margin-bottom: 20px">La prime de cooptation</h3>
 				<p style="text-align: justify;">Corban offre une prime allant de<br> 
 				   100.000 jusqu'à 400 00 ariary<br> 

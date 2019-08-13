@@ -6,10 +6,6 @@
 </head>
 <body>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  	<ol class="carousel-indicators">
-	    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-	     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    </ol>
   	<div class="carousel-inner">
     	<div class="carousel-item active">
       		<img src="assets/images/apropos/74 1.jpg" class="d-block w-100" alt="">
@@ -69,16 +65,16 @@
 <section class="container-fluid" style="background-color: #ffffff;padding: 80px 20px;">
 	<div class="container">
 		<div class="row" style="margin-bottom: 50px;margin-top: 50px">
-			<div class="col-md-6">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xl-12 ">
 			</div>
-			<div class="col-md-6">
-				<h2 style="color: #222222; 
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xl-12 ">
+				<h2 class="col-lg-12 col-md-12 col-sm-12 col-xl-12" style="color: #222222; 
 						   font-weight:bold;
-						   font-family: Raleway ;
+						   font-family: Raleway;
 						   text-align: center;
 						   margin-bottom: 50px;">Notre mission
 				</h2>
-				<p style="color:#444041;
+				<p class="col-lg-12 col-md-12 col-sm-12 col-xl-12" style="color:#444041;
 						  font-family:Raleway Heavy;
 						  text-align: justify;
 						  line-height: 1.8;">
@@ -96,7 +92,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12" style="text-align: center;">
-				<h2 style="color: #ffffff;">Notre vision</h2>
+				<h2 class="col-lg-12 col-md-12 col-sm-12 col-xl-12" style="color: #ffffff;">Notre vision</h2>
 			</div>
 		</div>
 		<div class="row">
@@ -117,7 +113,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12" style="text-align: center;">
-				<h2 style="color: #545454;">Notre histoire</h2>
+				<h2 class="col-lg-12 col-md-12 col-sm-12 col-xl-12" style="color: #545454;">Notre histoire</h2>
 				<img src="">
 			</div>
 		</div>
@@ -128,7 +124,7 @@
 										padding: 80px 20px;">
 	<div class="container">
 		<div class="row" style="margin-bottom: 50px;margin-top: 10px">
-			<div class="col-md-12">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
 				<h2 style="color: #545454; 
 						   font-weight: bold;
 						   text-align: center;">CORBAN en quelques chiffres
@@ -137,7 +133,7 @@
 		</div>
 
 		<div class="row" style="margin-bottom: 20px;text-align: center;">
-			<div class="col-md-3">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xl-12">
 				<h3 style="font-weight: bold;
 						   font-family: LEAGUE SPARTAN;
 						   color: #ffffff;
@@ -147,7 +143,7 @@
 					followers sur <br>LinkedIn
 				</p>
 			</div>
-			<div class="col-md-3">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xl-12">
 				<h3 style="font-weight: bold;
 						   font-family: LEAGUE SPARTAN;
 						   color: #ffffff;
@@ -158,7 +154,7 @@
 						  followers sur<br> Facebook
 				</p>
 			</div>
-			<div class="col-md-3">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xl-12">
 				<h3 style="font-weight: bold;
 						   font-family: LEAGUE SPARTAN;
 						   color: #ffffff;
@@ -169,7 +165,7 @@
 						  années<br> d'expérience
 				</p>
 			</div>
-			<div class="col-md-3">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xl-12">
 				<h3 style="font-weight: bold;
 						   font-family: LEAGUE SPARTAN;
 						   color: #ffffff;
@@ -183,57 +179,57 @@
 	    </div>
 	</div>
 
-	<p style="color: #000000;
+	<p class="col-sm-12 col-xl-12" style="color: #000000;
 			  font-weight: bold;
-			  font-family: raleway;">
+			  font-family: Raleway;">
 			  Ils nous font<br> confiance
 	</p>
 
 	<div class="container">
 		<div class="row" style="color: #000000; text-align: center; ">
-			<div class="col-md-1" >
+			<div class="col-lg-1 col-md-1 col-sm-6 col-xl-12" >
 				<p style="background-color:#DCDCDC;
 						  font-size: 20px;
 						  text-align: center;
 						  padding: 10px 5px;">LOGO
 				</p>
 			</div>
-			<div class="col-md-1" >
+			<div class="col-lg-1 col-md-1 col-sm-6 col-xl-12" >
 				<p style="background-color:#DCDCDC;
 						  font-size: 20px;
 						  text-align: center;
 						  padding: 10px 5px;">LOGO
 				</p>
 			</div>
-			<div class="col-md-1" >
+			<div class="col-lg-1 col-md-1 col-sm-6 col-xl-12" >
 				<p style="background-color:#DCDCDC;
 						  font-size: 20px;
 						  text-align: center;
 						  padding: 10px 5px;">LOGO
 				</p>
 			</div>
-			<div class="col-md-1" >
+			<div class="col-lg-1 col-md-1 col-sm-6 col-xl-12" >
 				<p style="background-color:#DCDCDC;
 						  font-size: 20px;
 						  text-align: center;
 						  padding: 10px 5px;">LOGO
 				</p>
 			</div>
-			<div class="col-md-1" >
+			<div class="col-lg-1 col-md-1 col-sm-6 col-xl-12" >
 				<p style="background-color:#DCDCDC;
 						  font-size: 20px;
 						  text-align: center;
 						  padding: 10px 5px;">LOGO
 				</p>
 			</div>
-			<div class="col-md-1" >
+			<div class="col-lg-1 col-md-1 col-sm-6 col-xl-12" >
 				<p style="background-color:#DCDCDC;
 						  font-size: 20px;
 						  text-align: center;
 						  padding: 10px 5px;">LOGO
 				</p>
 			</div>
-			<div class="col-md-1" >
+			<div class="col-lg-1 col-md-1 col-sm-6 col-xl-12" >
 				<p style="background-color:#DCDCDC;
 						  font-size: 20px;
 						  text-align: center;
@@ -248,12 +244,17 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12" style="text-align: center;">
-				<h2 style="color: #545454;font-weight: bold;font-family: raleway Heavy; margin-top: 40px;font-size: 40px">Rejoignez-nous</h2>
+				<h2 class="col-lg-12 col-md-12 col-sm-12 col-xl-12" style="color: #545454;
+							font-weight: bold;
+							font-family: raleway Heavy;
+							 margin-top: 40px;
+							 font-size: 40px;
+							 text-align: center;">Rejoignez-nous</h2>
 				<img src="">
 			</div>
 		</div>
 		<div class="row" style="margin-top: 30px;">
-			<div class="col-md-6" style="text-align: center;">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xl-12" style="text-align: center;">
 				<img src="assets/images/apropos/1.png" style="margin-bottom: 20px"><br>
 				<p style="color:#222222;margin-bottom: 20px ">Entreprise</p><br>
 				<a href="index.php?page=offres">
@@ -270,7 +271,7 @@
 							       border:none; ">Demander une offre
 					</button>
 			</div>
-			<div class="col-md-6"  style="text-align: center;">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xl-12"  style="text-align: center;">
 				<img src="assets/images/apropos/2.png" style="margin-bottom: 20px"><br>
 				<p style="color:#222222;margin-bottom: 20px ">A la recherche d'opportunité</p><br>
 				<a href="index.php?page=offres">
