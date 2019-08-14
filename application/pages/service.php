@@ -6,10 +6,6 @@
 </head>
 <body>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-	  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-  </ol>
-
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="assets/images/service/20.jpg" class="d-block w-100" alt="">
@@ -214,12 +210,13 @@
   <div class="row" id="conseil">
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <div class="row" style="margin-top: 60px">
-          <div class="container"style="margin-top: 80px">
+          <div class="container"style="margin-top: 80px;text-align: center;">
              <h3 style="color:#393838;
                     font-family: Raleway Heavy;
-                    font-weight: bold;">Nous intervenons dans
+                    font-weight: bold;
+                    font-size: 40px;">Nous intervenons dans
           </h3>
-          <ul style="color:#393838;">
+          <ul style="color:#393838;text-align:justify;">
             <li>Management stratégique des ressources humaines</li>
             <li>Organisation et optimisation des processus</li>
             <li>Team building</li>

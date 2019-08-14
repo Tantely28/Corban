@@ -9,14 +9,11 @@
 </style>
 <body>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  	<ol class="carousel-indicators">
-	    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    </ol>
-
   	<div class="carousel-inner">
     	<div class="carousel-item active">
       		<img src="assets/images/ressource/20.jpg" class="d-block w-100" alt="">
-      		<div class="carousel-caption d-none d-md-block">
+      		<div class="carousel-caption d-none d-md-block" style="bottom: 200px;
+                    text-align: center;">
       			<div>
       				<h4 style="font-weight: bold;
                         font-family: Raleway Heavy;
@@ -25,7 +22,8 @@
               </h4>
               <p style="color: #545454;
                         font-size: 20px;
-                        font-family: raleway Heavy;">Profitez gratuitement de nos ressources et consommez les sans modération.
+                        font-family: raleway Heavy;
+                        ">Profitez gratuitement de nos ressources et consommez les sans modération.
               </p>
               <div class="btn-group" 
                    role="group" 
