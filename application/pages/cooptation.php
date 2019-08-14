@@ -176,7 +176,7 @@ label.light {
 
 					<p style="text-align: justify;">NB: Votre contact ne sera pas diffusé ou utilisé à des fins autres que l'objet de cette cooptation.</p>
 				</div>
-				<form action="index.html" method="post">
+				<form>
 			        <fieldset>
 			          <legend for="mail">Email:</legend>
 			          <input type="email" id="mail" name="user_email" placeholder="Votre adresse e-mail">

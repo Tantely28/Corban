@@ -118,9 +118,9 @@
 	padding: 10px 40px;
 	font-size: 30px
 	border-radius: 50px;
-	background:none;
-	border:2px solid #ffffff;
-	color: #545454;
+	background:#545454;
+	border:2px solid #fff;
+	color: #fff;
 }
 footer{
 	background-color: #545454;

@@ -112,7 +112,7 @@
 				</h2>
 				<div style="margin-top: 114px;
 							font-weight: bold;">
-					<a href="" style="color: #ffffff;text-decoration: none;">
+					<a href="leadqua" style="color: #ffffff;text-decoration: none;">
 						Détails
 					</a>
 				</div>
@@ -130,7 +130,7 @@
 	</div>
 </div>
 
-<div class="container-fluid" style="background-color:#ffffff;padding: 80px 20px;">
+<div class="container-fluid" style="background-color:#ffffff;padding: 80px 20px;" id="leadqua">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 col-md-8 col-sm-6 col-xs-12" style="color: #222222;">
