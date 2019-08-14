@@ -205,4 +205,17 @@ class ClientController extends AbstractController
         return $this->redirectToRoute('client_index');
 
     }
+
+    /**
+     * @param Temoignage $temoignage
+     * @Route("/lire/temoignage/{id}", name="lire_temoignage")
+     * @return Response
+     */
+    public function lireTem(Temoignage $temoignage)
+    {
+        return $this->render('admin/client/readTem.html.twig',[
+            'current_menu' => 'client',
+            'temoin'=>$temoignage
+        ]);
+    }
 }

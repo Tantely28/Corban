@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+        <video controls src="http://localhost/projet/corban/Corban/application/back/public/uploads/{{ temoin.video }}">Ici la description alternative</video>
+        <br><a href="javascript:history.back()" class="btn btn-warning">Retour</a>
+    </div>
+
+{% endblock %}
