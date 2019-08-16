@@ -88,13 +88,20 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="color: #545454;">
-        <h2 style="font-family:raleway heavy; text-align: center;font-weight: bold;, font-size:40px;color: #545454;">Le Book Club de Corban</h2>
+        <h2 style="font-family:raleway heavy; 
+                   text-align: center;
+                   font-weight: bold;
+                   font-size:40px;
+                   color: #545454;">Le Book Club de Corban
+        </h2>
         <p style="color: #545454;text-align: center;">Chez Corban, nous sommes convaincus que la lecture reste un moyen efficace pour s’enrichir
             intellectuellement.
         </p>
       </div>
     </div>
-    <div class="row" style="font-family: arimo; color: #222222; text-align: justify;">
+    <div class="row" style="font-family: arimo; 
+                            color: #222222; 
+                            text-align: justify;">
       <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12" style="background: #dcdcdc;">
         <p style="margin-top: 40px">Il s'agit est un évènement mensuel à ne pas rater. Nous <br>
           sélectionnons les tops des best-sellers recommandés par<br>
@@ -117,7 +124,13 @@
 
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <h2 style="margin-top: 40px; color: #222222; text-align: center;font-family: raleway heavy; font-size: 35px;">Ce qu’ils disent sur nos dernières <br>séances de Book Club</h2>
+        <h2 style="margin-top: 40px; 
+                   color: #222222; 
+                   text-align: center;
+                   font-family: raleway heavy; 
+                   font-size: 35px;">
+          Ce qu’ils disent sur nos dernières <br>séances de Book Club
+        </h2>
       </div>
     </div>
     <div class="row" style="margin-top: 40px">
@@ -158,7 +171,9 @@
   </div>
 </section>
 
-<section class="container-fluid" style="background:linear-gradient(#ffde59,#ffbd59); padding: 80px 20px" id="postuler">
+<section class="container-fluid" 
+         style="background:linear-gradient(#ffde59,#ffbd59); padding: 80px 20px" 
+         id="postuler">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

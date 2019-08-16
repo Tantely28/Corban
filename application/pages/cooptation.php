@@ -177,24 +177,24 @@ label.light {
 					<p style="text-align: justify;">NB: Votre contact ne sera pas diffusé ou utilisé à des fins autres que l'objet de cette cooptation.</p>
 				</div>
 				<form>
-			        <fieldset>
-			          <legend for="mail">Email:</legend>
-			          <input type="email" id="mail" name="user_email" placeholder="Votre adresse e-mail">
+			   <fieldset>
+			    <legend for="mail">Email:</legend>
+			    <input type="email" id="mail" name="user_email" placeholder="Votre adresse e-mail">
 
-			          <legend>Civilité</legend>
-			          <input type="checkbox" id="development" value="interest_development" name="user_interest">
-			          <label class="light" for="development">Melle</label><br>
-			          <input type="checkbox" id="design" value="interest_design" name="user_interest">
-			          <label class="light" for="design">Mme</label><br>
-			          <input type="checkbox" id="business" value="interest_business" name="user_interest">
-			          <label class="light" for="business">Mr</label>
+			    <legend>Civilité</legend>
+			    <input type="checkbox" id="development" value="interest_development" name="user_interest">
+			    <label class="light" for="development">Melle</label><br>
+			    <input type="checkbox" id="design" value="interest_design" name="user_interest">
+			    <label class="light" for="design">Mme</label><br>
+			    <input type="checkbox" id="business" value="interest_business" name="user_interest">
+			    <label class="light" for="business">Mr</label>
 			          
-			          <legend for="name">Prénom:</legend>
-			          <input type="text" id="name" name="user_name" placeholder="Votre Prénom">
+			    <legend for="name">Prénom:</legend>
+			    <input type="text" id="name" name="user_name" placeholder="Votre Prénom">
 
-			          <legend for="name">Nom:</legend>
-			          <input type="text" id="name" name="user_name" placeholder="Votre Nom">
-			        </fieldset>  
+			    <legend for="name">Nom:</legend>
+			    <input type="text" id="name" name="user_name" placeholder="Votre Nom">
+			  </fieldset>  
         <fieldset>  
           <legend for="mail">Adresse courriel (email)</legend>
           <label>
