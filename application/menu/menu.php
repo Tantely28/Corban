@@ -19,7 +19,7 @@
 
         <div class="collapse navbar-collapse" id="site-nav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a href="index.php?page=home" class="nav-link">Accuiel</a></li>
+            <li class="nav-item active"><a href="index.php?page=home" class="nav-link">Accueil</a></li>
             <li class="nav-item"><a href="index.php?page=temoignages" class="nav-link">Témoignage</a></li>
             <li class="nav-item"><a href="index.php?page=ressources" class="nav-link">Ressources</a></li>
             <li class="nav-item"><a href="index.php?page=service" class="nav-link">Service</a></li>
