@@ -21,7 +21,10 @@
 	<div class="container" style="color: #ffffff;">
 		<div class="row">
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-				<h2 style="font-family: Raleway Heavy; font-weight: bold;color: #ffffff;">Corban Perfomance</h2>
+				<h2 style="font-family: Raleway Heavy; 
+						   font-weight: bold;
+						   color: #ffffff;">Corban Perfomance
+				</h2>
 				<div style="padding: 10px 10px;margin-right: 5px;">
 					<a href="https://www.facebook.com/CorbanPerformanceConsulting/">
 						<img src="assets/images/footer/fb.png" style="margin-right: 10px;">
@@ -33,7 +36,10 @@
 						<img src="assets/images/footer/rj.png" >
 					</a>
 				</div>
-				<div style="font-family: arimo;margin-right: 5px;padding: 20px 10px;color: #ffffff;">
+				<div style="font-family: arimo;
+					        margin-right: 5px;
+					        padding: 20px 10px;
+					        color: #ffffff;">
 					<p style="margin-bottom: 2px;">Adresse physique</p> 
 					<p style="margin-bottom: 2px;">Antananarivo, Madagasc</p>
 					<p style="margin-bottom: 2px;">Téléphone</p>

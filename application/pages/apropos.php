@@ -35,13 +35,15 @@
       		<img src="assets/images/apropos/74 1.jpg" class="d-block w-100" alt="">
       		<div class="carousel-caption d-none d-md-block" style="bottom: 200px;text-align: center;">
       			<div>
-      				<h4 style="color: #fffff; 
+      				<h4 style="color: #ffffff; 
       						   font-weight: bold;
       						   font-family: Raleway Heavy;
       						   margin-right: 150px;
       						   font-size: 40px">Corban Perfomance Consulting
       				</h4>
-      				<p style="color: #ffffff;font-size:25px;margin-right: 250px;">Faster, Smater, Better</p>
+      				<p style="color: #ffffff;
+      					      font-size:25px;
+      					      margin-right: 250px;">Faster, Smater, Better</p>
       			</div>
         	</div>
     	</div>
@@ -92,7 +94,8 @@
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-				<h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="color: #222222; 
+				<h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12" 
+				    style="color: #222222; 
 						   font-weight:bold;
 						   font-family: Raleway;
 						   text-align: center;
@@ -137,7 +140,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12" style="text-align: center;">
-				<h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="color: #545454;">Notre histoire</h2>
+				<h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12" 
+					style="color: #545454;">Notre histoire</h2>
 				<img src="">
 			</div>
 		</div>

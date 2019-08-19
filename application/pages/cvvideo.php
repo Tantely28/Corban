@@ -59,7 +59,7 @@
           Le CV Vidéo est un moyen de se démarquer de la<br> 
           concurrence et d'aboutir facilement à un entretien<br>
            d'embauche.
-         </p>
+        </p>
         <p>
           Corban propose:<br>
           - La conception et le tournage de votre CV Vidéo<br>

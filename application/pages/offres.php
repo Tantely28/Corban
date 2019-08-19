@@ -47,9 +47,6 @@
 </body>
 </html>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  	<ol class="carousel-indicators">
-	    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    </ol>
   	<div class="carousel-inner">
     	<div class="carousel-item active">
       		<img src="assets/images/offre/14.jpg" class="d-block w-100" alt="">
@@ -70,67 +67,85 @@
 <div class="container-fluid" style="background-color: #f7f7f7;padding: 80px 20px;">
 	<div class="container">
 		<div class="row" style="color: #ffffff;">
-			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="background-color:#3b4a61 ;">
-				<p style="margin-top: 80px;font-size: 15px">
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" >
+				<div style="background-color:#3b4a61 ;padding:10px 10px;">
+					<p style="margin-top: 80px;font-size: 15px;">
 					Corban Performance Consulting
 				</p>
-				<h2 style="font-weight: bold;color: #ffffff;">
+				<h2 style="font-weight: bold;
+						   color: #ffffff;
+						   text-align: center; 
+						   font-size:40px;">
 					Business <br>Partner RH
 				</h2>
-				<p style="margin-top: 10px;font-size: 12px">
+				<p style="margin-top: 10px;font-size: 12px;text-align: right;">
 					pour VIVETIC
 				</p>
 				<div style="margin-top: 85px;
 				           font-weight: bold;
-				           text-align: left;">
-					<a href="" style="color: #ffffff;text-decoration: none;">
+				           text-align: right;">
+					<a href="#" style="color: #ffffff;text-decoration: none;">
 						Détails
 					</a>
 				</div>
+				</div>
+				
 			</div>
-			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="background-color:#652150 ;">
-				<p  style="margin-top: 80px;font-size: 15px">
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" >
+				<div style="background-color:#652150 ;padding:10px 10px;">
+					<p  style="margin-top: 80px;font-size: 15px">
 					Corban Performance Consulting
 				</p>
-				<h2 style="font-weight: bold;color: #ffffff;">
-					Senior <br>Programme<br>Manager
+				<h2 style="font-weight: bold;
+						    color: #ffffff;
+						    text-align: center; 
+						    font-size:40px;">
+					Senior Programme Manager
 				</h2>
 				<div style="margin-top: 75px;
 					        font-weight: bold;
-					        text-align: left;">
-					<a href="" style="color: #ffffff;text-decoration: none;">
+					        text-align: right;">
+					<a href="#" style="color: #ffffff;text-decoration: none;">
 						Détails
 					</a>
 				</div>
+				</div>
+				
 			</div>
-			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="background-color:#3b4a61 ;">
-				<p  style="margin-top: 80px;font-size: 15px">
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" >
+				<div style="background-color:#3b4a61 ;padding:10px 10px;">
+					<p  style="margin-top: 80px;font-size: 15px">
 					Corban Performance Consulting
 				</p>
-				<h2 style="font-weight: bold;color: #ffffff;">
-					Lead<br> Qualifiers
+				<h2 style="font-weight: bold;
+							color: #ffffff;
+							text-align: center; 
+							font-size:40px;">
+					Lead <br>Qualifiers
 				</h2>
 				<div style="margin-top: 114px;
-							font-weight: bold;">
-					<a href="leadqua" style="color: #ffffff;text-decoration: none;">
+							font-weight: bold;
+							text-align: right;">
+					<a href="#"  style="color: #ffffff;text-decoration: none;">
 						Détails
 					</a>
 				</div>
+				</div>
+				
 			</div>
 		</div>
 
 		<div class="row" style="margin-top: 50px;">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: center;">
 				<button type="button" 
-						class="btn-5" 
-						style="">VOIR PLUS
+						class="btn-5" >VOIR PLUS
 				</button>	
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="container-fluid" style="background-color:#ffffff;padding: 80px 20px;" id="leadqua">
+<div class="container-fluid" style="background-color:#ffffff;padding: 80px 20px;" id="#">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 col-md-8 col-sm-6 col-xs-12" style="color: #222222;">
