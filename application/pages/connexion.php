@@ -1,3 +1,8 @@
+<?php
+if (isset($_POST['idSession'])){
+    echo $_POST['idSession'];
+}
+?>
 <!-- MODAL -->
 <div class="modal fade" id="modalConnexion">
         <div class="modal-dialog">
@@ -34,10 +39,12 @@
                             <label for="passwordClient">Mot de passe</label>
                             <input type="password" class="form-control" id="passwordClient"  name="passwordClient" placeholder="Votre mot de passe...">
                         </div>
+                        <div class="form-group">
+                            <input type="hidden" class="form-control" id="idSession"  name="idSession">
+                        </div>
                     </form>
                     <button type="submit" id="connexionClient" class="btn btn-warning">Se connecter</button>
                 </div>
-                <textarea name="test" id="test" cols="30" rows="10"></textarea>
             </div>
         </div>
     </div>
