@@ -10,14 +10,12 @@
          <thead>
          <tr>
             <th>Titre</th>
-            <th>Description</th>
          </tr>
          </thead>
          <tbody>
          {% for t in tem %}
             <tr>
                <td>{{ t.titre }}</td>
-               <td>{{ t.description }}</td>
                <td>
                   <a href="{{ path('lire_temoignage',{id:t.id}) }}" class="btn btn-outline-primary">Voir</a>
                   <a href="#" onclick="deleteTem({{ t.id }})" class="btn btn-danger">Supprimer</a>

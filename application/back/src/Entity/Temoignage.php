@@ -52,7 +52,7 @@ class Temoignage
     /**
      * @return Collection|Client[]
      */
-    public function getClient(): Collection
+    public function getClient()
     {
         return $this->client;
     }

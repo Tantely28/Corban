@@ -30,6 +30,17 @@ class TemoignageRepository extends ServiceEntityRepository
             ;
     }
 
+    public function findTe()
+    {
+        return $this->createQueryBuilder('t')
+            ->innerJoin('t.client','c')
+            ->addSelect('c')
+            ->andWhere('t.client = c.id')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     // /**
     //  * @return Temoignage[] Returns an array of Temoignage objects
     //  */

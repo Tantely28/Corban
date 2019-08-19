@@ -4,13 +4,16 @@
 namespace App\Controller\api;
 
 
+use App\Entity\Client;
 use App\Repository\ClientRepository;
+use App\Repository\TemoignageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Doctrine\Common\Collections\Collection;
 
 /**
  * Class ClientController
@@ -23,10 +26,12 @@ class ClientController extends AbstractController
      * @var ClientRepository
      */
     private $client;
+    private $temoignage;
 
-    public function __construct(ClientRepository $client)
+    public function __construct(ClientRepository $client, TemoignageRepository $temoignage)
     {
         $this->client = $client;
+        $this->temoignage= $temoignage;
     }
 
     /**
@@ -59,6 +64,27 @@ class ClientController extends AbstractController
             return new JsonResponse($formatted,Response::HTTP_OK);
         }
 
+    }
+
+
+    /**
+     * @return JsonResponse
+     * @Rest\Get("/lecture/temoignage")
+     */
+    public function temoignage(){
+        $temoignage=$this->temoignage->findTe();
+        $formatted=[];
+
+        foreach ($temoignage as $temoignages) {
+            $formatted []= [
+                'id' => $temoignages->getId(),
+                'titre' => $temoignages->getTitre(),
+                'video' => $temoignages->getVideo(),
+                'clien'=> $temoignages->getClient()->getNom(),
+                'idClient'=> $temoignages->getClient()->getId()
+            ];
+        }
+        return new JsonResponse($formatted,Response::HTTP_OK);
     }
 
 
