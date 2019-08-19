@@ -183,7 +183,6 @@ class ClientController extends AbstractController
      */
     public function temoignage(Client $client, Request $request)
     {
-        dump($request);
         $temo=$this->temoignageRepository->findtem($client);
         $idCl=$client->getId();
         return $this->render('admin/client/list.html.twig',[
