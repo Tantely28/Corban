@@ -42,10 +42,10 @@ class CandidatController extends AbstractController
             $em=$this->getDoctrine()->getManager();
             $em->persist($candidat);
             $em->flush();
-            return new JsonResponse(['message' => 'Votre message est envoyée'], Response::HTTP_OK);
+            return new JsonResponse(['message' => 'Inscription réussit'], Response::HTTP_OK);
 
         }else{
-            return new JsonResponse(['message' => 'Veuillez remplir tous les champ','test'=>$request->get('name')], Response::HTTP_OK);
+            return new JsonResponse(['message' => 'Veuillez remplir tous les champs','test'=>$request->get('name')], Response::HTTP_OK);
         }
 
 

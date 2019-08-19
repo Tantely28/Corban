@@ -27,6 +27,7 @@
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/friendsofsymfony/rest-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/jdorn/sql-formatter" />
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/back/vendor/nelmio/cors-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/nikic/php-parser" />
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/ocramius/package-versions" />
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/ocramius/proxy-manager" />

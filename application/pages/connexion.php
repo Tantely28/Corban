@@ -158,8 +158,9 @@
                             </div>
                         </div>                                                                            
                 </div>
+                <div id="result"></div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">S'inscrire</button>
+                    <button type="submit" class="btn btn-primary" id="btnInscription">S'inscrire</button>
                 </div>
                 </form>
             </div>
@@ -168,8 +169,17 @@
 
  
     <script type="text/javascript">
+
+        //INSCRIPTION CANDIDAT
+        var xhr ;
+        document.querySelector('#formInscription').addEventListener('submit', postCandidat);
         function postCandidat(event){
             event.preventDefault();
+            xhr = new XMLHttpRequest();
+            if (!xhr) {
+                alert('Abandon :( Impossible de créer une instance de XMLHTTP');
+                return false;
+            }
             const nom = document.querySelector('#nom');
             const dateNaissance = document.querySelector('#dateNaissance');
             const telephone = document.querySelector('#telephone');
@@ -194,25 +204,30 @@
             data.append('password', password.value);
             data.append('sex', sex.value);
             data.append('situation', situation.value);
-            var requete = new XMLHttpRequest();
-            requete.open('POST', 'http://127.0.0.1:8000/api/create/candidat', true);
-            requete.onload = function(){
-                
 
-
-            } 
-            requete.send(data);
-            nom.value = "";
-                dateNaissance.value = "";
-                telephone.value = "";
-                email.value = "";
-                adresse.value = "";
-                ville.value = "";
-                pays.value = "";
-                pseudo.value ="";
-                password.value ="";
-                alert("Inscription Réussi!");
-                window.location.href = "http://localhost";
+            xhr.onreadystatechange = alertContents;
+            xhr.open('POST', 'http://127.0.0.1:8000/api/create/candidat', true);
+            xhr.send(data);
         }
-        document.querySelector('#formInscription').addEventListener('submit', postCandidat);
+        function alertContents() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    alert(response.message); //Si tout va bien afficher le message du serveur
+                    window.location.href = "http://localhost";
+                    nom.value = "";
+                    dateNaissance.value = "";
+                    telephone.value = "";
+                    email.value = "";
+                    adresse.value = "";
+                    ville.value = "";
+                    pays.value = "";
+                    pseudo.value ="";
+                    password.value ="";
+                } else {
+                    alert('Un problème est survenu avec la requête.', xhr);
+                }
+            }
+        }
+
     </script>
