@@ -30,8 +30,15 @@
             xhr.open("POST", url , true);
             xhr.onreadystatechange= function () {
                 if (xhr.readyState == 4 && xhr.status == 200){
-                    var test = JSON.parse(xhr.responseText);
-                    document.getElementById('test').value += test.nom;
+                    //window.location = 'http://localhost/Corban/application/index.php
+                    var response = JSON.parse(xhr.responseText);
+                    if (response.message == null){
+                        document.cookie = "Id" + response.id;
+                        document.getElementById("idSession").value = response.id;
+                        window.location.href = "http://localhost/Corban/application/index.php"
+                    } else {
+                        alert(response.message);
+                    }
                 }
             };
             xhr.send();
