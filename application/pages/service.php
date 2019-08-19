@@ -210,7 +210,7 @@
   <div class="row" id="conseil">
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <div class="row" style="margin-top: 60px">
-          <div class="container"style="margin-top: 80px;text-align: center;">
+          <div class="container"style="margin-top: 60px;text-align: center;padding-bottom: 50px;">
              <h3 style="color:#393838;
                     font-family: Raleway Heavy;
                     font-weight: bold;
@@ -256,32 +256,42 @@
     </div>
 </section>
 
-<section class="container-fluid">
-  <div class="container">
-    <div class="row" style="margin-top:100px;
-                            margin-bottom: 50px;
+<section class="container-fluid" style="text-align: center;background: #f5f5f5">
+    <div class="row" style="margin-bottom: 100px;
+                            padding-top: 100px;
                             color: #393838;
                             font-family: Raleway Heavy;
                             text-align: center;
                             font-weight: bold;">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <h3 style="font-size: 38px">Les secteurs d'intervention</h3>
+        <h3 style="font-size: 40px">Les secteurs d'intervention</h3>
       </div>
     </div>
-    <div class="container" style="color: #222222;font-family: arimo;">
-      <div class="row" style="margin-bottom: 70px">
-        <h4 class="col-lg-3 col-md-3 col-sm-6 col-xs-12">Banque</h4>
-        <h4 class="col-lg-3 col-md-3 col-sm-6 col-xs-12">Mine</h4>
-        <h4 class="col-lg-3 col-md-3 col-sm-6 col-xs-12">Informatique</h4>
-        <h4 class="col-lg-3 col-md-3 col-sm-6 col-xs-12">Logistique</h4>
+    <div class="row" style="margin-bottom: 100px;color: #222222;font-family: arimo; ">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <h4 style="font-size: 30px;">Banque</h4>
       </div>
-      <div class="row"  style="margin-bottom: 100px">
-        <h4 class="col-lg-4 col-md-4 col-sm-6 col-xs-12">Micro finance</h4>
-        <h4 class="col-lg-4 col-md-4 col-sm-6 col-xs-12">Hôtellerie & Mine</h4>
-         <h4 class="col-lg-4 col-md-4 col-sm-6 col-xs-12">Agroalimentaire</h4>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <h4 style="font-size: 30px;">Mine</h4>
       </div>
-    </div>        
-  </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <h4 style="font-size: 30px;">Informatique</h4>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <h4 style="font-size: 30px;">Logistique</h4>
+      </div>
+    </div>
+    <div class="row" style="padding-bottom: 100px;">
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <h4 style="font-size: 30px;">Micro finance</h4>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <h4 style="font-size: 30px;">Hôtellerie & Mine</h4>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <h4 style="font-size: 30px;">Agroalimentaire</h4>
+      </div>
+    </div>
 </section>
 
 <div class="contact">
