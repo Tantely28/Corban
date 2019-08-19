@@ -111,6 +111,7 @@
       <path value="$PROJECT_DIR$/back/vendor/willdurand/negotiation" />
       <path value="$PROJECT_DIR$/back/vendor/willdurand/jsonp-callback-validator" />
       <path value="$PROJECT_DIR$/back/vendor/friendsofsymfony/rest-bundle" />
+      <path value="$PROJECT_DIR$/back/vendor/nelmio/cors-bundle" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
