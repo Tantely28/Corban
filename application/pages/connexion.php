@@ -2,6 +2,10 @@
 if (isset($_POST['idSession'])){
     echo $_POST['idSession'];
 }
+if (isset($_POST['usernameClient'])){
+    echo $_POST['usernameClient'];
+}
+echo "Test";
 ?>
 <!-- MODAL -->
 <div class="modal fade" id="modalConnexion">

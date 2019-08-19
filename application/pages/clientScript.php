@@ -35,7 +35,7 @@
                     if (response.message == null){
                         document.cookie = "Id" + response.id;
                         document.getElementById("idSession").value = response.id;
-                        window.location.href = "http://localhost/Corban/application/index.php?page=home"
+                        window.location.href = "http://localhost/Corban/application/index.php"
                     } else {
                         alert(response.message);
                     }
