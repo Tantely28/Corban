@@ -19,6 +19,18 @@ class CandidatRepository extends ServiceEntityRepository
         parent::__construct($registry, Candidat::class);
     }
 
+    public function authentification($pseudo,$password)
+    {
+        return $this->createQueryBuilder('c')
+            ->andWhere('c.pseudo = :pseudo')
+            ->andWhere('c.password = :pass')
+            ->setParameter('pseudo', $pseudo)
+            ->setParameter('pass', sha1($password))
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     // /**
     //  * @return Candidat[] Returns an array of Candidat objects
     //  */

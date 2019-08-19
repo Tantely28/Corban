@@ -3,6 +3,8 @@
     //INSCRIPTION CANDIDAT
     var xhr ;
     document.querySelector('#formInscription').addEventListener('submit', postCandidat);
+    document.querySelector('#loginCandidat').addEventListener('click', loginCandidat);
+
     function postCandidat(event){
         event.preventDefault();
         xhr = new XMLHttpRequest();
@@ -58,6 +60,30 @@
                 alert('Un problème est survenu avec la requête.', xhr);
             }
         }
+    }
+    function loginCandidat(event) {
+        event.preventDefault();
+        xhr = new XMLHttpRequest();
+        if (!xhr) {
+            alert('Abandon :( Impossible de créer une instance de XMLHTTP');
+            return false;
+        }
+        const emailCandidat = document.querySelector('#emailCandidat');
+        const passwordCandidat = document.querySelector('#passwordCandidat');
+        const data = new FormData();
+        data.append('pseudo', emailCandidat.value);
+        data.append('password', passwordCandidat.value);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    var response = xhr.responseText;
+                    alert(response); //Si tout va bien afficher le message du serveur
+                } else {
+                    alert('Un problème est survenu avec la requête.', xhr);
+                }
+            }        };
+        xhr.open('POST', 'http://127.0.0.1:8000/api/login/candidat', true);
+        xhr.send(data);
     }
 
 </script>
