@@ -29,13 +29,13 @@
 
             xhr.open("POST", url , true);
             xhr.onreadystatechange= function () {
-                if (xhr.readyState == 4 && xhr.status == 200){
+                if (xhr.readyState === 4 && xhr.status === 200){
                     //window.location = 'http://localhost/Corban/application/index.php
                     var response = JSON.parse(xhr.responseText);
                     if (response.message == null){
-                        document.cookie = "Id" + response.id;
-                        document.getElementById("idSession").value = response.id;
-                        window.location.href = "http://localhost/Corban/application/index.php"
+                        // document.cookie = "Id" + response.id;
+                        // document.getElementById("idSession").value = response.id;
+                        window.location.href = "http://localhost/projet/corban/Corban/application/index.php?page=home&user="+response.user+"&id="+response.id;
                     } else {
                         alert(response.message);
                     }

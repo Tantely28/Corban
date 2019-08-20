@@ -1,4 +1,14 @@
 <?php
+session_start();
+require('Auth.php');
+
+if(isset($_GET['user']) && isset($_GET['id'])){
+    $_SESSION['auth'] = array(
+        'user' => $_GET['user'],
+        'id' => $_GET['id']
+    );
+    header("Location:index.php");
+}
 
 $pages=scandir('pages');
 if(isset($_GET['page'])) {
@@ -42,7 +52,12 @@ if(isset($_GET['page'])) {
 </head>
 <body data-spy="scroll" data-target="#site-navbar" data-offset="200">
     <?php
-    include('menu/menu.php');
+    if(Auth::isLogged()){
+        include('menu/menu.php');
+    }else{
+        include('menu/menunonconnecte.php');
+    }
+
     include($content);
     
     include('footer/footer.php');

@@ -26,7 +26,9 @@
             <li class="nav-item"><a href="index.php?page=offres" class="nav-link">Nos offres d'emplois</a></li>
             <li class="nav-item"><a href="index.php?page=apropos" class="nav-link">A propos</a></li>
 
-              <li class="nav-item"><a href="logout.php" class="nav-link">Deconnexion</a></li>
+            <li class="nav-item">
+              <a href="index.php?page=connexion" data-toggle="modal" data-target="#modalConnexion" class="nav-link">Connexion</a>
+            </li>
 
             <li class="nav-item"><a href="index.php?page=contact" class="nav-link">Contact</a></li>
           </ul>
