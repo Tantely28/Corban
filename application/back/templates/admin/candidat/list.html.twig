@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <h1>Les candidats</h1>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Date de naissance</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for c in candidat %}
+                <tr>
+                    <td>{{ c.nom }}</td>
+                    <td>{{ c.dateNaissance | date('d-m-Y' ,"Europe/Paris") }}</td>
+                    <td>
+                        <a href="{{ path('show_candidat', {id: c.id}) }}" class="btn btn secondary">Voir</a>
+                        <a href="#" onclick="DeletClient({{ c.id }})" class="btn btn-danger">Supprimer</a>
+                        <a href="{{ path('list_temoignage',{id: c.id}) }}" class="btn btn-outline-primary">Temoignage</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+{% endblock %}
