@@ -82,7 +82,7 @@ class CandidatController extends AbstractController
                         'adresse' => $candidat->getAdresse(),
                         'telephone' => $candidat->getTelephone(),
                         'email' => $candidat->getEmail(),
-                        'pseudo' => $candidat->getPseudo(),
+                        'user' => $candidat->getPseudo(),
 
                     ];
                 }

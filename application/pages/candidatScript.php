@@ -7,9 +7,11 @@
 
     function postCandidat(event){
         event.preventDefault();
+        chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', 'Inscription ... ', 'true');
         xhr = new XMLHttpRequest();
         if (!xhr) {
             alert('Abandon :( Impossible de créer une instance de XMLHTTP');
+            chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', "S'inscrire", 'false');
             return false;
         }
         const nom = document.querySelector('#nom');
@@ -40,6 +42,13 @@
         xhr.onreadystatechange = alertContents;
         xhr.open('POST', 'http://127.0.0.1:8000/api/create/candidat', true);
         xhr.send(data);
+
+    }
+    function chargement(idBtn, idSpinner, idLabel, label, disable ) {
+        document.getElementById(idBtn).disabled=disable;
+        if (disable=='false') document.getElementById(idSpinner).setAttribute('class', "");
+        else document.getElementById(idSpinner).setAttribute('class', "spinner-border spinner-border-sm");
+        document.getElementById(idLabel).innerHTML = label;
     }
     function alertContents() {
         if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -56,8 +65,10 @@
                 pays.value = "";
                 pseudo.value ="";
                 password.value ="";
+                chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', "S'inscrire", 'false');
             } else {
-                alert('Un problème est survenu avec la requête.', xhr);
+                alert(":( Erreur: Un problème est survenu avec la requête. \n\n Veuillez contacter l'administrateur du serveur.", xhr);
+                chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', "S'inscrire", 'false');
             }
         }
     }
@@ -76,14 +87,20 @@
         xhr.onreadystatechange = function () {
             if (xhr.readyState === XMLHttpRequest.DONE) {
                 if (xhr.status === 200) {
-                    var response = xhr.responseText;
-                    alert(response); //Si tout va bien afficher le message du serveur
+                    var response = JSON.parse(xhr.responseText);
+                    if (response.message == null){
+                        // Si tout se passe bien
+                        window.location.href = "http://localhost/index.php?page=home&user="+response.user+"&id="+response.id+"&type=candidat";
+                    } else {
+                        alert(response.message);
+                    }
                 } else {
-                    alert('Un problème est survenu avec la requête.', xhr);
+                    alert(":( Erreur: Un problème est survenu avec la requête. \n\n Veuillez contacter l'administrateur du serveur.", xhr);
                 }
             }        };
         xhr.open('POST', 'http://127.0.0.1:8000/api/login/candidat', true);
         xhr.send(data);
+
     }
 
 </script>
