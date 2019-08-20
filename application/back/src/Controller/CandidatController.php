@@ -4,17 +4,29 @@ namespace App\Controller;
 
 use App\Entity\Candidat;
 use App\Repository\CandidatRepository;
+use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response as ResponseAlias;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class CandidatController extends AbstractController
 {
-    private $candidat;
 
-    public function __construct(CandidatRepository $candidat)
+    /**
+     * @var CandidatRepository
+     */
+    private $candidat;
+    /**
+     * @var ObjectManager
+     */
+    private $em;
+
+    public function __construct(CandidatRepository $candidat, ObjectManager $em)
     {
-        $this->candidat=$candidat;
+        $this->candidat = $candidat;
+        $this->em = $em;
     }
     /**
      * @return ResponseAlias
@@ -40,5 +52,19 @@ class CandidatController extends AbstractController
             'candidat'=>$candidat,
             'current_menu' => 'candidat'
         ]);
+    }
+
+    /**
+     * @Route("/delete/candidat/{id}", name="delete_candidat")
+     * @param Candidat $candidat
+     * @param Request $request
+     * @return Response|ResponseAlias
+     */
+    public function delete(Candidat $candidat, Request $request){
+        if ($this->isCsrfTokenValid('delete' . $candidat->getId(), $request->get('_token'))){
+            $this->em->remove($candidat);
+            $this->em->flush();
+        }
+        return $this->redirectToRoute('liste_candidat');
     }
 }

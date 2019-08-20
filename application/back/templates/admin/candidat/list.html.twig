@@ -17,13 +17,17 @@
                     <td>{{ c.dateNaissance | date('d-m-Y' ,"Europe/Paris") }}</td>
                     <td>
                         <a href="{{ path('show_candidat', {id: c.id}) }}" class="btn btn secondary">Voir</a>
-                        <a href="#" onclick="DeletClient({{ c.id }})" class="btn btn-danger">Supprimer</a>
-                        <a href="{{ path('list_temoignage',{id: c.id}) }}" class="btn btn-outline-primary">Temoignage</a>
+                        <form action="{{ path('delete_candidat', {id: c.id}) }}" method="post" style="display: inline-block" onsubmit="return confirm('Etes vous sur?')" >
+                            <input type="hidden" name="_method" value="DELETE" >
+                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ c.id) }}">
+                            <button class="btn btn-danger">Supprimer</button>
+                        </form>
+                        <a href="{{ path('list_temoignage',{id: c.id}) }}" class="btn btn-outline-primary">Entretien video</a>
+                        <a href="{{ path('list_temoignage',{id: c.id}) }}" class="btn btn-outline-secondary">Témoignage video</a>
                     </td>
                 </tr>
             {% endfor %}
             </tbody>
         </table>
-
     </div>
 {% endblock %}

@@ -196,13 +196,12 @@ class ClientController extends AbstractController
     /**
      * @param Temoignage $temoignage
      * @Route("/delete/temoignage/{id}", name="delete_temoignage")
-     * @return RedirectResponse
+     * @return Response
      */
     public function deleteTem(Temoignage $temoignage){
         $this->em->remove($temoignage);
         $this->em->flush();
-        return $this->redirectToRoute('client_index');
-
+        return $this->render('admin/client/list.html.twig'); 
     }
 
     /**
