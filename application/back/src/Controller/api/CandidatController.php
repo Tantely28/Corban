@@ -22,6 +22,7 @@ class CandidatController extends AbstractController
      * @Rest\Post("/create/candidat")
      * @param Request $request
      * @return JsonResponse
+     * @throws \Exception
      */
     public function inscriptionCandidat(Request $request)
     {
