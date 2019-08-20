@@ -5,7 +5,6 @@ if (isset($_POST['idSession'])){
 if (isset($_POST['usernameClient'])){
     echo $_POST['usernameClient'];
 }
-echo "Test";
 ?>
 <!-- MODAL -->
 <div class="modal fade" id="modalConnexion">
@@ -44,7 +43,7 @@ echo "Test";
                             <input type="password" class="form-control" id="passwordClient"  name="passwordClient" placeholder="Votre mot de passe...">
                         </div>
                         <div class="form-group">
-                            <input type="hidden" class="form-control" id="idSession"  name="idSession">
+                            <input type="hidden" class="form-control" id="idSession"  name="idSession" value="<?php if (isset($_POST['idSession'])) echo $_POST['idSession'] ?>">
                         </div>
                     </form>
                     <button type="submit" id="connexionClient" class="btn btn-warning">Se connecter</button>

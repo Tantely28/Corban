@@ -1,4 +1,13 @@
 <?php
+if (isset($_POST['idSession'])) {
+    echo $_POST['idSession'];
+}
+if (isset($_POST['usernameClient'])) {
+    echo $_POST['usernameClient'];
+} else {
+    echo "Non";
+}
+
 $pages=scandir('pages');
 if(isset($_GET['page'])) {
     $page = htmlentities($_GET['page']);
