@@ -22,7 +22,10 @@ class CandidatRepository extends ServiceEntityRepository
     public function findCandidat()
     {
         return $this->createQueryBuilder('c')
-            ->orderBy('c.id', 'DESC');
+            ->orderBy('c.id', 'DESC')
+            ->getQuery()
+            ->getResult()
+            ;
     }
     public function authentification($pseudo,$password)
     {

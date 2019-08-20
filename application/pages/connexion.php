@@ -1,11 +1,3 @@
-<?php
-if (isset($_POST['idSession'])){
-    echo $_POST['idSession'];
-}
-if (isset($_POST['usernameClient'])){
-    echo $_POST['usernameClient'];
-}
-?>
 <!-- MODAL -->
 <div class="modal fade" id="modalConnexion">
         <div class="modal-dialog">
