@@ -205,16 +205,14 @@ class ClientController extends AbstractController
     /**
      * @param Temoignage $temoignage
      * @param Request $request
-     * @param Client $client
      * @return Response
      * @Route("/delete/temoignage/{id}", name="delete_temoignage")
      */
-    public function deleteTem(Temoignage $temoignage, Request $request, Client $client){
-        if ($this->isCsrfTokenValid('delete' . $temoignage->getId(), $request->get('_token'))){
+    public function deleteTem(Temoignage $temoignage, Request $request){
             $this->em->remove($temoignage);
             $this->em->flush();
-        }
-        return $this->redirectToRoute('list_temoignage', ['id' => $client->getId()]);
+
+        return $this->redirectToRoute('client_index');
     }
 
     /**
