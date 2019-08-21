@@ -4,14 +4,15 @@
     var xhr ;
     document.querySelector('#formInscription').addEventListener('submit', postCandidat);
     document.querySelector('#loginCandidat').addEventListener('click', loginCandidat);
+    document.querySelector('#btnCVCandidat').addEventListener('click', postCVCandidat);
 
     function postCandidat(event){
         event.preventDefault();
-        chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', 'Inscription ... ', 'true');
+        chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', 'Inscription ... ', true);
         xhr = new XMLHttpRequest();
         if (!xhr) {
             alert('Abandon :( Impossible de créer une instance de XMLHTTP');
-            chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', "S'inscrire", 'false');
+            chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', "S'inscrire", false);
             return false;
         }
         const nom = document.querySelector('#nom');
@@ -46,7 +47,7 @@
     }
     function chargement(idBtn, idSpinner, idLabel, label, disable ) {
         document.getElementById(idBtn).disabled=disable;
-        if (disable=='false') document.getElementById(idSpinner).setAttribute('class', "");
+        if (disable===false) document.getElementById(idSpinner).setAttribute('class', "");
         else document.getElementById(idSpinner).setAttribute('class', "spinner-border spinner-border-sm");
         document.getElementById(idLabel).innerHTML = label;
     }
@@ -65,10 +66,10 @@
                 pays.value = "";
                 pseudo.value ="";
                 password.value ="";
-                chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', "S'inscrire", 'false');
+                chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', "S'inscrire", false);
             } else {
+                chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', "S'inscrire", false);
                 alert(":( Erreur: Un problème est survenu avec la requête. \n\n Veuillez contacter l'administrateur du serveur.", xhr);
-                chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', "S'inscrire", 'false');
             }
         }
     }
@@ -101,6 +102,45 @@
         xhr.open('POST', 'http://127.0.0.1:8000/api/login/candidat', true);
         xhr.send(data);
 
+    }
+
+    function postCVCandidat(event){
+        event.preventDefault();
+        chargement('btnCVCandidat', 'spinnerBtnCVCandidat', 'labelBtnCVCandidat', 'Enregistrement ... ', true);
+        xhr = new XMLHttpRequest();
+        if (!xhr) {
+            alert('Abandon :( Impossible de créer une instance de XMLHTTP');
+            chargement('btnCVCandidat', 'spinnerBtnCVCandidat', 'labelBtnCVCandidat', 'Enregistrer', false);
+            return false;
+        }
+        const data = new FormData();
+        data.append('candidat_id', document.querySelector('#idCandidat').value);
+        data.append('photo', document.querySelector('#photoCandidat').value);
+        data.append('formation', document.querySelector('#formationCandidat').value);
+        data.append('experience', document.querySelector('#experienceCandidat').value);
+        data.append('competence', document.querySelector('#competenceCandidat').value);
+        data.append('langue', document.querySelector('#langueCandidat').value);
+        data.append('loisir', document.querySelector('#loisirCandidat').value);
+        data.append('cv', document.querySelector('#cvCandidat').value);
+
+
+        xhr.onreadystatechange = alertContentsCvCandidat();
+        xhr.open('POST', 'http://127.0.0.1:8000/api/create/cvCandidat', true);
+        xhr.send(data);
+
+    }
+    function alertContentsCvCandidat() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                var response = JSON.parse(xhr.responseText);
+                alert(response.message); //Si tout va bien afficher le message du serveur
+                window.location.href = "http://localhost";
+                chargement('btnCVCandidat', 'spinnerBtnCVCandidat', 'labelBtnCVCandidat', 'Enregistrement ... ', false);
+            } else {
+                chargement('btnCVCandidat', 'spinnerBtnCVCandidat', 'labelBtnCVCandidat', 'Enregistrement ... ', false);
+                alert(":( Erreur: Un problème est survenu avec la requête. \n\n Veuillez contacter l'administrateur du serveur.", xhr);
+            }
+        }
     }
 
 </script>

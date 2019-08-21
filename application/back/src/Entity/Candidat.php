@@ -78,6 +78,11 @@ class Candidat
      */
     private $temoignageCandidats;
 
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\CV", mappedBy="candidat", cascade={"persist", "remove"})
+     */
+    private $cv;
+
     public function __construct()
     {
         $this->temoignageCandidats = new ArrayCollection();
@@ -246,6 +251,24 @@ class Candidat
             if ($temoignageCandidat->getCandidat() === $this) {
                 $temoignageCandidat->setCandidat(null);
             }
+        }
+
+        return $this;
+    }
+
+    public function getCv(): ?CV
+    {
+        return $this->cv;
+    }
+
+    public function setCv(?CV $cv): self
+    {
+        $this->cv = $cv;
+
+        // set (or unset) the owning side of the relation if necessary
+        $newCandidat = $cv === null ? null : $this;
+        if ($newCandidat !== $cv->getCandidat()) {
+            $cv->setCandidat($newCandidat);
         }
 
         return $this;

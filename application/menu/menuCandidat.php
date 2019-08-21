@@ -25,10 +25,11 @@
             <li class="nav-item"><a href="index.php?page=service" class="nav-link">Service</a></li>
             <li class="nav-item"><a href="index.php?page=offres" class="nav-link">Nos offres d'emplois</a></li>
             <li class="nav-item"><a href="index.php?page=apropos" class="nav-link">A propos</a></li>
-
-              <li class="nav-item"><a href="logout.php" class="nav-link">Deconnexion candidat</a></li>
-
+            <li class="nav-item"><a href="logout.php" class="nav-link">Deconnexion candidat</a></li>
             <li class="nav-item"><a href="index.php?page=contact" class="nav-link">Contact</a></li>
+              <li class="nav-item">
+                  <a href="index.php?page=connexion" data-toggle="modal" data-target="#modalCVCandidat" class="nav-link">Compléter information</a>
+              </li>
           </ul>
         </div>
       </div>
