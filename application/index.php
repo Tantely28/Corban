@@ -1,4 +1,17 @@
 <?php
+session_start();
+require('Auth.php');
+
+if(isset($_GET['user']) && isset($_GET['id'])  && isset($_GET['type'])){
+    $_SESSION['auth'] = array(
+        'user' => $_GET['user'],
+        'id' => $_GET['id'],
+        'type' => $_GET['type']
+    );
+    header("Location:index.php");
+}
+
+
 $pages=scandir('pages');
 if(isset($_GET['page'])) {
     $page = htmlentities($_GET['page']);
@@ -41,7 +54,18 @@ if(isset($_GET['page'])) {
 </head>
 <body data-spy="scroll" data-target="#site-navbar" data-offset="200">
     <?php
-    include('menu/menu.php');
+    if(Auth::isLogged()){
+        if ($_SESSION['auth']['type']=='candidat') {
+            include('menu/menuCandidat.php');
+        }
+        elseif ($_SESSION['auth']['type']=='client'){
+            include('menu/menuClient.php');
+        }
+
+    }else{
+        include('menu/menunonconnecte.php');
+    }
+
     include($content);
     
     include('footer/footer.php');

@@ -113,15 +113,14 @@ class ClientController extends AbstractController
 
     /**
      * @param Client $client
-     * @param Request $request
      * @return Response
      * @Route("/delete/client/{id}", name="client_delete")
      */
-    public function delete(Client $client, Request $request): Response
+    public function delete(Client $client): Response
     {
             $this->em->remove($client);
             $this->em->flush();
-        return $this->redirectToRoute('client_index');
+        return $this->render('/client');
     }
 
     /*
@@ -177,7 +176,7 @@ class ClientController extends AbstractController
 
 
     /**
-     * @Route("/list/temoignage/clent/{id}", name="list_temoignage")
+     * @Route("/list/temoignage/client/{id}", name="list_temoignage")
      * @param Client $client
      * @return Response
      */
@@ -196,13 +195,12 @@ class ClientController extends AbstractController
     /**
      * @param Temoignage $temoignage
      * @Route("/delete/temoignage/{id}", name="delete_temoignage")
-     * @return RedirectResponse
+     * @return Response
      */
     public function deleteTem(Temoignage $temoignage){
         $this->em->remove($temoignage);
         $this->em->flush();
-        return $this->redirectToRoute('client_index');
-
+        return $this->render('admin/client/list.html.twig');
     }
 
     /**

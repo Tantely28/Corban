@@ -351,8 +351,8 @@
                                         <p>Clients</p>
                                     </a>
                                 </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="./typography.html">
+                                <li class="nav-item {% if current_menu is defined and current_menu == 'candidat' %}active{% endif %}">
+                                    <a class="nav-link" href="{{ path('liste_candidat') }}">
                                         <i class="material-icons">library_books</i>
                                         <p>Candidats</p>
                                     </a>

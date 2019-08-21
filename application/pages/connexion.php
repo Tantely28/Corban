@@ -1,12 +1,3 @@
-<?php
-if (isset($_POST['idSession'])){
-    echo $_POST['idSession'];
-}
-if (isset($_POST['usernameClient'])){
-    echo $_POST['usernameClient'];
-}
-echo "Test";
-?>
 <!-- MODAL -->
 <div class="modal fade" id="modalConnexion">
         <div class="modal-dialog">
@@ -44,7 +35,7 @@ echo "Test";
                             <input type="password" class="form-control" id="passwordClient"  name="passwordClient" placeholder="Votre mot de passe...">
                         </div>
                         <div class="form-group">
-                            <input type="hidden" class="form-control" id="idSession"  name="idSession">
+                            <input type="hidden" class="form-control" id="idSession"  name="idSession" value="<?php if (isset($_POST['idSession'])) echo $_POST['idSession'] ?>">
                         </div>
                     </form>
                     <button type="submit" id="connexionClient" class="btn btn-warning">Se connecter</button>
@@ -73,7 +64,7 @@ echo "Test";
                             <input type="password" class="form-control" id="passwordCandidat" placeholder="Votre mot de passe...">
                         </div>
                     </form>
-                    <button type="submit" class="btn btn-warning" id="loginCandidat">Se connecter</button>
+                    <button type="button" class="btn btn-warning" id="loginCandidat">Se connecter</button>
                 </div>
                 <div class="modal-footer">
                     Pas de compte? Inscrivez-vous gratuitement &nbsp;<button class="btn btn-info" data-toggle="modal" data-dismiss="modal" data-target="#modalInscriptionCandidat">S'inscrire</button>
@@ -172,7 +163,10 @@ echo "Test";
                 </div>
                 <div id="result"></div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary" id="btnInscription">S'inscrire</button>
+                    <button type="submit" class="btn btn-primary" id="btnInscription">
+                        <span id="spinnerBtnInscription"></span>
+                        <span id="labelBtnInscription">S'inscrire</span>
+                    </button>
                 </div>
                 </form>
             </div>

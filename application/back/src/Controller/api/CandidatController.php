@@ -23,6 +23,7 @@ class CandidatController extends AbstractController
      * @Rest\Post("/create/candidat")
      * @param Request $request
      * @return JsonResponse
+     * @throws \Exception
      */
     public function inscriptionCandidat(Request $request)
     {
@@ -81,7 +82,7 @@ class CandidatController extends AbstractController
                         'adresse' => $candidat->getAdresse(),
                         'telephone' => $candidat->getTelephone(),
                         'email' => $candidat->getEmail(),
-                        'pseudo' => $candidat->getPseudo(),
+                        'user' => $candidat->getPseudo(),
 
                     ];
                 }
