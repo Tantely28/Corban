@@ -69,8 +69,7 @@
 
             for(var i=0;i<arr.length;i++) {
                 document.getElementById("temoin").innerHTML +=
-                '<div class="team-block-two col-lg-4 col-md-4 col-sm-6 col-xs-12"><div class="inner-box"><div class="video"><video controls src="http://localhost/Corban/application/back/public/uploads/'+arr[i].video +'" width="175px" height="200px"><div class="overlay-box"><div class="content"><h3>' + arr[i].titre + '</h3><div class="designation">' + arr[i].description+'</div></div></div></div><div class="lower-box"><h3>'
-                                    + arr[i].titre +'</br>'+ arr[i].description+'</h3> </div></div>'
+                '<div class="team-block-two col-lg-4 col-md-4 col-sm-6 col-xs-12"><div class="inner-box"><div class="video"><video controls src="http://localhost/Corban/application/back/public/uploads/'+arr[i].video +'" width="175px" height="200px">'
           }      
         }
       }

@@ -64,7 +64,7 @@
                             <input type="password" class="form-control" id="passwordCandidat" placeholder="Votre mot de passe...">
                         </div>
                     </form>
-                    <button type="submit" class="btn btn-warning" id="loginCandidat">Se connecter</button>
+                    <button type="button" class="btn btn-warning" id="loginCandidat">Se connecter</button>
                 </div>
                 <div class="modal-footer">
                     Pas de compte? Inscrivez-vous gratuitement &nbsp;<button class="btn btn-info" data-toggle="modal" data-dismiss="modal" data-target="#modalInscriptionCandidat">S'inscrire</button>
@@ -163,7 +163,10 @@
                 </div>
                 <div id="result"></div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary" id="btnInscription">S'inscrire</button>
+                    <button type="submit" class="btn btn-primary" id="btnInscription">
+                        <span id="spinnerBtnInscription"></span>
+                        <span id="labelBtnInscription">S'inscrire</span>
+                    </button>
                 </div>
                 </form>
             </div>
