@@ -27,6 +27,14 @@ class TemoignageCandidatRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult();
     }
+//
+//    public function findVideo($candidat){
+//        return $this->createQueryBuilder('t')
+//            ->andHaving('t.candidat = :val')
+//            ->setParameter('val', $candidat)
+//            ->getQuery()
+//            ->getResult();
+//    }
 
     // /**
     //  * @return TemoignageCandidat[] Returns an array of TemoignageCandidat objects

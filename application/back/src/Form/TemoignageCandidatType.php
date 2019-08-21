@@ -18,7 +18,8 @@ class TemoignageCandidatType extends AbstractType
             ->add('description')
             ->add('video', FileType::class, [
                 'attr' => [
-                    'placeholder' => 'Ajouter un fichier'
+                    'placeholder' => 'Ajouter un fichier',
+                    'class' => 'btn btn-primary'
                 ]
             ])
             ->add('Ajouter', SubmitType::class)

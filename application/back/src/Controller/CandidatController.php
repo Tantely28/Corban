@@ -74,15 +74,15 @@ class CandidatController extends AbstractController
     /**
      * @Route("/list/temoignage/candidat/{id}", name="list_temoignage_candidat")
      * @param Candidat $candidat
-     * @param TemoignageCandidat $temoignageCandidat
+     * @param TemoignageCandidatRepository $temRepo
      * @return Response
      */
     public function temoignage(Candidat $candidat, TemoignageCandidatRepository $temRepo){
-        $temoignageCandidat = $temRepo->findTem($candidat);
+        $temoignageRechercheCandidat = $temRepo->findTem($candidat);
         return $this->render('admin/candidat/listTemoignage.html.twig', [
             'candidat' => $candidat,
             'current_menu' => 'candidat',
-            'temoignage' => $temoignageCandidat
+            'temoignage' => $temoignageRechercheCandidat
         ]);
     }
 
