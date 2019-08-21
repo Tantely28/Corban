@@ -172,6 +172,137 @@
             </div>
         </div>
     </div>
+
+    <!-- MODAL CV CANDIDAT-->
+    <div class="modal" id="modalCVCandidat">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">INFORMATION CANDIDAT
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form  method="post" id="formInscription" name="formCandidat">
+                        <div class="form-group">
+                            <label for="nom">Nom</label>
+                            <input type="text" class="form-control" name="nom" id="nom" placeholder="Nom complet" required>
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label>Sexe</label></br>
+                                <div class="form-check">
+                                    <input class="form-check-input" class="custom-control-input" type="radio" name="sex" id="homme" value="homme" checked>
+                                    <label class="form-check-label" for="homme">
+                                        Homme
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="sex" id="femme" value="femme">
+                                    <label class="form-check-label" for="femme">
+                                        Femme
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label for="dateNaissance">Date de naissance</label>
+                                <input type="date" class="form-control" id="dateNaissance" name="dateNaissance" placeholder="Date de naissance" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>Situation</label></br>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="situation" id="celibataire" value="celibataire" checked>
+                                    <label class="form-check-label" for="celibataire">
+                                        Célibataire
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="situation" id="marie" value="marie">
+                                    <label class="form-check-label" for="marie">
+                                        Marié
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="telephone">Téléphone</label>
+                                <input type="text" class="form-control" id="telephone" name="telephone" placeholder="Numéro de téléphone" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="emailInscription">Adresse email</label>
+                                <input type="email" class="form-control" name="email" id="emailInscription" placeholder="Adresse email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="adresse">Adresse</label>
+                            <input type="text" class="form-control" id="adresse" name="adresse" placeholder="Adresse" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="ville">Ville</label>
+                                <input type="text" class="form-control" id="ville" name="ville" placeholder="Ville" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="pays">Pays</label>
+                                <input type="text" class="form-control" name="pays" id="pays" placeholder="Pays" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="pseudo">Pseudonime</label>
+                                <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Pseudonime" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="passwordInscription">Mot de passe</label>
+                                <input type="password" class="form-control" id="passwordInscription" name="password" placeholder="Mot de passe" required>
+                            </div>
+                        </div>
+
+                        <!-- AUTRE INFORMATION -->
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1">Photo d'identité</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1" accept="image/*">
+                        </div>
+                        <div class="form-group">
+                            <label for="formation">FORAMTIONS ET DIPLOMES</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="formation">EXPERIENCES PROFESSIONELLES</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="formation">COMPETENCE</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="formation">CONNAISSANCES LINGUISTIQUES</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="formation">LOISIR</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1">CV (Word ou pdf)</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1" accept=".doc, .docx,.pdf">
+                        </div>
+
+                </div>
+                <div id="result"></div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" id="btnInscription">
+                        <span id="spinnerBtnInscription"></span>
+                        <span id="labelBtnInscription">Enregistrer</span>
+                    </button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
 <?php
 require 'candidatScript.php';
 require 'clientScript.php';

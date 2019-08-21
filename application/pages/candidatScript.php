@@ -7,11 +7,11 @@
 
     function postCandidat(event){
         event.preventDefault();
-        chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', 'Inscription ... ', 'true');
+        chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', 'Inscription ... ', true);
         xhr = new XMLHttpRequest();
         if (!xhr) {
             alert('Abandon :( Impossible de créer une instance de XMLHTTP');
-            chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', "S'inscrire", 'false');
+            chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', "S'inscrire", false);
             return false;
         }
         const nom = document.querySelector('#nom');
@@ -46,7 +46,7 @@
     }
     function chargement(idBtn, idSpinner, idLabel, label, disable ) {
         document.getElementById(idBtn).disabled=disable;
-        if (disable=='false') document.getElementById(idSpinner).setAttribute('class', "");
+        if (disable===false) document.getElementById(idSpinner).setAttribute('class', "");
         else document.getElementById(idSpinner).setAttribute('class', "spinner-border spinner-border-sm");
         document.getElementById(idLabel).innerHTML = label;
     }
@@ -65,10 +65,10 @@
                 pays.value = "";
                 pseudo.value ="";
                 password.value ="";
-                chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', "S'inscrire", 'false');
+                chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', "S'inscrire", false);
             } else {
+                chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', "S'inscrire", false);
                 alert(":( Erreur: Un problème est survenu avec la requête. \n\n Veuillez contacter l'administrateur du serveur.", xhr);
-                chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', "S'inscrire", 'false');
             }
         }
     }
