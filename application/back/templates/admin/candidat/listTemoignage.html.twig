@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <h2>Témoignage de {{ candidat.nom }}</h2>
+        <table class="table table-striped">
+            <a href="{{ path('add_temoignage_candidat', {id: candidat.id}) }}" class="text-left">
+                <div class="btn btn-primary">Ajouter Temoignage</div>
+            </a>
+            <thead>
+            <tr>
+                <th>Titre</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for t in temoignage %}
+                <tr>
+                    <td>{{ t.title }}</td>
+                    <td>
+                        <a href="{{ path('see_video_candidat', {id: t.id}) }}" class="btn btn-outline-primary">Voir</a>
+                        <form action="#" method="post" style="display: inline-block" onsubmit="return confirm('Etes vous sur?')" >
+                            <input type="hidden" name="_method" value="DELETE" >
+                            <input type="hidden" name="_token" value="#">
+                            <button class="btn btn-danger">Supprimer</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+

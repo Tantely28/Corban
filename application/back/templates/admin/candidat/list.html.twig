@@ -23,7 +23,7 @@
                             <button class="btn btn-danger">Supprimer</button>
                         </form>
                         <a href="{{ path('list_temoignage',{id: c.id}) }}" class="btn btn-outline-primary">Entretien video</a>
-                        <a href="{{ path('list_temoignage',{id: c.id}) }}" class="btn btn-outline-secondary">Témoignage video</a>
+                        <a href="{{ path('list_temoignage_candidat',{id: c.id}) }}" class="btn btn-outline-secondary">Témoignage video</a>
                     </td>
                 </tr>
             {% endfor %}

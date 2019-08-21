@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <h4>{{ temoin.title }}</h4><br>
+        <video width="700" height="auto" controls src="http://localhost/Corban/application/back/public/uploads/{{ temoin.video }}">Description</video>
+        <br><p>{{ temoin.description }}</p>
+        <br><a href="javascript:history.back()" class="btn btn-warning">Retour</a>
+    </div>
+{% endblock %}
+
