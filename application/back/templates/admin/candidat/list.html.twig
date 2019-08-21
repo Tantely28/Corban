@@ -22,8 +22,8 @@
                             <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ c.id) }}">
                             <button class="btn btn-danger">Supprimer</button>
                         </form>
-                        <a href="{{ path('list_temoignage',{id: c.id}) }}" class="btn btn-outline-primary">CV video</a>
-                        <a href="{{ path('list_temoignage_candidat',{id: c.id}) }}" class="btn btn-outline-secondary">Entretient video</a>
+{#                        <a href="{{ path('list_temoignage',{id: c.id}) }}" class="btn btn-outline-primary">CV video</a>#}
+                        <a href="{{ path('list_video_candidat',{id: c.id}) }}" class="btn btn-outline-secondary">Vidéos</a>
                     </td>
                 </tr>
             {% endfor %}

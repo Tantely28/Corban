@@ -74,7 +74,7 @@ class Candidat
     private $password;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\TemoignageCandidat", mappedBy="candidat")
+     * @ORM\OneToMany(targetEntity="App\Entity\Video", mappedBy="candidat")
      */
     private $temoignageCandidats;
 
@@ -221,14 +221,14 @@ class Candidat
     }
 
     /**
-     * @return Collection|TemoignageCandidat[]
+     * @return Collection|Video[]
      */
     public function getTemoignageCandidats(): Collection
     {
         return $this->temoignageCandidats;
     }
 
-    public function addTemoignageCandidat(TemoignageCandidat $temoignageCandidat): self
+    public function addTemoignageCandidat(Video $temoignageCandidat): self
     {
         if (!$this->temoignageCandidats->contains($temoignageCandidat)) {
             $this->temoignageCandidats[] = $temoignageCandidat;
@@ -238,7 +238,7 @@ class Candidat
         return $this;
     }
 
-    public function removeTemoignageCandidat(TemoignageCandidat $temoignageCandidat): self
+    public function removeTemoignageCandidat(Video $temoignageCandidat): self
     {
         if ($this->temoignageCandidats->contains($temoignageCandidat)) {
             $this->temoignageCandidats->removeElement($temoignageCandidat);

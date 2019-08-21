@@ -19,20 +19,20 @@
 {#        </div>#}
 {#    </div>#}
     <div class="container">
-        <h2>Témoignage de {{ candidat.nom }}</h2>
+        <h2>Vidéos de {{ candidat.nom }}</h2>
         <table class="table table-striped">
             <a href="{{ path('add_temoignage_candidat', {id: candidat.id}) }}" class="text-left">
-                <div class="btn btn-primary">Ajouter Temoignage</div>
+                <div class="btn btn-primary">Ajouter un vidéo</div>
             </a>
             <thead>
             <tr>
-                <th>Titre</th>
+                <th>Type</th>
             </tr>
             </thead>
             <tbody>
             {% for t in temoignage %}
                 <tr>
-                    <td>{{ t.title }}</td>
+                    <td>{{ t.type }} vidéo</td>
                     <td>
                         <a href="{{ path('see_video_candidat', {id: t.id}) }}" class="btn btn-outline-primary">Voir</a>
                         <form action="#" method="post" style="display: inline-block" onsubmit="return confirm('Etes vous sur?')" >

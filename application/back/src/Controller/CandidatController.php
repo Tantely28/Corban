@@ -3,10 +3,10 @@
 namespace App\Controller;
 
 use App\Entity\Candidat;
-use App\Entity\TemoignageCandidat;
-use App\Form\TemoignageCandidatType;
+use App\Entity\Video;
+use App\Form\VideoCandidatType;
 use App\Repository\CandidatRepository;
-use App\Repository\TemoignageCandidatRepository;
+use App\Repository\VideoRepository;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -72,17 +72,17 @@ class CandidatController extends AbstractController
     }
 
     /**
-     * @Route("/list/temoignage/candidat/{id}", name="list_temoignage_candidat")
+     * @Route("/list/temoignage/candidat/{id}", name="list_video_candidat")
      * @param Candidat $candidat
-     * @param TemoignageCandidatRepository $temRepo
+     * @param VideoRepository $video
      * @return Response
      */
-    public function temoignage(Candidat $candidat, TemoignageCandidatRepository $temRepo){
-        $temoignageRechercheCandidat = $temRepo->findTem($candidat);
+    public function temoignage(Candidat $candidat, VideoRepository $video){
+        $videos = $video->findTem($candidat);
         return $this->render('admin/candidat/listTemoignage.html.twig', [
             'candidat' => $candidat,
             'current_menu' => 'candidat',
-            'temoignage' => $temoignageRechercheCandidat
+            'temoignage' => $videos
         ]);
     }
 
@@ -93,20 +93,20 @@ class CandidatController extends AbstractController
      * @Route("/temoignage/{id}", name="add_temoignage_candidat")
      */
     public function addTemoignage(Candidat $candidat, Request $request){
-        $temoignageCandidat = new TemoignageCandidat();
-        $form = $this->createForm(TemoignageCandidatType::class, $temoignageCandidat);
+        $temoignageCandidat = new Video();
+        $form = $this->createForm(VideoCandidatType::class, $temoignageCandidat);
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()){
-            $file = $form->get('video')->getData();
-            $fileName = md5(uniqid()) . '.' .$file->guessExtension();
-            $file->move($this->getParameter('upload_directory'), $fileName);
-            $temoignageCandidat->setVideo($fileName);
+//            $file = $form->get('video')->getData();
+//            $fileName = md5(uniqid()) . '.' .$file->guessExtension();
+//            $file->move($this->getParameter('upload_directory'), $fileName);
+//            $temoignageCandidat->setVideo($fileName);
 
             $temoignageCandidat->setCandidat($candidat);
             $this->em->persist($temoignageCandidat);
             $this->em->flush();
-            return $this->redirectToRoute('list_temoignage_candidat', ['id' => $candidat->getId()]);
+            return $this->redirectToRoute('list_video_candidat', ['id' => $candidat->getId()]);
         }
 
         return $this->render('admin/candidat/addTemoignage.html.twig', [
@@ -117,11 +117,11 @@ class CandidatController extends AbstractController
     }
 
     /**
-     * @param TemoignageCandidat $temoignageCandidat
+     * @param Video $temoignageCandidat
      * @Route("/see/temoignage_candidat/{id}", name="see_video_candidat")
      * @return Response
      */
-    public function seeVideo(TemoignageCandidat $temoignageCandidat){
+    public function seeVideo(Video $temoignageCandidat){
         return $this->render('admin/candidat/seeVideo.html.twig', [
             'temoin' => $temoignageCandidat,
             'current_menu' => 'candidat',
