@@ -27,6 +27,24 @@
 		color: #0e3fab;
 		border:2px solid #0e3fab;
 	}
+	.btn-2{
+		border-radius: 50px;
+		padding: 10px 40px;
+		color:  #545454;
+		font-weight: bold;
+		font-family:Arimo;
+		background: linear-gradient(#ffde59,#ffbd59,#ff914d);
+		border:none;
+	}
+	.btn-2:hover{
+		border-radius: 50px;
+		padding: 10px 40px;
+		color: #ffde59;
+		font-weight: bold;
+		font-family:Arimo;
+		background: #545454;
+		border:2px solid #ffde59;
+	}
 </style>	
 <body>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -56,16 +74,7 @@
 		          	</h5>
 					<div>
 						<a href="index.php?page=ressources">
-							<button type="button" 
-									class="btn " 
-									style="border-radius: 50px;
-										   padding: 10px 40px;
-										   color:  #545454;
-										   font-weight: bold;
-										   font-family:Arimo;
-										   background: linear-gradient(#ffde59,#ffbd59,#ff914d)
-										   ;border:none;">SAISIR L’OPPORTUNITE
-							</button>
+							<button type="button" class="btn-2 " >SAISIR L’OPPORTUNITE</button>
 						</a>
 					</div>
 				</div>	
