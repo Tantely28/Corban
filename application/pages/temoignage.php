@@ -34,7 +34,7 @@
         if (this.readyState === 4 && this.status === 200) {
             var arr=JSON.parse(xrh.response);
 
-         document.getElementById("tem").innerHTML +='<p><video controls src="http://localhost/projet/corban/Corban/application/back/public/uploads/'+arr.video +'" width="1000px" height="450px"></video><br>'+arr.description+'<br><br><a href="#" class="btn btn-warning">Retour</a></p>'
+         document.getElementById("tem").innerHTML +='<p><video controls src="http://localhost/projet/corban/Corban/application/back/public/uploads/'+arr.video +'" width="1000px" height="450px"></video><br>'+arr.description+'<br><br><a href="javascript:history.back()" class="btn btn-warning">Retour</a></p>'
         }
     };
     xrh.send()

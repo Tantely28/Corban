@@ -81,7 +81,7 @@ class ClientController extends AbstractController
                 'id' => $temoignages->getId(),
                 'titre' => $temoignages->getTitre(),
                 'video' => $temoignages->getVideo(),
-                'clien'=> $temoignages->getClient()->getNom(),
+                'client'=> $temoignages->getClient()->getNom(),
                 'idClient'=> $temoignages->getClient()->getId()
             ];
         }
@@ -101,7 +101,7 @@ class ClientController extends AbstractController
             'titre' => $tem->getTitre(),
             'video' => $tem->getVideo(),
             'description' => $tem->getDescription(),
-            'clien'=> $tem->getClient()->getNom(),
+            'client'=> $tem->getClient()->getNom(),
             'idClient'=> $tem->getClient()->getId()
         ];
         return new JsonResponse($formatted,Response::HTTP_OK);

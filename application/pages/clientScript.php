@@ -35,11 +35,8 @@
                     if (response.message == null){
                         // document.cookie = "Id" + response.id;
                         // document.getElementById("idSession").value = response.id;
-<<<<<<< HEAD
-                        window.location.href = "http://localhost/Corban/application/index.php?page=home&user="+response.user+"&id="+response.id;
-=======
-                        window.location.href = "http://localhost/index.php?page=home&user="+response.user+"&id="+response.id+"&type=client";
->>>>>>> 3f38a0bcdcb0ad7f5de6c34d6c98b217f49eb2e7
+                        window.location.href = "http://localhost/projet/corban/Corban/application/index.php?page=home&user="+response.user+"&id="+response.id;
+                        // window.location.href = "http://localhost/index.php?page=home&user="+response.user+"&id="+response.id+"&type=client";
                     } else {
                         alert(response.message);
                     }

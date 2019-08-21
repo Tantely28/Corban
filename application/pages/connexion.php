@@ -302,6 +302,6 @@
         </div>
     </div>
 <?php
-require 'candidatScript.php';
-require 'clientScript.php';
+require('clientScript.php');
+require('candidatScript.php');
 ?>
