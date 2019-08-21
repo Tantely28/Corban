@@ -5,6 +5,7 @@ namespace App\Controller\api;
 
 
 use App\Entity\Client;
+use App\Entity\Temoignage;
 use App\Repository\ClientRepository;
 use App\Repository\TemoignageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -84,6 +85,25 @@ class ClientController extends AbstractController
                 'idClient'=> $temoignages->getClient()->getId()
             ];
         }
+        return new JsonResponse($formatted,Response::HTTP_OK);
+    }
+
+    /**
+     * @param Temoignage $temoignage
+     * @Rest\Get("/lecture/un/temoignage/{id}")
+     * @return JsonResponse
+     */
+    public function temoignageone(Temoignage $temoignage)
+    {
+        $tem=$this->temoignage->find($temoignage->getId());
+        $formatted=[
+            'id' => $tem->getId(),
+            'titre' => $tem->getTitre(),
+            'video' => $tem->getVideo(),
+            'description' => $tem->getDescription(),
+            'clien'=> $tem->getClient()->getNom(),
+            'idClient'=> $tem->getClient()->getId()
+        ];
         return new JsonResponse($formatted,Response::HTTP_OK);
     }
 

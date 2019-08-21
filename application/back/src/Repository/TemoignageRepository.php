@@ -30,6 +30,21 @@ class TemoignageRepository extends ServiceEntityRepository
             ;
     }
 
+    /**
+     * @param $idClient
+     * @return mixed
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
+    public function findRowTemoignage($idClient)
+    {
+        return $this->createQueryBuilder('t')
+            ->select('count(t)')
+            ->andWhere('t.client = :val')
+            ->setParameter('val', $idClient)
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
+
     public function findTe()
     {
         return $this->createQueryBuilder('t')

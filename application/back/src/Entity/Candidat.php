@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -70,6 +72,21 @@ class Candidat
      * @ORM\Column(type="string", length=255)
      */
     private $password;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Video", mappedBy="candidat")
+     */
+    private $temoignageCandidats;
+
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\CV", mappedBy="candidat", cascade={"persist", "remove"})
+     */
+    private $cv;
+
+    public function __construct()
+    {
+        $this->temoignageCandidats = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -204,6 +221,55 @@ class Candidat
     public function setPassword(string $password): self
     {
         $this->password = $password;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Video[]
+     */
+    public function getTemoignageCandidats(): Collection
+    {
+        return $this->temoignageCandidats;
+    }
+
+    public function addTemoignageCandidat(Video $temoignageCandidat): self
+    {
+        if (!$this->temoignageCandidats->contains($temoignageCandidat)) {
+            $this->temoignageCandidats[] = $temoignageCandidat;
+            $temoignageCandidat->setCandidat($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTemoignageCandidat(Video $temoignageCandidat): self
+    {
+        if ($this->temoignageCandidats->contains($temoignageCandidat)) {
+            $this->temoignageCandidats->removeElement($temoignageCandidat);
+            // set the owning side to null (unless already changed)
+            if ($temoignageCandidat->getCandidat() === $this) {
+                $temoignageCandidat->setCandidat(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getCv(): ?CV
+    {
+        return $this->cv;
+    }
+
+    public function setCv(?CV $cv): self
+    {
+        $this->cv = $cv;
+
+        // set (or unset) the owning side of the relation if necessary
+        $newCandidat = $cv === null ? null : $this;
+        if ($newCandidat !== $cv->getCandidat()) {
+            $cv->setCandidat($newCandidat);
+        }
 
         return $this;
     }

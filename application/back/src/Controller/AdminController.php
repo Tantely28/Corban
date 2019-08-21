@@ -2,7 +2,12 @@
 
 namespace App\Controller;
 
+use App\Entity\OffreEmplois;
+use App\Form\OffreEmploisType;
 use App\Repository\AdminRepository;
+use App\Repository\OffreEmploisRepository;
+use Doctrine\Common\Persistence\ObjectManager;
+use FOS\RestBundle\Controller\Annotations as Rest;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -22,11 +27,25 @@ class AdminController extends AbstractController
      * @var SessionInterface
      */
     private $session;
+    /**
+     * @var ObjectManager
+     */
+    private $em;
+    /**
+     * @var OffreEmploisRepository
+     */
+    private $emploisRepository;
 
-    public function __construct(AdminRepository $repository,SessionInterface $session)
+    public function __construct(
+        AdminRepository $repository,
+        SessionInterface $session,
+        ObjectManager $em,
+        OffreEmploisRepository $emploisRepository)
     {
         $this->repository = $repository;
         $this->session = $session;
+        $this->em = $em;
+        $this->emploisRepository = $emploisRepository;
     }
 
     /**
@@ -99,5 +118,50 @@ class AdminController extends AbstractController
         return $this->render('service.html.twig');
     }
 
+    /**
+     * @return Response
+     * @Route("/offreEmplois/index", name="offre_emplois_index")
+     */
+    public function offreEmplois(): Response
+    {
+        $offreEmplois = $this->emploisRepository->findAll();
+        return $this->render('admin/offreEmplois/index.html.twig', [
+            'current_menu' => 'offre',
+            'offreEmplois' => $offreEmplois
+        ]);
+    }
 
+    /**
+     * @param Request $request
+     * @return Response
+     * @Route("/offreEmplois/new", name="offre_emplois_new")
+     */
+    public function newEmpois(Request $request): Response
+    {
+        $empois = new OffreEmplois();
+        $form = $this->createForm(OffreEmploisType::class, $empois);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()){
+            $this->em->persist($empois);
+            $this->em->flush();
+            return $this->redirectToRoute('offre_emplois_index');
+        }
+
+        return $this->render('admin/offreEmplois/new.html.twig', [
+            'form' => $form->createView(),
+            'current_menu' => 'offre'
+        ]);
+    }
+
+    /**
+     * @param OffreEmplois $offreEmplois
+     * @return Response
+     * @Route("/offreEmplois/show/{id}", name="offre_emplois_show")
+     */
+    public function showEmpois(OffreEmplois $offreEmplois): Response
+    {
+        return $this->render('admin/offreEmplois/show.html.twig', [
+            'offre' => $offreEmplois
+        ]);
+    }
 }

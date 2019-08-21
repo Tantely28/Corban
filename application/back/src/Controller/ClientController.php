@@ -9,6 +9,7 @@ use App\Repository\ClientRepository;
 use App\Repository\TemoignageRepository;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\EntityRepository;
+use phpDocumentor\Reflection\Types\This;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -114,13 +115,22 @@ class ClientController extends AbstractController
     /**
      * @param Client $client
      * @return Response
+     * @throws \Doctrine\ORM\NonUniqueResultException
      * @Route("/delete/client/{id}", name="client_delete")
      */
     public function delete(Client $client): Response
     {
+        $row = $this->temoignageRepository->findRowTemoignage($client->getId());
+        if ($row == 0) {
             $this->em->remove($client);
             $this->em->flush();
-        return $this->render('/client');
+            return $this->redirectToRoute('client_index', [
+                'clients' => $client,
+                'current_menu' => 'client'
+            ]);
+        } else {
+            return new Response('Ce client ne peut pas etre supprimer');
+        }
     }
 
     /*
@@ -194,13 +204,15 @@ class ClientController extends AbstractController
 
     /**
      * @param Temoignage $temoignage
-     * @Route("/delete/temoignage/{id}", name="delete_temoignage")
+     * @param Request $request
      * @return Response
+     * @Route("/delete/temoignage/{id}", name="delete_temoignage")
      */
-    public function deleteTem(Temoignage $temoignage){
-        $this->em->remove($temoignage);
-        $this->em->flush();
-        return $this->render('admin/client/list.html.twig');
+    public function deleteTem(Temoignage $temoignage, Request $request){
+            $this->em->remove($temoignage);
+            $this->em->flush();
+
+        return $this->redirectToRoute('client_index');
     }
 
     /**

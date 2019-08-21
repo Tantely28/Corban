@@ -43,12 +43,8 @@ if(isset($_GET['page'])) {
     <link rel="stylesheet" href="assets/css/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="assets/css/css/magnific-popup.css">
-
     <link rel="stylesheet" href="assets/css/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="assets/css/css/jquery.timepicker.css">
-
-    
-
     <link rel="stylesheet" href="assets/css/css/icomoon.css">
     <link rel="stylesheet" href="assets/css/css/style.css">  
 </head>
