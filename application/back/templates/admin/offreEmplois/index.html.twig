@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Offre d'emplois!{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h3>Les offres d'emplois</h3>
+        <table class="table table-striped">
+            <a href="{{ path('offre_emplois_new') }}" class="text-left">
+                <div class="btn btn-primary">Ajouter offre</div>
+            </a>
+            <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Date limite</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for o in offreEmplois %}
+                <tr>
+                    <td>{{ o.titre }}</td>
+                    <td>{{ o.dateLimite | date('d/M/Y') }}</td>
+                    <td>
+                        <a href="{{ path('offre_emplois_show', { id: o.id }) }}" class="btn btn-primary">Voir</a>
+                        <a href="#" class="btn btn-outline-primary">Publier</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
