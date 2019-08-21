@@ -161,7 +161,6 @@
                             </div>
                         </div>                                                                            
                 </div>
-                <div id="result"></div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary" id="btnInscription">
                         <span id="spinnerBtnInscription"></span>
@@ -183,10 +182,10 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form  method="post" id="formInscription" name="formCandidat">
+                    <form  method="post" id="formCvCandidat" name="formCandidat">
                         <div class="form-group">
                             <label for="nom">Nom</label>
-                            <input type="text" class="form-control" name="nom" id="nom" placeholder="Nom complet" required>
+                            <input type="text" class="form-control" name="nom" id="idCandidat" placeholder="Nom complet" value="<?php echo $_SESSION['auth']['id'] ?>">
                         </div>
 
 
@@ -264,39 +263,38 @@
                         <!-- AUTRE INFORMATION -->
                         <div class="form-group">
                             <label for="exampleFormControlFile1">Photo d'identité</label>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1" accept="image/*">
+                            <input type="file" class="form-control-file" id="photoCandidat" accept="image/*">
                         </div>
                         <div class="form-group">
                             <label for="formation">FORAMTIONS ET DIPLOMES</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea class="form-control" id="formationCandidat" rows="3"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="formation">EXPERIENCES PROFESSIONELLES</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea class="form-control" id="experienceCandidat" rows="3"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="formation">COMPETENCE</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea class="form-control" id="competenceCandidat" rows="3"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="formation">CONNAISSANCES LINGUISTIQUES</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea class="form-control" id="langueCandidat" rows="3"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="formation">LOISIR</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea class="form-control" id="loisirCandidat" rows="3"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlFile1">CV (Word ou pdf)</label>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1" accept=".doc, .docx,.pdf">
+                            <input type="file" class="form-control-file" id="cvCandidat" accept=".doc, .docx,.pdf">
                         </div>
 
                 </div>
-                <div id="result"></div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary" id="btnInscription">
-                        <span id="spinnerBtnInscription"></span>
-                        <span id="labelBtnInscription">Enregistrer</span>
+                    <button type="submit" class="btn btn-primary" id="btnCVCandidat">
+                        <span id="spinnerBtnCVCandidat"></span>
+                        <span id="labelBtnCVCandidat">Enregistrer</span>
                     </button>
                 </div>
                 </form>
