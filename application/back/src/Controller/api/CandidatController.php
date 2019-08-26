@@ -5,6 +5,7 @@ namespace App\Controller\api;
 use App\Entity\Candidat;
 use App\Entity\CV;
 use App\Repository\CandidatRepository;
+use App\Repository\VideoRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -19,6 +20,10 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class CandidatController extends AbstractController
 {
+    /**
+     * @var VideoRepository
+     */
+    private $videoRepository;
 
     /**
      * @Rest\Post("/create/candidat")
@@ -57,9 +62,10 @@ class CandidatController extends AbstractController
          */
         private $candidat;
 
-        public function __construct(CandidatRepository $candidat)
+        public function __construct(CandidatRepository $candidat, VideoRepository $videoRepository)
     {
         $this->candidat = $candidat;
+        $this->videoRepository = $videoRepository;
     }
 
         /**
@@ -84,7 +90,6 @@ class CandidatController extends AbstractController
                         'telephone' => $candidat->getTelephone(),
                         'email' => $candidat->getEmail(),
                         'user' => $candidat->getPseudo(),
-
                     ];
                 }
                 return new JsonResponse($formatted, Response::HTTP_OK);
@@ -127,6 +132,32 @@ class CandidatController extends AbstractController
 
         }else{
             return new JsonResponse(['message' => 'Veuillez remplir tous les champs','test'=>$request->get('name')], Response::HTTP_OK);
+        }
+    }
+
+    #API video
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     * @Rest\Route("/video")
+     */
+    public function video(Request $request){
+        $video = $this->videoRepository->searchVideoCV($request->get('candidat'));
+
+        if (empty($video)){
+            return new JsonResponse(['message' => 'Id non spécifié', 'status' => 'KO'], Response::HTTP_OK);
+        } else {
+            $formatted = [];
+            foreach ($video as $video){
+                $formatted[] = [
+                    'id' => $video->getId(),
+                    'type' => $video->getType(),
+                    'description' => $video->getDescription(),
+                    'video' => $video->getVideo(),
+                    'candidat' => $video->getCandidat()->getNom()
+                ];
+            }
+            return new JsonResponse($formatted, Response::HTTP_OK);
         }
     }
 }

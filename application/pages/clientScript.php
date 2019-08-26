@@ -36,7 +36,7 @@
                         // document.cookie = "Id" + response.id;
                         // document.getElementById("idSession").value = response.id;
 
-                        window.location.href = "http://localhost/Corban/application/index.php?page=home&user="+response.user+"&id="+response.id;
+                        window.location.href = "http://localhost/Corban/application/index.php?page=home&user="+response.user+"&id="+response.id+"&type=client";
 
                     } else {
                         alert(response.message);
