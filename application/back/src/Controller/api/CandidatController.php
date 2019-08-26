@@ -135,14 +135,93 @@ class CandidatController extends AbstractController
         }
     }
 
-    #API video
+    /*************** VIDEO **************/
+    #API videoCV
+    /**
+     * @return JsonResponse
+     * @Rest\Route("/video/CV")
+     */
+    public function videoCV(){
+        $video = $this->videoRepository->searchVideoCV();
+
+        if (empty($video)){
+            return new JsonResponse(['message' => 'Id non spécifié', 'status' => 'KO'], Response::HTTP_OK);
+        } else {
+            $formatted = [];
+            foreach ($video as $video){
+                $formatted[] = [
+                    'id' => $video->getId(),
+                    'type' => $video->getType(),
+                    'description' => $video->getDescription(),
+                    'video' => $video->getVideo(),
+                    'candidat' => $video->getCandidat()->getNom()
+                ];
+            }
+            return new JsonResponse($formatted, Response::HTTP_OK);
+        }
+    }
+
+    #API videoEntretient
     /**
      * @param Request $request
      * @return JsonResponse
-     * @Rest\Route("/video")
+     * @Rest\Route("/video/Entretient")
      */
-    public function video(Request $request){
-        $video = $this->videoRepository->searchVideoCV($request->get('candidat'));
+    public function videoEntretient(){
+        $video = $this->videoRepository->searchVideoEntretient();
+
+        if (empty($video)){
+            return new JsonResponse(['message' => 'Id non spécifié', 'status' => 'KO'], Response::HTTP_OK);
+        } else {
+            $formatted = [];
+            foreach ($video as $video){
+                $formatted[] = [
+                    'id' => $video->getId(),
+                    'type' => $video->getType(),
+                    'description' => $video->getDescription(),
+                    'video' => $video->getVideo(),
+                    'candidat' => $video->getCandidat()->getNom()
+                ];
+            }
+            return new JsonResponse($formatted, Response::HTTP_OK);
+        }
+    }
+
+
+    #API videoCVCandidat
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     * @Rest\Route("/video/candidat/CV")
+     */
+    public function videoCVCandidat(Request $request){
+        $video = $this->videoRepository->searchVideoCVCandidat($request->get('candidat'));
+
+        if (empty($video)){
+            return new JsonResponse(['message' => 'Id non spécifié', 'status' => 'KO'], Response::HTTP_OK);
+        } else {
+            $formatted = [];
+            foreach ($video as $video){
+                $formatted[] = [
+                    'id' => $video->getId(),
+                    'type' => $video->getType(),
+                    'description' => $video->getDescription(),
+                    'video' => $video->getVideo(),
+                    'candidat' => $video->getCandidat()->getNom()
+                ];
+            }
+            return new JsonResponse($formatted, Response::HTTP_OK);
+        }
+    }
+
+    #API videoEntretientCandidat
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     * @Rest\Route("/video/candidat/Entretient")
+     */
+    public function videoEntretientCandidat(Request $request){
+        $video = $this->videoRepository->searchVideoEntretientCandidat($request->get('candidat'));
 
         if (empty($video)){
             return new JsonResponse(['message' => 'Id non spécifié', 'status' => 'KO'], Response::HTTP_OK);
