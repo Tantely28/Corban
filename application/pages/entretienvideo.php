@@ -76,6 +76,13 @@
     </div>
   </div>
 </section>
+<section class="container-fluid">
+    <div class="container">
+        <div class="row" id="entretientvideos">
+
+        </div>
+    </div>
+</section>
 
 <div class="contact">
   <div class="container">
@@ -114,5 +121,24 @@
     </div>
   </div>
 </div>
+
+<script>
+    var xrh=new XMLHttpRequest();
+    xrh.open('GET','http://127.0.0.1:8000/api/video/CV');
+    xrh.onreadystatechange=function () {
+        if (this.readyState === 4 && this.status === 200) {
+            var arr=JSON.parse(xrh.response);
+
+            for(var i=0;i<arr.length;i++) {
+                document.getElementById("entretientvideos").innerHTML +=
+                    '<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"><div style="background-color: white; width: 175px; padding: 3px 3px 2px 2px; margin-bottom: 10px; border-radius: 7px">' +
+                    '<video controls src="http://localhost/Corban/application/back/public/uploads/'+arr[i].video +'" width="175px" height="200px"></video>' +
+                    '<b>'+arr[i].type+'</b></br><a href="index.php?page=entretientvideos='+arr[i].id+'" class="btn btn-outline-primary"><b>Regarder</b></a></div></div>'
+            }
+        }
+    }
+    xrh.send()
+</script>
+
 </body>
 </html>

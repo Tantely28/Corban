@@ -92,15 +92,15 @@
                     var response = JSON.parse(xhr.responseText);
                     if (response.message == null){
                         // Si tout se passe bien
-                        chargement('connexionCandidat', 'spnrConnexCandidat', 'lblConnexCandidat', 'Se Connecter ', false);
                         window.location.href = "http://localhost/index.php?page=home&user="+response.user+"&id="+response.id+"&type=candidat";
 
                     } else {
                         alert(response.message);
-                        chargement('connexionCandidat', 'spnrConnexCandidat', 'lblConnexCandidat', 'Se Connecter ', false);
                     }
+                    chargement('connexionCandidat', 'spnrConnexCandidat', 'lblConnexCandidat', 'Se Connecter ', false);
                 } else {
                     alert(":( Erreur: Un problème est survenu avec la requête. \n\n Veuillez contacter l'administrateur du serveur.", xhr);
+                    chargement('connexionCandidat', 'spnrConnexCandidat', 'lblConnexCandidat', 'Se Connecter ', false);
                 }
             }        };
         xhr.open('POST', 'http://127.0.0.1:8000/api/login/candidat', true);
