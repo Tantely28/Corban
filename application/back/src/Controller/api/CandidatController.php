@@ -5,6 +5,7 @@ namespace App\Controller\api;
 use App\Entity\Candidat;
 use App\Entity\CV;
 use App\Repository\CandidatRepository;
+use App\Repository\VideoRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -19,6 +20,10 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class CandidatController extends AbstractController
 {
+    /**
+     * @var VideoRepository
+     */
+    private $videoRepository;
 
     /**
      * @Rest\Post("/create/candidat")
@@ -57,9 +62,10 @@ class CandidatController extends AbstractController
          */
         private $candidat;
 
-        public function __construct(CandidatRepository $candidat)
+        public function __construct(CandidatRepository $candidat, VideoRepository $videoRepository)
     {
         $this->candidat = $candidat;
+        $this->videoRepository = $videoRepository;
     }
 
         /**
@@ -84,7 +90,6 @@ class CandidatController extends AbstractController
                         'telephone' => $candidat->getTelephone(),
                         'email' => $candidat->getEmail(),
                         'user' => $candidat->getPseudo(),
-
                     ];
                 }
                 return new JsonResponse($formatted, Response::HTTP_OK);
@@ -92,41 +97,148 @@ class CandidatController extends AbstractController
         }
 
     /**
-     * @Rest\Post("/create/cvCandidat")
+     * @Rest\Post("/create/cvCandidat/{id}")
      * @param Request $request
      * @return JsonResponse
      * @throws \Exception
      */
-    public function ajoutCVCandidat(Request $request)
+    public function ajoutCVCandidat(Candidat $candidat,Request $request)
     {
         $cvCandidat=new CV();
-        if (!empty($request->get('candidat_id')) && !empty($request->get('photo')) && !empty($request->get('cv')) && !empty($request->get('formation')) && !empty(($request->get('experience')) && !empty($request->get('competence')) && !empty($request->get('langue')) && !empty($request->get('loisir'))))
+
+        if (!empty($request->files->get('photo')) && !empty($request->files->get('cv')) && !empty($request->get('formation')) && !empty(($request->get('experience')) && !empty($request->get('competence')) && !empty($request->get('langue')) && !empty($request->get('loisir'))))
         {
-            $cvCandidat->setCandidat($request->get('candidat_id'));
+                $filePhoto = $request->files->get('photo');
+                $filenamePhoto=md5(uniqid()).'.'.$filePhoto->guessExtension();
+                $filePhoto->move($this->getParameter('upload_directory'), $filenamePhoto);
+                $cvCandidat->setPhoto($filenamePhoto);
 
-            $filePhoto = $request->get('photo');
-            $filenamePhoto=md5(uniqid()).'.'.$filePhoto->guessExtension();
-            $filePhoto->move($this->getParameter('upload_directory'), $filenamePhoto);
-            $cvCandidat->setPhoto($filenamePhoto);
+                $fileCV = $request->files->get('cv');
+                $filenameCV=md5(uniqid()).'.'.$fileCV->guessExtension();
+                $fileCV->move($this->getParameter('upload_directory'), $filenameCV);
+                $cvCandidat->setCv($filenameCV);
+                $cvCandidat->setCandidat($candidat);
+                $cvCandidat->setFormation($request->get('formation'));
+                $cvCandidat->setExperience($request->get('experience'));
+                $cvCandidat->setCompetence($request->get('competence'));
+                $cvCandidat->setLangue($request->get('langue'));
+                $cvCandidat->setLoisir($request->get('loisir'));
 
-            $fileCV = $request->get('cv');
-            $filenameCV=md5(uniqid()).'.'.$fileCV->guessExtension();
-            $fileCV->move($this->getParameter('upload_directory'), $filenameCV);
-            $cvCandidat->setCv($filenameCV);
+                $em=$this->getDoctrine()->getManager();
+                $em->persist($cvCandidat);
+                $em->flush();
+                return new JsonResponse(['message' => 'Information sauvegardé'], Response::HTTP_OK);
 
-            $cvCandidat->setFormation($request->get('formation'));
-            $cvCandidat->setExperience($request->get('experience'));
-            $cvCandidat->setCompetence($request->get('competence'));
-            $cvCandidat->setLangue($request->get('langue'));
-            $cvCandidat->setLoisir($request->get('loisir'));
 
-            $em=$this->getDoctrine()->getManager();
-            $em->persist($cvCandidat);
-            $em->flush();
-            return new JsonResponse(['message' => 'Information sauvegardé'], Response::HTTP_OK);
+
 
         }else{
             return new JsonResponse(['message' => 'Veuillez remplir tous les champs','test'=>$request->get('name')], Response::HTTP_OK);
+        }
+    }
+
+    /*************** VIDEO **************/
+    #API videoCV
+    /**
+     * @return JsonResponse
+     * @Rest\Route("/video/CV")
+     */
+    public function videoCV(){
+        $video = $this->videoRepository->searchVideoCV();
+
+        if (empty($video)){
+            return new JsonResponse(['message' => 'Id non spécifié', 'status' => 'KO'], Response::HTTP_OK);
+        } else {
+            $formatted = [];
+            foreach ($video as $video){
+                $formatted[] = [
+                    'id' => $video->getId(),
+                    'type' => $video->getType(),
+                    'description' => $video->getDescription(),
+                    'video' => $video->getVideo(),
+                    'candidat' => $video->getCandidat()->getNom()
+                ];
+            }
+            return new JsonResponse($formatted, Response::HTTP_OK);
+        }
+    }
+
+    #API videoEntretient
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     * @Rest\Route("/video/Entretient")
+     */
+    public function videoEntretient(){
+        $video = $this->videoRepository->searchVideoEntretient();
+
+        if (empty($video)){
+            return new JsonResponse(['message' => 'Id non spécifié', 'status' => 'KO'], Response::HTTP_OK);
+        } else {
+            $formatted = [];
+            foreach ($video as $video){
+                $formatted[] = [
+                    'id' => $video->getId(),
+                    'type' => $video->getType(),
+                    'description' => $video->getDescription(),
+                    'video' => $video->getVideo(),
+                    'candidat' => $video->getCandidat()->getNom()
+                ];
+            }
+            return new JsonResponse($formatted, Response::HTTP_OK);
+        }
+    }
+
+
+    #API videoCVCandidat
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     * @Rest\Route("/video/candidat/CV")
+     */
+    public function videoCVCandidat(Request $request){
+        $video = $this->videoRepository->searchVideoCVCandidat($request->get('candidat'));
+
+        if (empty($video)){
+            return new JsonResponse(['message' => 'Id non spécifié', 'status' => 'KO'], Response::HTTP_OK);
+        } else {
+            $formatted = [];
+            foreach ($video as $video){
+                $formatted[] = [
+                    'id' => $video->getId(),
+                    'type' => $video->getType(),
+                    'description' => $video->getDescription(),
+                    'video' => $video->getVideo(),
+                    'candidat' => $video->getCandidat()->getNom()
+                ];
+            }
+            return new JsonResponse($formatted, Response::HTTP_OK);
+        }
+    }
+
+    #API videoEntretientCandidat
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     * @Rest\Route("/video/candidat/Entretient")
+     */
+    public function videoEntretientCandidat(Request $request){
+        $video = $this->videoRepository->searchVideoEntretientCandidat($request->get('candidat'));
+
+        if (empty($video)){
+            return new JsonResponse(['message' => 'Id non spécifié', 'status' => 'KO'], Response::HTTP_OK);
+        } else {
+            $formatted = [];
+            foreach ($video as $video){
+                $formatted[] = [
+                    'id' => $video->getId(),
+                    'type' => $video->getType(),
+                    'description' => $video->getDescription(),
+                    'video' => $video->getVideo(),
+                    'candidat' => $video->getCandidat()->getNom()
+                ];
+            }
+            return new JsonResponse($formatted, Response::HTTP_OK);
         }
     }
 }

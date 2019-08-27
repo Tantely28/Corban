@@ -106,6 +106,4 @@ class ClientController extends AbstractController
         ];
         return new JsonResponse($formatted,Response::HTTP_OK);
     }
-
-
 }

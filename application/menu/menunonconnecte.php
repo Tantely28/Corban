@@ -7,7 +7,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="site-nav">
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ml-auto" style="font-family: 'Roboto', sans-serif;">
             <li class="nav-item active"><a href="index.php?page=home" class="nav-link">Accueil</a></li>
             <li class="nav-item"><a href="index.php?page=temoignages" class="nav-link">Témoignage</a></li>
             <li class="nav-item"><a href="index.php?page=ressources" class="nav-link">Ressources</a></li>

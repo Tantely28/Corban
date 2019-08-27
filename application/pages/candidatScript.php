@@ -3,7 +3,7 @@
     //INSCRIPTION CANDIDAT
     var xhr ;
     document.querySelector('#formInscription').addEventListener('submit', postCandidat);
-    document.querySelector('#loginCandidat').addEventListener('click', loginCandidat);
+    document.querySelector('#connexionCandidat').addEventListener('click', loginCandidat);
     document.querySelector('#btnCVCandidat').addEventListener('click', postCVCandidat);
 
     function postCandidat(event){
@@ -45,7 +45,7 @@
         xhr.send(data);
 
     }
-    function chargement(idBtn, idSpinner, idLabel, label, disable ) {
+    function chargement(idBtn, idSpinner, idLabel, label, disable) {
         document.getElementById(idBtn).disabled=disable;
         if (disable===false) document.getElementById(idSpinner).setAttribute('class', "");
         else document.getElementById(idSpinner).setAttribute('class', "spinner-border spinner-border-sm");
@@ -56,7 +56,12 @@
             if (xhr.status === 200) {
                 var response = JSON.parse(xhr.responseText);
                 alert(response.message); //Si tout va bien afficher le message du serveur
+<<<<<<< HEAD
                 window.location.href = "http://localhost/projet/corban/Corban/application/";
+=======
+                chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', "S'inscrire", false);
+                window.location.href = "http://localhost";
+>>>>>>> 5a5fc4e9589f1f8381e437a89ba11873958f9502
                 nom.value = "";
                 dateNaissance.value = "";
                 telephone.value = "";
@@ -66,15 +71,15 @@
                 pays.value = "";
                 pseudo.value ="";
                 password.value ="";
-                chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', "S'inscrire", false);
             } else {
                 chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', "S'inscrire", false);
                 alert(":( Erreur: Un problème est survenu avec la requête. \n\n Veuillez contacter l'administrateur du serveur.", xhr);
             }
         }
     }
-    function loginCandidat(event) {
-        event.preventDefault();
+    function loginCandidat() {
+
+        chargement('connexionCandidat', 'spnrConnexCandidat', 'lblConnexCandidat', 'Connexion ... ', true);
         xhr = new XMLHttpRequest();
         if (!xhr) {
             alert('Abandon :( Impossible de créer une instance de XMLHTTP');
@@ -92,11 +97,14 @@
                     if (response.message == null){
                         // Si tout se passe bien
                         window.location.href = "http://localhost/projet/corban/Corban/application/index.php?page=home&user="+response.user+"&id="+response.id+"&type=candidat";
+
                     } else {
                         alert(response.message);
                     }
+                    chargement('connexionCandidat', 'spnrConnexCandidat', 'lblConnexCandidat', 'Se Connecter ', false);
                 } else {
                     alert(":( Erreur: Un problème est survenu avec la requête. \n\n Veuillez contacter l'administrateur du serveur.", xhr);
+                    chargement('connexionCandidat', 'spnrConnexCandidat', 'lblConnexCandidat', 'Se Connecter ', false);
                 }
             }        };
         xhr.open('POST', 'http://127.0.0.1:8000/api/login/candidat', true);
@@ -114,33 +122,32 @@
             return false;
         }
         const data = new FormData();
-        data.append('candidat_id', document.querySelector('#idCandidat').value);
-        data.append('photo', document.querySelector('#photoCandidat').value);
+        const $idCandidat = document.querySelector('#idCandidat').value;
+        data.append('photo', document.querySelector('#photoCandidat').files[0]);
         data.append('formation', document.querySelector('#formationCandidat').value);
         data.append('experience', document.querySelector('#experienceCandidat').value);
         data.append('competence', document.querySelector('#competenceCandidat').value);
         data.append('langue', document.querySelector('#langueCandidat').value);
         data.append('loisir', document.querySelector('#loisirCandidat').value);
-        data.append('cv', document.querySelector('#cvCandidat').value);
+        data.append('cv', document.querySelector('#cvCandidat').files[0]);
 
+        xhr.onreadystatechange = function(){
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    alert(response.message); //Si tout va bien afficher le message du serveur
 
-        xhr.onreadystatechange = alertContentsCvCandidat();
-        xhr.open('POST', 'http://127.0.0.1:8000/api/create/cvCandidat', true);
+                    window.location.href = "http://localhost";
+                } else {
+
+                    alert(":( Erreur: Un problème est survenu avec la requête. \n\n Veuillez contacter l'administrateur du serveur.", xhr);
+                }
+                chargement('btnCVCandidat', 'spinnerBtnCVCandidat', 'labelBtnCVCandidat', 'Enregistrer', false);
+            }
+        };
+        xhr.open('POST', "http://127.0.0.1:8000/api/create/cvCandidat/<?php if (isset($_SESSION['auth']['id'])) {echo $_SESSION['auth']['id'];}?>", true);
         xhr.send(data);
 
-    }
-    function alertContentsCvCandidat() {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-                var response = JSON.parse(xhr.responseText);
-                alert(response.message); //Si tout va bien afficher le message du serveur
-                window.location.href = "http://localhost";
-                chargement('btnCVCandidat', 'spinnerBtnCVCandidat', 'labelBtnCVCandidat', 'Enregistrement ... ', false);
-            } else {
-                chargement('btnCVCandidat', 'spinnerBtnCVCandidat', 'labelBtnCVCandidat', 'Enregistrement ... ', false);
-                alert(":( Erreur: Un problème est survenu avec la requête. \n\n Veuillez contacter l'administrateur du serveur.", xhr);
-            }
-        }
     }
 
 </script>

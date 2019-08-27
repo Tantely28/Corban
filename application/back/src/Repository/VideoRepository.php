@@ -27,6 +27,46 @@ class VideoRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult();
     }
+
+    public function searchVideoCV()
+    {
+        return $this->createQueryBuilder('v')
+            ->andWhere('v.type = :cv')
+            ->setParameter('cv', "CV")
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function searchVideoEntretient()
+    {
+        return $this->createQueryBuilder('v')
+            ->andWhere('v.type = :entretient')
+            ->setParameter('entretient', "Entretient")
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function searchVideoCVCandidat($candidat_id)
+    {
+        return $this->createQueryBuilder('v')
+            ->andWhere('v.candidat = :val')
+            ->andWhere('v.type = :cv')
+            ->setParameter('val', $candidat_id)
+            ->setParameter('cv', "CV")
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function searchVideoEntretientCandidat($candidat_id)
+    {
+        return $this->createQueryBuilder('v')
+            ->andWhere('v.candidat = :val')
+            ->andWhere('v.type = :entretient')
+            ->setParameter('val', $candidat_id)
+            ->setParameter('entretient', "Entretient")
+            ->getQuery()
+            ->getResult();
+    }
 //
 //    public function findVideo($candidat){
 //        return $this->createQueryBuilder('t')

@@ -38,7 +38,10 @@
                             <input type="hidden" class="form-control" id="idSession"  name="idSession" value="<?php if (isset($_POST['idSession'])) echo $_POST['idSession'] ?>">
                         </div>
                     </form>
-                    <button type="submit" id="connexionClient" class="btn btn-warning">Se connecter</button>
+                    <button type="button" class="btn btn-warning" id="connexionClient">
+                        <span id="spnrConnexClient"></span>
+                        <span id="lblConnexClient">Se connecter</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -64,7 +67,10 @@
                             <input type="password" class="form-control" id="passwordCandidat" placeholder="Votre mot de passe...">
                         </div>
                     </form>
-                    <button type="button" class="btn btn-warning" id="loginCandidat">Se connecter</button>
+                    <button type="button" class="btn btn-warning" id="connexionCandidat">
+                        <span id="spnrConnexCandidat"></span>
+                        <span id="lblConnexCandidat">Se connecter</span>
+                    </button>
                 </div>
                 <div class="modal-footer">
                     Pas de compte? Inscrivez-vous gratuitement &nbsp;<button class="btn btn-info" data-toggle="modal" data-dismiss="modal" data-target="#modalInscriptionCandidat">S'inscrire</button>
@@ -183,84 +189,11 @@
                 </div>
                 <div class="modal-body">
                     <form  method="post" id="formCvCandidat" name="formCandidat">
-                        <div class="form-group">
-                            <label for="nom">Nom</label>
-                            <input type="text" class="form-control" name="nom" id="idCandidat" placeholder="Nom complet" value="<?php echo $_SESSION['auth']['id'] ?>">
-                        </div>
-
-
-                        <div class="form-row">
-                            <div class="form-group col-md-3">
-                                <label>Sexe</label></br>
-                                <div class="form-check">
-                                    <input class="form-check-input" class="custom-control-input" type="radio" name="sex" id="homme" value="homme" checked>
-                                    <label class="form-check-label" for="homme">
-                                        Homme
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="sex" id="femme" value="femme">
-                                    <label class="form-check-label" for="femme">
-                                        Femme
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-group col-md-5">
-                                <label for="dateNaissance">Date de naissance</label>
-                                <input type="date" class="form-control" id="dateNaissance" name="dateNaissance" placeholder="Date de naissance" required>
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label>Situation</label></br>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="situation" id="celibataire" value="celibataire" checked>
-                                    <label class="form-check-label" for="celibataire">
-                                        Célibataire
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="situation" id="marie" value="marie">
-                                    <label class="form-check-label" for="marie">
-                                        Marié
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="telephone">Téléphone</label>
-                                <input type="text" class="form-control" id="telephone" name="telephone" placeholder="Numéro de téléphone" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="emailInscription">Adresse email</label>
-                                <input type="email" class="form-control" name="email" id="emailInscription" placeholder="Adresse email" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="adresse">Adresse</label>
-                            <input type="text" class="form-control" id="adresse" name="adresse" placeholder="Adresse" required>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="ville">Ville</label>
-                                <input type="text" class="form-control" id="ville" name="ville" placeholder="Ville" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="pays">Pays</label>
-                                <input type="text" class="form-control" name="pays" id="pays" placeholder="Pays" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="pseudo">Pseudonime</label>
-                                <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Pseudonime" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="passwordInscription">Mot de passe</label>
-                                <input type="password" class="form-control" id="passwordInscription" name="password" placeholder="Mot de passe" required>
-                            </div>
-                        </div>
-
                         <!-- AUTRE INFORMATION -->
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1">CV (Word ou pdf)</label>
+                            <input type="file" class="form-control-file" id="cvCandidat" accept=".doc, .docx,.pdf">
+                        </div>
                         <div class="form-group">
                             <label for="exampleFormControlFile1">Photo d'identité</label>
                             <input type="file" class="form-control-file" id="photoCandidat" accept="image/*">
@@ -285,11 +218,6 @@
                             <label for="formation">LOISIR</label>
                             <textarea class="form-control" id="loisirCandidat" rows="3"></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlFile1">CV (Word ou pdf)</label>
-                            <input type="file" class="form-control-file" id="cvCandidat" accept=".doc, .docx,.pdf">
-                        </div>
-
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary" id="btnCVCandidat">

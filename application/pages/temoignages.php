@@ -69,7 +69,11 @@
 
             for(var i=0;i<arr.length;i++) {
                 document.getElementById("temoin").innerHTML +=
+<<<<<<< HEAD
                 '<div class="col-lg-3 col-md-4 col-6"><div style="background-color: white; width: 200px; padding: 0 0 0 0; margin-bottom: 10px; border-radius: 7px; text-align: center"><a href="index.php?page=temoignage&idtemoignage='+arr[i].id+'""><video src="http://localhost/projet/corban/Corban/application/back/public/uploads/'+arr[i].video +'" width="200px" height="200px"></video>'+arr[i].client+'</b></a></div></div>'
+=======
+                '<div class="col-lg-3 col-md-4 col-6"><div style="background-color: white; width: 175px; padding: 3px 3px 2px 2px; margin-bottom: 10px; border-radius: 7px"><video controls src="http://localhost/Corban/application/back/public/uploads/'+arr[i].video +'" width="175px" height="200px"></video><b>'+arr[i].titre+'</b></br><a href="index.php?page=temoignage&idtemoignage='+arr[i].id+'" class="btn btn-outline-primary"><b>Regarder</b></a></div></div>'
+>>>>>>> 5a5fc4e9589f1f8381e437a89ba11873958f9502
           }      
         }
       };
