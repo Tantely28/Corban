@@ -56,12 +56,7 @@
             if (xhr.status === 200) {
                 var response = JSON.parse(xhr.responseText);
                 alert(response.message); //Si tout va bien afficher le message du serveur
-<<<<<<< HEAD
                 window.location.href = "http://localhost/projet/corban/Corban/application/";
-=======
-                chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', "S'inscrire", false);
-                window.location.href = "http://localhost";
->>>>>>> 5a5fc4e9589f1f8381e437a89ba11873958f9502
                 nom.value = "";
                 dateNaissance.value = "";
                 telephone.value = "";

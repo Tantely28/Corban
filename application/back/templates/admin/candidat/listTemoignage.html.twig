@@ -35,9 +35,9 @@
                     <td>{{ t.type }} vidéo</td>
                     <td>
                         <a href="{{ path('see_video_candidat', {id: t.id}) }}" class="btn btn-outline-primary">Voir</a>
-                        <form action="#" method="post" style="display: inline-block" onsubmit="return confirm('Etes vous sur?')" >
+                        <form action="{{ path('delete_video', {id: t.id}) }}" method="post" style="display: inline-block" onsubmit="return confirm('Etes vous sur?')" >
                             <input type="hidden" name="_method" value="DELETE" >
-                            <input type="hidden" name="_token" value="#">
+                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ t.id) }}">
                             <button class="btn btn-danger">Supprimer</button>
                         </form>
                     </td>
