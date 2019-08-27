@@ -56,7 +56,7 @@
             if (xhr.status === 200) {
                 var response = JSON.parse(xhr.responseText);
                 alert(response.message); //Si tout va bien afficher le message du serveur
-                window.location.href = "http://localhost";
+                window.location.href = "http://localhost/projet/corban/Corban/application/";
                 nom.value = "";
                 dateNaissance.value = "";
                 telephone.value = "";
@@ -91,7 +91,7 @@
                     var response = JSON.parse(xhr.responseText);
                     if (response.message == null){
                         // Si tout se passe bien
-                        window.location.href = "http://localhost/index.php?page=home&user="+response.user+"&id="+response.id+"&type=candidat";
+                        window.location.href = "http://localhost/projet/corban/Corban/application/index.php?page=home&user="+response.user+"&id="+response.id+"&type=candidat";
                     } else {
                         alert(response.message);
                     }

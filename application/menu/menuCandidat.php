@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
-<style>
+<?php
+$_SESSION['auth']['id'];
+include("pages/connexion.php");
 
-</style> 
-<body>
-
-</body>
-</html>
+?>
 <nav class="navbar navbar-expand-lg navbar-dark site_navbar bg-dark site-navbar-light" id="site-navbar">
       <div class="container">
         <a class="navbar-brand" href="index.php?page=home"><img src="assets/images/Logo.png" style="width: 100%; height:70px;">  </a>
@@ -25,14 +18,14 @@
             <li class="nav-item"><a href="index.php?page=service" class="nav-link">Service</a></li>
             <li class="nav-item"><a href="index.php?page=offres" class="nav-link">Nos offres d'emplois</a></li>
             <li class="nav-item"><a href="index.php?page=apropos" class="nav-link">A propos</a></li>
-            <li class="nav-item"><a href="logout.php" class="nav-link">Deconnexion candidat</a></li>
+
             <li class="nav-item"><a href="index.php?page=contact" class="nav-link">Contact</a></li>
               <li class="nav-item">
                   <a href="index.php?page=connexion" data-toggle="modal" data-target="#modalCVCandidat" class="nav-link">Compléter information</a>
               </li>
+              <li class="nav-item"><a href="logout.php" class="nav-link">Deconnexion</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <?php include("pages/connexion.php"); ?>
