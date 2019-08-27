@@ -132,12 +132,13 @@
                 if (xhr.status === 200) {
                     var response = JSON.parse(xhr.responseText);
                     alert(response.message); //Si tout va bien afficher le message du serveur
-                    chargement('btnCVCandidat', 'spinnerBtnCVCandidat', 'labelBtnCVCandidat', 'Enregistrer', false);
+
                     window.location.href = "http://localhost";
                 } else {
-                    chargement('btnCVCandidat', 'spinnerBtnCVCandidat', 'labelBtnCVCandidat', 'Enregistrer', false);
+
                     alert(":( Erreur: Un problème est survenu avec la requête. \n\n Veuillez contacter l'administrateur du serveur.", xhr);
                 }
+                chargement('btnCVCandidat', 'spinnerBtnCVCandidat', 'labelBtnCVCandidat', 'Enregistrer', false);
             }
         };
         xhr.open('POST', "http://127.0.0.1:8000/api/create/cvCandidat/<?php if (isset($_SESSION['auth']['id'])) {echo $_SESSION['auth']['id'];}?>", true);
