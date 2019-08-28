@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Arimo|Oswald|Raleway|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,700|Lora:400,700|Raleway:400,700|Roboto:400,700&display=swap');
 
 .carousel-item{
 	height: 100vh;
@@ -21,7 +21,7 @@
 	text-transform: uppercase;
 	margin-top: 25px;
 	color: #ffffff;
-	font-family:Raleway Heavy ;
+	font-family:'Raleway', sans-serif;
 	font-weight: bold;
 	text-align: center;
 	float: right; 
@@ -32,7 +32,7 @@
 	font-size: 10px;
 	line-height: 1.9;
 	color: #ffffff;
-	font-family: Raleway;
+	font-family: 'Raleway', sans-serif;
 }
 .carousel-caption .carousel-caption button{
 	border: none;
@@ -64,7 +64,7 @@
 
 .contact{
 	padding: 80px 20px;
-	font-family:Raleway Heavy;
+	font-family:'Raleway', sans-serif;
 	background: linear-gradient(#ffde59,#ffbd59);
 }
 .contact h2{

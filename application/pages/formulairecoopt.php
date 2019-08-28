@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Formulaire Cooptation</title>
 	<link rel="stylesheet" href="css/normalize.css">
-    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Lora:400,700|Raleway:400,700|Roboto:400,700&display=swap" rel="stylesheet"> 
 </head>
 <style>
 	*, *:before, *:after {
@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Arimo', sans-serif;
  
 }
 
@@ -98,6 +98,25 @@ label.light {
   }
 
 }
+.btn-8{
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 40px;
+  font-size: 30px
+  color: #545454;
+  background: #ffffff;
+  border-radius: 50px;
+  border: 2px solid #545454;
+}
+.btn-8:hover{
+  font-weight: bold;
+  padding: 10px 40px;
+  font-size: 30px
+  border-radius: 50px;
+  background:#545454;
+  border:2px solid #fff;
+  color: #fff;
+}
 </style>	
 <body>
 <section class="container-fluid" style="background: linear-gradient(#ffbd59,#ff914d);
@@ -106,9 +125,9 @@ label.light {
 	<div class="container">
 		<div class="row" style="text-align: center;">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<h2 style="font-family: Raleway Heavy; 
+				<h2 style="font-family: 'Raleway', sans-serif; 
                    font-weight: bold; 
-                   margin-bottom: 35px; 
+                   padding-bottom: 35px; 
                    color: #ffffff;
 				           font-size: 40px;">INSCRIVEZ-VOUS
         </h2>
@@ -203,8 +222,10 @@ label.light {
           <legend for="">Dans quelle région travaillez-vous?</legend>
           <input type="text" id="" name="" placeholder="Votre réponse">
         </fieldset>
-
-        <button class="btn btn-primary" type="submit">ENVOYER</button>
+        <a href="#">
+          <button class="btn-8" type="button">ENVOYER</button>
+        </a>
+        
       </form>
 			</div>
 		</div>

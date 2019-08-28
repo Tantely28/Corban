@@ -3,25 +3,26 @@
 <head>
 	<meta charset="utf-8">
 	<title>A propos</title>
+	<link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Lora:400,700|Raleway:400,700|Roboto:400,700&display=swap" rel="stylesheet"> 
 </head>
 <style>
 	.btn-1{
-		font-size: 16px; 
+		font-size: 20px; 
 		border-radius: 10px;
 		font-weight: bold;
-		padding: 4px 10px;
-		font-family: Martodo bold;
+		padding: 10px 40px;
+		font-family: 'Roboto', sans-serif;
 		background-color:#0e3fab;
 		left: 10px;
 		color: #fff;
 		border:none;
 	}
 	.btn-1:hover{
-		font-size: 16px; 
+		font-size: 20px; 
 		border-radius: 10px;
 		font-weight: bold;
-		padding: 4px 10px;
-		font-family: Martodo bold;
+		padding: 10px 40px;
+		font-family: 'Roboto', sans-serif;
 		background-color:#ffffff;
 		left: 10px;
 		color: #0e3fab;
@@ -32,7 +33,7 @@
 		padding: 10px 40px;
 		color:  #545454;
 		font-weight: bold;
-		font-family:Arimo;
+		font-family:'Arimo', sans-serif;
 		background: linear-gradient(#ffde59,#ffbd59,#ff914d);
 		border:none;
 	}
@@ -41,7 +42,7 @@
 		padding: 10px 40px;
 		color: #ffde59;
 		font-weight: bold;
-		font-family:Arimo;
+		font-family:'Arimo', sans-serif;
 		background: #545454;
 		border:2px solid #ffde59;
 	}
@@ -55,7 +56,7 @@
       			<div>
       				<h4 style="color: #ffffff; 
       						   font-weight: bold;
-      						   font-family: Raleway Heavy;
+      						   font-family: 'Raleway', sans-serif;
       						   margin-right: 150px;
       						   font-size: 40px">Corban Perfomance Consulting
       				</h4>
@@ -69,7 +70,7 @@
 	      	<img src="assets/images/apropos/74 2.jpg" class="d-block w-100" alt="">
 	      	<div class="carousel-caption d-none d-md-block">
 		      	<div class="" style="margin:0px 300px 0px 0px;bottom: 200px;">	
-		          	<h5 style="font-family: Raleway Heavy;
+		          	<h5 style="font-family: 'Raleway', sans-serif;
 		          			   padding: 2px 0px 20px 0px;">Découvrez nos dernières offres d’emploi publiées
 		          	</h5>
 					<div>
@@ -103,15 +104,15 @@
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-				<h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12" 
-				    style="color: #222222; 
+				<h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="color: #222222; 
 						   font-weight:bold;
-						   font-family: Raleway;
+						   font-family: 'Raleway', sans-serif;
 						   text-align: center;
-						   margin-bottom: 50px;">Notre mission
+						   padding-bottom: 50px;
+						   font-size: 35px;">Notre mission
 				</h2>
 				<p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="color:#444041;
-						  font-family:Raleway Heavy;
+						  font-family:'Raleway', sans-serif;
 						  text-align: justify;
 						  line-height: 1.8;">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -124,34 +125,48 @@
 	</div>
 </section>
 
-<section class="container-fluid" style="background: linear-gradient(#ffbd59,#ff914d)">
+<section class="container-fluid" style="background: linear-gradient(#ffbd59,#ff914d);
+										padding-top: 90px;
+										padding-bottom: 120px;">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12" style="text-align: center;">
-				<h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="color: #ffffff;">Notre vision</h2>
+				<h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12" 
+					style="color: #ffffff; 
+							font-weight:bold;
+						   font-family: 'Raleway', sans-serif;
+						   text-align: center;
+						   font-size: 40px;">Notre vision
+				</h2>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-4">
-				<img src="">
+		<div class="row" style="text-align: center; padding-top: 60px;">
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+				<img src="assets/images/apropos">
 			</div>
-			<div class="col-md-4">
-				<img src="">
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+				<img src="assets/images/apropos">
 			</div>
-			<div class="col-md-4">
-				<img src="">
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+				<img src="assets/images/apropos">
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="container-fluid">
+<section class="container-fluid" style="padding-top: 90px; padding-bottom: 120px;">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12" style="text-align: center;">
 				<h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12" 
-					style="color: #545454;">Notre histoire</h2>
-				<img src="">
+					style="color: #000;
+						   font-weight:bold;
+						   font-family: 'Raleway', sans-serif;
+						   text-align: center;
+						   font-size: 40px;
+						   padding-bottom: 60px;">Notre histoire
+				</h2>
+				<img src="assets/images/apropos">
 			</div>
 		</div>
 	</div>
@@ -172,44 +187,44 @@
 		<div class="row" style="margin-bottom: 20px;text-align: center;">
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				<h3 style="font-weight: bold;
-						   font-family: LEAGUE SPARTAN;
+						   font-family: 'Lora', serif;
 						   color: #ffffff;
 						   font-size: 35px">+ 12 000
 				</h3>
-				<p style="color: #000000; font-family: arimo;">
+				<p style="color: #000000; font-family: 'Arimo', sans-serif;">
 					followers sur <br>LinkedIn
 				</p>
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				<h3 style="font-weight: bold;
-						   font-family: LEAGUE SPARTAN;
+						   font-family: 'Lora', serif;
 						   color: #ffffff;
 						   font-size: 35px">+ 9 000
 				</h3>
 				<p style="color: #000000; 
-						  font-family: arimo;">
+						  font-family: 'Arimo', sans-serif;">
 						  followers sur<br> Facebook
 				</p>
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				<h3 style="font-weight: bold;
-						   font-family: LEAGUE SPARTAN;
+						   font-family: 'Lora', serif;
 						   color: #ffffff;
 						   font-size: 35px">7
 				</h3>
 				<p style="color: #000000; 
-						  font-family: arimo;">
+						  font-family: 'Arimo', sans-serif;">
 						  années<br> d'expérience
 				</p>
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				<h3 style="font-weight: bold;
-						   font-family: LEAGUE SPARTAN;
+						   font-family: 'Lora', serif;
 						   color: #ffffff;
 						   font-size: 35px">+ 7 000
 				</h3>
 				<p style="color: #000000; 
-				          font-family: arimo;">
+				          font-family: 'Arimo', sans-serif;">
 				          CV dans notre<br> base de données
 				</p>
 			</div>
@@ -218,7 +233,7 @@
 
 	<p class="col-sm-12 col-xs-12" style="color: #000000;
 			  font-weight: bold;
-			  font-family: Raleway;">
+			  font-family: 'Raleway', sans-serif;">
 			  Ils nous font<br> confiance
 	</p>
 
@@ -277,31 +292,41 @@
 	</div>		
 </section>
 
-<section class="container-fluid" style="padding: 40px 40px" >
+<section class="container-fluid" style="padding-top:70px;padding-bottom: 60px" >
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12" style="text-align: center;">
-				<h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="color: #545454;
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<h2  style="color: #000;
 							font-weight: bold;
-							font-family: raleway Heavy;
-							 margin-top: 40px;
+							font-family: 'Raleway', sans-serif;
+							 padding-top: 40px;
 							 font-size: 40px;
-							 text-align: center;">Rejoignez-nous</h2>
-				<img src="">
+							 text-align: center;">Rejoignez-nous
+				</h2>
 			</div>
 		</div>
 		<div class="row" style="margin-top: 30px;">
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="text-align: center;">
 				<img src="assets/images/apropos/1.png" style="margin-bottom: 20px"><br>
-				<p style="color:#222222;margin-bottom: 20px ">Entreprise</p><br>
+				<p style="color:#000;
+						  padding-bottom: 20px;
+						  font-weight: bold;
+						  font-size: 25px; ">Entreprise
+				</p><br>
 				<a href="index.php?page=offres">
 					<button type="button" class="btn-1 " >Demander une offre</button>
+				</a>	
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"  style="text-align: center;">
 				<img src="assets/images/apropos/2.png" style="margin-bottom: 20px"><br>
-				<p style="color:#222222;margin-bottom: 20px ">A la recherche d'opportunité</p><br>
+				<p style="color:#000;
+						  padding-bottom: 20px ;
+						  font-weight: bold;
+						  font-size: 25px;">A la recherche d'opportunité
+				</p><br>
 				<a href="index.php?page=offres">
 					<button type="button" class="btn-1 " >Demander votre CV</button>
+				</a>	
 			</div>
 		</div>
 	</div>

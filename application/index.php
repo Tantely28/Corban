@@ -34,7 +34,7 @@ if(isset($_GET['page'])) {
     <title>Corban</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-   <link href="https://fonts.googleapis.com/css?family=Arimo|Oswald|Raleway|Roboto&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Lora:400,700|Raleway:400,700|Roboto:400,700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="assets/css/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/css/animate.css">

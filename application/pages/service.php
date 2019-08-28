@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Service</title>
+  <link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Lora:400,700|Raleway:400,700|Roboto:400,700&display=swap" rel="stylesheet"> 
 </head>
 <body>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -13,7 +14,7 @@
       	<div>
       		<h4 style="color: #545454; 
                     font-weight: bold;
-                    font-family: Raleway Heavy;
+                    font-family: 'Raleway', sans-serif;;
                     margin-left: 150px;
                     font-size: 40px">
             </h4>
@@ -23,81 +24,84 @@
     </div>	
 </div>
 
-<section class="container-fluid" style="background-color:#ffffff;padding: 70px 10px 20px 5px;">
+<section class="container-fluid" style="background-color:#ffffff;
+                                        padding-top: 80px; 
+                                        padding-bottom: 60px;">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <h2 style="color: #222222;
-                  font-family: Raleway Heavy;
-                  font-size: 45px;
+                  font-family: 'Raleway', sans-serif;;
+                  font-size: 65px;
                   text-align: center;
-                  font-weight: bold;">Nos Services
+                  font-weight: bold;"> Nos Services
         </h2>
       </div>
     </div>  
   </div>
 </section>
 
-<section class="container-fluid" style="background: linear-gradient(#ffde59,#ffbd59);padding: 10px 10px;">
+<section class="container-fluid" style="background: linear-gradient(#ffde59,#ffbd59);
+                                        padding: 10px 10px;">
   <div class="container">
     <div class="row" style="color: #222222;
-                            font-family: arimo;
+                            font-family: 'Arimo', sans-serif;
                             text-align: center;"> 
 
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
         <a href="recrutement">
           <img src="assets/images/service/noir/1.png" style="max-width: 100%;height: 90px;">
         </a>
-        <p style="font-size: 15px">RECRUTEMENT</p>
+        <p style="font-size: 15px; padding-top: 5px;">RECRUTEMENT</p>
       </div>
 
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
         <a href="index.php?page=cvvideo">
           <img src="assets/images/service/noir/2.png" style="max-width: 100%;height: 90px;">
         </a>
-        <p style="font-size: 15px">CV VIDEO</p>
+        <p style="font-size: 15px; padding-top: 5px;">CV VIDEO</p>
       </div>
 
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
         <a href="index.php?page=entretienvideo">
           <img src="assets/images/service/noir/3.png" style="max-width: 100%;height: 90px;">
         </a>
-        <p style="font-size: 15px">ENTRETIEN VIDEO</p>
+        <p style="font-size: 15px; padding-top: 5px;">ENTRETIEN VIDEO</p>
       </div>
 
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
         <a href="index.php?page=inbound">
           <img src="assets/images/service/noir/4.png" style="max-width: 100%;height: 90px;">
         </a>
-        <p style="font-size: 15px">INBOUND RECRUITING</p>
+        <p style="font-size: 15px; padding-top: 5px;">INBOUND RECRUITING</p>
       </div>
 
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
           <a href="#externalisation">
             <img src="assets/images/service/noir/5.png" style="max-width: 100%;height: 90px;">
           </a>
-          <p style="font-size: 15px">EXTERNALISATION DE PAIE</p>
+          <p style="font-size: 15px; padding-top: 5px;">EXTERNALISATION DE PAIE</p>
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
           <a href="#conseil">
             <img src="assets/images/service/noir/6.png" style="max-width: 100%;height: 90px;">
           </a>
-          <p style="font-size: 15px">CONSEIL RH</p>
+          <p style="font-size: 15px; padding-top: 5px;">CONSEIL RH</p>
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
           <a href="index.php?page=cooptation">
             <img src="assets/images/service/noir/7.png" style="max-width: 100%;height: 90px;">
           </a>
-          <p style="font-size: 15px">COOPTATION</p>
+          <p style="font-size: 15px; padding-top: 5px;">COOPTATION</p>
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
           <a href="#formation">
             <img src="assets/images/service/noir/8.png" style="max-width: 100%;height: 90px;">
           </a>
-          <p style="font-size: 15px">FORMATION</p>
+          <p style="font-size: 15px; padding-top: 5px;">FORMATION</p>
         </div>
 
       </div>  
@@ -108,15 +112,19 @@
 <section class="container-fluid" id="recrutement">
   <div class="row" >
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="background: #eff0f2">
-        <div class="container" style="margin-top: 40px">
+        <div class="container" style="padding-top: 40px">
           <h3 class="text-center" style="color:#393838;
-                                          font-family: Raleway Heavy;
+                                          font-family: 'Raleway', sans-serif;;
                                           font-weight: bold;
-                                          margin-top:15px ">Recrutement
+                                          padding-top:15px;
+                                          font-size: 40px; ">Recrutement
         </h3>
         <div style="color: #222222;
-                    font-family: Raleway Heavy;
-                    font-size: 17px">
+                    font-family: 'Raleway', sans-serif;;
+                    font-size: 21px;
+                    text-align: justify;
+                    padding-top: 5px;
+                    padding-bottom: 10px;">
           <p>Corban Performance Consulting accompagne les entreprises 
             dans leur projet de recrutement.
           </p>
@@ -127,45 +135,47 @@
           <p>En plus des 7 000 CV dans notre base de données, nous mettons 
             également au service de nos clients notre réseau de coopteur 
             ainsi la nouvelle technologie à travers notre 
-            <strong> CV Vidéo et Entretien Vidéo </strong> 
+            <strong> CV Vidéo et Entretien Vidéo. </strong> 
            </p>   
           <p>
             <strong>Nos garanties:</strong> 
-            la confidentialité, la rapidité et les compétences
+            la confidentialité, la rapidité et les compétences.
           </p>
         </div>
         </div> 
       </div>
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="text-align: center;">
-        <img src="assets/images/service/recru.png" style="max-width: 100%;height: 400px;">
+        <img src="assets/images/service/recru.png" style="max-width: 100%;height: 500px;">
       </div>  
 </section>
 
 <section class="container-fluid" id="formation">
   <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="text-align: center;">
-        <img src="assets/images/service/form.png" style="max-width: 100%;height: 400px;">
+        <img src="assets/images/service/form.png" style="max-width: 100%;height: 500px;">
       </div>
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="background: linear-gradient(#ffbd59,#ff914d);">
-        <div class="container" style="margin-top: 40px">
+        <div class="container" style="padding-top: 40px">
           <h3 class="text-center" style="color:#393838;
-                                      font-family: Raleway Heavy;
+                                      font-family: 'Raleway', sans-serif;;
                                       font-weight: bold;
                                       text-align: center;
-                                       margin-top:15px">Formation
+                                      padding-top:15px;
+                                      font-size: 40px;">Formation
         </h3>
         <div style="color: #222222;
-                    font-family: Raleway Heavy;
-                    font-size: 17px;
+                    font-family: 'Raleway', sans-serif;;
                     text-align: justify;
-                    margin-top: 80px">
-          <p style="margin-bottom: 80px">
+                    padding-top: 80px">
+          <p style="padding-bottom: 40px;font-size: 23px;">
             Corban Performance Consulting offre un large éventail 
             de formation aussi bien pour les professionnels et les 
             candidats à la recherche de travail ainsi que les 
             entrepreneurs.
           </p>   
-          <p style="text-align: center;"><strong>Télécharger notre catalogue de formation</strong></p>
+          <p style="text-align: center;font-size: 20px;padding-bottom: 10px;">
+            <strong>Télécharger notre catalogue de formation</strong>
+          </p>
         </div>
         </div>
       </div>
@@ -175,17 +185,18 @@
 <section class="container-fluid">
    <div class="row" id="externalisation">
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="background: #d9d9d9;">
-        <div class="container" style="margin-top: 40px">
+        <div class="container" style="padding-top: 40px;">
           <h3 class="text-center" style="color:#393838;
-                                      font-family: Raleway Heavy;
+                                      font-family: 'Raleway', sans-serif;;
                                       font-weight: bold;
                                       text-align: center;
-                                      margin-top:15px ">Externalisation de paie
+                                      padding-top:15px;
+                                      font-size: 40px ">Externalisation de paie
         </h3>
         <div style="color: #222222;
-                    font-family: Raleway Heavy;
-                    font-size: 17px;
-                    margin-top:80px;
+                    font-family: 'Raleway', sans-serif;;
+                    font-size: 21px;
+                    padding-top:70px;
                     text-align: justify;">
           <p>L'externalisation de paie est une solution moins coûteuses et 
               plus flexible d'un côté et de l'autre, une solution qui permet 
@@ -201,7 +212,7 @@
         </div>       
       </div>
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="text-align: center;">
-        <img src="assets/images/service/extr.png" style="max-width: 100%;height: 400px;">
+        <img src="assets/images/service/extr.png" style="max-width: 100%;height: 500px;">
       </div>
     </div>
 </section>
@@ -209,14 +220,15 @@
 <section class="container-fluid">
   <div class="row" id="conseil">
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <div class="row" style="margin-top: 60px">
-          <div class="container"style="margin-top: 60px;text-align: center;padding-bottom: 50px;">
-             <h3 style="color:#393838;
-                    font-family: Raleway Heavy;
+        <div class="row" style="padding-top: 60px">
+          <div class="container"style="padding-top: 130px;text-align: center;">
+             <h3 style="color:#000;
+                    font-family: 'Raleway', sans-serif;;
                     font-weight: bold;
-                    font-size: 40px;">Nous intervenons dans
+                    font-size: 30px;
+                    text-align: left;">Nous intervenons dans
           </h3>
-          <ul style="color:#393838;text-align:justify;">
+          <ul style="color:#393838;text-align:justify;font-size: 20px;">
             <li>Management stratégique des ressources humaines</li>
             <li>Organisation et optimisation des processus</li>
             <li>Team building</li>
@@ -225,18 +237,19 @@
         </div>   
       </div>
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="background: linear-gradient(#ffbd59,#ff914d);">
-        <div class="container" style="margin-top: 40px;">
+        <div class="container" style="padding-top: 40px;">
           <h3 class="text-center" style="color:#393838;
-                                      font-family: Raleway Heavy;
+                                      font-family: 'Raleway', sans-serif;;
                                       font-weight: bold;
                                       text-align: center;
-                                      margin-top:15px">Conseil en RH
+                                      padding-top:15px;
+                                      font-size: 40px">Conseil en RH
         </h3>
         <div style="color: #222222;
-                    font-family: Raleway Heavy;
-                    font-size: 17px;
-                    margin-top: 15px;
-                    margin-bottom: 40px;
+                    font-family: 'Raleway', sans-serif;;
+                    font-size: 21px;
+                    padding-top: 15px;
+                    padding-bottom: 40px;
                     text-align: justify;">
           <p>Dans un contexte de forte concurrence, de nécessaire 
               croissance, et dans un environnement changeant demandant
@@ -257,17 +270,17 @@
 </section>
 
 <section class="container-fluid" style="text-align: center;background: #f5f5f5">
-    <div class="row" style="margin-bottom: 100px;
+    <div class="row" style="padding-bottom: 100px;
                             padding-top: 100px;
                             color: #393838;
-                            font-family: Raleway Heavy;
+                            font-family: 'Raleway', sans-serif;;
                             text-align: center;
                             font-weight: bold;">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <h3 style="font-size: 40px">Les secteurs d'intervention</h3>
+        <h3 style="font-size: 40px"><strong>Les secteurs d'intervention</strong> </h3>
       </div>
     </div>
-    <div class="row" style="margin-bottom: 100px;color: #222222;font-family: arimo; ">
+    <div class="row" style="padding-bottom: 100px;color: #222222;font-family: 'Arimo', sans-serif; ">
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
         <h4 style="font-size: 30px;">Banque</h4>
       </div>

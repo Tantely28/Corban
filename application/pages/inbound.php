@@ -3,15 +3,12 @@
 <head>
   <meta charset="utf-8">
   <title>Inbound Recruiting</title>
+  <link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Lora:400,700|Raleway:400,700|Roboto:400,700&display=swap" rel="stylesheet"> 
 </head>
 <body>
 
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-	  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-  </ol>
-
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="assets/images/service/inbound/70.jpeg" class="d-block w-100" alt="">
@@ -19,47 +16,47 @@
       	<div>
       		<h4 style="color: #ffffff; 
                     font-weight: bold;
-                    font-family: Raleway Heavy;
-                     margin-right:165px;
+                    font-family: 'Raleway', sans-serif;
+                     text-align: left;
                     font-size: 70px">Inbound Recruiting
           </h4>
           <p style="color:#ffffff;
-                    font-size: 30px;
-                    margin-right:200px;
-                    margin-top: 30px">Comment venir en soi les talents</p>
+                    font-size: 25px;
+                    text-align: left;
+                    font-family: 'Raleway', sans-serif;">Comment venir en soi les talents</p>
       	</div>
       </div>
     	</div>
     </div>	
 </div>
 
-<section class="container-fluid">
+<section class="container-fluid" style="padding-top: 130px; padding-bottom: 100px;">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-ml-12 col-sm-12 col-xs-12">
         <h2 style="color: #545454;
                   font-weight: bold;
                   text-align: center;
-                  font-family: Raleway Heavy;
-                  font-size: 45px;
-                  margin-top: 40px">Inbound Recruiting </h2>
+                  font-family: 'Raleway', sans-serif;
+                  font-size: 45px;"><strong> Inbound Recruiting </strong> </h2>
         <h3 style="color: #ff914d;
                   text-align: center;
-                  font-family: Raleway;
-                  margin-top: 35px;">Comment venir en soi les talents 
+                  font-family: 'Raleway', sans-serif;
+                  padding-top: 50px;
+                  font-size: 20px;"><strong>Comment venir en soi les talents </strong>  
         </h3>
       </div>
     </div>
-    <div class="row" style="margin-top: 35px;margin-bottom: 40px">
+    <div class="row" style="padding-top: 50px;">
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <p style="text-align: center; font-family: arimo">
-          L'inbound Recruiting fonctionne sur un<br> 
+        <p style="text-align: center; font-family: 'Arimo', sans-serif;font-size: 20px;">
+          L'inbound Recruiting fonctionne<br> sur un 
           principe comparable à <br>
           l'inbound marketing.
         </p>
       </div>
       <div class="col-md-6">
-        <p style="text-align: center;font-family: arimo">
+        <p style="text-align: center;font-family: 'Arimo', sans-serif;font-size: 20px;">
           L'inbound Recruiting est une solution <br>
           imaginative et innovante pour être<br> 
           remarqué par des candidats très qualifié
@@ -73,55 +70,56 @@
   <div class="row">
     <div class="col-lg-6 col-ml-6 col-sm-12 col-xs-12" style="background: #eff0f2">
       <h2 style="color:#393838;
-                font-family: Raleway Heavy;
+                font-family: 'Raleway', sans-serif;
                 font-weight: bold;
-                margin-top:15px;
                 text-align: center;
-                margin-top: 40px;
-                ">Les avantages
+                padding-top: 55px;
+                font-size: 40px;
+                "><strong>Les avantages</strong>  
       </h2>
       <p style="color: #222222;
-                font-family:Raleway Heavy;
-                font-size: 17px;
+                font-family:'Raleway', sans-serif;
+                font-size: 22px;
                 text-align: justify;
-                margin-bottom: 40px ;
-                margin-top:15px">
-        ● Devancer vos concurrents dans la guerre dans la guerre des talents<br>
-        ● Baisser le coût d’acquisition des candidats<br>
-        ● Réduire le délai de recrutement<br>
-        ● Créer un vivier de talents<br>
-        ● Sécuriser un recrutement et réduire son turn-over
+                padding-bottom: 45px ;
+                padding-top:15px">
+        ●&nbsp; Devancer vos concurrents dans la guerre dans la <br>&nbsp;&nbsp;&nbsp;
+        guerre des talents<br>
+        ●&nbsp; Baisser le coût d’acquisition des candidats<br>
+        ●&nbsp; Réduire le délai de recrutement<br>
+        ●&nbsp; Créer un vivier de talents<br>
+        ●&nbsp; Sécuriser un recrutement et réduire son turn-over
       </p>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <img src="assets/images/service/inbound/66.jpeg" style="width: 100%; height: 300px;">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="background:#eff0f2 ">
+      <img src="assets/images/service/inbound/66.jpeg" style="width: 100%; height: 400px;">
     </div>
   </div>
 </section>
 <section class="container-fluid">
   <div class="row">
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <img src="assets/images/service/inbound/nospre.png" style="width: 100%; height: 300px;">
+      <img src="assets/images/service/inbound/nospre.png" style="width: 100%; height: 400px;">
     </div>
-    <div class="col-lgl6 col-md-6 col-sm-12 col-xs-12" style="background: linear-gradient(#ffbd59,#ff914d)">
+    <div class="col-lgl6 col-md-6 col-sm-12 col-xs-12" style="background: linear-gradient(#ffbd59,#ff914d);text-align: center;">
       <h2 style="color:#393838;
-                font-family: Raleway Heavy;
+                font-family: 'Raleway', sans-serif;
                 font-weight: bold;
-                margin-top:15px;
                 text-align: center;
-                margin-top: 40px;
-                margin-bottom: 15px ">Nos prestations
+                padding-top: 60px;
+                padding-bottom: 15px;
+                font-size: 40px; ">Nos prestations
       </h2>
       <p style="color: #222222;
-                font-family: Raleway Heavy;
-                font-size: 17px;
+                font-family: 'Raleway', sans-serif;
+                font-size: 22px;
                 text-align: justify;
-                margin-bottom: 40px;">
-        Nous accompagnons les entreprises dans chaque étapes de l'inbound recruiting:<br>
-        ● la définition de la stratégie inbound recruiting<br>
-        ● le déploiement de la stratégie<br>
-        ● la création et production des contenus<br>
-        ● la distribution des contenus sur les plateformes digitales.
+                padding-bottom: 60px;">
+        Nous accompagnons les entreprises dans chaque étapes <br>de l'inbound recruiting:<br>
+        ●&nbsp; la définition de la stratégie inbound recruiting<br>
+        ●&nbsp; le déploiement de la stratégie<br>
+        ●&nbsp; la création et production des contenus<br>
+        ●&nbsp; la distribution des contenus sur les plateformes<br>&nbsp;&nbsp;&nbsp; digitales.
       </p>
     </div>
     

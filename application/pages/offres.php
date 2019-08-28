@@ -9,7 +9,7 @@
 		border-radius: none;
 		padding: 10px 80px;
 		color: #545454;
-		font-family:Arimo;
+		font-family:'Arimo', sans-serif;
 		font-weight: bold;
 		background: linear-gradient(#ffde59,#ffbd59,#ff914d);
 		border:none;
@@ -18,7 +18,7 @@
 		border-radius: none;
 		padding: 10px 80px;
 		color: #ffde59;
-		font-family:Arimo;
+		font-family:'Arimo', sans-serif;
 		font-weight: bold;
 		background: #545454;
 		border:2px solid #ffde59;"
@@ -27,7 +27,7 @@
 		border-radius:50px;
 		padding: 8px 40px;
 		color: #ffffff;
-		font-family:Raleway Heavy;
+		font-family:'Raleway', sans-serif;
 		font-weight: bold;
 		background: linear-gradient(#00b7ff,#3d5a98,#00b7ff);
 		border:none;
@@ -36,11 +36,30 @@
 		border-radius:50px;
 		padding: 8px 40px;
 		color: #3d5a98;
-		font-family:Raleway Heavy;
+		font-family:'Raleway', sans-serif;
 		font-weight: bold;
 		background: #ffffff;
 		border:2px solid #3d5a98;
 	}
+	.btn-8{
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 40px;
+  font-size: 30px
+  color: #545454;
+  background: #ffffff;
+  border-radius: 50px;
+  border: none;
+}
+.btn-8:hover{
+  font-weight: bold;
+  padding: 10px 40px;
+  font-size: 30px
+  border-radius: 50px;
+  background:#545454;
+  border:2px solid #fff;
+  color: #fff;
+}
 </style>
 <body>
 
@@ -54,9 +73,9 @@
       			<div>
       				<h4 style="color: #545454; 
       						   font-weight: bold;
-      						   font-family: Raleway Heavy;
+      						   font-family: 'Raleway', sans-serif;
       						   margin-left: 150px;
-      						   font-size: 40px">Toutes nos offres d'emploi
+      						   font-size: 60px">Toutes nos offres d'emploi
       				</h4>
       			</div>
         	</div>
@@ -148,13 +167,17 @@
 <div class="container-fluid" style="background-color:#ffffff;padding: 80px 20px;" id="#">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-8 col-md-8 col-sm-6 col-xs-12" style="color: #222222;">
-				<h2 style="font-weight: bold;font-family: Raleway Heavy;">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="color: #222222;">
+				<h2 style="font-weight: bold;
+						  font-family: 'Raleway', sans-serif;
+						  text-align: center;
+						  padding-bottom: 25px;
+						  font-size: 28px;">
 					Lead qualifier (H/F)
 				</h2>
-				<div style="font-family: arimo;text-align: justify;">
+				<div style="font-family: 'Arimo', sans-serif;text-align: justify;">
 					<p>
-						CORBAN cherche d'urgence un LEAD QUALIFIER (H/F) pour une<br>
+						CORBAN cherche d'urgence un LEAD QUALIFIER (H/F) pour une
 						entreprise d'envergure internationale opérant dans le domaine logistique.
 					</p>
 					<p>MISSION:<br>
@@ -162,21 +185,21 @@
 						-élaborer offres commerciales.
 					</p>
 					<p>PROFIL:<br>
-						-Bonne connaissance du commerce internationale (idéalement avec des<br>
+						-Bonne connaissance du commerce internationale (idéalement avec des
 						pratiques) attestée par un diplôme reconnu.<br>
-						-Ayant idéalement des vécus en entreprise de logistique internationale<br>
+						-Ayant idéalement des vécus en entreprise de logistique internationale
 						(terrestre,maritime, etc.).<br>
 						-Bonne capacité d'adaptation.<br>
-						-Dispose d'un bon niveau en marketing, analyse de marché et de la<br>
+						-Dispose d'un bon niveau en marketing, analyse de marché et de la
 						concurrence [un diplôme en Marketing peut être un plus).
 					</p>
 				</div>
 				
 			</div>
-			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="margin-top: 150px">
-				<p style="color: #222222;
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding-top: 150px">
+				<p style="color: #000;
 						  font-weight: bold;
-						  font-family:Raleway Heavy;
+						  font-family:'Raleway', sans-serif;
 						  text-align: center;
 						  font-size: 20px;">Postuler avant le 15 Mai 2019
 				</p>
@@ -194,73 +217,80 @@
 	</div>
 </div>
 
-<section class="container-fluid" style="background:linear-gradient(#ffde59,#ffbd59);" id="postuler">
+<section class="container-fluid" style="background:linear-gradient(#ffde59,#ffbd59); padding-bottom: 20px;" id="postuler">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h2 style="font-family:Raleway Heavy;
+				<h2 style="font-family:'Raleway', sans-serif;
 						   color: #ffffff;
 						   text-align: center;
 						   font-size: 45px;
 						   font-weight: bold;
-						   margin-bottom: 25px;
-						   margin-top: 60px">Postuler
+						   padding-bottom: 45px;
+						   padding-top: 60px">Postuler
 				</h2>
 			</div>
 		</div>
-		<div class="row" style="font-family: arimo;color: #222222;">
-			<div class="col-md-6">
-				<input  type="text" placeholder="Nom" style="margin-bottom: 50px;
+		<div class="row" style="font-family: 'Arimo', sans-serif;color: #222222;">
+			<div class="col-md-6" style="text-align: center;">
+				<input  type="text" placeholder="Nom" style="padding-bottom: 50px;
 															 background:none;
 															 border:none;
 															 text-decoration:none;
-															 font-size: 20px;
+															 font-size: 25px;
 															 font-weight: bold;"><br>
-				<input  type="text" placeholder="Téléphone" style="margin-bottom: 50px;
+				<input  type="text" placeholder="Téléphone" style="padding-bottom: 50px;
 															 background:none;
 															 border:none;
 															 text-decoration:none;
-															 font-size: 20px;
+															 font-size: 25px;
 															 font-weight: bold;"><br>
-				<input  type="text" placeholder="CV:" style="margin-bottom: 50px;
+				<input  type="text" placeholder="CV:" style="padding-bottom: 50px;
 															 background:none;
 															 border:none;
 															 text-decoration:none;
-															 font-size: 20px;
+															 font-size: 25px;
 															 font-weight: bold;" ><br>
-				<input  type="text" placeholder="Copie de diplôme" style="margin-bottom: 50px;
+				<input  type="text" placeholder="Copie de diplôme" style="padding-bottom: 50px;
 															 background:none;
 															 border:none;
 															 text-decoration:none;
-															 font-size: 20px;
+															 font-size: 25px;
 															 font-weight: bold;">
 			</div>
-			<div class="col-md-6">
-				<input  type="text" placeholder="Prénom" style="margin-bottom: 50px;
+			<div class="col-md-6" style="text-align: center;">
+				<input  type="text" placeholder="Prénom" style="padding-bottom: 50px;
 															 background:none;
 															 border:none;
 															 text-decoration:none;
-															 font-size: 20px;
+															 font-size: 25px;
 															 font-weight: bold;"><br>
-				<input  type="text" placeholder="Adresse email"style="margin-bottom: 50px;
+				<input  type="text" placeholder="Adresse email"style="padding-bottom: 50px;
 															 background:none;border: 
 															 none;text-decoration: 
 															 none;
-															 font-size: 20px;
+															 font-size: 25px;
 															 font-weight: bold;"><br>
-				<input  type="text" placeholder="LM:" style="margin-bottom: 50px;
+				<input  type="text" placeholder="LM:" style="padding-bottom: 50px;
 															 background:none;border: 
 															 none;text-decoration: 
 															 none;
-															 font-size: 20px;
+															 font-size: 25px;
 															 font-weight: bold;"><br>
-				<input  type="text" placeholder="Références" style="margin-bottom: 0px;
+				<input  type="text" placeholder="Références" style="padding-bottom: 0px;
 																	background:none;
 																	border: none;
 																	text-decoration: none;
-																	font-size: 20px;
+																	font-size: 25px;
 																	font-weight: bold;">
 			</div>	
+		</div>
+		<div class="row" style="text-align: center;padding-top: 5px;">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<a href="#">
+          			<button class="btn-8" type="button">ENVOYER</button>
+        		</a>
+			</div>
 		</div>
 	</div>
 </section>

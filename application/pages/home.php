@@ -9,7 +9,7 @@
 		border-radius: 10px;
 		font-weight: bold;
 		padding: 4px 10px;
-		font-family: Martodo bold;
+		font-family:'Roboto', sans-serif;
 		background-color:#0e3fab;
 		left: 10px;
 		color: #fff;
@@ -20,7 +20,7 @@
 		border-radius: 10px;
 		font-weight: bold;
 		padding: 4px 10px;
-		font-family: Martodo bold;
+		font-family:'Roboto', sans-serif;
 		background-color:#ffffff;
 		left: 10px;
 		color: #0e3fab;
@@ -31,7 +31,7 @@
 		padding: 10px 40px;
 		color:  #545454;
 		font-weight: bold;
-		font-family:Arimo;
+		font-family:'Arimo', sans-serif;
 		background: linear-gradient(#ffde59,#ffbd59,#ff914d);
 		border:none;
 	}
@@ -40,7 +40,7 @@
 		padding: 10px 40px;
 		color: #ffde59;
 		font-weight: bold;
-		font-family:Arimo;
+		font-family:'Arimo', sans-serif;
 		background: #545454;
 		border:2px solid #ffde59;
 	}
@@ -56,7 +56,7 @@
           			<p style="font-size: 20px;
           					  padding: 2px 0px 8px 0px;">Marc Bennioff
           			</p>
-          			<p style="font-family: Raleway Heavy ;
+          			<p style="font-family: 'Raleway', sans-serif;
           					  font-size: 16px;
           					  line-height: 0.5cm;
           					  padding: 2px 0px 20px 0px;">
@@ -78,7 +78,7 @@
 	      	<img src="assets/images/accueil/4.jpg" class="d-block w-100" alt="">
 	      	<div class="carousel-caption d-none d-md-block">
 		      	<div class="" style="margin:0px 300px 0px 0px;bottom: 200px;">	
-		          	<h5 style="font-family: Raleway Heavy;
+		          	<h5 style="font-family: Raleway
 		          			   padding: 2px 0px 20px 0px;">Découvrez nos dernières offres d’emploi publiées
 		          	</h5>
 					<div>
@@ -98,7 +98,7 @@
 		          	<p style="font-size: 20px;
 		          			  padding: 2px 0px 8px 0px;">Jim Bouton
 		          	</p>
-		          	<p style="font-family: Raleway Heavy ;
+		          	<p style="font-family: 'Raleway', sans-serif;
 		          			  font-size: 16px;
 		          			  line-height: 0.5cm;
 		          			  padding: 2px 0px 20px 0px;">
@@ -157,44 +157,44 @@
 		<div class="row" style="margin-bottom: 20px;text-align: center;">
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				<h3 style="font-weight: bold;
-						   font-family: LEAGUE SPARTAN;
+						   font-family: 'Lora', serif;
 						   color: #ffffff;
 						   font-size: 35px">+ 12 000
 				</h3>
-				<p style="color: #000000; font-family: arimo;">
+				<p style="color: #000000; font-family: 'Arimo', sans-serif;">
 					followers sur <br>LinkedIn
 				</p>
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				<h3 style="font-weight: bold;
-						   font-family: LEAGUE SPARTAN;
+						   font-family: 'Lora', serif;
 						   color: #ffffff;
 						   font-size: 35px">+ 9 000
 				</h3>
 				<p style="color: #000000; 
-						  font-family: arimo;">
+						  font-family: 'Arimo', sans-serif;">
 						  followers sur<br> Facebook
 				</p>
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				<h3 style="font-weight: bold;
-						   font-family: LEAGUE SPARTAN;
+						   font-family: 'Lora', serif;
 						   color: #ffffff;
 						   font-size: 35px">7
 				</h3>
 				<p style="color: #000000; 
-						  font-family: arimo;">
+						  font-family: 'Arimo', sans-serif;">
 						  années<br> d'expérience
 				</p>
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				<h3 style="font-weight: bold;
-						   font-family: LEAGUE SPARTAN;
+						   font-family: 'Lora', serif;
 						   color: #ffffff;
 						   font-size: 35px">+ 7 000
 				</h3>
 				<p style="color: #000000; 
-				          font-family: arimo;">
+				          font-family: 'Arimo', sans-serif;">
 				          CV dans notre<br> base de données
 				</p>
 			</div>
@@ -203,7 +203,7 @@
 
 	<p class="col-sm-12 col-xs-12" style="color: #000000;
 			  font-weight: bold;
-			  font-family: Raleway;">
+			  font-family: 'Raleway', sans-serif;">
 			  Ils nous font<br> confiance
 	</p>
 
@@ -270,12 +270,12 @@
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
 				<h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="color: #222222; 
 						   font-weight:bold;
-						   font-family: Raleway;
+						   font-family: 'Raleway', sans-serif;
 						   text-align: center;
 						   margin-bottom: 50px;">Notre mission
 				</h2>
 				<p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="color:#444041;
-						  font-family:Raleway Heavy;
+						  font-family:Raleway
 						  text-align: justify;
 						  line-height: 1.8;">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -293,14 +293,14 @@
 		<p style="color: #444041;font-family: arimo">
 		   Ce qu'ils disent de nous
 		</p>
-		<h2 style="font-family: Raleway Heavy ;
+		<h2 style="font-family: 'Raleway', sans-serif;
 				  font-weight: bold;
 				  color: #444041">Témoignages
 		</h2>
 	</div>
 
 	<div class="container">
-	<div class="row" style="font-family: Raleway Heavy ;color: #444041">
+	<div class="row" style="font-family: 'Raleway', sans-serif;color: #444041">
 		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 			<img src="assets/images/temoignage/Frank.png" 
 			style="max-width: 100%;height: 200px;">
