@@ -127,4 +127,23 @@ class CandidatController extends AbstractController
             'current_menu' => 'candidat',
         ]);
     }
+
+    /**
+     * @param Video $videoCandidat
+     * @param Request $request
+     * @param Candidat $candidat
+     * @return Response
+     * @Route("/see/video/delete/{id}", name="delete_video")
+     */
+    public function deleteVideo(Video $videoCandidat, Request $request): Response
+    {
+        if ($this->isCsrfTokenValid('delete'.$videoCandidat->getId(), $request->get('_token'))){
+            $this->em->remove($videoCandidat);
+            $this->em->flush();
+        }
+
+        return $this->redirectToRoute('list_video_candidat', [
+            'id' => $videoCandidat->getCandidat()->getId()
+        ]);
+    }
 }

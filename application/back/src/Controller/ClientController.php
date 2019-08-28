@@ -204,11 +204,10 @@ class ClientController extends AbstractController
 
     /**
      * @param Temoignage $temoignage
-     * @param Request $request
      * @return Response
      * @Route("/delete/temoignage/{id}", name="delete_temoignage")
      */
-    public function deleteTem(Temoignage $temoignage, Request $request){
+    public function deleteTem(Temoignage $temoignage){
             $this->em->remove($temoignage);
             $this->em->flush();
 

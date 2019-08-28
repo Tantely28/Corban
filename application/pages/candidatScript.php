@@ -58,6 +58,7 @@
                 alert(response.message); //Si tout va bien afficher le message du serveur
                 window.location.href = "http://localhost/projet/corban/Corban/application/";
                 chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', "S'inscrire", false);
+
                 nom.value = "";
                 dateNaissance.value = "";
                 telephone.value = "";
