@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Nos offres d'emploi</title>
-</head>
+
 <style>
 	.btn-5{
 		border-radius: none;
@@ -42,10 +42,9 @@
 		border:2px solid #3d5a98;
 	}
 </style>
+</head>
 <body>
 
-</body>
-</html>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   	<div class="carousel-inner">
     	<div class="carousel-item active">
@@ -63,7 +62,9 @@
     	</div>
     </div>	
 </div>
+<div id="main">
 
+</div>
 <div class="container-fluid" style="background-color: #f7f7f7;padding: 80px 20px;">
 	<div class="container">
 		<div class="row" style="color: #ffffff;">
@@ -264,4 +265,29 @@
 		</div>
 	</div>
 </section>
+
+<script>
+    var xrh=new XMLHttpRequest();
+    xrh.open('GET','http://127.0.0.1:8000/api/read/offre');
+    xrh.onreadystatechange=function () {
+        if (this.readyState === 4 && this.status === 200) {
+
+            var arr=JSON.parse(xrh.response);
+
+            for(var i=0;i<arr.length;i++) {
+                document.getElementById("main").innerHTML +='<p>test</p>'
+
+
+                // '                            <img src="http://127.0.0.1:8000/uploads/'+arr[i].image +'" alt="post">' +
+
+
+
+            }
+        }
+    };
+    xrh.send();
+
+</script>
+</body>
+</html>
 	
