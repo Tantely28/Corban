@@ -4,6 +4,7 @@ namespace App\Controller\api;
 
 use App\Entity\Candidat;
 use App\Entity\CV;
+use App\Entity\Video;
 use App\Repository\CandidatRepository;
 use App\Repository\VideoRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -129,9 +130,6 @@ class CandidatController extends AbstractController
                 $em->flush();
                 return new JsonResponse(['message' => 'Information sauvegardé'], Response::HTTP_OK);
 
-
-
-
         }else{
             return new JsonResponse(['message' => 'Veuillez remplir tous les champs','test'=>$request->get('name')], Response::HTTP_OK);
         }
@@ -163,9 +161,27 @@ class CandidatController extends AbstractController
         }
     }
 
+    /**
+     * @Rest\Get("/video/CV/un/{id}")
+     * @param Video $video
+     * @return JsonResponse
+     */
+    public function videoCVOne(Video $video)
+    {
+        $vid=$this->videoRepository->find($video->getId());
+        $formatted=[
+            'id' => $vid->getId(),
+            'titre' => $vid->getType(),
+            'video' => $vid->getVideo(),
+            'description' => $vid->getDescription(),
+            'candidat'=> $vid->getCandidat()->getNom(),
+            'idCandidat'=> $vid->getCandidat()->getId()
+        ];
+        return new JsonResponse($formatted,Response::HTTP_OK);
+    }
+
     #API videoEntretient
     /**
-     * @param Request $request
      * @return JsonResponse
      * @Rest\Route("/video/Entretient")
      */
@@ -187,6 +203,24 @@ class CandidatController extends AbstractController
             }
             return new JsonResponse($formatted, Response::HTTP_OK);
         }
+    }
+
+    /**
+     * @Rest\Get("/video/Entretient/un/{id}")
+     * @return JsonResponse
+     */
+    public function videoEntretientOne(Video $video)
+    {
+        $tem=$this->videoRepository->find($video->getId());
+        $formatted=[
+            'id' => $tem->getId(),
+            'titre' => $tem->getType(),
+            'video' => $tem->getVideo(),
+            'description' => $tem->getDescription(),
+            'candidat'=> $tem->getCandidat()->getNom(),
+            'idCandidat'=> $tem->getCandidat()->getId()
+        ];
+        return new JsonResponse($formatted,Response::HTTP_OK);
     }
 
 
