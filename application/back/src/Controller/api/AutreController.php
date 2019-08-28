@@ -42,7 +42,7 @@ class AutreController extends AbstractController
                 $datas[]=[
                     'id'=>$offre->getId(),
                     'poste'=>$offre->getTitre(),
-                    'dateLimite'=>$offre->getDateLimite(),
+                    'dateLimite'=>$offre->getDateLimite()->format('d-m-Y'),
                     'contrat'=>$offre->getContrat(),
                     'activite'=>$offre->getActivite(),
                     'mission'=>$offre->getMission(),
@@ -59,6 +59,7 @@ class AutreController extends AbstractController
      */
     public function offreOne(OffreEmplois $emplois)
     {
+        $date=new \DateTime();
         $offre=$this->offre->findOffreOne($emplois->getId());
 
         if(empty($offre)){
@@ -70,7 +71,7 @@ class AutreController extends AbstractController
                 $datas=[
                     'id'=>$of->getId(),
                     'poste'=>$of->getTitre(),
-                    'dateLimite'=>$of->getDateLimite(),
+                    'dateLimite'=>$of->getDateLimite()->format('d-m-Y'),
                     'contrat'=>$of->getContrat(),
                     'activite'=>$of->getActivite(),
                     'mission'=>$of->getMission(),
