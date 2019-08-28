@@ -275,7 +275,7 @@
             var arr=JSON.parse(xrh.response);
 
             for(var i=0;i<arr.length;i++) {
-                document.getElementById("main").innerHTML +='<p>test</p>'
+                document.getElementById("main").innerHTML +='<p>'+arr[i].poste+'</p>'
 
 
                 // '                            <img src="http://127.0.0.1:8000/uploads/'+arr[i].image +'" alt="post">' +
