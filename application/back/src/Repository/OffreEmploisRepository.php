@@ -19,6 +19,24 @@ class OffreEmploisRepository extends ServiceEntityRepository
         parent::__construct($registry, OffreEmplois::class);
     }
 
+    public function findOffre()
+    {
+        return $this->createQueryBuilder('o')
+            ->orderBy('o.id', 'DESC')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+    public function findOffreOne($id)
+    {
+        return $this->createQueryBuilder('o')
+            ->andWhere('o.id = :val')
+            ->setParameter('val', $id)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     // /**
     //  * @return OffreEmplois[] Returns an array of OffreEmplois objects
     //  */
