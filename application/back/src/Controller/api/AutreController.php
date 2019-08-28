@@ -4,6 +4,7 @@
 namespace App\Controller\api;
 
 
+use App\Entity\OffreEmplois;
 use App\Repository\OffreEmploisRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -32,7 +33,7 @@ class AutreController extends AbstractController
     {
         $offres=$this->offre->findOffre();
 
-        if(!empty($offre)){
+        if(empty($offres)){
             return new JsonResponse(['message'=>'Il n\'y a aucun offre d\'emplies']);
         }else{
             $datas=[];
@@ -51,5 +52,34 @@ class AutreController extends AbstractController
             }
             return new JsonResponse($datas,Response::HTTP_OK);
         }
+    }
+
+    /**
+     * @Rest\Get("/read/of/{id}")
+     */
+    public function offreOne(OffreEmplois $emplois)
+    {
+        $offre=$this->offre->findOffreOne($emplois->getId());
+
+        if(empty($offre)){
+            return new JsonResponse(['message'=>'Il n\'y a aucun offre d\'emplies']);
+        }else{
+            $datas=[];
+
+            foreach ($offre as $of){
+                $datas=[
+                    'id'=>$of->getId(),
+                    'poste'=>$of->getTitre(),
+                    'dateLimite'=>$of->getDateLimite(),
+                    'contrat'=>$of->getContrat(),
+                    'activite'=>$of->getActivite(),
+                    'mission'=>$of->getMission(),
+                    'profile'=>$of->getProfil(),
+                    'reference'=>$of->getReference(),
+                ];
+            }
+            return new JsonResponse($datas,Response::HTTP_OK);
+        }
+
     }
 }
