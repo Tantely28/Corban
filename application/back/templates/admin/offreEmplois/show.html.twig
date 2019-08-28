@@ -1,16 +1,19 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <div class="container">
-        <h2><b>{{ offre.titre }}</b></h2>
 
-        <table class="table">
-            <tr><th>Date limite :</th><td>{{ offre.dateLimite | date('d/m/Y à H:i' ) }}</td></tr>
-            <tr><th>Type de contrat :</th><td>{{ offre.contratType }}</td></tr>
-            <tr><th>Activités :</th><td>{{ offre.activite }}</td></tr>
-            <tr><th>Mission :</th><td>{{ offre.mission }}</td></tr>
-            <tr><th>Profile :</th><td>{{ offre.profil }}</td></tr>
-            <tr><th>Référence :</th><td>{{ offre.reference }}</td></tr>
-        </table>
+    <div class="container">
+        <b>Poste :</b> {{ offre.titre }}<br>
+
+        <b>Type de contrat :</b> {{ offre.contratType }}<br>
+        <b>Date limite :</b> {{ offre.dateLimite | date('d-m-Y') }}
+        <hr>
+        <b>Activités :</b><br>{{ offre.activite | raw }}
+        <hr>
+        <b>Mission :</b><br>{{ offre.mission | raw}}
+        <hr>
+        <b>Profile :</b><br>{{ offre.profil | raw }}
+        <hr>
+        <b>Référence :</b><br>{{ offre.reference | raw }}<br><br>
 
         <a href="javascript:history.back()" class="btn btn-warning">Retour</a>
     </div>

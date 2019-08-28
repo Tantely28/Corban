@@ -10,19 +10,30 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h2 style="color: #222222;
-                          text-align: center;
-                          font-family: Raleway Heavy;
-                          font-weight: bold;
-                          padding-bottom: 70px;
-                          font-size: 45px;">Un témoignage du client</h2>
+
             </div>
         </div>
         <center>
-        <div class="row" id="tem" style="text-align: center;">
+            <h2 style="color: #222222;
+                          text-align: center;
+                          font-family: Raleway Heavy;
+                          font-weight: bold;
+                          padding-bottom: 10px;
+                          font-size: 45px;">Témoignages du client</h2>
+            <p>Ecoutez ce que nos clients pensent de Corban.<br>
+                Quand vous êtes prêt, contactez-nous + ADRESSE<br>
+                EMAIL & PHONE NUMBER<br></p>
+            <hr>
+                <div class="row" id="tem" style="margin-left: 2px;">
+
+                </div>
+            <div id="desc" style="float: right; width: 300px; text-align: left; margin-top: -470px">
+            </div>
+            <hr>
+            <div class="row" id="temoin" style="text-align: center;">
 
 
-        </div>
+            </div>
         </center>
     </div>
 </section>
@@ -34,10 +45,26 @@
         if (this.readyState === 4 && this.status === 200) {
             var arr=JSON.parse(xrh.response);
 
-         document.getElementById("tem").innerHTML +='<p><video controls src="http://localhost/projet/corban/Corban/application/back/public/uploads/'+arr.video +'" width="1000px" height="450px"></video><br>'+arr.description+'<br><br><a href="#" class="btn btn-warning">Retour</a></p>'
+         document.getElementById("tem").innerHTML +='<p><video controls src="http://localhost/projet/corban/Corban/application/back/public/uploads/'+arr.video +'" width="720px" height="450px"></video>'
+         document.getElementById("desc").innerHTML +='<p>'+arr.description+'</p>'
         }
     };
     xrh.send()
+
+
+    var xhrtt=new XMLHttpRequest();
+    xhrtt.open('GET','http://127.0.0.1:8000/api/lecture/temoignage');
+    xhrtt.onreadystatechange=function () {
+        if (this.readyState === 4 && this.status === 200) {
+            var arr=JSON.parse(xhrtt.response);
+
+            for(var i=0;i<arr.length;i++) {
+                document.getElementById("temoin").innerHTML +=
+                    '<div class="col-lg-3 col-md-4 col-6"><div style="background-color: white; width: 200px; padding: 0 0 0 0; margin-bottom: 10px; border-radius: 7px; text-align: center"><a href="index.php?page=temoignage&idtemoignage='+arr[i].id+'""><video src="http://localhost/Corban/application/back/public/uploads/'+arr[i].video +'" width="200px" height="200px"></video>'+arr[i].client+'</b></a></div></div>'
+            }
+        }
+    };
+    xhrtt.send()
 </script>
 </body>
 </html>

@@ -10,9 +10,9 @@ use Doctrine\ORM\Mapping as ORM;
 class OffreEmplois
 {
     const CONTRAT = [
-        0 => 'CDI',
-        1 => 'CDD',
-        2 => 'Stage'
+        'CDI' => 'CDI',
+        'CDD' => 'CDD',
+        'Stage' => 'Stage'
     ];
 
     /**
@@ -26,11 +26,6 @@ class OffreEmplois
      * @ORM\Column(type="string", length=255)
      */
     private $titre;
-
-    /**
-     * @ORM\Column(type="datetime")
-     */
-    private $dateLimite;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -48,19 +43,24 @@ class OffreEmplois
     private $activite;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text")
      */
     private $mission;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text")
      */
     private $profil;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text")
      */
     private $reference;
+
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $dateLimite;
 
     public function getId(): ?int
     {
@@ -79,17 +79,6 @@ class OffreEmplois
         return $this;
     }
 
-    public function getDateLimite(): ?\DateTimeInterface
-    {
-        return $this->dateLimite;
-    }
-
-    public function setDateLimite(\DateTimeInterface $dateLimite): self
-    {
-        $this->dateLimite = $dateLimite;
-
-        return $this;
-    }
 
     public function getContrat(): ?string
     {
@@ -147,6 +136,18 @@ class OffreEmplois
     public function setReference(string $reference): self
     {
         $this->reference = $reference;
+
+        return $this;
+    }
+
+    public function getDateLimite(): ?\DateTimeInterface
+    {
+        return $this->dateLimite;
+    }
+
+    public function setDateLimite(\DateTimeInterface $dateLimite): self
+    {
+        $this->dateLimite = $dateLimite;
 
         return $this;
     }

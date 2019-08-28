@@ -11,23 +11,35 @@
             </a>
             <thead>
             <tr>
+                <th>Numero</th>
                 <th>Titre</th>
-                <th>Date limite</th>
             </tr>
             </thead>
             <tbody>
             {% for o in offreEmplois %}
                 <tr>
+                    <td>{{ o.id }}</td>
                     <td>{{ o.titre }}</td>
-                    <td>{{ o.dateLimite | date('d/M/Y') }}</td>
                     <td>
-                        <a href="{{ path('offre_emplois_show', { id: o.id }) }}" class="btn btn-primary">Voir</a>
-                        <a href="#" class="btn btn-outline-primary">Publier</a>
+                        <a href="{{ path('offre_emplois_show', { id: o.id }) }}" class="btn btn-info">Voir</a>
+                        <a href="{{ path('offre_emplois_edit', { id: o.id }) }}" class="btn btn-default">Modifier</a>
+                        <a href="#" onclick="deleteOffre({{ o.id }})" class="btn btn-danger">Supprimer</a>
                     </td>
                 </tr>
             {% endfor %}
             </tbody>
         </table>
     </div>
+    <script>
+        function deleteOffre(id) {
+            if(confirm("Voulez vous vraiment supprimer cette Enregistrement ?")){
+                window.location='/delete/offre/'+id;
+                console.log("ok")
+            }
+            else{
+                alert("L'enregistrement n'a pas été supprimé.")
+            }
+        }
+    </script>
 
 {% endblock %}

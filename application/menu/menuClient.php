@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
-<style>
-
-</style> 
-<body>
-
-</body>
-</html>
 <nav class="navbar navbar-expand-lg navbar-dark site_navbar bg-dark site-navbar-light" id="site-navbar">
       <div class="container">
         <a class="navbar-brand" href="index.php?page=home"><img src="assets/images/Logo.png" style="width: 50%; height:25%;">  </a>
@@ -26,9 +14,8 @@
             <li class="nav-item"><a href="index.php?page=offres" class="nav-link">Nos offres d'emplois</a></li>
             <li class="nav-item"><a href="index.php?page=apropos" class="nav-link">A propos</a></li>
 
-              <li class="nav-item"><a href="logout.php" class="nav-link">Deconnexion</a></li>
-
             <li class="nav-item"><a href="index.php?page=contact" class="nav-link">Contact</a></li>
+              <li class="nav-item"><a href="logout.php" class="nav-link">Deconnexion</a></li>
           </ul>
         </div>
       </div>

@@ -11,6 +11,7 @@ use FOS\RestBundle\Controller\Annotations as Rest;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
@@ -124,7 +125,7 @@ class AdminController extends AbstractController
      */
     public function offreEmplois(): Response
     {
-        $offreEmplois = $this->emploisRepository->findAll();
+        $offreEmplois = $this->emploisRepository->findOffre();
         return $this->render('admin/offreEmplois/index.html.twig', [
             'current_menu' => 'offre',
             'offreEmplois' => $offreEmplois
@@ -147,6 +148,29 @@ class AdminController extends AbstractController
             return $this->redirectToRoute('offre_emplois_index');
         }
 
+
+        return $this->render('admin/offreEmplois/new.html.twig', [
+            'form' => $form->createView(),
+            'current_menu' => 'offre'
+        ]);
+    }
+
+    /**
+     * @param OffreEmplois $offre
+     * @return RedirectResponse|Response
+     * @Route("/offreEmplois/edit/{id}", name="offre_emplois_edit")
+     */
+    public function editOffre(Request$request,OffreEmplois $offre)
+    {
+        $form = $this->createForm(OffreEmploisType::class, $offre);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()){
+            $this->em->persist($offre);
+            $this->em->flush();
+            return $this->redirectToRoute('offre_emplois_index');
+        }
+
+
         return $this->render('admin/offreEmplois/new.html.twig', [
             'form' => $form->createView(),
             'current_menu' => 'offre'
@@ -161,7 +185,20 @@ class AdminController extends AbstractController
     public function showEmpois(OffreEmplois $offreEmplois): Response
     {
         return $this->render('admin/offreEmplois/show.html.twig', [
-            'offre' => $offreEmplois
+            'offre' => $offreEmplois,
+            'current_menu' => 'offre'
         ]);
+    }
+
+    /**
+     * @param OffreEmplois $offre
+     * @return RedirectResponse
+     * @Route("/delete/offre/{id}")
+     */
+    public function deleteOffre(OffreEmplois $offre)
+    {
+        $this->em->remove($offre);
+        $this->em->flush();
+        return $this->redirectToRoute('offre_emplois_index');
     }
 }

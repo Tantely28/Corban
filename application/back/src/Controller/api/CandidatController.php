@@ -97,38 +97,40 @@ class CandidatController extends AbstractController
         }
 
     /**
-     * @Rest\Post("/create/cvCandidat")
+     * @Rest\Post("/create/cvCandidat/{id}")
      * @param Request $request
      * @return JsonResponse
      * @throws \Exception
      */
-    public function ajoutCVCandidat(Request $request)
+    public function ajoutCVCandidat(Candidat $candidat,Request $request)
     {
         $cvCandidat=new CV();
-        if (!empty($request->get('candidat_id')) && !empty($request->get('photo')) && !empty($request->get('cv')) && !empty($request->get('formation')) && !empty(($request->get('experience')) && !empty($request->get('competence')) && !empty($request->get('langue')) && !empty($request->get('loisir'))))
+
+        if (!empty($request->files->get('photo')) && !empty($request->files->get('cv')) && !empty($request->get('formation')) && !empty(($request->get('experience')) && !empty($request->get('competence')) && !empty($request->get('langue')) && !empty($request->get('loisir'))))
         {
-            $cvCandidat->setCandidat($request->get('candidat_id'));
+                $filePhoto = $request->files->get('photo');
+                $filenamePhoto=md5(uniqid()).'.'.$filePhoto->guessExtension();
+                $filePhoto->move($this->getParameter('upload_directory'), $filenamePhoto);
+                $cvCandidat->setPhoto($filenamePhoto);
 
-            $filePhoto = $request->get('photo');
-            $filenamePhoto=md5(uniqid()).'.'.$filePhoto->guessExtension();
-            $filePhoto->move($this->getParameter('upload_directory'), $filenamePhoto);
-            $cvCandidat->setPhoto($filenamePhoto);
+                $fileCV = $request->files->get('cv');
+                $filenameCV=md5(uniqid()).'.'.$fileCV->guessExtension();
+                $fileCV->move($this->getParameter('upload_directory'), $filenameCV);
+                $cvCandidat->setCv($filenameCV);
+                $cvCandidat->setCandidat($candidat);
+                $cvCandidat->setFormation($request->get('formation'));
+                $cvCandidat->setExperience($request->get('experience'));
+                $cvCandidat->setCompetence($request->get('competence'));
+                $cvCandidat->setLangue($request->get('langue'));
+                $cvCandidat->setLoisir($request->get('loisir'));
 
-            $fileCV = $request->get('cv');
-            $filenameCV=md5(uniqid()).'.'.$fileCV->guessExtension();
-            $fileCV->move($this->getParameter('upload_directory'), $filenameCV);
-            $cvCandidat->setCv($filenameCV);
+                $em=$this->getDoctrine()->getManager();
+                $em->persist($cvCandidat);
+                $em->flush();
+                return new JsonResponse(['message' => 'Information sauvegardé'], Response::HTTP_OK);
 
-            $cvCandidat->setFormation($request->get('formation'));
-            $cvCandidat->setExperience($request->get('experience'));
-            $cvCandidat->setCompetence($request->get('competence'));
-            $cvCandidat->setLangue($request->get('langue'));
-            $cvCandidat->setLoisir($request->get('loisir'));
 
-            $em=$this->getDoctrine()->getManager();
-            $em->persist($cvCandidat);
-            $em->flush();
-            return new JsonResponse(['message' => 'Information sauvegardé'], Response::HTTP_OK);
+
 
         }else{
             return new JsonResponse(['message' => 'Veuillez remplir tous les champs','test'=>$request->get('name')], Response::HTTP_OK);

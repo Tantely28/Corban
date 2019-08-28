@@ -71,6 +71,7 @@ if(isset($_GET['page'])) {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 <script src="assets/js/js/jquery.min.js"></script>
+<script src="assets/js/js/jquery.js"></script>
     <script src="assets/js/js/popper.min.js"></script>
     <script src="assets/js/js/bootstrap.min.js"></script>
     <script src="assets/js/js/jquery.easing.1.3.js"></script>
