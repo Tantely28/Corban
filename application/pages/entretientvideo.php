@@ -19,7 +19,7 @@
                           font-family: Raleway Heavy;
                           font-weight: bold;
                           padding-bottom: 10px;
-                          font-size: 45px;">CV vidéo du candidat</h2>
+                          font-size: 45px;">Entretient video</h2>
 
             <hr>
             <div class="row" id="tem" style="margin-left: 2px;">
@@ -28,7 +28,7 @@
             <div id="desc" style="float: right; width: 300px; text-align: left; margin-top: -470px">
             </div>
             <hr>
-            <div class="row" id="cvvideo" style="text-align: center;">
+            <div class="row" id="entretientvideo" style="text-align: center;">
 
 
             </div>
@@ -38,7 +38,7 @@
 
 <script>
     var xrh=new XMLHttpRequest();
-    xrh.open('GET',"http://127.0.0.1:8000/api/video/CV/un/<?php echo $_GET['idvideo'] ?>");
+    xrh.open('GET',"http://127.0.0.1:8000/api/video/Entretient/un/<?php echo $_GET['identretientvideo'] ?>");
     xrh.onreadystatechange=function () {
         if (this.readyState === 4 && this.status === 200) {
             var arr=JSON.parse(xrh.response);
@@ -51,14 +51,14 @@
 
 
     var xhrtt=new XMLHttpRequest();
-    xhrtt.open('GET','http://127.0.0.1:8000/api/video/CV');
+    xhrtt.open('GET','http://127.0.0.1:8000/api/video/Entretient');
     xhrtt.onreadystatechange=function () {
         if (this.readyState === 4 && this.status === 200) {
             var arr=JSON.parse(xhrtt.response);
 
             for(var i=0;i<arr.length;i++) {
-                document.getElementById("cvvideo").innerHTML +=
-                    '<div class="col-lg-3 col-md-4 col-6"><div style="background-color: white; width: 200px; padding: 0 0 0 0; margin-bottom: 10px; border-radius: 7px; text-align: center"><a href="index.php?page=cvvideo&idvideo='+arr[i].id+'""><video src="http://localhost/Corban/application/back/public/uploads/'+arr[i].video +'" width="200px" height="200px"></video>'+arr[i].type+'</b></a></div></div>'
+                document.getElementById("entretientvideo").innerHTML +=
+                    '<div class="col-lg-3 col-md-4 col-6"><div style="background-color: white; width: 200px; padding: 0 0 0 0; margin-bottom: 10px; border-radius: 7px; text-align: center"><a href="index.php?page=entretientvideo&identretientvideo='+arr[i].id+'""><video src="http://localhost/Corban/application/back/public/uploads/'+arr[i].video +'" width="200px" height="200px"></video>'+arr[i].type+'</b></a></div></div>'
             }
         }
     };

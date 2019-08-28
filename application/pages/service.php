@@ -52,14 +52,14 @@
       </div>
 
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <a href="index.php?page=cvvideo">
+        <a href="index.php?page=cvvideos">
           <img src="assets/images/service/noir/2.png" style="max-width: 100%;height: 90px;">
         </a>
         <p style="font-size: 15px">CV VIDEO</p>
       </div>
 
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <a href="index.php?page=entretienvideo">
+        <a href="index.php?page=entretienvideos">
           <img src="assets/images/service/noir/3.png" style="max-width: 100%;height: 90px;">
         </a>
         <p style="font-size: 15px">ENTRETIEN VIDEO</p>
