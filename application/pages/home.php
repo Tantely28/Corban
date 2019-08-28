@@ -5,22 +5,22 @@
 </head>
 <style>
 	.btn-1{
-		font-size: 16px; 
+		font-size: 20px; 
 		border-radius: 10px;
 		font-weight: bold;
-		padding: 4px 10px;
-		font-family:'Roboto', sans-serif;
+		padding: 10px 40px;
+		font-family: 'Roboto', sans-serif;
 		background-color:#0e3fab;
 		left: 10px;
 		color: #fff;
 		border:none;
 	}
 	.btn-1:hover{
-		font-size: 16px; 
+		font-size: 20px; 
 		border-radius: 10px;
 		font-weight: bold;
-		padding: 4px 10px;
-		font-family:'Roboto', sans-serif;
+		padding: 10px 40px;
+		font-family: 'Roboto', sans-serif;
 		background-color:#ffffff;
 		left: 10px;
 		color: #0e3fab;

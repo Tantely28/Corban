@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Entretien Vidéo</title>
+  <link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Lora:400,700|Raleway:400,700|Roboto:400,700&display=swap" rel="stylesheet"> 
 </head>
 <body>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -13,63 +14,62 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="assets/images/service/entretienvideo/43.jpg" class="d-block w-100" alt="">
-      <div class="carousel-caption d-none d-md-block" style="bottom: 270px;text-align: center;">
-      	<div>
+      <div class="carousel-caption d-none d-md-block" style="bottom: 270px;">
+      	<div style="text-align: center;">
       		<h4 style="color: #ffffff; 
                     font-weight: bold;
-                    font-family: Raleway Heavy;
-                    margin-right:270px;
-                    font-size: 80px">Entretien Vidéo
+                    font-family: 'Raleway', sans-serif;
+                   text-align: left;
+                    font-size: 80px"><strong>Entretien Vidéo</strong> 
           </h4>
           <p style="color:#ffffff;
                     font-size: 30px;
-                    margin-right:200px;
-                    margin-top: 30px">Entrez dans l'ère du recrutement 2.0</p>
+                    font-family: 'Raleway', sans-serif;
+                    text-align: left;
+                    float: left;">Entrez dans l'ère du recrutement 2.0</p>
       	</div>
       </div>
     	</div>
     </div>	
 </div>
 
-<section class="container-fluid">
+<section class="container-fluid" style="padding-top: 80px;padding-bottom: 50px;">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <h2 style="font-family:Raleway Heavy; 
+        <h2 style="font-family:'Raleway', sans-serif; 
                   color:#545454;
                   font-weight: bold;
                   font-size: 45px;
-                  text-align:center;
-                  margin-top: 40px ">Entretien Vidéo
+                  text-align:center;"> <strong>Entretien Vidéo</strong> 
         </h2>
         <h3 style="color: #ff914d;
-                  font-family: arimo;
+                  font-family: 'Arimo', sans-serif;
                   text-align: center;
-                  margin-top: 20px;">ENTREZ DANS L'ERE DU RECRUTEMENT 2.0</h3>
+                  padding-top: 20px;">ENTREZ DANS L'ERE DU RECRUTEMENT 2.0</h3>
       </div>
     </div>
   </div>
-  <div class="row" style="color: #222222;font-family: arimo;margin-top: 20px;
-    margin-bottom: 40px;">
+  <div class="row" style="color: #222222;
+                          font-family: 'Arimo', sans-serif;
+                          padding-top: 30px;
+                          padding-bottom: 40px;">
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <h4 style="font-weight: bold;margin-bottom: 20px">Le concept</h4>
-      <div style="text-align: justify;">
+      <h4 style="font-weight: bold;padding-bottom: 20px">Le concept</h4>
+      <div style="font-size: 24px;">
         <p>
-          Cette plateforme digitale dédiée au recrutement 2.0 met en<br>
-          relation les candidats à la recherche de nouvelle opportunité<br>
-          de travail et les entreprises à la recherche de meilleur<br>
+          Cette plateforme digitale dédiée au recrutement 2.0 met en relation les candidats à la recherche de nouvelle opportunité de travail et les entreprises à la recherche de meilleur
           talents.
         </p>
         <p>
-          Inscrivez-vous et ayez accès à des entretiens différés des<br>
-          candidats potentiels.
+          Inscrivez-vous et ayez accès à des entretiens différés des candidats potentiels.
         </p>
         <p>Contactez-nous pour plus d'information.</p>
       </div>
     </div>
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <h4 style="font-weight: bold;margin-bottom: 20px">Les avantages</h4>
-      <div style="text-align: justify;">
+      <h4 style="font-weight: bold;padding-bottom: 20px">Les avantages</h4>
+      <div style="font-size: 24px;">
         <p>●  accélérer le processus de recrutement</p>
         <p>● large choix des candidats potentiels</p>
       </div>
@@ -88,21 +88,21 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <h2 style="text-align: center;">Pour plus d'information</h2>
+        <h2 style="text-align: center;"> <strong>Pour plus d'information</strong> </h2>
         <h3 style="text-align: center;">CONTACTEZ NOUS</h3>
       </div>
     </div>
-    <div class="row" style="margin-bottom: 20px;">
+    <div class="row" style="padding-bottom: 20px;">
       <div class="col-lg-3 col-md-3">
       </div>  
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <input  type="text" placeholder="Nom" style="margin-bottom: 20px;">
-        <input  type="text" placeholder="Téléphone" style="margin-bottom: 20px;">
+        <input  type="text" placeholder="Nom" style="padding-bottom: 20px;">
+        <input  type="text" placeholder="Téléphone" style="padding-bottom: 20px;">
         <input  type="text" placeholder="Entreprise">
       </div>
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <input  type="text" placeholder="Prénom" style="margin-bottom: 20px;">
-        <input  type="text" placeholder="Adresse email"style="margin-bottom: 20px;">
+        <input  type="text" placeholder="Prénom" style="padding-bottom: 20px;">
+        <input  type="text" placeholder="Adresse email"style="padding-bottom: 20px;">
         <select>
           <option>Vous êtes</option>
             <option>Responsablerecrutement</option>
