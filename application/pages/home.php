@@ -154,12 +154,12 @@
 			</div>
 		</div>
 
-		<div class="row" style="margin-bottom: 20px;text-align: center;">
+		<div id="chiffre" class="row" style="margin-bottom: 20px;text-align: center;">
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				<h3 style="font-weight: bold;
 						   font-family: 'Lora', serif;
 						   color: #ffffff;
-						   font-size: 35px">+ 12 000
+						   font-size: 35px" class="numero1">+ 12 000
 				</h3>
 				<p style="color: #000000; font-family: 'Arimo', sans-serif;">
 					followers sur <br>LinkedIn
@@ -169,7 +169,7 @@
 				<h3 style="font-weight: bold;
 						   font-family: 'Lora', serif;
 						   color: #ffffff;
-						   font-size: 35px">+ 9 000
+						   font-size: 35px" class="numero2">+ 9 000
 				</h3>
 				<p style="color: #000000; 
 						  font-family: 'Arimo', sans-serif;">
@@ -180,7 +180,7 @@
 				<h3 style="font-weight: bold;
 						   font-family: 'Lora', serif;
 						   color: #ffffff;
-						   font-size: 35px">7
+						   font-size: 35px" class="numero3">7
 				</h3>
 				<p style="color: #000000; 
 						  font-family: 'Arimo', sans-serif;">
@@ -191,7 +191,7 @@
 				<h3 style="font-weight: bold;
 						   font-family: 'Lora', serif;
 						   color: #ffffff;
-						   font-size: 35px">+ 7 000
+						   font-size: 35px" class="numero4">+ 7 000
 				</h3>
 				<p style="color: #000000; 
 				          font-family: 'Arimo', sans-serif;">
@@ -200,6 +200,30 @@
 			</div>
 	    </div>
 	</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.scr = function() {
+            // f(12000, 'numero1');
+            // f(9000, 'numero2');
+            // f(7, 'numero3');
+            // f(7000, 'numero4');
+        }
+
+        function f(nombre, classes) {
+            $({countNum: $('.'+classes).html()}).animate({countNum: nombre}, {
+                duration: 1000,
+                easing: 'linear',
+                step: function () {
+                    $('.'+classes).html(Math.floor(this.countNum) + "+");
+                },
+                complete: function () {
+                    $('.'+classes).html(this.countNum + "+");
+                    //alert('finished');
+                }
+            });
+        }
+    </script>
 
 	<p class="col-sm-12 col-xs-12" style="color: #000000;
 			  font-weight: bold;

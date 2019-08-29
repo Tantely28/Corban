@@ -89,5 +89,9 @@ if(isset($_GET['page'])) {
     <script src="assets/js/js/google-map.js"></script>
 
     <script src="assets/js/js/main.js"></script>
+
+    <!--    Conterup -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 </body>
 </html>
