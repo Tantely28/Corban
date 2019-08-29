@@ -1,4 +1,27 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<style>
+  .btn-9{
+    background: #f4960e;
+    color: #222222;
+    font-weight: bold;
+    border: 2px solid #222222;
+    padding: 5px 20px; 
+    text-align: center;
+  }
+  .btn-9:hover{
+    background:#000;
+    color: #f4960e;
+    font-weight: bold;
+    border: 2px solid #f4960e;
+    padding: 5px 20px; 
+  }
+</style>  
+<body>
 <nav class="navbar navbar-expand-lg navbar-dark site_navbar bg-dark site-navbar-light" id="site-navbar">
       <div class="container">
         <a class="navbar-brand" href="index.php?page=home"><img src="assets/images/Logo.png" style="width: 89px; height:70px;">  </a>
@@ -21,7 +44,9 @@
 
         </div>
       </div>
-    <a href="index.php?page=connexion" data-toggle="modal" data-target="#modalConnexion" class="btn btn-info">Se connecter</a>
+    <a href="index.php?page=connexion" data-toggle="modal" data-target="#modalConnexion" class="btn-9">Se connecter</a>
     </nav>
 
     <?php include("pages/connexion.php"); ?>
+</body>
+</html>
