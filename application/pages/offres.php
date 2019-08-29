@@ -84,7 +84,7 @@
             var arr=JSON.parse(xrh.response);
 
             for(var i=0;i<arr.length;i++) {
-                document.getElementById("main").innerHTML +='<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"><div style="background-color:#3b4a61; padding:10px 10px;"><p style="padding-top: 60px;font-size: 15px;">Corban Performance Consulting</p><h2 style="font-family:Lora;font-weight:bold;text-align:center;font-size:35px;padding-top: 35px;padding-bottom:100px;">'+arr[i].poste+'</h2><a href="index.php?page=detailsoffre&id='+arr[i].id+'" style="color:#fff;text-decoration: none;font-weight: bold;font-size:20px;">Détails</a></div></div>'
+                document.getElementById("main").innerHTML +='<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"><div style="background-color:#3b4a61; padding:10px 10px;"><p style="padding-top: 60px;font-size: 15px;">Corban Performance Consulting</p><h2 style="font-family:Lora;font-weight:bold;text-align:center;font-size:35px;padding-top: 35px;padding-bottom:100px;">'+arr[i].poste+'</h2><p style="text-align:left;">pour&nbsp;'+arr[i].client+' </p><a href="index.php?page=detailsoffre&id='+arr[i].id+'" style="color:#fff;text-decoration: none;font-weight: bold;font-size:20px;">Détails</a></div></div>'
 
 
                 // '                            <img src="http://127.0.0.1:8000/uploads/'+arr[i].image +'" alt="post">' +
