@@ -2,7 +2,10 @@
 
 namespace App\Form;
 
+use App\Entity\Client;
 use App\Entity\OffreEmplois;
+use Doctrine\ORM\EntityRepository;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -17,6 +20,12 @@ class OffreEmploisType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('client',EntityType::class,[
+                'class'=>Client::class,
+                'query_builder'=>function(EntityRepository $s){
+                    return $s->createQueryBuilder('c')->orderBy('c.nom');
+                }
+            ])
             ->add('titre',TextType::class,[
                 'label'=>'Poste'
             ])

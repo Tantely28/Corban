@@ -63,9 +63,15 @@ class Client
      */
     private $temoignages;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\OffreEmplois", mappedBy="client")
+     */
+    private $offreEmplois;
+
     public function __construct()
     {
         $this->temoignages = new ArrayCollection();
+        $this->offreEmplois = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -198,6 +204,43 @@ class Client
         }
 
         return $this;
+    }
+
+    /**
+     * @return Collection|OffreEmplois[]
+     */
+    public function getOffreEmplois(): Collection
+    {
+        return $this->offreEmplois;
+    }
+
+    public function addOffreEmplois(OffreEmplois $offreEmplois): self
+    {
+        if (!$this->offreEmplois->contains($offreEmplois)) {
+            $this->offreEmplois[] = $offreEmplois;
+            $offreEmplois->setClient($this);
+        }
+
+        return $this;
+    }
+
+    public function removeOffreEmplois(OffreEmplois $offreEmplois): self
+    {
+        if ($this->offreEmplois->contains($offreEmplois)) {
+            $this->offreEmplois->removeElement($offreEmplois);
+            // set the owning side to null (unless already changed)
+            if ($offreEmplois->getClient() === $this) {
+                $offreEmplois->setClient(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
+        return $this->nom;
     }
 
 }

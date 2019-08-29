@@ -62,6 +62,11 @@ class OffreEmplois
      */
     private $dateLimite;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Client", inversedBy="offreEmplois")
+     */
+    private $client;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -148,6 +153,18 @@ class OffreEmplois
     public function setDateLimite(\DateTimeInterface $dateLimite): self
     {
         $this->dateLimite = $dateLimite;
+
+        return $this;
+    }
+
+    public function getClient(): ?Client
+    {
+        return $this->client;
+    }
+
+    public function setClient(?Client $client): self
+    {
+        $this->client = $client;
 
         return $this;
     }

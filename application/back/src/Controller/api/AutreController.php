@@ -59,7 +59,6 @@ class AutreController extends AbstractController
      */
     public function offreOne(OffreEmplois $emplois)
     {
-        $date=new \DateTime();
         $offre=$this->offre->findOffreOne($emplois->getId());
 
         if(empty($offre)){
@@ -70,6 +69,7 @@ class AutreController extends AbstractController
             foreach ($offre as $of){
                 $datas=[
                     'id'=>$of->getId(),
+                    'client'=>$of->getClient()->getNom(),
                     'poste'=>$of->getTitre(),
                     'dateLimite'=>$of->getDateLimite()->format('d-m-Y'),
                     'contrat'=>$of->getContrat(),

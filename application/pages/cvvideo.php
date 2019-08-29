@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<<<<<<< HEAD
-  <meta charset="utf-8">
-  <title>CV Vidéo</title>
-  <link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Lora:400,700|Raleway:400,700|Roboto:400,700&display=swap" rel="stylesheet"> 
-</head>
-<body>
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -77,17 +69,11 @@
     </div>
   </div>
 </section>
-=======
-    <title></title>
-</head>
-<body>
-
 
 <section class="container-fluid" style="background-color: #ffff;padding: 80px 20px;">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
->>>>>>> 9dccc620fbb5d2838b76c74f36c2575469e8af9b
 
             </div>
         </div>
@@ -99,7 +85,6 @@
                           padding-bottom: 10px;
                           font-size: 45px;">CV vidéo du candidat</h2>
 
-<<<<<<< HEAD
 <div class="contact">
   <div class="container">
     <div class="row">
@@ -134,7 +119,6 @@
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: center;">
         <button type="button" class="btn">Envoyer</button>  
       </div>
-=======
             <hr>
             <div class="row" id="tem" style="margin-left: 2px;">
 
@@ -147,7 +131,6 @@
 
             </div>
         </center>
->>>>>>> 9dccc620fbb5d2838b76c74f36c2575469e8af9b
     </div>
 </section>
 
@@ -179,5 +162,3 @@
     };
     xhrtt.send()
 </script>
-</body>
-</html>
