@@ -83,18 +83,9 @@
   </div>
 </section>
 
-<section class="container-fluid">
+<section class="container-fluid" style="background-color: lightgray; padding: 80px 80px">
   <div class="container">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <h2 style="color: #222222;
-                          text-align: center;
-                          font-family: Raleway Heavy;
-                          font-weight: bold;
-                          padding-bottom: 70px;
-                          font-size: 45px;">Tous les CV vidéos</h2>
-      </div>
       <div class="row" id="cvvideos" style="text-align: center;">
-
 
       </div>
   </div>
@@ -148,7 +139,7 @@
             for(var i=0;i<arr.length;i++) {
                 document.getElementById("cvvideos").innerHTML +=
 
-                    '<div class="col-lg-3 col-md-4 col-6"><div style="background-color: white; width: 200px; padding: 0 0 0 0; margin-bottom: 10px; border-radius: 7px; text-align: center"><a href="index.php?page=cvvideo&idvideo='+arr[i].id+'""><video src="http://localhost/Corban/application/back/public/uploads/'+arr[i].video +'" width="200px" height="200px"></video>'+arr[i].type+'</b></a></div></div>'
+                    '<div class="col-lg-4 col-md-4 col-6"><div style="background-color: white; width: 200px; padding: 0 0 0 0; margin-bottom: 10px; border-radius: 7px; text-align: center"><a href="index.php?page=cvvideo&idvideo='+arr[i].id+'""><video src="http://localhost/Corban/application/back/public/uploads/'+arr[i].video +'" width="200px" height="200px"></video>'+arr[i].type+'</b></a></div></div>'
 
                 // '<div class="col-lg-3 col-md-4 col-6"><div style="background-color: white; width: 175px; padding: 3px 3px 2px 2px; margin-bottom: 10px; border-radius: 7px"><video controls src="http://localhost/Corban/application/back/public/uploads/'+arr[i].video +'" width="175px" height="200px"></video><b>'+arr[i].titre+'</b></br><a href="index.php?page=temoignage&idtemoignage='+arr[i].id+'" class="btn btn-outline-primary"><b>Regarder</b></a></div></div>'
 
