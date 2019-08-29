@@ -203,11 +203,11 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
-        window.scr = function() {
-            // f(12000, 'numero1');
-            // f(9000, 'numero2');
-            // f(7, 'numero3');
-            // f(7000, 'numero4');
+        window.onscroll = function() {
+            f(12000, 'numero1');
+            f(9000, 'numero2');
+            f(7, 'numero3');
+            f(7000, 'numero4');
         }
 
         function f(nombre, classes) {
