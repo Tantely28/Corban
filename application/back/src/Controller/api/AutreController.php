@@ -41,6 +41,7 @@ class AutreController extends AbstractController
             foreach ($offres as $offre){
                 $datas[]=[
                     'id'=>$offre->getId(),
+                    'client'=>$offre->getClient()->getNom(),
                     'poste'=>$offre->getTitre(),
                     'dateLimite'=>$offre->getDateLimite()->format('d-m-Y'),
                     'contrat'=>$offre->getContrat(),

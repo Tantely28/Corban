@@ -56,7 +56,7 @@
             if (xhr.status === 200) {
                 var response = JSON.parse(xhr.responseText);
                 alert(response.message); //Si tout va bien afficher le message du serveur
-                window.location.href = "http://localhost/projet/corban/Corban/application/";
+                window.location.href = "http://localhost/Corban/application/";
                 chargement('btnInscription', 'spinnerBtnInscription', 'labelBtnInscription', "S'inscrire", false);
 
                 nom.value = "";
@@ -93,7 +93,7 @@
                     var response = JSON.parse(xhr.responseText);
                     if (response.message == null){
                         // Si tout se passe bien
-                        window.location.href = "http://localhost/projet/corban/Corban/application/index.php?page=home&user="+response.user+"&id="+response.id+"&type=candidat";
+                        window.location.href = "http://localhost/Corban/application/index.php?page=home&user="+response.user+"&id="+response.id+"&type=candidat";
 
                     } else {
                         alert(response.message);

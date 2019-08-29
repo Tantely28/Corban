@@ -77,7 +77,7 @@
             var arr=JSON.parse(xrh.response);
 
           
-                document.getElementById("det").innerHTML +='<h2>'+arr.poste+'</h2><p><strong>Type de contrat :</strong>&nbsp;'+arr.contrat+'</p><p><strong>Activités :</strong> &nbsp;'+arr.activite+'</p><p><strong>Mission:</strong><br>'+arr.mission+'</p><p><strong>Profil:</strong><br>'+arr.profile+'</p><p><strong>Référence :</strong>&nbsp;'+arr.reference+'</p>'
+                document.getElementById("det").innerHTML +='<br><h2>'+arr.client+' cherche '+arr.poste+'</h2><p><strong>Type de contrat :</strong>&nbsp;'+arr.contrat+'</p><p><strong>Activités :</strong> &nbsp;'+arr.activite+'</p><p><strong>Mission:</strong><br>'+arr.mission+'</p><p><strong>Profil:</strong><br>'+arr.profile+'</p><p><strong>Référence :</strong>&nbsp;'+arr.reference+'</p>'
                 document.getElementById("date").innerHTML +=arr.dateLimite
 
 
