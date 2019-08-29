@@ -3,10 +3,22 @@
 {% block body %}
 
     <div class="container">
-        <h4>{{ temoin.titre }}</h4><br>
-        <video width="700" height="auto" controls src="http://localhost/Corban/application/back/public/uploads/{{ temoin.video }}">Ici la description alternative</video>
-        <br><p>{{ temoin.description }}</p>
-        <br><a href="javascript:history.back()" class="btn btn-warning">Retour</a>
+    	<div>	 
+	        <video style="height:400px;width:800px;text-align: center;"  controls src="http://localhost/Corban/application/back/public/uploads/{{ temoin.video }}">Ici la description alternative</video>
+	        <h4 style="font-size: 35px; 
+        				font-weight: bold;
+        				font-family: raleway;
+        				color: #000;
+        				padding-top: 12px;">Titre:&nbsp;{{ temoin.titre }}
+        	</h4>
+	        <p style="font-size: 25px;
+        			 font-family: arimo;
+        			 color: #222222;
+        			 font-weight: bold;">Description:&nbsp;
+        			 <strong>{{ temoin.description }}</strong>
+        	</p>
+	        <a href="javascript:history.back()" class="btn btn-warning">Retour</a>
+    	</div>
     </div>
 
 {% endblock %}
