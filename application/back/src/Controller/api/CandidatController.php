@@ -3,7 +3,6 @@
 namespace App\Controller\api;
 
 use App\Entity\Candidat;
-use App\Entity\CV;
 use App\Entity\Video;
 use App\Repository\CandidatRepository;
 use App\Repository\VideoRepository;
@@ -35,8 +34,13 @@ class CandidatController extends AbstractController
     public function inscriptionCandidat(Request $request)
     {
         $candidat=new Candidat();
-        if (!empty($request->get('nom')) && !empty($request->get('dateNaissance')) && !empty($request->get('situation')) && !empty($request->get('adresse')) && !empty(($request->get('ville')) && !empty($request->get('pays')) && !empty($request->get('telephone')) && !empty($request->get('sex')) && !empty($request->get('pseudo')) && !empty($request->get('password'))))
+        if (!empty($request->files->get('photo')) && !empty($request->get('nom')) && !empty($request->get('dateNaissance')) && !empty($request->get('situation')) && !empty($request->get('adresse')) && !empty(($request->get('ville')) && !empty($request->get('pays')) && !empty($request->get('telephone')) && !empty($request->get('sex')) && !empty($request->get('pseudo')) && !empty($request->get('password'))))
         {
+            $filePhoto = $request->files->get('photo');
+            $filenamePhoto=md5(uniqid()).'.'.$filePhoto->guessExtension();
+            $filePhoto->move($this->getParameter('upload_directory'), $filenamePhoto);
+            $candidat->setPhoto($filenamePhoto);
+
             $candidat->setNom($request->get('nom'));
             $candidat->setDateNaissance(new \DateTime($request->get('dateNaissance')));
             $candidat->setSituationFamilier($request->get('situation'));
@@ -105,28 +109,20 @@ class CandidatController extends AbstractController
      */
     public function ajoutCVCandidat(Candidat $candidat,Request $request)
     {
-        $cvCandidat=new CV();
-
-        if (!empty($request->files->get('photo')) && !empty($request->files->get('cv')) && !empty($request->get('formation')) && !empty(($request->get('experience')) && !empty($request->get('competence')) && !empty($request->get('langue')) && !empty($request->get('loisir'))))
+        if (!empty($request->files->get('cv')) && !empty($request->get('formation')) && !empty(($request->get('experience')) && !empty($request->get('competence')) && !empty($request->get('langue')) && !empty($request->get('loisir'))))
         {
-                $filePhoto = $request->files->get('photo');
-                $filenamePhoto=md5(uniqid()).'.'.$filePhoto->guessExtension();
-                $filePhoto->move($this->getParameter('upload_directory'), $filenamePhoto);
-                $cvCandidat->setPhoto($filenamePhoto);
-
                 $fileCV = $request->files->get('cv');
                 $filenameCV=md5(uniqid()).'.'.$fileCV->guessExtension();
                 $fileCV->move($this->getParameter('upload_directory'), $filenameCV);
-                $cvCandidat->setCv($filenameCV);
-                $cvCandidat->setCandidat($candidat);
-                $cvCandidat->setFormation($request->get('formation'));
-                $cvCandidat->setExperience($request->get('experience'));
-                $cvCandidat->setCompetence($request->get('competence'));
-                $cvCandidat->setLangue($request->get('langue'));
-                $cvCandidat->setLoisir($request->get('loisir'));
+                $candidat->setCv($filenameCV);
+                $candidat->setFormation($request->get('formation'));
+            $candidat->setExperience($request->get('experience'));
+            $candidat->setCompetence($request->get('competence'));
+            $candidat->setLangue($request->get('langue'));
+            $candidat->setLoisir($request->get('loisir'));
 
                 $em=$this->getDoctrine()->getManager();
-                $em->persist($cvCandidat);
+                $em->persist($candidat);
                 $em->flush();
                 return new JsonResponse(['message' => 'Information sauvegardé'], Response::HTTP_OK);
 

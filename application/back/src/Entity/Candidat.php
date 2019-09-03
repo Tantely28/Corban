@@ -79,7 +79,37 @@ class Candidat
     private $temoignageCandidats;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\CV", mappedBy="candidat", cascade={"persist", "remove"})
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $photo;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $experience;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $competence;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $langue;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $loisir;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $formation;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $cv;
 
@@ -256,20 +286,86 @@ class Candidat
         return $this;
     }
 
-    public function getCv(): ?CV
+    public function getPhoto(): ?string
+    {
+        return $this->photo;
+    }
+
+    public function setPhoto(?string $photo): self
+    {
+        $this->photo = $photo;
+
+        return $this;
+    }
+
+    public function getExperience(): ?string
+    {
+        return $this->experience;
+    }
+
+    public function setExperience(?string $experience): self
+    {
+        $this->experience = $experience;
+
+        return $this;
+    }
+
+    public function getCompetence(): ?string
+    {
+        return $this->competence;
+    }
+
+    public function setCompetence(?string $competence): self
+    {
+        $this->competence = $competence;
+
+        return $this;
+    }
+
+    public function getLangue(): ?string
+    {
+        return $this->langue;
+    }
+
+    public function setLangue(?string $langue): self
+    {
+        $this->langue = $langue;
+
+        return $this;
+    }
+
+    public function getLoisir(): ?string
+    {
+        return $this->loisir;
+    }
+
+    public function setLoisir(?string $loisir): self
+    {
+        $this->loisir = $loisir;
+
+        return $this;
+    }
+
+    public function getFormation(): ?string
+    {
+        return $this->formation;
+    }
+
+    public function setFormation(?string $formation): self
+    {
+        $this->formation = $formation;
+
+        return $this;
+    }
+
+    public function getCv(): ?string
     {
         return $this->cv;
     }
 
-    public function setCv(?CV $cv): self
+    public function setCv(?string $cv): self
     {
         $this->cv = $cv;
-
-        // set (or unset) the owning side of the relation if necessary
-        $newCandidat = $cv === null ? null : $this;
-        if ($newCandidat !== $cv->getCandidat()) {
-            $cv->setCandidat($newCandidat);
-        }
 
         return $this;
     }

@@ -28,6 +28,7 @@
         const situation = document.forms['formCandidat'].elements['situation'];
 
         const data = new FormData();
+        data.append('photo', document.querySelector('#photoCandidat').files[0]);
         data.append('nom', nom.value);
         data.append('dateNaissance', dateNaissance.value);
         data.append('telephone', telephone.value);
@@ -119,8 +120,6 @@
             return false;
         }
         const data = new FormData();
-        const $idCandidat = document.querySelector('#idCandidat').value;
-        data.append('photo', document.querySelector('#photoCandidat').files[0]);
         data.append('formation', document.querySelector('#formationCandidat').value);
         data.append('experience', document.querySelector('#experienceCandidat').value);
         data.append('competence', document.querySelector('#competenceCandidat').value);
@@ -133,8 +132,7 @@
                 if (xhr.status === 200) {
                     var response = JSON.parse(xhr.responseText);
                     alert(response.message); //Si tout va bien afficher le message du serveur
-
-                    window.location.href = "http://localhost";
+                    window.location.href = "http://localhost/Corban/application/index.php";
                 } else {
 
                     alert(":( Erreur: Un problème est survenu avec la requête. \n\n Veuillez contacter l'administrateur du serveur.", xhr);

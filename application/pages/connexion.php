@@ -91,6 +91,10 @@
                 <div class="modal-body">
                     <form  method="post" id="formInscription" name="formCandidat">
                         <div class="form-group">
+                            <label for="exampleFormControlFile1">Photo d'identité</label>
+                            <input type="file" class="form-control-file" id="photoCandidat" accept="image/*" required>
+                        </div>
+                        <div class="form-group">
                             <label for="nom">Nom</label>
                             <input type="text" class="form-control" name="nom" id="nom" placeholder="Nom complet" required>
                         </div>
@@ -192,31 +196,27 @@
                         <!-- AUTRE INFORMATION -->
                         <div class="form-group">
                             <label for="exampleFormControlFile1">CV (Word ou pdf)</label>
-                            <input type="file" class="form-control-file" id="cvCandidat" accept=".doc, .docx,.pdf">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlFile1">Photo d'identité</label>
-                            <input type="file" class="form-control-file" id="photoCandidat" accept="image/*">
+                            <input type="file" class="form-control-file" id="cvCandidat" accept=".doc, .docx,.pdf" required>
                         </div>
                         <div class="form-group">
                             <label for="formation">FORAMTIONS ET DIPLOMES</label>
-                            <textarea class="form-control" id="formationCandidat" rows="3"></textarea>
+                            <textarea class="form-control" id="formationCandidat" rows="3" required></textarea>
                         </div>
                         <div class="form-group">
                             <label for="formation">EXPERIENCES PROFESSIONELLES</label>
-                            <textarea class="form-control" id="experienceCandidat" rows="3"></textarea>
+                            <textarea class="form-control" id="experienceCandidat" rows="3" required></textarea>
                         </div>
                         <div class="form-group">
                             <label for="formation">COMPETENCE</label>
-                            <textarea class="form-control" id="competenceCandidat" rows="3"></textarea>
+                            <textarea class="form-control" id="competenceCandidat" rows="3" required></textarea>
                         </div>
                         <div class="form-group">
                             <label for="formation">CONNAISSANCES LINGUISTIQUES</label>
-                            <textarea class="form-control" id="langueCandidat" rows="3"></textarea>
+                            <textarea class="form-control" id="langueCandidat" rows="3" required></textarea>
                         </div>
                         <div class="form-group">
                             <label for="formation">LOISIR</label>
-                            <textarea class="form-control" id="loisirCandidat" rows="3"></textarea>
+                            <textarea class="form-control" id="loisirCandidat" rows="3" required></textarea>
                         </div>
                 </div>
                 <div class="modal-footer">
