@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -66,6 +68,16 @@ class OffreEmplois
      * @ORM\ManyToOne(targetEntity="App\Entity\Client", inversedBy="offreEmplois")
      */
     private $client;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Acces", mappedBy="offre")
+     */
+    private $acces;
+
+    public function __construct()
+    {
+        $this->acces = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -165,6 +177,37 @@ class OffreEmplois
     public function setClient(?Client $client): self
     {
         $this->client = $client;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Acces[]
+     */
+    public function getAcces(): Collection
+    {
+        return $this->acces;
+    }
+
+    public function addAcce(Acces $acce): self
+    {
+        if (!$this->acces->contains($acce)) {
+            $this->acces[] = $acce;
+            $acce->setOffre($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAcce(Acces $acce): self
+    {
+        if ($this->acces->contains($acce)) {
+            $this->acces->removeElement($acce);
+            // set the owning side to null (unless already changed)
+            if ($acce->getOffre() === $this) {
+                $acce->setOffre(null);
+            }
+        }
 
         return $this;
     }

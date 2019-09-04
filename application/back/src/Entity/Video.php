@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -36,6 +38,16 @@ class Video
      * @ORM\JoinColumn(nullable=false)
      */
     private $candidat;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Accesvideo", mappedBy="video")
+     */
+    private $accesvideos;
+
+    public function __construct()
+    {
+        $this->accesvideos = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -86,6 +98,37 @@ class Video
     public function setCandidat(?Candidat $candidat): self
     {
         $this->candidat = $candidat;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Accesvideo[]
+     */
+    public function getAccesvideos(): Collection
+    {
+        return $this->accesvideos;
+    }
+
+    public function addAccesvideo(Accesvideo $accesvideo): self
+    {
+        if (!$this->accesvideos->contains($accesvideo)) {
+            $this->accesvideos[] = $accesvideo;
+            $accesvideo->setVideo($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAccesvideo(Accesvideo $accesvideo): self
+    {
+        if ($this->accesvideos->contains($accesvideo)) {
+            $this->accesvideos->removeElement($accesvideo);
+            // set the owning side to null (unless already changed)
+            if ($accesvideo->getVideo() === $this) {
+                $accesvideo->setVideo(null);
+            }
+        }
 
         return $this;
     }

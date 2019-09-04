@@ -3,9 +3,11 @@
 namespace App\Controller;
 
 use App\Entity\Client;
+use App\Entity\Responsable;
 use App\Entity\Temoignage;
 use App\Form\ClientType;
 use App\Repository\ClientRepository;
+use App\Repository\ResponsableRepository;
 use App\Repository\TemoignageRepository;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\EntityRepository;
@@ -13,6 +15,7 @@ use phpDocumentor\Reflection\Types\This;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -34,12 +37,17 @@ class ClientController extends AbstractController
      * @var TemoignageRepository
      */
     private $temoignageRepository;
+    /**
+     * @var ResponsableRepository
+     */
+    private $responsable;
 
-    public function __construct(ObjectManager $em, ClientRepository $clientRepository,TemoignageRepository $temoignageRepository)
+    public function __construct(ObjectManager $em, ClientRepository $clientRepository,TemoignageRepository $temoignageRepository, ResponsableRepository $responsable)
     {
         $this->em = $em;
         $this->clientRepository = $clientRepository;
         $this->temoignageRepository = $temoignageRepository;
+        $this->responsable = $responsable;
     }
 
     /**
@@ -70,7 +78,7 @@ class ClientController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid())
         {
-            $client->setPassword(sha1($client->getPassword()));
+//            $client->setPassword(sha1($client->getPassword()));
             $this->em->persist($client);
             $this->em->flush();
 
@@ -133,9 +141,64 @@ class ClientController extends AbstractController
         }
     }
 
-    /*
-     * @Route("/ajout/temoignage?id={id}", name="ajout_temoin")
+    /**
+     * @param Client $client
+     * @return Response
+     * @Route("/option/client/{id}", name="options")
      */
+    public function options(Client $client)
+    {
+        return $this->render('admin/client/option.html.twig',[
+            'client'=>$client,
+            'current_menu' => 'client'
+        ]);
+    }
+
+    /**
+     * @Route("/liste/responsable/client/{id}" ,name="responsable")
+     * @param Client $client
+     * @return Response
+     */
+    public function responsable(Client $client)
+    {
+        $responsable=$this->responsable->findResponsable($client->getId());
+        return $this->render('admin/client/responsable.html.twig',[
+            'c'=>$client,
+            'responsable'=>$responsable,
+            'current_menu' => 'client'
+        ]);
+    }
+
+    /**
+     * @Route("/create/responsable/client/{id}", name="new_responsable")
+     * @param Client $client
+     * @return Response
+     */
+    public function createResponsable(Client $client,Request $request)
+    {
+        $responsable=$this->responsable->findResponsable($client->getId());
+        $respo=new Responsable();
+        $form=$this->createFormBuilder($respo)
+            ->add('responabilite')
+            ->add('pseudo')
+            ->add('password',PasswordType::class)
+            ->getForm();
+        $form->handleRequest($request);
+        if($form->isSubmitted() and $form->isValid())
+        {
+            $respo->setClient($client);
+            $respo->setPassword(sha1($respo->getPassword()));
+            $em=$this->getDoctrine()->getManager();
+            $em->persist($respo);
+            $em->flush();
+            return $this->redirectToRoute('responsable',['id'=>$client->getId()]);
+        }
+        return $this->render('admin/client/creatResponsable.html.twig',[
+            'form'=>$form->createView(),
+            'client'=>$client
+        ]);
+    }
+
     /**
      * @param Client $client
      * @param Request $request

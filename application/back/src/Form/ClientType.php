@@ -20,7 +20,6 @@ class ClientType extends AbstractType
             ->add('web')
             ->add('secteur')
             ->add('user')
-            ->add('password',PasswordType::class)
         ;
     }
 

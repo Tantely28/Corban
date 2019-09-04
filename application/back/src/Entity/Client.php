@@ -54,11 +54,6 @@ class Client
     private $user;
 
     /**
-     * @ORM\Column(type="string", length=50)
-     */
-    private $password;
-
-    /**
      * @ORM\OneToMany(targetEntity="App\Entity\Temoignage", mappedBy="client")
      */
     private $temoignages;
@@ -68,10 +63,17 @@ class Client
      */
     private $offreEmplois;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Responsable", mappedBy="client")
+     */
+    private $responsables;
+
+
     public function __construct()
     {
         $this->temoignages = new ArrayCollection();
         $this->offreEmplois = new ArrayCollection();
+        $this->responsables = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -163,18 +165,6 @@ class Client
         return $this;
     }
 
-    public function getPassword(): ?string
-    {
-        return $this->password;
-    }
-
-    public function setPassword(string $password): self
-    {
-        $this->password = $password;
-
-        return $this;
-    }
-
     /**
      * @return Collection|Temoignage[]
      */
@@ -241,6 +231,37 @@ class Client
     {
         // TODO: Implement __toString() method.
         return $this->nom;
+    }
+
+    /**
+     * @return Collection|Responsable[]
+     */
+    public function getResponsables(): Collection
+    {
+        return $this->responsables;
+    }
+
+    public function addResponsable(Responsable $responsable): self
+    {
+        if (!$this->responsables->contains($responsable)) {
+            $this->responsables[] = $responsable;
+            $responsable->setClient($this);
+        }
+
+        return $this;
+    }
+
+    public function removeResponsable(Responsable $responsable): self
+    {
+        if ($this->responsables->contains($responsable)) {
+            $this->responsables->removeElement($responsable);
+            // set the owning side to null (unless already changed)
+            if ($responsable->getClient() === $this) {
+                $responsable->setClient(null);
+            }
+        }
+
+        return $this;
     }
 
 }

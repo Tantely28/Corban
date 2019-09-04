@@ -1,10 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ClientController!{% endblock %}
-
 {% block body %}
     <div class="container">
-        <h1>Les clients</h1>
+        <h2><b>LISTE DES ENTREPRISES CLIENTS</b></h2><hr>
         <table class="table table-striped">
             <a href="{{ path('client_new') }}" class="text-left">
                 <div class="btn btn-primary">Ajouter client</div>
@@ -21,10 +19,11 @@
                     <td>{{ client.nom }}</td>
                     <td>{{ client.adresse }}</td>
                     <td>
+                        <a href="{{ path('options',{id: client.id}) }}" class="btn btn-info">Options</a>
                         <a href="{{ path('client_edit', {id: client.id}) }}" class="btn btn secondary">Editer</a>
 {#                        <a href="{{ path('client_delete', {id: client.id}) }}" onclick="DeletClient({{ client.id }})" class="btn btn-danger">Supprimer</a>#}
                         <a onclick="DeletClient({{ client.id }})" href="{{ path('client_delete', {id: client.id}) }}" class="btn btn-danger">Supprimer</a>
-                        <a href="{{ path('list_temoignage',{id: client.id}) }}" class="btn btn-outline-primary">Temoignage</a>
+{#                        <a href="{{ path('list_temoignage',{id: client.id}) }}" class="btn btn-outline-primary">Temoignage</a>#}
                     </td>
                 </tr>
             {% endfor %}

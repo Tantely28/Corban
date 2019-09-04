@@ -1,7 +1,5 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello PosteController!{% endblock %}
-
 {% block body %}
     <h2>Ajout nouveau client</h2>
 
@@ -16,11 +14,8 @@
         <div class="col-md-4">{{ form_row(form.web) }}</div>
     </div>
     <div class="row">
-        <div class="col-md-12">{{ form_row(form.secteur) }}</div>
-    </div>
-    <div class="row">
+        <div class="col-md-6">{{ form_row(form.secteur) }}</div>
         <div class="col-md-6">{{ form_row(form.user) }}</div>
-        <div class="col-md-6">{{ form_row(form.password) }}</div>
     </div>
     {{ form_widget(form) }}
     <button class="btn btn-success">Ajouter</button>

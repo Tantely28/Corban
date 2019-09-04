@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <table>
+        <tr><td><a href="{{ path('responsable',{id: client.id}) }}" class="btn btn-warning">Responsable</a></td></tr>
+        <tr><td><a href="{{ path('list_temoignage',{id: client.id}) }}" class="btn btn-warning">Temoignage</a></td></tr>
+        <tr><td><a href="" class="btn btn-warning">Accès</a></td></tr>
+    </table>
+
+{% endblock %}
