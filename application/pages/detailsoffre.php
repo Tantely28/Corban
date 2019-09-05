@@ -42,10 +42,7 @@
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 detoffre" id="det">
 					
 				</div>
-                <?php
-                if (isset($_SESSION['auth'])) {
-                    if($_SESSION['auth']['type']=='candidat') {
-                        echo '<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style = "padding-top: 100px; padding-bottom: 25px;" >
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style = "padding-top: 100px; padding-bottom: 25px;" >
 				<p style = "color: #000;
 						  font-weight: bold;
 						  font-family:\'Raleway\', sans-serif;
@@ -53,8 +50,17 @@
 						  font-size: 30px;" > Postuler avant <em id = "date" ></em>
 				</p >
 				<div style = "text-align: center;" >
-					<a href = "index.php?page=postuler" >
-						<button type = "button" class="btn-6" > POSTULER</button >
+					<a>
+						<button type = "button" class="btn-6"
+                           <?php if (isset($_SESSION['auth'])) {
+                                    if ($_SESSION['auth']['type'] == 'candidat') {
+                                         echo "onclick=window.location.href='index.php?page=postuler'";
+                                    }
+                                    else echo 'data-toggle="modal" data-target="#modalCandidat"';
+                                }
+                                else echo 'data-toggle="modal" data-target="#modalCandidat"';
+                           ?>
+                        > POSTULER</button >
 					</a >
 					<a href = "index.php?page=cooptation" >
 						<button type = "button" class="btn-6 " > COOPTER</button >	
@@ -62,10 +68,7 @@
 						
 				</div >
 			</div >
-			</div >';
-                    }
-                    }
-			?>
+			</div >
 		</div>
 	</section>
 <script>
