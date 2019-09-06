@@ -69,10 +69,16 @@ class OffreEmplois
      */
     private $client;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Candidature", mappedBy="offreEmplois")
+     */
+    private $candidatures;
+
 
     public function __construct()
     {
         $this->acces = new ArrayCollection();
+        $this->candidatures = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -173,6 +179,37 @@ class OffreEmplois
     public function setClient(?Client $client): self
     {
         $this->client = $client;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Candidature[]
+     */
+    public function getCandidatures(): Collection
+    {
+        return $this->candidatures;
+    }
+
+    public function addCandidature(Candidature $candidature): self
+    {
+        if (!$this->candidatures->contains($candidature)) {
+            $this->candidatures[] = $candidature;
+            $candidature->setOffreEmplois($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCandidature(Candidature $candidature): self
+    {
+        if ($this->candidatures->contains($candidature)) {
+            $this->candidatures->removeElement($candidature);
+            // set the owning side to null (unless already changed)
+            if ($candidature->getOffreEmplois() === $this) {
+                $candidature->setOffreEmplois(null);
+            }
+        }
 
         return $this;
     }

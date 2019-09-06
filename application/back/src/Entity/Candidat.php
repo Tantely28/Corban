@@ -113,9 +113,15 @@ class Candidat
      */
     private $cv;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Candidature", mappedBy="candidat")
+     */
+    private $candidatures;
+
     public function __construct()
     {
         $this->temoignageCandidats = new ArrayCollection();
+        $this->candidatures = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -366,6 +372,37 @@ class Candidat
     public function setCv(?string $cv): self
     {
         $this->cv = $cv;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Candidature[]
+     */
+    public function getCandidatures(): Collection
+    {
+        return $this->candidatures;
+    }
+
+    public function addCandidature(Candidature $candidature): self
+    {
+        if (!$this->candidatures->contains($candidature)) {
+            $this->candidatures[] = $candidature;
+            $candidature->setCandidat($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCandidature(Candidature $candidature): self
+    {
+        if ($this->candidatures->contains($candidature)) {
+            $this->candidatures->removeElement($candidature);
+            // set the owning side to null (unless already changed)
+            if ($candidature->getCandidat() === $this) {
+                $candidature->setCandidat(null);
+            }
+        }
 
         return $this;
     }
