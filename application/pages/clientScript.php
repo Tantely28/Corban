@@ -17,7 +17,9 @@
     window.onload = function () {
         document.getElementById('connexionClient').onclick = function () {
             chargement('connexionClient', 'spnrConnexClient', 'lblConnexClient', "Connexion ...", true);
-            var username = $("#usernameClient").val();
+            document.getElementById('modalResp').click();
+            chargement('connexionClient', 'spnrConnexClient', 'lblConnexClient', "Se Connecter", false);
+            /*var username = $("#usernameClient").val();
             var password = $("#passwordClient").val();
 
             const params = new URLSearchParams({
@@ -48,7 +50,7 @@
                     }
                 }
             };
-            xhr.send();
+            xhr.send();*/
         }
     }
 </script>
