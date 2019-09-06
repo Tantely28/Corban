@@ -30,14 +30,8 @@
                             <label for="usernameClient">Nom d'utilisateur</label>
                             <input type="email" class="form-control" name="usernameClient" id="usernameClient" placeholder="Votre nom...">
                         </div>
-                        <div class="form-group">
-                            <label for="passwordClient">Mot de passe</label>
-                            <input type="password" class="form-control" id="passwordClient"  name="passwordClient" placeholder="Votre mot de passe...">
-                        </div>
-                        <div class="form-group">
-                            <input type="hidden" class="form-control" id="idSession"  name="idSession" value="<?php if (isset($_POST['idSession'])) echo $_POST['idSession'] ?>">
-                        </div>
                     </form>
+                    <button data-toggle="modal" id="modalResp" hidden data-target="#modalResponsable" class="btn btn-primary">Responsable</button>
                     <button type="button" class="btn btn-warning" id="connexionClient">
                         <span id="spnrConnexClient"></span>
                         <span id="lblConnexClient">Se connecter</span>
@@ -46,6 +40,34 @@
             </div>
         </div>
     </div>
+<!-- MODAL CLIENT-->
+<div class="modal fade" id="modalResponsable">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">Connexion Responsable
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="usernameClient">Nom d'utilisateur</label>
+                        <input type="email" class="form-control" name="usernameResponsable" id="usernameResponsable" placeholder="Votre nom...">
+                    </div>
+                    <div class="form-group">
+                        <label for="passwordClient">Mot de passe</label>
+                        <input type="password" class="form-control" id="passwordResponsable"  name="passwordResponsable" placeholder="Votre mot de passe...">
+                    </div>
+                </form>
+                <button type="button" class="btn btn-warning" id="connexionResp">
+                    <span id="spnrConnexResp"></span>
+                    <span id="lblConnexResp">Se connecter</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- MODAL CANDIDAT-->
     <div class="modal fade" id="modalCandidat">
