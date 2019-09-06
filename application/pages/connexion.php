@@ -28,7 +28,7 @@
                     <form action="#" method="post">
                         <div class="form-group">
                             <label for="usernameClient">Nom d'utilisateur</label>
-                            <input type="email" class="form-control" name="usernameClient" id="usernameClient" placeholder="Votre nom...">
+                            <input class="form-control" name="usernameClient" id="usernameClient" placeholder="Votre nom...">
                         </div>
                     </form>
                     <button data-toggle="modal" id="modalResp" hidden data-target="#modalResponsable" class="btn btn-primary">Responsable</button>

@@ -17,40 +17,35 @@
     window.onload = function () {
         document.getElementById('connexionClient').onclick = function () {
             chargement('connexionClient', 'spnrConnexClient', 'lblConnexClient', "Connexion ...", true);
-            document.getElementById('modalResp').click();
-            chargement('connexionClient', 'spnrConnexClient', 'lblConnexClient', "Se Connecter", false);
-            /*var username = $("#usernameClient").val();
-            var password = $("#passwordClient").val();
+
+            var username = $("#usernameClient").val();
 
             const params = new URLSearchParams({
                 user: username,
-                password: password
             });
 
             var xhr = new XHRObject();
-            var url = `http://127.0.0.1:8000/api/login/client?${params.toString()}`;
+            var url = `http://127.0.0.1:8000/api/client/user?${params.toString()}`;
 
             xhr.open("POST", url , true);
             xhr.onreadystatechange= function () {
                 if (xhr.readyState === 4 && xhr.status === 200){
-                    //window.location = 'http://localhost/Corban/application/index.php
                     var response = JSON.parse(xhr.responseText);
                     if (response.message == null){
-                        // document.cookie = "Id" + response.id;
-                        // document.getElementById("idSession").value = response.id;
                         window.location.href = "http://localhost/Corban/application/index.php?page=home&user="+response.user+"&id="+response.id+"&type=client";
-                        // window.location.href = "http://localhost/index.php?page=home&user="+response.user+"&id="+response.id+"&type=client";
-                        // window.location.href = "http://localhost/Corban/application/index.php?page=home&user="+response.user+"&id="+response.id;
-
                         chargement('connexionClient', 'spnrConnexClient', 'lblConnexClient', "Se Connecter", false);
 
                     } else {
                         alert(response.message);
+                        if (response.message==='Utilisateur vérifié'){
+
+                            document.getElementById('modalResp').click();
+                        }
                         chargement('connexionClient', 'spnrConnexClient', 'lblConnexClient', "Se Connecter", false);
                     }
                 }
             };
-            xhr.send();*/
+            xhr.send();
         }
     }
 </script>
