@@ -38,6 +38,11 @@ class Responsable
      */
     private $responabilite;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Acces", mappedBy="responsable")
+     */
+    private $acces;
+
 
     public function __construct()
     {
@@ -94,6 +99,37 @@ class Responsable
     public function setResponabilite(string $responabilite): self
     {
         $this->responabilite = $responabilite;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Acces[]
+     */
+    public function getAcces(): Collection
+    {
+        return $this->acces;
+    }
+
+    public function addAcce(Acces $acce): self
+    {
+        if (!$this->acces->contains($acce)) {
+            $this->acces[] = $acce;
+            $acce->setResponsable($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAcce(Acces $acce): self
+    {
+        if ($this->acces->contains($acce)) {
+            $this->acces->removeElement($acce);
+            // set the owning side to null (unless already changed)
+            if ($acce->getResponsable() === $this) {
+                $acce->setResponsable(null);
+            }
+        }
 
         return $this;
     }
