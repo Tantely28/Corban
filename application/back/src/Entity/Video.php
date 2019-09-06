@@ -39,10 +39,6 @@ class Video
      */
     private $candidat;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Accesvideo", mappedBy="video")
-     */
-    private $accesvideos;
 
     public function __construct()
     {
@@ -102,34 +98,5 @@ class Video
         return $this;
     }
 
-    /**
-     * @return Collection|Accesvideo[]
-     */
-    public function getAccesvideos(): Collection
-    {
-        return $this->accesvideos;
-    }
 
-    public function addAccesvideo(Accesvideo $accesvideo): self
-    {
-        if (!$this->accesvideos->contains($accesvideo)) {
-            $this->accesvideos[] = $accesvideo;
-            $accesvideo->setVideo($this);
-        }
-
-        return $this;
-    }
-
-    public function removeAccesvideo(Accesvideo $accesvideo): self
-    {
-        if ($this->accesvideos->contains($accesvideo)) {
-            $this->accesvideos->removeElement($accesvideo);
-            // set the owning side to null (unless already changed)
-            if ($accesvideo->getVideo() === $this) {
-                $accesvideo->setVideo(null);
-            }
-        }
-
-        return $this;
-    }
 }

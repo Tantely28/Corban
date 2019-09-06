@@ -38,15 +38,6 @@ class Responsable
      */
     private $responabilite;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Acces", mappedBy="responsable")
-     */
-    private $acces;
-
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Accesvideo", mappedBy="responsable")
-     */
-    private $accesvideos;
 
     public function __construct()
     {
@@ -107,65 +98,4 @@ class Responsable
         return $this;
     }
 
-    /**
-     * @return Collection|Acces[]
-     */
-    public function getAcces(): Collection
-    {
-        return $this->acces;
-    }
-
-    public function addAcce(Acces $acce): self
-    {
-        if (!$this->acces->contains($acce)) {
-            $this->acces[] = $acce;
-            $acce->setResponsable($this);
-        }
-
-        return $this;
-    }
-
-    public function removeAcce(Acces $acce): self
-    {
-        if ($this->acces->contains($acce)) {
-            $this->acces->removeElement($acce);
-            // set the owning side to null (unless already changed)
-            if ($acce->getResponsable() === $this) {
-                $acce->setResponsable(null);
-            }
-        }
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Accesvideo[]
-     */
-    public function getAccesvideos(): Collection
-    {
-        return $this->accesvideos;
-    }
-
-    public function addAccesvideo(Accesvideo $accesvideo): self
-    {
-        if (!$this->accesvideos->contains($accesvideo)) {
-            $this->accesvideos[] = $accesvideo;
-            $accesvideo->setResponsable($this);
-        }
-
-        return $this;
-    }
-
-    public function removeAccesvideo(Accesvideo $accesvideo): self
-    {
-        if ($this->accesvideos->contains($accesvideo)) {
-            $this->accesvideos->removeElement($accesvideo);
-            // set the owning side to null (unless already changed)
-            if ($accesvideo->getResponsable() === $this) {
-                $accesvideo->setResponsable(null);
-            }
-        }
-
-        return $this;
-    }
 }

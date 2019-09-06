@@ -69,10 +69,6 @@ class OffreEmplois
      */
     private $client;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Acces", mappedBy="offre")
-     */
-    private $acces;
 
     public function __construct()
     {
@@ -181,34 +177,5 @@ class OffreEmplois
         return $this;
     }
 
-    /**
-     * @return Collection|Acces[]
-     */
-    public function getAcces(): Collection
-    {
-        return $this->acces;
-    }
-
-    public function addAcce(Acces $acce): self
-    {
-        if (!$this->acces->contains($acce)) {
-            $this->acces[] = $acce;
-            $acce->setOffre($this);
-        }
-
-        return $this;
-    }
-
-    public function removeAcce(Acces $acce): self
-    {
-        if ($this->acces->contains($acce)) {
-            $this->acces->removeElement($acce);
-            // set the owning side to null (unless already changed)
-            if ($acce->getOffre() === $this) {
-                $acce->setOffre(null);
-            }
-        }
-
-        return $this;
-    }
+ 
 }
