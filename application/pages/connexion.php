@@ -53,7 +53,7 @@
                 <form action="#" method="post">
                     <div class="form-group">
                         <label for="usernameClient">Nom d'utilisateur</label>
-                        <input type="email" class="form-control" name="usernameResponsable" id="usernameResponsable" placeholder="Votre nom...">
+                        <input class="form-control" name="usernameResponsable" id="usernameResponsable" placeholder="Votre nom...">
                     </div>
                     <div class="form-group">
                         <label for="passwordClient">Mot de passe</label>
@@ -82,7 +82,7 @@
                     <form action="#" method="post">
                         <div class="form-group">
                             <label for="emailCandidat">Adresse email</label>
-                            <input type="email" class="form-control" id="emailCandidat" placeholder="Votre adresse email...">
+                            <input class="form-control" id="emailCandidat" placeholder="Votre adresse email...">
                         </div>
                         <div class="form-group">
                             <label for="passwordCandidat">Mot de passe</label>

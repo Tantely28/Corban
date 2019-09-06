@@ -76,7 +76,7 @@ class ClientController extends AbstractController
     public function userClient(Request $request){
         $oneUser = $this->client->oneUserClient($request->get('user'));
         if (empty($oneUser)) {
-            return new JsonResponse(['message' => 'Le login et/ou le mot de passe sont incorrects','status'=>'KO'],Response::HTTP_OK);
+            return new JsonResponse(['message' => 'Utilisateur non vérifié','status'=>'KO'],Response::HTTP_OK);
         } else {
             return new JsonResponse(['message' => 'Utilisateur vérifié', 'status' => 'OK'],Response::HTTP_OK);
         }
