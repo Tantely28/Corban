@@ -19,6 +19,18 @@ class ResponsableRepository extends ServiceEntityRepository
         parent::__construct($registry, Responsable::class);
     }
 
+    public function authentification($pseudo,$password)
+    {
+        return $this->createQueryBuilder('r')
+            ->andWhere('r.pseudo = :pseudo')
+            ->andWhere('r.password = :pass')
+            ->setParameter('pseudo', $pseudo)
+            ->setParameter('pass', sha1($password))
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     public function findResponsable($id)
     {
         return $this->createQueryBuilder('r')

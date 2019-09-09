@@ -7,6 +7,7 @@ namespace App\Controller\api;
 use App\Entity\Client;
 use App\Entity\Temoignage;
 use App\Repository\ClientRepository;
+use App\Repository\ResponsableRepository;
 use App\Repository\TemoignageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use FOS\RestBundle\Controller\Annotations as Rest;
@@ -29,42 +30,56 @@ class ClientController extends AbstractController
     private $client;
     private $temoignage;
 
-    public function __construct(ClientRepository $client, TemoignageRepository $temoignage)
+    /**
+     * @var ResponsableRepository
+     */
+    private $responsableRepository;
+
+    public function __construct(ClientRepository $client, TemoignageRepository $temoignage, ResponsableRepository $responsableRepository)
     {
         $this->client = $client;
         $this->temoignage= $temoignage;
+        $this->responsableRepository = $responsableRepository;
     }
 
     /**
      * @param Request $request
      * @return JsonResponse
-     * @Rest\Post("/login/client")
+     * @Rest\Post("/login/responsable")
      */
     public function login(Request $request)
     {
-        $client=$this->client->authentification($request->get('user'),$request->get('password'));
+        $responsable=$this->responsableRepository->authentification($request->get('pseudo'),$request->get('password'));
 
-        if (empty($client)) {
+        if (empty($responsable)) {
             return new JsonResponse(['message' => 'Le login et/ou le mot de passe sont incorrects','status'=>'KO'],Response::HTTP_OK);
         }else{
             $formatted = [];
 
-            foreach ($client as $clients) {
+            foreach ($responsable as $responsable) {
                 $formatted = [
-                    'id' => $clients->getId(),
-                    'nom' => $clients->getNom(),
-                    'adresse' => $clients->getAdresse(),
-                    'telephone' => $clients->getTelephone(),
-                    'email' => $clients->getEmail(),
-                    'web' => $clients->getWeb(),
-                    'secteur' => $clients->getSecteur(),
-                    'user' => $clients->getUser(),
-
+                    'id' => $responsable->getId(),
+                    'pseudo' => $responsable->getPseudo(),
+                    'responsabilite' => $responsable->getResponabilite(),
+                    'client' => $responsable->getClient()->getID(),
                 ];
             }
             return new JsonResponse($formatted,Response::HTTP_OK);
         }
+    }
 
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     * @Rest\Post("/client/user")
+     */
+    public function userClient(Request $request){
+        $oneUser = $this->client->oneUserClient($request->get('user'));
+        if (empty($oneUser)) {
+            return new JsonResponse(['message' => 'Utilisateur non vérifié','status'=>'KO'],Response::HTTP_OK);
+        } else {
+            return new JsonResponse(['message' => 'Utilisateur vérifié', 'status' => 'OK'],Response::HTTP_OK);
+        }
     }
 
 

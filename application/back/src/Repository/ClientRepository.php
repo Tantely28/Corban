@@ -31,6 +31,14 @@ class ClientRepository extends ServiceEntityRepository
             ;
     }
 
+    public function oneUserClient($user){
+        return $this->createQueryBuilder('u')
+            ->andWhere('u.user = :user')
+            ->setParameter('user', $user)
+            ->getQuery()
+            ->getResult();
+    }
+
 
     // /**
     //  * @return Client[] Returns an array of Client objects
