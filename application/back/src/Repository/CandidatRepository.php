@@ -39,6 +39,16 @@ class CandidatRepository extends ServiceEntityRepository
             ;
     }
 
+    public function findOneCand($id)
+    {
+        return $this->createQueryBuilder('c')
+            ->andWhere('c.id = :val')
+            ->setParameter('val', $id)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     // /**
     //  * @return Candidat[] Returns an array of Candidat objects
     //  */

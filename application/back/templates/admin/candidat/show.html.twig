@@ -1,8 +1,10 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <div class="container">
-        <h2><b>{{ candidat.nom }}</b></h2>
+    <br>
 
+    <div class="container">
+        <img width="260px" src="http://localhost/Corban/application/back/public/uploads/{{ candidat.photo }}">        <h2><b>{{ candidat.nom }}</b></h2>
+<br>
         <table class="table">
             <tr><th>Sexe :</th><td>{{ candidat.sex }}</td></tr>
             <tr><th>Né(e) le :</th><td>{{ candidat.dateNaissance |date('d-m-Y') }}</td></tr>

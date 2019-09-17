@@ -3,9 +3,11 @@
 namespace App\Controller;
 
 use App\Entity\Candidat;
+use App\Entity\OffreEmplois;
 use App\Entity\Video;
 use App\Form\VideoCandidatType;
 use App\Repository\CandidatRepository;
+use App\Repository\CandidatureRepository;
 use App\Repository\VideoRepository;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -25,11 +27,16 @@ class CandidatController extends AbstractController
      * @var ObjectManager
      */
     private $em;
+    /**
+     * @var CandidatureRepository
+     */
+    private $candidature;
 
-    public function __construct(CandidatRepository $candidat, ObjectManager $em)
+    public function __construct(CandidatRepository $candidat, ObjectManager $em,CandidatureRepository $candidature)
     {
         $this->candidat = $candidat;
         $this->em = $em;
+        $this->candidature = $candidature;
     }
     /**
      * @return ResponseAlias
@@ -38,6 +45,10 @@ class CandidatController extends AbstractController
     public function read()
     {
         $candidat=$this->candidat->findCandidat();
+        $can=$this->candidat->findOneCand('1');
+        $cadid=new Candidat();
+        dump($can[0]);
+        dump($cadid);
         return $this->render('admin/candidat/list.html.twig',[
             'candidat'=>$candidat,
             'current_menu' => 'candidat'
@@ -144,6 +155,21 @@ class CandidatController extends AbstractController
 
         return $this->redirectToRoute('list_video_candidat', [
             'id' => $videoCandidat->getCandidat()->getId()
+        ]);
+    }
+
+    /**
+     * @param OffreEmplois $offreEmplois
+     * @return Response
+     * @Route("/liste/candidature/offre/{id}",name="liste_candidature")
+     */
+    public function listCandidature(OffreEmplois $offreEmplois)
+    {
+        $candidature=$this->candidature->findCandidature($offreEmplois->getId());
+
+        return $this->render('admin/candidat/candidature.html.twig',[
+            'candidature'=>$candidature,
+            'current_menu' => 'offre'
         ]);
     }
 }

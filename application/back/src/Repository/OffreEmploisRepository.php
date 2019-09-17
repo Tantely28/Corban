@@ -36,6 +36,15 @@ class OffreEmploisRepository extends ServiceEntityRepository
             ->getResult()
             ;
     }
+    public function findOnOffre($id)
+    {
+        return $this->createQueryBuilder('o')
+            ->andWhere('o.id = :val')
+            ->setParameter('val', $id)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
 
     // /**
     //  * @return OffreEmplois[] Returns an array of OffreEmplois objects

@@ -54,7 +54,7 @@
 						<button type = "button" class="btn-6"
                            <?php if (isset($_SESSION['auth'])) {
                                     if ($_SESSION['auth']['type'] == 'candidat') {
-                                         echo "onclick=window.location.href='index.php?page=postuler'";
+                                         echo "onclick=window.location.href='index.php?page=postuler&id=".$_GET['id']."'";
                                     }
                                     else echo 'data-toggle="modal" data-target="#modalCandidat"';
                                 }
@@ -94,5 +94,6 @@
     xrh.send();
 
 </script>
+
 </body>
 </html>

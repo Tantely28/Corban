@@ -3,8 +3,11 @@
 namespace App\Controller\api;
 
 use App\Entity\Candidat;
+use App\Entity\Candidature;
+use App\Entity\OffreEmplois;
 use App\Entity\Video;
 use App\Repository\CandidatRepository;
+use App\Repository\OffreEmploisRepository;
 use App\Repository\VideoRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use FOS\RestBundle\Controller\Annotations as Rest;
@@ -12,6 +15,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Validator\Constraints\Date;
 
 /**
  * Class CandidatController
@@ -24,6 +28,11 @@ class CandidatController extends AbstractController
      * @var VideoRepository
      */
     private $videoRepository;
+    /**
+     * @var OffreEmploisRepository
+     */
+    private $offre;
+
 
     /**
      * @Rest\Post("/create/candidat")
@@ -67,10 +76,11 @@ class CandidatController extends AbstractController
          */
         private $candidat;
 
-        public function __construct(CandidatRepository $candidat, VideoRepository $videoRepository)
+        public function __construct(CandidatRepository $candidat, VideoRepository $videoRepository, OffreEmploisRepository $offre)
     {
         $this->candidat = $candidat;
         $this->videoRepository = $videoRepository;
+        $this->offre = $offre;
     }
 
         /**
@@ -253,13 +263,13 @@ class CandidatController extends AbstractController
      * @Rest\Route("/video/candidat/Entretient")
      */
     public function videoEntretientCandidat(Request $request){
-        $video = $this->videoRepository->searchVideoEntretientCandidat($request->get('candidat'));
+        $videos = $this->videoRepository->searchVideoEntretientCandidat($request->get('candidat'));
 
-        if (empty($video)){
+        if (empty($videos)){
             return new JsonResponse(['message' => 'Id non spécifié', 'status' => 'KO'], Response::HTTP_OK);
         } else {
             $formatted = [];
-            foreach ($video as $video){
+            foreach ($videos as $video){
                 $formatted[] = [
                     'id' => $video->getId(),
                     'type' => $video->getType(),
@@ -269,6 +279,42 @@ class CandidatController extends AbstractController
                 ];
             }
             return new JsonResponse($formatted, Response::HTTP_OK);
+        }
+    }
+
+    /**
+     * @Rest\Post("/candidature/candidat/{id}")
+     * @param Candidat $candidats
+     * @param Request $request
+     * @return JsonResponse
+     * @throws \Exception
+     */
+    public function Candidature(Candidat $candidats,Request $request)
+    {
+        $id=$request->get('ids');
+        $offres=$this->offre->findOnOffre(''.$id);
+        if(!empty($request->files->get('cv')) && !empty($request->files->get('lm'))){
+            $candidature=new Candidature();
+            $candidature->setCandidat($candidats);
+            $candidature->setOffreEmplois($offres[0]);
+            $candidature->setDate(new \DateTime());
+
+                    $fileCV = $request->files->get('cv');
+                    $filenameCV=md5(uniqid()).'.'.$fileCV->guessExtension();
+                    $fileCV->move($this->getParameter('upload_directory'), $filenameCV);
+                    $candidature->setCv($filenameCV);
+
+                    $fileLm = $request->files->get('lm');
+                    $filenameLm=md5(uniqid()).'.'.$fileLm->guessExtension();
+                    $fileLm->move($this->getParameter('upload_directory'), $filenameLm);
+                    $candidature->setLm($filenameLm);
+
+            $em=$this->getDoctrine()->getManager();
+            $em->persist($candidature);
+            $em->flush();
+            return new JsonResponse(['message' => 'Information sauvegardé'], Response::HTTP_OK);
+        }else{
+            return new JsonResponse(['message' => 'Remplir tous les champs'], Response::HTTP_OK);
         }
     }
 }

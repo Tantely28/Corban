@@ -41,68 +41,48 @@
 				</h2>
 			</div>
 		</div>
+        <form action="">
 		<div class="row" style="font-family: 'Arimo', sans-serif;color: #222222;">
-			<div class="col-md-6" style="text-align: center;">
-				<input  type="text" placeholder="Nom" style="padding-bottom: 50px;
-															 background:none;
-															 border:none;
-															 text-decoration:none;
-															 font-size: 25px;
-															 font-weight: bold;"><br>
-				<input  type="text" placeholder="Téléphone" style="padding-bottom: 50px;
-															 background:none;
-															 border:none;
-															 text-decoration:none;
-															 font-size: 25px;
-															 font-weight: bold;"><br>
-				<input  type="text" placeholder="CV:" style="padding-bottom: 50px;
-															 background:none;
-															 border:none;
-															 text-decoration:none;
-															 font-size: 25px;
-															 font-weight: bold;" ><br>
-				<input  type="text" placeholder="Copie de diplôme" style="padding-bottom: 50px;
-															 background:none;
-															 border:none;
-															 text-decoration:none;
-															 font-size: 25px;
-															 font-weight: bold;">
+            <div class="col-md-12" style="text-align: left;">
+                <input  type="text" class="input-f" value="<?php echo $_GET['id']; ?>" id="ids" style="visibility: hidden"> <br>
+            </div>
+			<div class="col-md-6" style="text-align: left;">
+                <label><b>CV :</b></label><br>
+				<input  type="file" value="CV" id="cv" required><br>
 			</div>
-			<div class="col-md-6" style="text-align: center;">
-				<input  type="text" placeholder="Prénom" style="padding-bottom: 50px;
-															 background:none;
-															 border:none;
-															 text-decoration:none;
-															 font-size: 25px;
-															 font-weight: bold;"><br>
-				<input  type="text" placeholder="Adresse email"style="padding-bottom: 50px;
-															 background:none;border: 
-															 none;text-decoration: 
-															 none;
-															 font-size: 25px;
-															 font-weight: bold;"><br>
-				<input  type="text" placeholder="LM:" style="padding-bottom: 50px;
-															 background:none;border: 
-															 none;text-decoration: 
-															 none;
-															 font-size: 25px;
-															 font-weight: bold;"><br>
-				<input  type="text" placeholder="Références" style="padding-bottom: 0px;
-																	background:none;
-																	border: none;
-																	text-decoration: none;
-																	font-size: 25px;
-																	font-weight: bold;">
-			</div>	
+			<div class="col-md-6" style="text-align: left;">
+                <label><b>LM :</b></label><br>
+				<input  type="file" value="LM" id="lm" required><br>
+			</div>
 		</div>
 		<div class="row" style="text-align: center;padding-top: 5px;">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<a href="#">
-          			<button class="btn-8" type="button">ENVOYER</button>
-        		</a>
+          			<button class="btn-8" type="button" onclick="candidature()">ENVOYER</button>
 			</div>
 		</div>
+
+        </form>
 	</div>
 </section>
+<script>
+        var request=new XMLHttpRequest();
+
+
+        function candidature() {
+
+            const ids = document.querySelector('#ids');
+            const cv = document.querySelector('#cv');
+            const lm = document.querySelector('#lm');
+
+            const data = new FormData();
+            data.append('ids', ids.value);
+            data.append('cv', cv.files[0]);
+            data.append('lm', lm.files[0]);
+            request.open('POST',"http://127.0.0.1:8000/api/candidature/candidat/<?php echo $_SESSION['auth']['id']; ?>");
+            request.send(data);
+
+            alert("Envoyées")
+        }
+</script>
 </body>
 </html>
