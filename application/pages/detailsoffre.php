@@ -77,18 +77,11 @@
     xrh.onreadystatechange=function () {
         if (this.readyState === 4 && this.status === 200) {
 
-            var arr=JSON.parse(xrh.response);
-
-          
+            var arr=JSON.parse(xrh.response)
                 document.getElementById("det").innerHTML +='<br><h2>'+arr.client+' cherche '+arr.poste+'</h2><p><strong>Type de contrat :</strong>&nbsp;'+arr.contrat+'</p><p><strong>Activités :</strong> &nbsp;'+arr.activite+'</p><p><strong>Mission:</strong><br>'+arr.mission+'</p><p><strong>Profil:</strong><br>'+arr.profile+'</p><p><strong>Référence :</strong>&nbsp;'+arr.reference+'</p>'
                 document.getElementById("date").innerHTML +=arr.dateLimite
 
-
                 // '                            <img src="http://127.0.0.1:8000/uploads/'+arr[i].image +'" alt="post">' +
-
-
-
-           
         }
     };
     xrh.send();

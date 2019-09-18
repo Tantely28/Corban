@@ -50,7 +50,7 @@
                           font-family: Raleway Heavy;
                           font-weight: bold;
                           padding-bottom: 70px;
-                          font-size: 45px;">Tous les Témoignage</h2>
+                          font-size: 45px;">Tous les Témoignages</h2>
               </div>            
             </div>    
             <div class="row" id="temoin" style="text-align: center;">
@@ -68,8 +68,7 @@
           var arr=JSON.parse(xrh.response);
 
             for(var i=0;i<arr.length;i++) {
-
-                document.getElementById("temoin").innerHTML +='<div class="col-lg-3 col-md-4 col-6"><div style="background-color: white; width: 200px; padding: 0 0 0 0; margin-bottom: 10px; border-radius: 7px; text-align: center"><a href="index.php?page=temoignage&idtemoignage='+arr[i].id+'""><video src="http://localhost/projet/corban/Corban/application/back/public/uploads/'+arr[i].video +'" width="200px" height="200px"></video>'+arr[i].client+'</b></a></div></div>'
+                document.getElementById("temoin").innerHTML +='<div class="col-lg-3 col-md-4 col-6"><div style="background-color: white; width: 200px; padding: 0 0 0 0; margin-bottom: 10px; border-radius: 7px; text-align: center"><a href="index.php?page=temoignage&idtemoignage='+arr[i].id+'""><video poster="/Corban/application/assets/img/video.jpg" src="http://localhost/projet/corban/Corban/application/back/public/uploads/'+arr[i].video +'" width="200px" height="200px"></video>'+arr[i].client+'</b></a></div></div>'
           }
         }
       };

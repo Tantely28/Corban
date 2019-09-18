@@ -16,11 +16,11 @@ include("pages/connexion.php");
                 <li class="nav-item"><a href="index.php?page=temoignages" class="nav-link">Témoignage</a></li>
                 <li class="nav-item"><a href="index.php?page=ressources" class="nav-link">Ressources</a></li>
                 <li class="nav-item"><a href="index.php?page=service" class="nav-link">Service</a></li>
-                <li class="nav-item"><a href="index.php?page=offres" class="nav-link">Offres d'emplois</a></li>
+                <li class="nav-item"><a href="index.php?page=offres" class="nav-link">Offres</a></li>
                 <li class="nav-item"><a href="index.php?page=apropos" class="nav-link">A propos</a></li>
                 <li class="nav-item"><a href="index.php?page=contact" class="nav-link">Contact</a></li>
               <li class="nav-item">
-                  <a href="index.php?page=connexion" data-toggle="modal" data-target="#modalCVCandidat" class="nav-link">Compléter profils</a>
+                  <a href="index.php?page=connexion" data-toggle="modal" data-target="#modalCVCandidat" class="nav-link">Profils</a>
               </li>
               <li class="nav-item"><a href="logout.php" class="nav-link">Deconnexion</a></li>
           </ul>

@@ -169,7 +169,8 @@ class CandidatController extends AbstractController
 
         return $this->render('admin/candidat/candidature.html.twig',[
             'candidature'=>$candidature,
-            'current_menu' => 'offre'
+            'current_menu' => 'offre',
+            'offre'=>$offreEmplois
         ]);
     }
 }

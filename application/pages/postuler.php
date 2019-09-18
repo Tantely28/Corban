@@ -11,14 +11,14 @@
   font-size: 30px
   color: #545454;
   background: #ffffff;
-  border-radius: 50px;
+  border-radius: 10px;
   border: none;
 }
 .btn-8:hover{
   font-weight: bold;
   padding: 10px 40px;
   font-size: 30px
-  border-radius: 50px;
+  border-radius: 10px;
   background:#545454;
   border:2px solid #fff;
   color: #fff;
@@ -46,43 +46,40 @@
             <div class="col-md-12" style="text-align: left;">
                 <input  type="text" class="input-f" value="<?php echo $_GET['id']; ?>" id="ids" style="visibility: hidden"> <br>
             </div>
-			<div class="col-md-6" style="text-align: left;">
-                <label><b>CV :</b></label><br>
-				<input  type="file" value="CV" id="cv" required><br>
-			</div>
-			<div class="col-md-6" style="text-align: left;">
-                <label><b>LM :</b></label><br>
-				<input  type="file" value="LM" id="lm" required><br>
-			</div>
+
 		</div>
+            <div class="row" style="padding-bottom: 25px; ">
+                <div class="col-md-12" style="padding-left: 43%" >
+                    <label><b>CV :</b></label><br>
+                    <input  type="file" value="CV" id="cv" accept=".doc, .docx,.pdf" required><br>
+                </div>
+
+            </div>
+            <div class="row" style="padding-bottom: 25px; ">
+                <div class="col-md-6" style="padding-left: 43%;">
+                    <label><b>LM :</b></label><br>
+                    <input  type="file" value="LM" id="lm" accept=".doc, .docx,.pdf"  required><br>
+
+                </div>
+            </div>
 		<div class="row" style="text-align: center;padding-top: 5px;">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          			<button class="btn-8" type="button" onclick="candidature()">ENVOYER</button>
+
+                <button type="button" class="btn-8 btn-warning" id="envoyPostule">
+                    <span id="spnrEnvoyPostule"></span>
+                    <span id="lblEnvoyPostule">ENVOYER</span>
+                </button>
 			</div>
+
 		</div>
 
         </form>
 	</div>
 </section>
-<script>
-        var request=new XMLHttpRequest();
+<?php
+require('postuleScript.php');
 
+?>
 
-        function candidature() {
-
-            const ids = document.querySelector('#ids');
-            const cv = document.querySelector('#cv');
-            const lm = document.querySelector('#lm');
-
-            const data = new FormData();
-            data.append('ids', ids.value);
-            data.append('cv', cv.files[0]);
-            data.append('lm', lm.files[0]);
-            request.open('POST',"http://127.0.0.1:8000/api/candidature/candidat/<?php echo $_SESSION['auth']['id']; ?>");
-            request.send(data);
-
-            alert("Envoyées")
-        }
-</script>
 </body>
 </html>
