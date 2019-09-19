@@ -118,10 +118,16 @@ class Candidat
      */
     private $candidatures;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\LigneProposition", mappedBy="candidat")
+     */
+    private $lignePropositions;
+
     public function __construct()
     {
         $this->temoignageCandidats = new ArrayCollection();
         $this->candidatures = new ArrayCollection();
+        $this->lignePropositions = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -401,6 +407,37 @@ class Candidat
             // set the owning side to null (unless already changed)
             if ($candidature->getCandidat() === $this) {
                 $candidature->setCandidat(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|LigneProposition[]
+     */
+    public function getLignePropositions(): Collection
+    {
+        return $this->lignePropositions;
+    }
+
+    public function addLigneProposition(LigneProposition $ligneProposition): self
+    {
+        if (!$this->lignePropositions->contains($ligneProposition)) {
+            $this->lignePropositions[] = $ligneProposition;
+            $ligneProposition->setCandidat($this);
+        }
+
+        return $this;
+    }
+
+    public function removeLigneProposition(LigneProposition $ligneProposition): self
+    {
+        if ($this->lignePropositions->contains($ligneProposition)) {
+            $this->lignePropositions->removeElement($ligneProposition);
+            // set the owning side to null (unless already changed)
+            if ($ligneProposition->getCandidat() === $this) {
+                $ligneProposition->setCandidat(null);
             }
         }
 

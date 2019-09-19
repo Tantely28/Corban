@@ -43,12 +43,12 @@
 
 <script>
     var xrh=new XMLHttpRequest();
-    xrh.open('GET',"http://127.0.0.1:8000/api/lecture/un/temoignage/<?php echo $_GET['idtemoignage'] ?>");
+    xrh.open('GET',"http://127.0.0.1:8000/api/lecture/un/temoignage/<?php echo $_GET['idtemoignage']; ?>");
     xrh.onreadystatechange=function () {
         if (this.readyState === 4 && this.status === 200) {
             var arr=JSON.parse(xrh.response);
 
-         document.getElementById("tem").innerHTML +='<p><video controls src="http://localhost/projet/corban/Corban/application/back/public/uploads/'+arr.video +'" width="720px" height="450px"></video>'
+         document.getElementById("tem").innerHTML +='<p><video controls src="http://localhost/Corban/application/back/public/uploads/'+arr.video +'" width="720px" height="450px"></video>'
          document.getElementById("desc").innerHTML +='<p>'+arr.description+'</p>'
         }
     };
@@ -63,7 +63,7 @@
 
             for(var i=0;i<arr.length;i++) {
                 document.getElementById("temoin").innerHTML +=
-                    '<div class="col-lg-3 col-md-4 col-6"><div style="background-color: white; width: 200px; padding: 0 0 0 0; margin-bottom: 10px; border-radius: 7px; text-align: center"><a href="index.php?page=temoignage&idtemoignage='+arr[i].id+'""><video src="http://localhost/Corban/application/back/public/uploads/'+arr[i].video +'" width="200px" height="200px"></video>'+arr[i].client+'</b></a></div></div>'
+                    '<div class="col-lg-3 col-md-4 col-6"><div style="background-color: white; width: 200px; padding: 0 0 0 0; margin-bottom: 10px; border-radius: 7px; text-align: center"><a href="index.php?page=temoignage&idtemoignage='+arr[i].id+'""><video poster="/Corban/application/assets/img/video.jpg" src="http://localhost/Corban/application/back/public/uploads/'+arr[i].video +'" width="200px" height="200px"></video>'+arr[i].client+'</b></a></div></div>'
             }
         }
     };

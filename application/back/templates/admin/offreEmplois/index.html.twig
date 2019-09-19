@@ -11,8 +11,8 @@
             </a>
             <thead>
             <tr>
-                <th>Numero</th>
-                <th>Titre</th>
+                <th><b>NUMERO</b></th>
+                <th><b>POSTE</b></th>
             </tr>
             </thead>
             <tbody>
@@ -23,7 +23,9 @@
                     <td>
                         <a href="{{ path('offre_emplois_show', { id: o.id }) }}" class="btn btn-info">Voir</a>
                         <a href="{{ path('offre_emplois_edit', { id: o.id }) }}" class="btn btn-default">Modifier</a>
-                        <a href="#" onclick="deleteOffre({{ o.id }})" class="btn btn-danger">Supprimer</a>
+{#                        <a href="#" onclick="deleteOffre({{ o.id }})" class="btn btn-danger">Supprimer</a>#}
+                        <a href="{{ path('liste_candidature',{id:o.id}) }}" class="btn btn-outline-primary">Candidature</a>
+                        <a href="#" class="btn btn-outline-secondary">Cooptation</a>
                     </td>
                 </tr>
             {% endfor %}
