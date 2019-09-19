@@ -1,40 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+  <title></title>
 </head>
+<style>
+  
+</style>
 <body>
-
-
-<section class="container-fluid" style="background-color: #ffff;padding: 80px 20px;">
+  <div class="container-fluid" style="padding-top: 100px;padding-bottom: 50px;
+                                      background: linear-gradient(#00b7ff,#ffffff)">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="row" id="tem" style="margin-left: 2px;">
 
-            </div>
         </div>
-        <center>
-            <h2 style="color: #222222;
-                          text-align: center;
-                          font-family: Raleway Heavy;
-                          font-weight: bold;
-                          padding-bottom: 10px;
-                          font-size: 45px;">Entretient video</h2>
+        <div id="desc" style="float: right; width: 300px; text-align: left; margin-top: -470px">
 
-            <hr>
-            <div class="row" id="tem" style="margin-left: 2px;">
+        </div>
 
-            </div>
-            <div id="desc" style="float: right; width: 300px; text-align: left; margin-top: -470px">
-            </div>
-            <hr>
-            <div class="row" id="entretientvideo" style="text-align: center;">
+        <hr>
+            
+        <div class="row" id="entretientvideo" style="text-align: center;">
 
-
-            </div>
-        </center>
-    </div>
-</section>
+        </div>
+    </div>    
+ </div>
 
 <script>
     var xrh=new XMLHttpRequest();
@@ -43,7 +32,7 @@
         if (this.readyState === 4 && this.status === 200) {
             var arr=JSON.parse(xrh.response);
 
-            document.getElementById("tem").innerHTML +='<p><video controls src="http://localhost/Corban/application/back/public/uploads/'+arr.video +'" width="720px" height="450px"></video>'
+            document.getElementById("tem").innerHTML +='<p><video controls src="http://localhost/Corban/application/back/public/uploads/'+arr.video +'" width="720px" height="450px"></video></p>'
             document.getElementById("desc").innerHTML +='<p>'+arr.description+'</p>'
         }
     };

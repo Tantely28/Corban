@@ -6,22 +6,22 @@
 </head>
 <style>
   .btn-1{
-    font-size: 16px; 
+    font-size: 20px; 
     border-radius: 10px;
     font-weight: bold;
-    padding: 4px 10px;
-    font-family:'Roboto', sans-serif;
+    padding: 10px 40px;
+    font-family: 'Roboto', sans-serif;
     background-color:#0e3fab;
     left: 10px;
     color: #fff;
     border:none;
   }
   .btn-1:hover{
-    font-size: 16px; 
+    font-size: 20px; 
     border-radius: 10px;
     font-weight: bold;
-    padding: 4px 10px;
-    font-family:'Roboto', sans-serif;
+    padding: 10px 40px;
+    font-family: 'Roboto', sans-serif;
     background-color:#ffffff;
     left: 10px;
     color: #0e3fab;
@@ -46,9 +46,29 @@
   border:2px solid #fff;
   color: #fff;
 }
+.morph div img {
+  width: 200px;
+  height: 150px;
+  -webkit-filter: grayscale(0) blur(0px);
+  filter: grayscale(0) blur(0px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+ 
+.morph div:hover img {
+  width: 150px; /* on affiche l'image au carré */
+  height: 150px;
+  border-radius: 50%;  /* on arrondit l'image */
+  -webkit-transform: rotate(360deg); /* rotation de l'image */
+  transform: rotate(360deg);
+}
 </style> 
 <body>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+  </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
           <img src="assets/images/book/81 1.jpg" class="d-block w-100" alt="">
@@ -87,11 +107,11 @@
                   followers sur les réseaux sociaux, recrutez rapidement, trouvez 
                   le bon talent et accompagnez-vous par Corban
                 </p>
-                <div style="padding: 0px 0px 0px 90px;">
+                <div style="padding-bottom: 100px;">
                   <a href="index.php?page=offres">
-                    <button type="button" class="btn-1 " >Demander une offre</button>
-                  </a>
-                </div> 
+                    <button type="button" class="btn-1">Demander une offre</button>
+            </a>
+          </div>
             </div>
           </div>
       </div>
@@ -112,7 +132,7 @@
   </a>
 </div>
 
-<section class="container-fluid" style="padding-top: 80px; padding-bottom: 80px;">
+<section class="container-fluid" style="background: #dcdcdc;padding-bottom: 80px;padding-top: 80px;">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -129,25 +149,25 @@
         </p>
       </div>
     </div>
-    <div class="row" style="font-family: 'Arimo', sans-serif; 
-                            color: #000000; 
-                            text-align: justify;">
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="background: #dcdcdc;">
-        <p style="padding-top: 50px;font-size: 20px;">
+    <div class="row" style="padding-top: 50px;">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div style="text-align: center;">
+          <p data-aos="fade-right" style="font-size: 20px;text-align: justify;">
           Il s'agit est un évènement mensuel à ne pas rater. Nous sélectionnons les tops des best-sellers recommandés par des experts en management sur des thèmes variés.
         </p>
-        <p style="padding-bottom: 50px;font-size: 20px;">
+        <p data-aos="fade-right" style="font-size: 20px;text-align: justify;">
           Notre Book club a été spécialement conçu pour les cadres dirigeants, managers et professionnels qui sont curieux et veulent à la fois discuter d’un livre et rencontrer des gens.
         </p>
+        </div>
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         
       </div>
     </div>
   </div>
 </section>
 
-<section class="container-fluid" style="padding-top: 20px;padding-bottom: 70px;background:#fff;">
+<section class="container-fluid" style="padding-top: 20px;padding-bottom: 70px;background:#f7f7f7;">
   <div class="container">
 
     <div class="row">
@@ -162,41 +182,37 @@
         </h2>
       </div>
     </div>
+
     <div class="row" style="padding-top: 40px">
-      <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="text-align: center;">
+        <div class="morph">
+          <div data-aos="zoom-in">
+            <img src="assets/images/book/Frank.png" style="max-width: 100%;height: 200px;">
+          </div>
+        </div>
+        <p data-aos="zoom-in-down" style="text-align: justify;">
+          Pour un commercial et/ou un manage, le livre INFLUENCE est un must. 
+          Il devra permettre d’améliorer mon efficience et mon efficacité. 
+          Alors, si vous voulez aussi améliorer votre capacité de persuasion de vos clients et prospects, ou améliorer et affiner votre posture managériale, je vous recommande ce livre. 
+          Merci Rija pour l'initiative et le partage. 
+        </p>
+        <p data-aos="zoom-in-right" style="font-weight: bold;">Franck Rakotondrahanta - Cadre Commercial Bancaire</p>
       </div>
-      <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
-        <div class="row" style="padding-bottom: 35px">
-          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-            <img src="assets/images/book/Frank.png" 
-                style="max-width: 100%;height: 200px;">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="text-align: center;">
+        <div class="morph">
+          <div data-aos="zoom-in">
+            <img src="assets/images/book/Laurie.png" style="max-width: 100%;height: 200px;">
           </div>
-          <div class="col-lg-9 col-md-9 col-sm-6 col-xs-12" style="color: #000000;">
-            <p style="text-align: justify;">
-              Pour un commercial et/ou un manage, le livre INFLUENCE est un must. 
-              Il devra permettre d’améliorer mon efficience et mon efficacité. 
-              Alors, si vous voulez aussi améliorer votre capacité de persuasion de vos clients et prospects, ou améliorer et affiner votre posture managériale, je vous recommande ce livre. 
-              Merci Rija pour l'initiative et le partage. 
-            </p>
-            <p style="font-weight: bold;">Franck Rakotondrahanta - Cadre Commercial Bancaire</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-            <img src="assets/images/book/Laurie.png" 
-                style="max-width: 100%;height: 200px;">
-          </div>
-          <div class="col-lg-9 col-md-9 col-sm-6 col-xs-12" style="color: #000000;">
-            <p style="text-align: justify;">
-              Ce Book Club / network répond à pas mal de questions que je me pose dans ma vie professionnelle. 
-              La partie qui m’a le plus marqué c’est le principe du “donnez” ce que vous vous voulez recevoir….  
-              Merci aux TIPS de Jean Luc (Axian), Gilto (Encor Madagascar) et de Fano (Torio Creatives) sans oublier Rija Rajemisa. 
-            </p>
-            <p style="font-weight: bold;">Laurie Antonia Rakotomalala - Photographe </p>
-          </div>
-        </div>
+         </div> 
+        <p data-aos="zoom-in-down" style="text-align: justify;">
+          Ce Book Club / network répond à pas mal de questions que je me pose dans ma vie professionnelle. 
+          La partie qui m’a le plus marqué c’est le principe du “donnez” ce que vous vous voulez recevoir….  
+          Merci aux TIPS de Jean Luc (Axian), Gilto (Encor Madagascar) et de Fano (Torio Creatives) sans oublier Rija Rajemisa. 
+        </p>
+        <p data-aos="zoom-in-left" style="font-weight: bold;">Laurie Antonia Rakotomalala - Photographe </p>
       </div>
     </div>
+
   </div>
 </section>
 

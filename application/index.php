@@ -46,6 +46,18 @@ if(isset($_GET['page'])) {
     <link rel="stylesheet" href="assets/css/css/jquery.timepicker.css">
     <link rel="stylesheet" href="assets/css/css/icomoon.css">
     <link rel="stylesheet" href="assets/css/css/style.css">  
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+   
+    <link rel="stylesheet" type="text/css" href="assets/stylecontact/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylecontact/fonts/iconic/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylecontact/vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylecontact/css/util.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylecontact/css/contact.css">
+
+
+   
 </head>
 <body data-spy="scroll" data-target="#site-navbar" data-offset="200">
     <?php
@@ -93,5 +105,85 @@ if(isset($_GET['page'])) {
     <!--    Conterup -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    
+    <!--===============================================================================================-->
+    <script src="assets/stylecontact/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+    <script src="assets/stylecontact/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+    <script src="assets/stylecontact/vendor/bootstrap/js/popper.js"></script>
+    <script src="assets/stylecontact/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+    <script src="assets/stylecontact/vendor/select2/select2.min.js"></script>
+    <script>
+        $(".js-select2").each(function(){
+            $(this).select2({
+                minimumResultsForSearch: 20,
+                dropdownParent: $(this).next('.dropDownSelect2')
+            });
+
+
+            $(".js-select2").each(function(){
+                $(this).on('select2:close', function (e){
+                    if($(this).val() == "Please chooses") {
+                        $('.js-show-service').slideUp();
+                    }
+                    else {
+                        $('.js-show-service').slideUp();
+                        $('.js-show-service').slideDown();
+                    }
+                });
+            });
+        })
+    </script>
+<!--===============================================================================================-->
+    <script src="assets/stylecontact/vendor/daterangepicker/moment.min.js"></script>
+    <script src="assets/stylecontact/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+    <script src="assets/stylecontact/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+    <script src="assets/stylecontact/vendor/noui/nouislider.min.js"></script>
+    <script>
+        var filterBar = document.getElementById('filter-bar');
+
+        noUiSlider.create(filterBar, {
+            start: [ 1500, 3900 ],
+            connect: true,
+            range: {
+                'min': 1500,
+                'max': 7500
+            }
+        });
+
+        var skipValues = [
+        document.getElementById('value-lower'),
+        document.getElementById('value-upper')
+        ];
+
+        filterBar.noUiSlider.on('update', function( values, handle ) {
+            skipValues[handle].innerHTML = Math.round(values[handle]);
+            $('.contact100-form-range-value input[name="from-value"]').val($('#value-lower').html());
+            $('.contact100-form-range-value input[name="to-value"]').val($('#value-upper').html());
+        });
+    </script>
+<!--===============================================================================================-->
+    <script src="assets/stylecontact/js/main.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
 </body>
 </html>

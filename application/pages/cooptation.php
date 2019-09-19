@@ -61,41 +61,40 @@
 		</div>
 		<div class="row" style="padding-top: 40px;">
 			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-				<h3 style="padding-bottom: 20px;
+				<h3 data-aos="zoom-in-right" style="padding-bottom: 20px;
                    text-align: center;
                    font-size: 30px;
                    font-weight: bold;">Le concept
         </h3>
         <div style="text-align: center;">
-          <p style="text-align: left;font-size: 20px;">
-            Il s'agit d'un mode de<br> recrutement consistant à <br>recommander une personne de<br> son réseau pour un poste.
+          <p data-aos="fade-up-right" style="text-align: left;font-size: 20px;">
+            Il s'agit d'un mode de recrutement consistant à recommander une personne de son réseau pour un poste.
           </p>
         </div>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-				<h3 style="padding-bottom: 20px;
+				<h3 data-aos="zoom-in-down" style="padding-bottom: 20px;
                    text-align: center;
                    font-size: 30px;
                    font-weight: bold;">L'avantage
            </h3>
         <div style="text-align: center;">
-          <p style="text-align: left;font-size: 20px;">
+          <p data-aos="fade-up" style="text-align: left;font-size: 20px;">
             ● Gain du temps durant le sourcing<br> 
-            ● Des collaborateurs proches des &nbsp;&nbsp;&nbsp;valeurs de l'entreprise.<br> 
+            ● Des collaborateurs proches des valeurs de l'entreprise.<br> 
             ● Des candidats qualifiés.
           </p>
         </div>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-				<h3 style="padding-bottom: 20px;
+				<h3 data-aos="zoom-in-left" style="padding-bottom: 20px;
                    text-align: center;
                    font-size: 30px;
                    font-weight: bold;">La prime de cooptation
         </h3>
         <div style="text-align: center;">
-          <p style="text-align: left;font-size: 20px;">
-            Corban offre une prime allant de 100.000 jusqu'à 400 00 ariary<br> 
-            pour le coopteur dont le <br>candidat proposé est embauché<br> par l'entreprise.
+          <p data-aos="fade-up-left" style="text-align: left;font-size: 20px;">
+            Corban offre une prime allant de 100.000 jusqu'à 400 00 ariary pour le coopteur dont le candidat proposé est embauchépar l'entreprise.
           </p>
         </div>
 			</div>
@@ -103,7 +102,7 @@
 	</div>
 </section>
 
-<section class="container-fluid" style="background: linear-gradient(#ffbd59,#ff914d);">
+<section class="container-fluid" style="background: linear-gradient(#ffbd59,#ff914d);padding-top: 40px;padding-bottom: 40px;">
 	<div class="container">
 		<div class="row" style="text-align: center;">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -116,13 +115,13 @@
                   <strong>Envie de rejoindre notre <br>réseau de coopteur?</strong> 
         </h2>
 				<div style="text-align: center;padding-bottom: 50px;">
-					<p style="text-align: justify;color: #fff;">Si vous vous inscrivez à ce formulaire, nous vous intégrons dans la liste de personnes qui vont recevoir de notre part, Corban, par email des offres d'emploi. Corban est un cabinet de recrutement/chasse de tête respectable malgache ayant des clients grands comptes. Nous sommes specialisés dans des recrutements de cadres dirigeants ou moyens d'exception. Notre dirigeant fondateur est membre de l'amDRHe (Association des DRHs d'Entreprise).
+					<p data-aos="zoom-in" style="text-align: justify;color: #fff;">Si vous vous inscrivez à ce formulaire, nous vous intégrons dans la liste de personnes qui vont recevoir de notre part, Corban, par email des offres d'emploi. Corban est un cabinet de recrutement/chasse de tête respectable malgache ayant des clients grands comptes. Nous sommes specialisés dans des recrutements de cadres dirigeants ou moyens d'exception. Notre dirigeant fondateur est membre de l'amDRHe (Association des DRHs d'Entreprise).
           </p>
-          <p style="text-align: justify;color: #fff;">
+          <p data-aos="zoom-in" style="text-align: justify;color: #fff;">
 					Etant un coopteur, vous serez ainsi invité(e) à voir dans vos réseaux familiaux, professionnels ou associatifs s'il y a une(des) personne(s) pouvant repondre à l'offre. EN CONTREPARTIE DUQUEL, si le(la) candidat(e) que vous proposez signe un contrat, vous serez remunéré(e) par une PRIME, OU AUTRES CADEAUX DIVERS.
 					</p>
 
-					<p style="text-align: justify;color:#000"> <strong>NB:</strong>  Votre contact ne sera pas diffusé ou utilisé à des fins autres que l'objet de cette cooptation.</p>
+					<p data-aos="zoom-in" style="text-align: justify;color:#000;font-size: 20px;"> <strong>NB:</strong>  Votre contact ne sera pas diffusé ou utilisé à des fins autres que l'objet de cette cooptation.</p>
 				</div>
 			</div>
 		</div>

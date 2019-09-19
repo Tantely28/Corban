@@ -28,14 +28,19 @@
   <div class="container">
     <div class="row" style="color: #222222;text-align: center;">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <h2 style="font-family: Raleway Heavy;font-weight: bold;">
+        <h2 style="color: #222222;
+                          text-align: center;
+                          font-family: Raleway Heavy;
+                          font-weight: bold;
+                          padding-bottom: 10px;
+                          font-size: 45px;">
           Témoignage
         </h2>
-        <p style="font-family:arimo">
-          Ecoutez ce que nos clients pensent de Corban.<br>
-          Quand vous êtes prêt, contactez-nous + ADRESSE<br>
-          EMAIL & PHONE NUMBER
-        </p>
+        <p style="font-family:arimo">Ecoutez ce que nos clients pensent de Corban.<br>
+                Quand vous êtes prêt, contactez-nous <br>
+                Email: rija.rajemisa@corbanconsulting.mg<br>
+                Téléphone: +261 32 57 679 19 / +261 34 41 822 14<br>
+            </p>
       </div>
     </div>
   </div>
@@ -50,7 +55,7 @@
                           font-family: Raleway Heavy;
                           font-weight: bold;
                           padding-bottom: 70px;
-                          font-size: 45px;">Tous les Témoignage</h2>
+                          font-size: 45px;">Tous les Témoignages</h2>
               </div>            
             </div>    
             <div class="row" id="temoin" style="text-align: center;">

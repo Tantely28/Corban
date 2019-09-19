@@ -62,66 +62,7 @@
 	letter-spacing:2px; 
 }
 
-.contact{
-	padding: 80px 20px;
-	font-family:'Raleway', sans-serif;
-	background: linear-gradient(#ffde59,#ffbd59);
-}
-.contact h2{
-	color: #545454;
-	text-align: center;
-	font-size: 45px;
-	font-weight: bold;
-	margin-bottom: 25px;
-}
-.contact h3{
-	color: #ffffff;
-	text-align: center;
-	font-weight: bold;
-	font-size: 35px;
-	margin-bottom: 40px;
-}
-.contact input[type="text"].big-dog::-webkit-input-placeholder {
-  color: #000;
- 
-}
-.contact .col-md-3 input{
-	padding: 10px 40px;
-	background:none;
-	border: none;
-	text-decoration: none;
-	 font-size: 25px;
-}
 
-.contact .col-md-3 select{
-	padding: 10px 40px;
-	background:none;
-	border: none;
-	text-decoration: none;
-	font-size: 25px;
-	color: #222222;	
-}
-.contact .col-md-3 select option{
-	font-size: 18px;
-}
-.contact button{
-	text-align: center;
-	font-weight: bold;
-	padding: 10px 40px;
-	font-size: 30px
-	color: #545454;
-	background: #ffffff;
-	border-radius: 50px;
-}
-.contact button:hover{
-	font-weight: bold;
-	padding: 10px 40px;
-	font-size: 30px
-	border-radius: 50px;
-	background:#545454;
-	border:2px solid #fff;
-	color: #fff;
-}
 footer{
 	background-color: #545454;
 	color: #ffffff;

@@ -21,8 +21,11 @@
                           padding-bottom: 10px;
                           font-size: 45px;">Témoignages du client</h2>
             <p>Ecoutez ce que nos clients pensent de Corban.<br>
-                Quand vous êtes prêt, contactez-nous + ADRESSE<br>
-                EMAIL & PHONE NUMBER<br></p>
+                Quand vous êtes prêt, contactez-nous <br>
+                rija.rajemisa@corbanconsulting.mg<br>
+                +261 32 57 679 19<br>
+                +261 34 41 822 14<br>
+            </p>
             <hr>
                 <div class="row" id="tem" style="margin-left: 2px;">
 

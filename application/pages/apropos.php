@@ -46,9 +46,21 @@
 		background: #545454;
 		border:2px solid #ffde59;
 	}
+	.slide24 div img {
+	margin-left: 0px;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.slide24 div:hover img {
+	margin-left: -30px;
+}
 </style>	
 <body>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">
+	  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+	  <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+  </ol>
   	<div class="carousel-inner">
     	<div class="carousel-item active">
       		<img src="assets/images/apropos/74 1.jpg" class="d-block w-100" alt="">
@@ -73,9 +85,9 @@
 		          	<h5 style="font-family: 'Raleway', sans-serif;
 		          			   padding: 2px 0px 20px 0px;">Découvrez nos dernières offres d’emploi publiées
 		          	</h5>
-					<div>
+					<div  style="padding-bottom: 100px;">
 						<a href="index.php?page=ressources">
-							<button type="button" class="btn-2 " >SAISIR L’OPPORTUNITE</button>
+							<button type="button" class="btn-2 ">SAISIR L’OPPORTUNITE </button>
 						</a>
 					</div>
 				</div>	
@@ -127,13 +139,13 @@
 
 <section class="container-fluid" style="background: linear-gradient(#ffbd59,#ff914d);
 										padding-top: 90px;
-										padding-bottom: 120px;">
+										padding-bottom: 120px;
+										color: #545454">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12" style="text-align: center;">
 				<h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12" 
-					style="color: #ffffff; 
-							font-weight:bold;
+					style="font-weight:bold;
 						   font-family: 'Raleway', sans-serif;
 						   text-align: center;
 						   font-size: 40px;">Notre vision
@@ -141,36 +153,106 @@
 			</div>
 		</div>
 		<div class="row" style="text-align: center; padding-top: 60px;">
-			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-				<img src="assets/images/apropos">
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="text-align: center;">
+				<div class="slide24">
+					<div data-aos="zoom-in-right">
+						<img src="assets/images/apropos/3.png" style="padding-bottom: 30px;">
+					</div>
+				</div>
+				<h3 data-aos="zoom-in-right" style="padding-bottom: 30px; font-size: 20px;">
+					<strong>Nouvelle façon de penser</strong>
+				</h3>
+				<p data-aos="fade-up" data-aos-duration="500">Insuffler une nouvelle façon de penser dans la
+					conception du business</p>
+				
 			</div>
-			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-				<img src="assets/images/apropos">
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="text-align: center;">
+				<div class="slide24">
+					<div  data-aos="zoom-in-up">
+						<img src="assets/images/apropos/4.png" style="padding-bottom: 30px;">
+					</div>
+				</div>
+				<h3 data-aos="zoom-in-up" style="padding-bottom: 30px;font-size: 20px;">
+					<strong>Nouveaux modèles</strong>
+				</h3>
+				<p data-aos="fade-up" data-aos-duration="500">Des modèles uniques, performants et
+					déstabilisants à Madagascar</p>
+				
 			</div>
-			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-				<img src="assets/images/apropos">
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="text-align: center;">
+				<div class="slide24">
+					<div data-aos="zoom-in-left">
+						<img src="assets/images/apropos/5.png" style="padding-bottom: 30px;">
+					</div>
+				</div>
+				<h3 data-aos="zoom-in-left" style="padding-bottom: 30px;font-size: 20px;">
+					<strong>Nous croyons que 1 +1 = 3</strong>
+				</h3>
+				<p data-aos="fade-up" data-aos-duration="500">C’est la raison pour laquelle nous sommes
+					un open networker</p>
+				
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="container-fluid" style="padding-top: 90px; padding-bottom: 120px;">
+<section class="container-fluid" style="padding-top: 90px; padding-bottom: 60px; text-align: center;">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12" style="text-align: center;">
-				<h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12" 
-					style="color: #000;
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<h2 style="color: #545454;
 						   font-weight:bold;
 						   font-family: 'Raleway', sans-serif;
-						   text-align: center;
 						   font-size: 40px;
-						   padding-bottom: 60px;">Notre histoire
+						   padding-bottom: 30px;">Notre histoire
 				</h2>
-				<img src="assets/images/apropos">
+				
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: center;color: #545454;font-family: 'Arimo, sans-serif">
+				<div data-aos="fade-down">
+					<h3 style="font-weight: bold;font-size: 20px;color: #56c39d">
+					<strong>DIVERSIFICATION DE L'OFFRE</strong>
+				</h3>
+				<p>Corban a élargi sa gamme d’activités. Durant cette même année<br>
+					des experts RH et en organisation sont venus rejoindre l’équipe de <br>Corban
+				</p>
+				</div>
+				<div>
+					<div>
+						<img src="assets/images/apropos/notre.png" style="text-align: center;">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" style="text-align: center;color: #545454;font-family: 'Arimo, sans-serif">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+				<div data-aos="fade-down-right">
+					<h3 style="font-weight: bold;font-size: 20px;color: #fbc837">
+					<strong>NAISSANCE DE CORBAN</strong>
+				</h3>
+				<p>Avec moins de 1.000.000 Ar, et une envie de tracer<br>
+					son propre chemin, le 09 Janvier<br>
+					2012, Corban a été créée par Rija Rajemisa
+				</p>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+				<div data-aos="fade-down-left">
+					<h3 style="font-weight: bold;font-size: 20px;color: #ad3090">
+					<strong>LANCEMENT DE LA PLATEFORME WEB DE CORBAN</strong>
+				</h3>
+				<p>Corban mise sur le recrutement 2.0 et digitalise ses process. Le<br>
+					cabinet met à la disposition des entreprises et des talents une<br>
+						plateforme web.
+				</p>
+				</div>
 			</div>
 		</div>
 	</div>
 </section>
+
 
 <section class="container-fluid" style="background: linear-gradient(#ffde59,#ffbd59);
 										padding: 80px 20px;">
@@ -184,12 +266,12 @@
 			</div>
 		</div>
 
-		<div class="row" style="margin-bottom: 20px;text-align: center;">
+		<div id="chiffre" class="row" style="margin-bottom: 20px;text-align: center;">
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				<h3 style="font-weight: bold;
 						   font-family: 'Lora', serif;
 						   color: #ffffff;
-						   font-size: 35px">+ 12 000
+						   font-size: 35px" class="numero1">+ 12 000
 				</h3>
 				<p style="color: #000000; font-family: 'Arimo', sans-serif;">
 					followers sur <br>LinkedIn
@@ -199,7 +281,7 @@
 				<h3 style="font-weight: bold;
 						   font-family: 'Lora', serif;
 						   color: #ffffff;
-						   font-size: 35px">+ 9 000
+						   font-size: 35px" class="numero2">+ 9 000
 				</h3>
 				<p style="color: #000000; 
 						  font-family: 'Arimo', sans-serif;">
@@ -210,7 +292,7 @@
 				<h3 style="font-weight: bold;
 						   font-family: 'Lora', serif;
 						   color: #ffffff;
-						   font-size: 35px">7
+						   font-size: 35px" class="numero3">7
 				</h3>
 				<p style="color: #000000; 
 						  font-family: 'Arimo', sans-serif;">
@@ -221,7 +303,7 @@
 				<h3 style="font-weight: bold;
 						   font-family: 'Lora', serif;
 						   color: #ffffff;
-						   font-size: 35px">+ 7 000
+						   font-size: 35px" class="numero4">+ 7 000
 				</h3>
 				<p style="color: #000000; 
 				          font-family: 'Arimo', sans-serif;">
@@ -231,6 +313,30 @@
 	    </div>
 	</div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.onscroll = function() {
+            f(12000, 'numero1');
+            f(9000, 'numero2');
+            f(7, 'numero3');
+            f(7000, 'numero4');
+        }
+
+        function f(nombre, classes) {
+            $({countNum: $('.'+classes).html()}).animate({countNum: nombre}, {
+                duration: 1000,
+                easing: 'linear',
+                step: function () {
+                    $('.'+classes).html(Math.floor(this.countNum) + "+");
+                },
+                complete: function () {
+                    $('.'+classes).html(this.countNum + "+");
+                    //alert('finished');
+                }
+            });
+        }
+    </script>
+
 	<p class="col-sm-12 col-xs-12" style="color: #000000;
 			  font-weight: bold;
 			  font-family: 'Raleway', sans-serif;">
@@ -239,54 +345,41 @@
 
 	<div class="container">
 		<div class="row" style="color: #000000; text-align: center; ">
-			<div class="col-lg-1 col-md-1 col-sm-6 col-xs-12" >
-				<p style="background-color:#DCDCDC;
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" >
+				<div>
+					<p style="background-color:#DCDCDC;
 						  font-size: 20px;
 						  text-align: center;
-						  padding: 10px 5px;">LOGO
-				</p>
+						  padding: 10px 10px;">LOGO
+					</p>
+				</div>
 			</div>
-			<div class="col-lg-1 col-md-1 col-sm-6 col-xs-12" >
-				<p style="background-color:#DCDCDC;
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" >
+				<div>
+					<p style="background-color:#DCDCDC;
 						  font-size: 20px;
 						  text-align: center;
-						  padding: 10px 5px;">LOGO
-				</p>
+						  padding: 10px 10px;">LOGO
+					</p>
+				</div>
 			</div>
-			<div class="col-lg-1 col-md-1 col-sm-6 col-xs-12" >
-				<p style="background-color:#DCDCDC;
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" >
+				<div>
+					<p style="background-color:#DCDCDC;
 						  font-size: 20px;
 						  text-align: center;
-						  padding: 10px 5px;">LOGO
-				</p>
+						  padding: 10px 10px;">LOGO
+					</p>
+				</div>
 			</div>
-			<div class="col-lg-1 col-md-1 col-sm-6 col-xs-12" >
-				<p style="background-color:#DCDCDC;
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" >
+				<div>
+					<p style="background-color:#DCDCDC;
 						  font-size: 20px;
 						  text-align: center;
-						  padding: 10px 5px;">LOGO
-				</p>
-			</div>
-			<div class="col-lg-1 col-md-1 col-sm-6 col-xs-12" >
-				<p style="background-color:#DCDCDC;
-						  font-size: 20px;
-						  text-align: center;
-						  padding: 10px 5px;">LOGO
-				</p>
-			</div>
-			<div class="col-lg-1 col-md-1 col-sm-6 col-xs-12" >
-				<p style="background-color:#DCDCDC;
-						  font-size: 20px;
-						  text-align: center;
-						  padding: 10px 5px;">LOGO
-				</p>
-			</div>
-			<div class="col-lg-1 col-md-1 col-sm-6 col-xs-12" >
-				<p style="background-color:#DCDCDC;
-						  font-size: 20px;
-						  text-align: center;
-						  padding: 10px 5px;">LOGO
-				</p>
+						  padding: 10px 10px;">LOGO
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>		
@@ -307,25 +400,41 @@
 		</div>
 		<div class="row" style="margin-top: 30px;">
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="text-align: center;">
-				<img src="assets/images/apropos/1.png" style="margin-bottom: 20px"><br>
-				<p style="color:#000;
+				<div data-aos="fade-down-right">
+					<div class="slide24">
+						<div>
+							<img src="assets/images/apropos/1.png" style="margin-bottom: 20px">
+						</div>
+					</div>
+					<br>
+					<p style="color:#000;
 						  padding-bottom: 20px;
 						  font-weight: bold;
 						  font-size: 25px; ">Entreprise
-				</p><br>
-				<a href="index.php?page=offres">
-					<button type="button" class="btn-1 " >Demander une offre</button>
+					</p>
+				</div>
+				<br>
+				<a href="index.php?page=contact">
+					<button data-aos="fade-right" type="button" class="btn-1 " >Demander une offre</button>
 				</a>	
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"  style="text-align: center;">
-				<img src="assets/images/apropos/2.png" style="margin-bottom: 20px"><br>
-				<p style="color:#000;
+				<div data-aos="fade-down-left">
+					<div class="slide24">
+						<div>
+							<img src="assets/images/apropos/2.png" style="margin-bottom: 20px">
+						</div>
+					</div>
+					<br>
+					<p style="color:#000;
 						  padding-bottom: 20px ;
 						  font-weight: bold;
 						  font-size: 25px;">A la recherche d'opportunité
-				</p><br>
-				<a href="index.php?page=offres">
-					<button type="button" class="btn-1 " >Demander votre CV</button>
+					</p>
+				</div>
+				<br>
+				<a  href="index.php?page=offres">
+					<button data-aos="fade-left" type="button" class="btn-1 " >Voir les offres d'emplois</button>
 				</a>	
 			</div>
 		</div>

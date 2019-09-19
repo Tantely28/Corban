@@ -5,8 +5,15 @@
   <title>Nos Ressources</title>
 </head>
 <style>
-  
+  h3{
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+  }
 </style>
+
 <body>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   	<div class="carousel-inner">
@@ -25,40 +32,203 @@
                         font-family: raleway Heavy;
                         ">Profitez gratuitement de nos ressources et consommez les sans modération.
               </p>
-              <div class="btn-group" 
-                   role="group" 
-                   aria-label="Button group with nested dropdown"
-                   style="background: #ffffff;
-                          border-radius: 50px;">
-                <div class="btn" 
-                     role="group"
-                     style="background: none">
-                   
-                  <button  type="button" 
-                           class="btn  dropdown-toggle" 
-                           data-toggle="dropdown" 
-                           aria-haspopup="true" 
-                           aria-expanded="false"
-                           style="color: #545454">
-                    Type
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                    <a class="dropdown-item" href="#">Article</a>
-                    <a class="dropdown-item" href="#">Vidéo</a>
-                    <a class="dropdown-item" href="#">Infographie</a>
-                  </div>
-                </div>
-                <button type="button" class="btn">
-                  <img src="assets/images/ressource/recherche.png" 
-                       style="width: 100%; height: 25px">
-                </button>
-              </div>
-	    			</div>
-
       		</div>
       </div>
     </div>
-</div>	
+</div>
+</div>
+
+<section class="container-fluid" style="padding-top:70px; padding-bottom:50px; ">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"  >
+        <div data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
+            <a href="#">
+              <img src="assets/images/ressource/temoignage.png" style="width:100%; height:300px;">
+            </a>
+            <div style="background:#ffde59; padding: 20px 30px;">
+              <a href="#">
+                <h3>TESTIMONY</h3>
+              </a>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
+        <div data-aos="fade-up"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
+            <a href="#">
+              <img src="assets/images/ressource/2.png" style="width:100%; height:300px;">
+            </a>
+            <div style="background:#ffbd59; padding: 20px 30px;">
+              <a href="#">
+                <h3>VLOG</h3>
+              </a>
+            </div>
+        </div>
+      </div>  
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
+        <div data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
+            <a href="#">
+              <img src="assets/images/ressource/fact fuel.png" style="width:100%; height:300px;">
+            </a>
+            <div style="background:#ffbd59; padding: 20px 30px;">
+              <a href="#">
+                <h3>FACT & FUEL</h3>
+              </a>
+            </div>
+        </div>
+      </div>
+    </div>  
+
+    <div class="row" style="padding-top: 40px;">  
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
+        <div data-aos="zoom-in-right"
+            data-aos-offset="400"
+            data-aos-easing="ease-in-sine">
+            <a href="#">
+              <img src="assets/images/ressource/2.png" style="width:100%; height:300px;">
+            </a>
+            <div style="background:#ff914d; padding: 20px 30px;">
+              <a href="#">
+                <h3>LA JOURNEE D'UN</h3>
+              </a>
+            </div>
+        </div>
+      </div> 
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
+        <div data-aos="zoom-in-down"
+            data-aos-offset="400"
+            data-aos-easing="ease-in-sine">
+            <a href="#">
+              <img src="assets/images/ressource/success story.png" style="width:100%; height:300px;">  
+            </a>
+            <div style="background:#ffde59; padding: 20px 30px;">
+              <a href="#">
+                <h3>SUCCESS STORIE</h3>
+              </a>
+            </div>
+        </div>
+      </div> 
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
+        <div data-aos="zoom-in-left"
+            data-aos-offset="400"
+            data-aos-easing="ease-in-sine">
+            <a href="#">
+              <img src="assets/images/ressource/2.png" style="width:100%; height:300px;">
+            </a>
+            <div style="background:#ffbd59; padding: 20px 30px;">
+              <a href="#">
+                <h3>E-BOOK</h3>
+              </a>
+            </div>
+        </div>
+      </div>
+    </div>  
+      
+    <div class="row" style="padding-top: 40px;">  
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
+          <div data-aos="fade-right"
+            data-aos-offset="400"
+            data-aos-easing="ease-in-sine">
+            <a href="#">
+              <img src="assets/images/ressource/2.png" style="width:100%; height:300px;">
+            </a>
+            <div style="background:#ffbd59; padding: 20px 30px;">
+              <a href="#">
+                <h3>BLOG ARTICLES</h3>
+              </a>
+            </div>
+          </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
+        <div data-aos="fade-down"
+            data-aos-offset="400"
+            data-aos-easing="ease-in-sine">
+            <a href="#">
+              <img src="assets/images/ressource/2.png" style="width:100%; height:300px;">
+            </a>
+            <div style="background:#ff914d; padding: 20px 30px;">
+              <a href="#">
+                <h3>DAILY QUOTES</h3>
+              </a>
+            </div>
+        </div>
+      </div> 
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
+          <div data-aos="fade-left"
+            data-aos-offset="400"
+            data-aos-easing="ease-in-sine">
+            <a href="#">
+              <img src="assets/images/ressource/2.png" style="width:100%; height:300px;">
+            </a>
+            <div style="background: #ffde59; padding: 20px 30px;">
+              <a href="#">
+                <h3>PRO TIPS</h3>
+              </a>
+            </div>
+          </div>
+      </div> 
+    </div>
+
+    <div class="row" style="padding-top: 40px;">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
+        <div data-aos="zoom-in-right"
+            data-aos-offset="400"
+            data-aos-easing="ease-in-sine">
+            <a href="#">
+              <img src="assets/images/ressource/2.png" style="width:100%; height:300px;">
+            </a>
+            <div style="background: #ffde59; padding: 20px 20px;">
+              <a href="#">
+                <h3>BROCHURES</h3>
+              </a>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
+        <div data-aos="zoom-in-up"
+            data-aos-offset="400"
+            data-aos-easing="ease-in-sine">
+            <a href="#">
+              <img src="assets/images/ressource/2.png" style="width:100%; height:300px;">
+            </a>
+            <div style="background:#ffbd59; padding: 20px 20px;">
+              <a href="#">
+                <h3>CV VIDEO</h3>
+              </a>
+            </div>
+        </div>
+      </div> 
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
+        <div data-aos="zoom-in-left"
+            data-aos-offset="400"
+            data-aos-easing="ease-in-sine">
+            <a href="#">
+              <img src="assets/images/ressource/2.png" style="width:100%; height:300px;">
+            </a>
+            <div style="background:#ff914d;padding: 20px 20px;">
+              <a href="#">
+                <h3>INTERVIEW VIDEO</h3>
+              </a>
+            </div>
+        </div>  
+    </div>
+  </div>
+</section>	
 </body>
 </html>
 
