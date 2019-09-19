@@ -40,7 +40,7 @@
 
 <script>
     var xrh=new XMLHttpRequest();
-    xrh.open('GET',"http://127.0.0.1:8000/api/lecture/un/temoignage/<?php echo $_GET['idtemoignage'] ?>");
+    xrh.open('GET',"http://127.0.0.1:8000/api/lecture/un/temoignage/<?php echo $_GET['idtemoignage']; ?>");
     xrh.onreadystatechange=function () {
         if (this.readyState === 4 && this.status === 200) {
             var arr=JSON.parse(xrh.response);

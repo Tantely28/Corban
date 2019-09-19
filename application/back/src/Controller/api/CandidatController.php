@@ -317,4 +317,30 @@ class CandidatController extends AbstractController
             return new JsonResponse(['message' => 'Remplir tous les champs'], Response::HTTP_OK);
         }
     }
+
+    /**
+     * @param Candidat $candidat
+     * @Rest\Get("/candidat/{id}")
+     * @return JsonResponse
+     */
+    public function candit(Candidat $candidat)
+    {
+        $cand=$this->candidat->findOneCand($candidat->getId());
+        $formatted = [];
+
+        foreach ($cand as $candidats) {
+            $formatted= [
+                'id' => $candidats->getId(),
+                'photo' => $candidats->getPhoto(),
+                'nom' => $candidats->getNom(),
+                'dateNaissance' => $candidats->getDateNaissance()->format('d-m-Y'),
+                'situationFamilier' => $candidats->getSituationFamilier(),
+                'adresse' => $candidats->getAdresse(),
+                'telephone' => $candidats->getTelephone(),
+                'email' => $candidats->getEmail(),
+                'user' => $candidats->getPseudo(),
+            ];
+        }
+        return new JsonResponse($formatted, Response::HTTP_OK);
+    }
 }
