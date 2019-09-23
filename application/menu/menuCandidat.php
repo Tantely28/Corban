@@ -11,8 +11,57 @@ include("pages/connexion.php");
         width: 45px;
         padding: 25px;
     }
+    .drop12 {
+        position: relative;
+        display: inline-block;
+
+    }
+    .dropcontent {
+        display: none;
+        position: absolute;
+
+
+        background-color: #f1f8e9;
+        min-width: 135px;
+
+        z-index: 1;
+
+
+
+    }
+
+    .dropcontent a {
+        color:#0d47a1;
+        text-decoration: none;
+        font-weight: bold;
+
+
+    }
+
+    .dropcontent a:hover {
+        background-color: #f4960e;
+        color: #0d47a1;
+        font-weight: bold;
+
+
+    }
+
+    .drop12:hover .dropcontent {
+        display: block;
+
+    }
+
+    .iconedeco:hover{
+        width:100%;
+        height: 50px;
+        border:2px solid #f4960e;
+
+
+    }
+
+
 </style>
-<nav class="navbar navbar-expand-lg navbar-dark site_navbar bg-dark site-navbar-light" id="site-navbar">
+<nav class="navbar navbar-expand-lg navbar-dark site_navbar  site-navbar-light" id="site-navbar">
     <div class="container">
         <a class="navbar-brand" href="index.php?page=home"><img src="assets/images/Logo.png" style="width: 89px; height:70px;">  </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#site-nav" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,12 +77,13 @@ include("pages/connexion.php");
                 <li class="nav-item"><a href="index.php?page=offres" class="nav-link">Offres</a></li>
                 <li class="nav-item"><a href="index.php?page=apropos" class="nav-link">A propos</a></li>
                 <li class="nav-item"><a href="index.php?page=contact" class="nav-link">Contact</a></li>
-              <li class="nav-item">
-                  <a href="index.php?page=connexion" data-toggle="modal" data-target="#modalCVCandidat" class="nav-link">Profils</a>
-              </li>
-              <li class="nav-item"><a href="logout.php" class="nav-link">Deconnexion</a></li>
-              <li class="nav-item"><a href="#" id="img"></a></li>
+
+
+
+            </ul>
+
           </ul>
+
 <!--            <table class="men">-->
 <!--                <tr>-->
 <!--                    <td><a href="#">Menu1</a></td>-->
@@ -46,8 +96,22 @@ include("pages/connexion.php");
 <!--                    <td><a href="#">Menu1</a></td>-->
 <!--                </tr>-->
 <!--            </table>-->
+            <ul style="position: relative; list-style: none;">
+                <div class="drop12" style="padding-top: 30%; ">
+                    <a style="margin-left: 170%" href="#"  id="img"></a>
+                    <div class="dropcontent" >
+                        <li class="nav-item">
+                            <a href="index.php?page=connexion" data-toggle="modal" data-target="#modalCVCandidat" class="nav-link" style="color: #0d47a1">Profils</a>
+                        </li>
+                        <li class="nav-item"><a href="" class="nav-link" style="color: #0d47a1">Info</a></li>
+                        <li class="nav-item"><a href="logout.php" class="nav-link" style="color: #0d47a1">Deconnexion</a></li>
+                    </div>
+                </div>
+            </ul>
         </div>
+
       </div>
+
     </nav>
 <script>
     var xhrtt=new XMLHttpRequest();

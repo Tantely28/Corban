@@ -9,16 +9,25 @@
     background: #f4960e;
     color: #222222;
     font-weight: bold;
-    border: 2px solid #222222;
-    padding: 5px 20px; 
+    border: 2px solid #fff;
     text-align: center;
+      padding-left: 4px;
+      padding-right: 4px;
+      height: 30px;
+      opacity: 0.5;
+      border-radius: 2px;
   }
   .btn-9:hover{
-    background:#000;
-    color: #f4960e;
-    font-weight: bold;
-    border: 2px solid #f4960e;
-    padding: 5px 20px; 
+      background: #f4960e;
+      color: #222222;
+      font-weight: bold;
+      border: 2px solid #fff;
+      text-align: center;
+      padding-left: 4px;
+      padding-right: 4px;
+      height: 30px;
+      opacity: 1;
+      border-radius: 2px;
   }
 </style>  
 <body>
