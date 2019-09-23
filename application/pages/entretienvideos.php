@@ -40,7 +40,7 @@
                   text-align:center;
                    padding-bottom:30px;"> <strong>Entretien Vidéo</strong> 
         </h2>
-        <h3 data-aos="zoom-in"  data-aos-duration="300" 
+        <h3 data-aos="zoom-in"  data-aos-duration="600" 
             style="color: #ff914d;
                   font-family: 'Arimo', sans-serif;
                   text-align: center;
@@ -50,24 +50,24 @@
 
     <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-        <h4 data-aos="fade-right" data-aos-duration="400" 
+        <h4 data-aos="fade-right" data-aos-duration="800" 
             style="font-weight: bold;padding-bottom: 20px;text-align: center;">Le concept</h4>
         <div style="font-size: 20px;text-align: justify;" >
-        <p data-aos="fade-up-right" data-aos-duration="500">
+        <p data-aos="fade-right" data-aos-duration="1000">
           Cette plateforme digitale dédiée au recrutement 2.0 met en relation les candidats à la recherche de nouvelle opportunité de travail et les entreprises à la recherche de meilleur
           talents.
         </p>
-        <p data-aos="fade-up-right" data-aos-duration="500">
+        <p data-aos="fade-right" data-aos-duration="1400">
           Inscrivez-vous et ayez accès à des entretiens différés des candidats potentiels.
         </p>
-         <p data-aos="fade-up-right" data-aos-duration="500">Contactez-nous pour plus d'information.</p>
+         <p data-aos="fade-right" data-aos-duration="1000">Contactez-nous pour plus d'information.</p>
         </div>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-        <h4 data-aos="fade-left" data-aos-duration="400"  
+        <h4 data-aos="fade-left" data-aos-duration="800"  
             style="font-weight: bold;padding-bottom: 20px; text-align: center;">Les avantages</h4>
         <div style="font-size: 20px;" >
-          <p style="text-align: center;" data-aos="fade-up-left" data-aos-duration="500">
+          <p style="text-align: center;" data-aos="fade-left" data-aos-duration="1400">
             ●  Accélérer le processus de recrutement<br>
             ● Large choix des candidats potentiels
           </p>

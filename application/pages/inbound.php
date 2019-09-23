@@ -58,7 +58,7 @@
                   text-align: center;
                   font-family: 'Raleway', sans-serif;
                   font-size: 45px;"><strong> Inbound Recruiting </strong> </h2>
-        <h3 data-aos="zoom-in"  data-aos-easing="linear" data-aos-duration="200"
+        <h3 data-aos="zoom-in"  data-aos-easing="linear" data-aos-duration="600"
             style="color: #ff914d;
                   text-align: center;
                   font-family: 'Raleway', sans-serif;
@@ -69,7 +69,7 @@
     </div>
     <div class="row" style="padding-top: 50px;">
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <p data-aos="fade-down-right" data-aos-easing="linear" data-aos-duration="400"
+        <p data-aos="fade-right" data-aos-easing="linear" data-aos-duration="900"
           style="text-align: center; font-family: 'Arimo', sans-serif;font-size: 20px;">
           L'inbound Recruiting fonctionne<br> sur un 
           principe comparable à <br>
@@ -77,7 +77,7 @@
         </p>
       </div>
       <div class="col-md-6">
-        <p data-aos="fade-down-left" data-aos-easing="linear" data-aos-duration="400"
+        <p data-aos="fade-left" data-aos-easing="linear" data-aos-duration="900"
             style="text-align: center;font-family: 'Arimo', sans-serif;font-size: 20px;">
           L'inbound Recruiting est une solution <br>
           imaginative et innovante pour être<br> 
@@ -108,15 +108,15 @@
                 font-size: 22px;
                 text-align: justify;">
           <p data-aos="fade-right">●&nbsp; Devancer vos concurrents dans la guerre dans la &nbsp;&nbsp;&nbsp;&nbsp; guerre des talents<br></p>
-          <p data-aos="fade-right">●&nbsp; Baisser le coût d’acquisition des candidats<br></p>
-          <p data-aos="fade-right">●&nbsp; Réduire le délai de recrutement<br></p>
-          <p data-aos="fade-right">●&nbsp; Créer un vivier de talents<br></p>
-          <p data-aos="fade-right">●&nbsp; Sécuriser un recrutement et réduire son turn-over
+          <p data-aos="fade-right" data-aos-duration="800">●&nbsp; Baisser le coût d’acquisition des candidats<br></p>
+          <p data-aos="fade-right" data-aos-duration="900">●&nbsp; Réduire le délai de recrutement<br></p>
+          <p data-aos="fade-right" data-aos-duration="1000">●&nbsp; Créer un vivier de talents<br></p>
+          <p data-aos="fade-right" data-aos-duration="1100">●&nbsp; Sécuriser un recrutement et réduire son turn-over
         </div>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="rotate">
-          <div data-aos="fade-left">
+          <div data-aos="fade-left" data-aos-duration="800">
             <img src="assets/images/service/inbound/66.jpeg" style="width: 100%; height: 300px; text-align: center;padding-top: 50px;">
           </div>
         </div>
@@ -151,19 +151,19 @@
                 font-family: 'Raleway', sans-serif;
                 font-size: 22px;
                 text-align: justify;">
-          <p data-aos="zoom-in"><strong>
+          <p data-aos="zoom-in" data-aos-duration="800"><strong>
             Nous accompagnons les entreprises dans chaque étapes de l'inbound recruiting:<br></strong>
           </p>
-          <p data-aos="fade-left" data-aos-duration="300">
+          <p data-aos="fade-left" data-aos-duration="900">
             ●&nbsp; la définition de la stratégie inbound recruiting<br>
           </p>
-          <p data-aos="fade-left" data-aos-duration="400">
+          <p data-aos="fade-left" data-aos-duration="900">
             ●&nbsp; le déploiement de la stratégie<br>
           </p>
-          <p data-aos="fade-left" data-aos-duration="500">
+          <p data-aos="fade-left" data-aos-duration="1000">
             ●&nbsp; la création et production des contenus<br>
           </p>
-          <p data-aos="fade-left" data-aos-duration="600">
+          <p data-aos="fade-left" data-aos-duration="1000">
             ●&nbsp; la distribution des contenus sur les plateformes<br>&nbsp;&nbsp;&nbsp; digitales.
           </p>
         </div>

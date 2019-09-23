@@ -45,7 +45,8 @@
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"  >
         <div data-aos="fade-right"
             data-aos-offset="300"
-            data-aos-easing="ease-in-sine">
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="500">
             <a href="#">
               <img src="assets/images/ressource/temoignage.png" style="width:100%; height:300px;">
             </a>
@@ -60,7 +61,8 @@
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
         <div data-aos="fade-up"
             data-aos-offset="300"
-            data-aos-easing="ease-in-sine">
+            data-aos-easing="ease-in-sine"
+             data-aos-duration="500">
             <a href="#">
               <img src="assets/images/ressource/2.png" style="width:100%; height:300px;">
             </a>
@@ -75,7 +77,8 @@
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
         <div data-aos="fade-left"
             data-aos-offset="300"
-            data-aos-easing="ease-in-sine">
+            data-aos-easing="ease-in-sine"
+             data-aos-duration="500">
             <a href="#">
               <img src="assets/images/ressource/fact fuel.png" style="width:100%; height:300px;">
             </a>
@@ -92,7 +95,8 @@
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
         <div data-aos="zoom-in-right"
             data-aos-offset="400"
-            data-aos-easing="ease-in-sine">
+            data-aos-easing="ease-in-sine"
+             data-aos-duration="500">
             <a href="#">
               <img src="assets/images/ressource/2.png" style="width:100%; height:300px;">
             </a>
@@ -107,7 +111,8 @@
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
         <div data-aos="zoom-in-down"
             data-aos-offset="400"
-            data-aos-easing="ease-in-sine">
+            data-aos-easing="ease-in-sine"
+             data-aos-duration="500">
             <a href="#">
               <img src="assets/images/ressource/success story.png" style="width:100%; height:300px;">  
             </a>
@@ -122,7 +127,8 @@
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
         <div data-aos="zoom-in-left"
             data-aos-offset="400"
-            data-aos-easing="ease-in-sine">
+            data-aos-easing="ease-in-sine"
+             data-aos-duration="500">
             <a href="#">
               <img src="assets/images/ressource/2.png" style="width:100%; height:300px;">
             </a>
@@ -139,7 +145,8 @@
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
           <div data-aos="fade-right"
             data-aos-offset="400"
-            data-aos-easing="ease-in-sine">
+            data-aos-easing="ease-in-sine"
+             data-aos-duration="500">
             <a href="#">
               <img src="assets/images/ressource/2.png" style="width:100%; height:300px;">
             </a>
@@ -154,7 +161,8 @@
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
         <div data-aos="fade-down"
             data-aos-offset="400"
-            data-aos-easing="ease-in-sine">
+            data-aos-easing="ease-in-sine"
+             data-aos-duration="500">
             <a href="#">
               <img src="assets/images/ressource/2.png" style="width:100%; height:300px;">
             </a>
@@ -169,7 +177,8 @@
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
           <div data-aos="fade-left"
             data-aos-offset="400"
-            data-aos-easing="ease-in-sine">
+            data-aos-easing="ease-in-sine"
+             data-aos-duration="500">
             <a href="#">
               <img src="assets/images/ressource/2.png" style="width:100%; height:300px;">
             </a>
@@ -186,7 +195,8 @@
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
         <div data-aos="zoom-in-right"
             data-aos-offset="400"
-            data-aos-easing="ease-in-sine">
+            data-aos-easing="ease-in-sine"
+             data-aos-duration="500">
             <a href="#">
               <img src="assets/images/ressource/2.png" style="width:100%; height:300px;">
             </a>
@@ -201,7 +211,8 @@
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
         <div data-aos="zoom-in-up"
             data-aos-offset="400"
-            data-aos-easing="ease-in-sine">
+            data-aos-easing="ease-in-sine"
+             data-aos-duration="500">
             <a href="#">
               <img src="assets/images/ressource/2.png" style="width:100%; height:300px;">
             </a>
@@ -216,7 +227,8 @@
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" >
         <div data-aos="zoom-in-left"
             data-aos-offset="400"
-            data-aos-easing="ease-in-sine">
+            data-aos-easing="ease-in-sine"
+             data-aos-duration="500">
             <a href="#">
               <img src="assets/images/ressource/2.png" style="width:100%; height:300px;">
             </a>

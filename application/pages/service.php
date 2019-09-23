@@ -69,7 +69,7 @@
                             text-align: center;"> 
 
        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <div data-aos="fade-down-right">
+        <div data-aos="fade-right" data-aos-duration="700">
         <a href="#recru">
           <div class="slide24">
             <div>
@@ -82,7 +82,7 @@
       </div>
 
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <div data-aos="fade-down">
+        <div data-aos="fade-down" data-aos-duration="700">
           <a href="index.php?page=cvvideos">
           <div class="slide24">
             <div>
@@ -95,7 +95,7 @@
       </div>
 
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <div data-aos="fade-down">
+        <div data-aos="fade-down" data-aos-duration="700">
           <a href="index.php?page=entretienvideos">
           <div class="slide24">
             <div>
@@ -106,8 +106,8 @@
         </div>
       </div>
 
-      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <div data-aos="fade-down-left">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="padding-bottom: 40px;">
+        <div data-aos="fade-left" data-aos-duration="700">
           <a href="index.php?page=inbound">
           <div class="slide24">
             <div>
@@ -119,7 +119,7 @@
       </div>
 
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <div data-aos="fade-up-right">
+        <div data-aos="fade-right" data-aos-duration="700">
           <a href="#externalisation">
             <div class="slide24">
             <div>
@@ -131,7 +131,7 @@
       </div>
 
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <div data-aos="fade-up">
+          <div data-aos="fade-up" data-aos-duration="700">
             <a href="#conseil">
             <div class="slide24">
             <div>
@@ -144,7 +144,7 @@
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <div data-aos="fade-up">
+          <div data-aos="fade-up" data-aos-duration="700">
             <a href="index.php?page=cooptation">
             <div class="slide24">
             <div>
@@ -157,7 +157,7 @@
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <div data-aos="fade-up-left">
+          <div data-aos="fade-left" data-aos-duration="700">
             <a href="#formation">
               <div class="slide24">
               <div>
@@ -192,19 +192,19 @@
                                                                   font-size: 18px;
                                                                   text-align: justify;">
             <br>                                                      
-          <p data-aos="fade-right">Corban Performance Consulting accompagne les entreprises 
+          <p data-aos="fade-right" data-aos-duration="500">Corban Performance Consulting accompagne les entreprises 
             dans leur projet de recrutement.
           </p>
-          <p data-aos="fade-right">Nous proposons un service tout compris depuis le briefing 
+          <p data-aos="fade-right" data-aos-duration="700">Nous proposons un service tout compris depuis le briefing 
             jusqu'à la proposition des CV en passant par le sourcing, les 
             différents tests et les entretiens. 
           </p>
-          <p data-aos="fade-right">En plus des 7 000 CV dans notre base de données, nous mettons 
+          <p data-aos="fade-right" data-aos-duration="800">En plus des 7 000 CV dans notre base de données, nous mettons 
             également au service de nos clients notre réseau de coopteur 
             ainsi la nouvelle technologie à travers notre 
             <strong> CV Vidéo et Entretien Vidéo. </strong> 
            </p>   
-          <p data-aos="fade-down"><br>
+          <p data-aos="fade-right" data-aos-duration="900"><br>
             <strong>NOS GARANTIES:</strong> 
             la confidentialité, la rapidité et les compétences.
           </p>
@@ -246,13 +246,13 @@
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="color: #222222;
                                                               font-family: 'Raleway', sans-serif;
                                                               text-align: center;">
-        <p data-aos="fade-left" style="font-size: 23px;text-align: justify;">
+        <p data-aos="fade-left" data-aos-duration="800" style="font-size: 23px;text-align: justify;">
             Corban Performance Consulting offre un large éventail 
             de formation aussi bien pour les professionnels et les 
             candidats à la recherche de travail ainsi que les 
             entrepreneurs.
         </p>   
-        <p data-aos="fade-up" style="text-align: center;font-size: 25px;padding-top:40px;">
+        <p data-aos="fade-left" data-aos-duration="900" style="text-align: center;font-size: 25px;padding-top:40px;">
           <strong>Télécharger notre catalogue de formation</strong>
         </p>
       </div>
@@ -281,14 +281,14 @@
                                                               font-size: 21px;
                                                               text-align: center;">
         <div style="text-align: justify;">
-          <p data-aos="fade-right">
+          <p data-aos="fade-right" data-aos-duration="800">
             L'externalisation de paie est une solution moins coûteuses et 
             plus flexible d'un côté et de l'autre, une solution qui permet 
             de réduire considérablement les erreurs. Au delà de cela, 
             elle vous fait gagner du temps. 
           </p>
           <br>
-          <p data-aos="fade-right">
+          <p data-aos="fade-right" data-aos-duration="900">
             Les experts de Corban Performance Consulting vous 
             aideront à se libérer des lourdeurs administratives liés à la 
             paie, ainsi vous pouvez vous consacrer à votre cœur de
@@ -321,23 +321,23 @@
       </div>
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding-top: 40px;">
-          <h3 data-aos="flip-left" style="color:#000;
+          <h3 data-aos="flip-left" data-aos-duration="700" style="color:#000;
                     font-family: 'Raleway', sans-serif;;
                     font-weight: bold;
                     font-size: 30px;
                     text-align: left;">Nous intervenons dans
           </h3>
           <ul style="color:#393838;text-align:justify;font-size: 20px;">
-            <li data-aos="fade-right">Management stratégique des ressources humaines</li>
-            <li data-aos="fade-right">Organisation et optimisation des processus</li>
-            <li data-aos="fade-right">Team building</li>
+            <li data-aos="fade-right" data-aos-duration="900">Management stratégique des ressources humaines</li>
+            <li data-aos="fade-right" data-aos-duration="1000">Organisation et optimisation des processus</li>
+            <li data-aos="fade-right" data-aos-duration="1300">Team building</li>
           </ul>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="color: #222222;
                     font-family: 'Raleway', sans-serif;;
                     font-size: 18px;
                     text-align: justify;">
-          <p data-aos="fade-left">
+          <p data-aos="fade-left" data-aos-duration="700">
             Dans un contexte de forte concurrence, de nécessaire 
               croissance, et dans un environnement changeant demandant
               une réactivité et une adaptation rapide, il est nécessaire de
@@ -345,7 +345,7 @@
               l'ensemble de ses salariés. L'entreprise a le devoir d'optimiser
               son capital humain.
           </p>
-          <p data-aos="fade-left">
+          <p data-aos="fade-left" data-aos-duration="900">
             Corban Performance Consulting apporte les conseils dans
               différents domaines des ressources humaines grâce à notre
               expertise sur l'organisation et ses métiers ainsi qu'à la maîtrise
@@ -369,27 +369,27 @@
     </div>
     <div class="row" style="padding-bottom: 100px;color: #222222;font-family: 'Arimo', sans-serif; ">
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <h4 data-aos="zoom-in-right" style="font-size: 30px;">BANQUE</h4>
+        <h4 data-aos="fade-right" data-aos-duration="700" style="font-size: 30px;">BANQUE</h4>
       </div>
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <h4 data-aos="zoom-in-down" style="font-size: 30px;">MINE</h4>
+        <h4 data-aos="fade-down" data-aos-duration="700" style="font-size: 30px;">MINE</h4>
       </div>
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <h4 data-aos="zoom-in-down" style="font-size: 30px;">INFORMATIQUE</h4>
+        <h4 data-aos="fade-down" data-aos-duration="700" style="font-size: 30px;">INFORMATIQUE</h4>
       </div>
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <h4 data-aos="zoom-in-left" style="font-size: 30px;">LOGISTIQUE</h4>
+        <h4 data-aos="fade-left" data-aos-duration="700" style="font-size: 30px;">LOGISTIQUE</h4>
       </div>
     </div>
     <div class="row" style="padding-bottom: 100px;">
       <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-        <h4 data-aos="zoom-in-right" style="font-size: 30px;">MICRO FINANCE</h4>
+        <h4 data-aos="fade-right" data-aos-duration="900" style="font-size: 30px;">MICRO FINANCE</h4>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-        <h4 data-aos="zoom-in-up" style="font-size: 30px;">HOTELLERIE & MINE</h4>
+        <h4 data-aos="fade-up" data-aos-duration="900" style="font-size: 30px;">HOTELLERIE & MINE</h4>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-        <h4 data-aos="zoom-in-left" style="font-size: 30px;">AGROALIMENTAIRE</h4>
+        <h4 data-aos="fade-left" data-aos-duration="700" style="font-size: 30px;">AGROALIMENTAIRE</h4>
       </div>
     </div>
 </section>

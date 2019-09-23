@@ -155,40 +155,40 @@
 		<div class="row" style="text-align: center; padding-top: 60px;">
 			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="text-align: center;">
 				<div class="slide24">
-					<div data-aos="zoom-in-right">
+					<div data-aos="fade-right" data-aos-duration="600">
 						<img src="assets/images/apropos/3.png" style="padding-bottom: 30px;">
 					</div>
 				</div>
-				<h3 data-aos="zoom-in-right" style="padding-bottom: 30px; font-size: 20px;">
+				<h3 data-aos="fade-right" data-aos-duration="800" style="padding-bottom: 30px; font-size: 20px;">
 					<strong>Nouvelle façon de penser</strong>
 				</h3>
-				<p data-aos="fade-up" data-aos-duration="500">Insuffler une nouvelle façon de penser dans la
+				<p data-aos="fade-right" data-aos-duration="1000">Insuffler une nouvelle façon de penser dans la
 					conception du business</p>
 				
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="text-align: center;">
 				<div class="slide24">
-					<div  data-aos="zoom-in-up">
+					<div  data-aos="zoom-in" data-aos-duration="600">
 						<img src="assets/images/apropos/4.png" style="padding-bottom: 30px;">
 					</div>
 				</div>
-				<h3 data-aos="zoom-in-up" style="padding-bottom: 30px;font-size: 20px;">
+				<h3 data-aos="fade-up" data-aos-duration="800" style="padding-bottom: 30px;font-size: 20px;">
 					<strong>Nouveaux modèles</strong>
 				</h3>
-				<p data-aos="fade-up" data-aos-duration="500">Des modèles uniques, performants et
+				<p data-aos="fade-up" data-aos-duration="1000" data-aos-duration="500">Des modèles uniques, performants et
 					déstabilisants à Madagascar</p>
 				
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="text-align: center;">
 				<div class="slide24">
-					<div data-aos="zoom-in-left">
+					<div data-aos="fade-left" data-aos-duration="600">
 						<img src="assets/images/apropos/5.png" style="padding-bottom: 30px;">
 					</div>
 				</div>
-				<h3 data-aos="zoom-in-left" style="padding-bottom: 30px;font-size: 20px;">
+				<h3 data-aos="fade-left" data-aos-duration="800" style="padding-bottom: 30px;font-size: 20px;">
 					<strong>Nous croyons que 1 +1 = 3</strong>
 				</h3>
-				<p data-aos="fade-up" data-aos-duration="500">C’est la raison pour laquelle nous sommes
+				<p data-aos="fade-left" data-aos-duration="1000">C’est la raison pour laquelle nous sommes
 					un open networker</p>
 				
 			</div>
@@ -400,7 +400,7 @@
 		</div>
 		<div class="row" style="margin-top: 30px;">
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="text-align: center;">
-				<div data-aos="fade-down-right">
+				<div data-aos="fade-right" data-aos-duration="600">
 					<div class="slide24">
 						<div>
 							<img src="assets/images/apropos/1.png" style="margin-bottom: 20px">
@@ -415,11 +415,11 @@
 				</div>
 				<br>
 				<a href="index.php?page=contact">
-					<button data-aos="fade-right" type="button" class="btn-1 " >Demander une offre</button>
+					<button data-aos="fade-right" data-aos-duration="800" type="button" class="btn-1 " >Demander une offre</button>
 				</a>	
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"  style="text-align: center;">
-				<div data-aos="fade-down-left">
+				<div data-aos="fade-left" data-aos-duration="600">
 					<div class="slide24">
 						<div>
 							<img src="assets/images/apropos/2.png" style="margin-bottom: 20px">
@@ -434,7 +434,7 @@
 				</div>
 				<br>
 				<a  href="index.php?page=offres">
-					<button data-aos="fade-left" type="button" class="btn-1 " >Voir les offres d'emplois</button>
+					<button data-aos="fade-left" data-aos-duration="800" type="button" class="btn-1 " >Voir les offres d'emplois</button>
 				</a>	
 			</div>
 		</div>

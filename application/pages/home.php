@@ -328,31 +328,32 @@
 	</div>
 </section>
 
-<section class="container-fluid" style="background-color:#f7f7f7;padding: 80px 20px;">
-	<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" style="margin-bottom: 50px;margin-top: 50px">
-		<p data-aos="fade-right" style="color: #444041;font-family: arimo">
+<section class="container-fluid" style="background-color:#f7f7f7;padding-top: 80px; padding-bottom: 80px;">
+	<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+		<div style="padding-bottom: 60px;">
+			<p data-aos="fade-right" data-aos-duration="600" style="color: #444041;font-family: arimo">
 		   Ce qu'ils disent de nous
 		</p>
-		<h2 data-aos="fade-down-right" style="font-family: 'Raleway', sans-serif;
+		<h2 data-aos="fade-right" data-aos-duration="900" style="font-family: 'Raleway', sans-serif;
 				  font-weight: bold;
 				  color: #444041">TEMOIGNAGE
 		</h2>
+		</div>
+		
 	</div>
 
 	<div class="container">
 	<div class="row" style="font-family: 'Raleway', sans-serif;color: #444041">
 		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-			<div class="morph">
-				<div data-aos="fade-down-right">
-					<img src="assets/images/temoignage/Frank.png" style="max-width: 100%;height: 200px;">
-				</div>
-			</div>
-			<p data-aos="fade-down-right" style="font-weight: bold;text-align: center;">
+			<p data-aos="fade-right" data-aos-duration="1000" style="font-weight: bold;text-align: center;">
 				Franck Rakotondrahanta - Cadre Commercial Bancaire
 			</p>
+			<div data-aos="fade-right" data-aos-duration="1000" style="text-align: center;">
+				<img src="assets/images/temoignage/Frank.png" style="max-width: 100%;height: 200px;">
+			</div>
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-			<p data-aos="flip-left" style="text-align: justify;">
+			<p data-aos="flip-left" data-aos-duration="1400" style="text-align: justify;">
 				Pour un commercial et/ou un manage, le livre INFLUENCE est un must. 
               Il devra permettre d’améliorer mon efficience et mon efficacité. 
               Alors, si vous voulez aussi améliorer votre capacité de persuasion de vos clients et prospects, ou améliorer et affiner votre posture managériale, je vous recommande ce livre. 
@@ -361,17 +362,15 @@
 			
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-			<div class="morph">
-				<div data-aos="fade-down-right">
-					<img src="assets/images/temoignage/Laurie.png" style="max-width: 100%;height: 200px;">
-				</div>
-			</div>
-			<p data-aos="fade-down-right" style="font-weight: bold; text-align: center;">
+			<p data-aos="fade-right" data-aos-duration="1000" style="font-weight: bold; text-align: center;">
 				Laurie Antonia Rakotomalala - Photographe
 			</p>
+			<div data-aos="fade-right" data-aos-duration="1000" style="text-align: center;">
+				<img src="assets/images/temoignage/Laurie.png" style="max-width: 100%;height: 200px;">
+			</div>
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-			<p data-aos="flip-right" style="text-align: justify;">
+			<p data-aos="flip-right" data-aos-duration="1400" style="text-align: justify;">
 				 Ce Book Club / network répond à pas mal de questions que je me pose dans ma vie professionnelle. 
               La partie qui m’a le plus marqué c’est le principe du “donnez” ce que vous vous voulez recevoir….  
               Merci aux TIPS de Jean Luc (Axian), Gilto (Encor Madagascar) et de Fano (Torio Creatives) sans oublier Rija Rajemisa. 

@@ -39,7 +39,7 @@
                   text-align:center;
                    padding-bottom:30px;"> <strong>CV Vidéo</strong> 
         </h2>
-        <h3 data-aos="zoom-in"  data-aos-duration="300" 
+        <h3 data-aos="zoom-in"  data-aos-duration="600" 
             style="color: #ff914d;
                   font-family: 'Arimo', sans-serif;
                   text-align: center;
@@ -49,13 +49,13 @@
 
     <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-        <h4 data-aos="fade-right" data-aos-duration="400" 
+        <h4 data-aos="fade-right" data-aos-duration="800" 
             style="font-weight: bold;padding-bottom: 20px;text-align: center;">Pour les candidats</h4>
         <div style="font-size: 20px;text-align: justify;" >
-        <p data-aos="fade-up-right" data-aos-duration="500">
+        <p data-aos="fade-right" data-aos-duration="1000">
           Le CV Vidéo est un moyen de se démarquer de la concurrence et d'aboutir facilement à un entretien d'embauche.
         </p>
-        <p data-aos="fade-up-right" data-aos-duration="500">
+        <p data-aos="fade-right" data-aos-duration="1400">
           <strong> Corban propose:</strong><br>
           - La conception et le tournage de votre CV Vidéo.<br>
           - Sa diffusion auprès des potentiels recruteurs.
@@ -63,13 +63,13 @@
         </div>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-        <h4 data-aos="fade-left" data-aos-duration="400"  
+        <h4 data-aos="fade-left" data-aos-duration="800"  
             style="font-weight: bold;padding-bottom: 20px;text-align: center;">Pour les recruteurs</h4>
         <div style="font-size: 20px;text-align: justify;" >
-          <p data-aos="fade-up-left" data-aos-duration="500">
+          <p data-aos="fade-left" data-aos-duration="1000">
             Le CV Vidéo vous permet de faire immédiatement une différenciation du profil du candidat recherché et donne une vision plus globale du candidat dans des conditions idéales.
           </p>
-          <p data-aos="fade-up-left" data-aos-duration="500">
+          <p data-aos="fade-left" data-aos-duration="1400">
             Corban propose:<br>
             - L'accès à notre base de donnée de CV Vidéos triés sur le volet.
           </p>
